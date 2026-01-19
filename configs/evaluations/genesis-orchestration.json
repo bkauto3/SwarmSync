@@ -1,0 +1,351 @@
+[
+  {
+    "sourceId": "orch_p1_001",
+    "scenarioName": "Full pipeline: HTDAG → HALO → AOP → DAAO execution",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "aop", "daao", "full_pipeline"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Build a complete SaaS MVP with authentication, payment processing, and deployment",
+      "constraints": ["Must use all orchestration layers", "Requires 5+ agents"]
+    },
+    "expectedOutputIncludes": [
+      "task_dag",
+      "routing_plan",
+      "validation_result",
+      "cost_optimization"
+    ],
+    "minOutputLength": 500,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 2000
+    },
+    "successCriteria": [
+      "htdag_decomposition",
+      "halo_routing",
+      "aop_validation",
+      "daao_optimization"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "Full pipeline: HTDAG → HALO → AOP → DAAO execution. Build a complete SaaS MVP with authentication, payment processing, and deployment",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_002",
+    "scenarioName": "HTDAG decomposition with dynamic task insertion",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "dynamic_update", "feedback_loop"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Deploy API, but discover during deployment that database migration is needed",
+      "context": {
+        "initial_tasks": ["design_api", "implement_api", "deploy_api"],
+        "discovered_requirement": "database_migration"
+      }
+    },
+    "expectedOutputIncludes": ["updated_dag", "migration_task_added", "dependency_reordered"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["dynamic_insertion", "dependency_correctness", "acyclicity_preserved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HTDAG decomposition with dynamic task insertion. Deploy API, but discover during deployment that database migration is needed",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_003",
+    "scenarioName": "HALO routing with agent capacity constraints",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "load_balancing", "capacity_check"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Route 20 tasks across 5 agents, where 2 agents are at 80% capacity",
+      "context": {
+        "available_agents": ["builder", "deploy", "qa", "security", "analyst"],
+        "agent_capacity": {
+          "builder": 0.8,
+          "deploy": 0.8,
+          "qa": 0.3,
+          "security": 0.5,
+          "analyst": 0.4
+        }
+      }
+    },
+    "expectedOutputIncludes": ["routing_plan", "load_balanced", "no_overload"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["load_balancing", "capacity_respect", "task_distribution"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "HALO routing with agent capacity constraints. Route 20 tasks across 5 agents, where 2 agents are at 80% capacity",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_004",
+    "scenarioName": "AOP validation with solvability failure recovery",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "validation", "solvability_check"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Validate routing plan where deploy agent lacks AWS credentials",
+      "context": {
+        "routing_plan": [
+          {
+            "task": "deploy_to_aws",
+            "agent": "deploy_agent",
+            "required_tools": ["aws_cli", "aws_credentials"]
+          }
+        ],
+        "agent_capabilities": {
+          "deploy_agent": {
+            "tools": ["aws_cli"],
+            "missing": ["aws_credentials"]
+          }
+        }
+      }
+    },
+    "expectedOutputIncludes": [
+      "solvability_failed",
+      "missing_credentials",
+      "remediation_suggested"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 1500,
+      "maxTokens": 600
+    },
+    "successCriteria": ["solvability_detection", "missing_tool_identified", "remediation_provided"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "AOP validation with solvability failure recovery. Validate routing plan where deploy agent lacks AWS credentials",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_005",
+    "scenarioName": "DAAO cost optimization with quality tradeoff",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_optimization", "quality_tradeoff"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Optimize routing plan: 10 simple tasks, 5 complex tasks",
+      "context": {
+        "simple_tasks": ["update_docs", "format_code", "send_notifications"],
+        "complex_tasks": ["design_architecture", "implement_authentication", "security_audit"],
+        "budget": "$1.00"
+      }
+    },
+    "expectedOutputIncludes": ["optimized_plan", "cost_breakdown", "quality_score"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["cost_within_budget", "quality_maintained", "appropriate_model_selection"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "DAAO cost optimization with quality tradeoff. Optimize routing plan: 10 simple tasks, 5 complex tasks",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_006",
+    "scenarioName": "HTDAG → HALO with parallel branch routing",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "parallel_execution"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Build 3 microservices in parallel: auth-service, payment-service, notification-service",
+      "constraints": ["Services are independent", "Each requires builder + deploy agents"]
+    },
+    "expectedOutputIncludes": ["parallel_branches", "independent_routing", "no_blocking"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1200
+    },
+    "successCriteria": ["parallel_decomposition", "independent_routing", "no_artificial_deps"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "HTDAG → HALO with parallel branch routing. Build 3 microservices in parallel: auth-service, payment-service, notification-service",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_007",
+    "scenarioName": "AOP completeness check with missing task detection",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "completeness", "gap_detection"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Validate routing plan for SaaS MVP",
+      "context": {
+        "routing_plan": [
+          "research_market → analyst",
+          "design_architecture → spec",
+          "implement_backend → builder",
+          "implement_frontend → builder"
+        ],
+        "dag_tasks": [
+          "research_market",
+          "design_architecture",
+          "implement_backend",
+          "implement_frontend",
+          "deploy_infrastructure",
+          "setup_database"
+        ]
+      }
+    },
+    "expectedOutputIncludes": [
+      "completeness_failed",
+      "unassigned_tasks",
+      "deploy_infrastructure",
+      "setup_database"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 1500,
+      "maxTokens": 600
+    },
+    "successCriteria": ["gap_detection", "unassigned_identification", "coverage_completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "AOP completeness check with missing task detection. Validate routing plan for SaaS MVP",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_008",
+    "scenarioName": "HTDAG → AOP with circular dependency prevention",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "aop", "cycle_detection"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Decompose task with potential circular dependency: A depends on B, B depends on C, C depends on A",
+      "context": {
+        "malicious_dag": ["task_a → task_b", "task_b → task_c", "task_c → task_a"]
+      }
+    },
+    "expectedOutputIncludes": ["cycle_detected", "validation_failed", "dag_rejected"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 600
+    },
+    "successCriteria": ["cycle_detection", "rejection_correct", "error_message_clear"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "HTDAG → AOP with circular dependency prevention. Decompose task with potential circular dependency: A depends on B, B depends on C, C depends on A",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_009",
+    "scenarioName": "DAAO → HALO with model fallback when budget exceeded",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "halo", "fallback", "budget_constraint"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Optimize 50 tasks with $0.50 budget (would cost $2.00 with GPT-4o)",
+      "context": {
+        "task_count": 50,
+        "budget": 0.5,
+        "default_cost_gpt4o": 2
+      }
+    },
+    "expectedOutputIncludes": ["fallback_triggered", "gemini_flash_used", "budget_respected"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["budget_respected", "fallback_appropriate", "quality_acceptable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "DAAO → HALO with model fallback when budget exceeded. Optimize 50 tasks with $0",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_010",
+    "scenarioName": "Full pipeline with AOP non-redundancy detection",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "aop", "redundancy_check"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Build landing page where analyst and marketing both run competitor analysis",
+      "context": {
+        "routing_plan": ["competitor_analysis_1 → analyst", "competitor_analysis_2 → marketing"]
+      }
+    },
+    "expectedOutputIncludes": ["redundancy_detected", "duplicate_tasks", "consolidation_suggested"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": [
+      "redundancy_detection",
+      "duplicate_identification",
+      "consolidation_recommendation"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Full pipeline with AOP non-redundancy detection. Build landing page where analyst and marketing both run competitor analysis",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_011",
+    "scenarioName": "HTDAG hierarchical decomposition (4 levels deep)",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "nested", "hierarchical"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Build complete e-commerce platform with admin panel, customer portal, payment gateway, inventory system",
+      "constraints": ["Allow nested decomposition up to 4 levels"]
+    },
+    "expectedOutputIncludes": ["hierarchical_dag", "max_depth_4", "leaf_tasks_actionable"],
+    "tolerances": {
+      "maxLatencyMs": 10000,
+      "maxTokens": 3000
+    },
+    "successCriteria": ["depth_limit_respected", "hierarchy_clear", "actionable_leaves"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "HTDAG hierarchical decomposition (4 levels deep). Build complete e-commerce platform with admin panel, customer portal, payment gateway, inventory system",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_012",
+    "scenarioName": "HALO dynamic agent creation for specialized task",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "dynamic_agent", "specialization"],
+    "agentNameIncludes": "orch",
+    "input": {
+      "prompt": "Route task requiring blockchain smart contract deployment",
+      "context": {
+        "task": "deploy_smart_contract_to_ethereum",
+        "available_agents": ["builder", "deploy", "qa"],
+        "none_have_blockchain_skills": true
+      }
+    },
+    "expectedOutputIncludes": ["dynamic_agent_created", "blockchain_specialist", "web3_tools"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": [
+      "specialization_identified",
+      "agent_creation_triggered",
+      "tools_appropriate"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HALO dynamic agent creation for specialized task. Route task requiring blockchain smart contract deployment",
+    "category": "integration"
+  }
+]

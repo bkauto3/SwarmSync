@@ -1,0 +1,13 @@
+[
+  {
+    "agentSlug": "research-agent",
+    "scenarioName": "Competitive intel smoke",
+    "vertical": "market-research",
+    "input": {
+      "task": "draft executive summary"
+    },
+    "expectedOutputIncludes": ["Execution simulated"],
+    "budget": 5,
+    "notes": "Baseline coverage to ensure agent responds."
+  }
+]

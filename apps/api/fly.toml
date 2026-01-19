@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for agent-market-api-withered-silence-253 on 2025-11-20T12:17:11-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'agent-market-api-divine-star-3849'
+primary_region = 'dfw'
+
+[build]
+  dockerfile = "../../Dockerfile.api"
+  context = "../.."
+
+[deploy]
+  release_command = 'npx prisma migrate deploy'
+
+[http_service]
+  internal_port = 4000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1

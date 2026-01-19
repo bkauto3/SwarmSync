@@ -1,0 +1,2112 @@
+[
+  {
+    "sourceId": "legal_agent_p0_100",
+    "scenarioName": "Legal Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p0_101",
+    "scenarioName": "Legal Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p0_102",
+    "scenarioName": "Legal Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p0_103",
+    "scenarioName": "Legal Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p0_104",
+    "scenarioName": "Legal Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p0_105",
+    "scenarioName": "Legal Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_agent_p0_106",
+    "scenarioName": "Legal Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical compliance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_agent_p0_107",
+    "scenarioName": "Legal Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "scalability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical scalability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "legal_agent_p0_108",
+    "scenarioName": "Legal Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "reliability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical reliability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "legal_agent_p0_109",
+    "scenarioName": "Legal Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical data_quality test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "legal_agent_p0_110",
+    "scenarioName": "Legal Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p0_111",
+    "scenarioName": "Legal Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p0_112",
+    "scenarioName": "Legal Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p0_113",
+    "scenarioName": "Legal Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p0_114",
+    "scenarioName": "Legal Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p0_115",
+    "scenarioName": "Legal Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "legal",
+    "agentTags": ["legal", "critical", "p0", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute critical security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Legal Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_p1_001",
+    "scenarioName": "Legal Agent - OCR Contract Clause Extraction",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "ocr", "contract", "clause_extraction"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Extract liability clauses from scanned contract PDF",
+      "document_path": "/tests/documents/contract_scanned.pdf",
+      "target_clauses": ["liability", "indemnification", "limitation_of_liability"]
+    },
+    "expectedOutputIncludes": ["liability", "indemnification", "extracted_clauses"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["ocr_successful", "clauses_identified", "extraction_accurate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Legal Agent - OCR Contract Clause Extraction. Extract liability clauses from scanned contract PDF",
+    "category": "ocr"
+  },
+  {
+    "sourceId": "legal_p1_002",
+    "scenarioName": "Legal Agent - Multi-Jurisdiction Compliance Check",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "compliance", "multi_jurisdiction", "gdpr_ccpa"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Validate data processing agreement for GDPR and CCPA compliance",
+      "document": "User data processing agreement for EU and California users",
+      "jurisdictions": ["EU-GDPR", "California-CCPA"]
+    },
+    "expectedOutputIncludes": ["gdpr_compliant", "ccpa_compliant", "compliance_report"],
+    "tolerances": {
+      "maxLatencyMs": 6000,
+      "maxTokens": 2000
+    },
+    "successCriteria": ["gdpr_checked", "ccpa_checked", "violations_identified"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "Legal Agent - Multi-Jurisdiction Compliance Check. Validate data processing agreement for GDPR and CCPA compliance",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_p1_003",
+    "scenarioName": "Legal Agent - Automated PII Redaction",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "pii", "redaction", "privacy"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Redact all PII from legal discovery document",
+      "document": "Contract mentions John Smith (john.smith@example.com, SSN 123-45-6789)",
+      "pii_types": ["names", "email", "ssn", "phone", "address"]
+    },
+    "expectedOutputIncludes": ["redacted", "pii_removed", "[REDACTED]"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["all_pii_redacted", "no_false_positives", "document_readable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Legal Agent - Automated PII Redaction. Redact all PII from legal discovery document",
+    "category": "redaction"
+  },
+  {
+    "sourceId": "legal_p1_004",
+    "scenarioName": "Legal Agent - Contract Risk Scoring",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "risk", "scoring", "analysis"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Assess contract risk: unlimited liability, auto-renewal, no termination clause",
+      "contract_clauses": {
+        "liability": "unlimited",
+        "renewal": "automatic_annual",
+        "termination": "none"
+      },
+      "risk_categories": ["financial", "operational", "reputational"]
+    },
+    "expectedOutputIncludes": ["risk_score", "high_risk", "recommendations"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1200
+    },
+    "successCriteria": ["risk_identified", "scoring_appropriate", "recommendations_actionable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "Legal Agent - Contract Risk Scoring. Assess contract risk: unlimited liability, auto-renewal, no termination clause",
+    "category": "risk_assessment"
+  },
+  {
+    "sourceId": "legal_p1_005",
+    "scenarioName": "Legal Agent - Legal Precedent Research",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "precedent", "research", "case_law"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Find relevant case law for software liability dispute",
+      "issue": "Software defect caused financial loss to user",
+      "jurisdiction": "California",
+      "topic": "software_liability"
+    },
+    "expectedOutputIncludes": ["case_law", "precedent", "relevant_cases"],
+    "tolerances": {
+      "maxLatencyMs": 6000,
+      "maxTokens": 2000
+    },
+    "successCriteria": ["cases_relevant", "jurisdiction_correct", "analysis_provided"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "Legal Agent - Legal Precedent Research. Find relevant case law for software liability dispute",
+    "category": "research"
+  },
+  {
+    "sourceId": "legal_p1_006",
+    "scenarioName": "Legal Agent - Terms of Service Generation",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "tos", "generation", "saas"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Generate SaaS Terms of Service for B2B platform",
+      "business_model": "B2B_SaaS",
+      "jurisdiction": "Delaware",
+      "features": ["data_processing", "api_access", "user_generated_content"]
+    },
+    "expectedOutputIncludes": ["terms_of_service", "liability", "warranty", "termination"],
+    "tolerances": {
+      "maxLatencyMs": 7000,
+      "maxTokens": 3000
+    },
+    "successCriteria": ["tos_complete", "jurisdiction_appropriate", "sections_comprehensive"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "Legal Agent - Terms of Service Generation. Generate SaaS Terms of Service for B2B platform",
+    "category": "generation"
+  },
+  {
+    "sourceId": "legal_p1_007",
+    "scenarioName": "Legal Agent - Contract Comparison Analysis",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "comparison", "diff", "negotiation"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Compare two versions of NDA and highlight material changes",
+      "version_1": "Standard NDA with 2-year confidentiality",
+      "version_2": "Modified NDA with 5-year confidentiality and broader scope",
+      "focus_areas": ["confidentiality_period", "scope", "exceptions"]
+    },
+    "expectedOutputIncludes": ["material_changes", "confidentiality_extended", "scope_broadened"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["changes_identified", "materiality_assessed", "negotiation_advice"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Legal Agent - Contract Comparison Analysis. Compare two versions of NDA and highlight material changes",
+    "category": "comparison"
+  },
+  {
+    "sourceId": "legal_p1_008",
+    "scenarioName": "Legal Agent - Regulatory Filing Automation",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "filing", "automation", "regulatory"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Prepare SEC Form D filing for venture capital raise",
+      "raise_details": {
+        "amount": "$2,000,000",
+        "investors": 10,
+        "offering_type": "Regulation D 506(b)"
+      },
+      "company_info": "Delaware C-Corp"
+    },
+    "expectedOutputIncludes": ["form_d", "regulation_d", "filing_prepared"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["form_correct", "fields_accurate", "filing_ready"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Legal Agent - Regulatory Filing Automation. Prepare SEC Form D filing for venture capital raise",
+    "category": "automation"
+  },
+  {
+    "sourceId": "legal_p1_009",
+    "scenarioName": "Legal Agent - Open Source License Compliance",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "open_source", "licensing", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Check codebase for GPL license conflicts with proprietary code",
+      "dependencies": ["library_a (MIT)", "library_b (GPL-3.0)", "library_c (Apache-2.0)"],
+      "project_license": "proprietary"
+    },
+    "expectedOutputIncludes": ["license_conflict", "gpl_violation", "remediation"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["conflict_detected", "license_analyzed", "remediation_suggested"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Legal Agent - Open Source License Compliance. Check codebase for GPL license conflicts with proprietary code",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_p1_010",
+    "scenarioName": "Legal Agent - Employment Agreement Customization",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "employment", "agreement", "hr"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Customize employment agreement for California remote engineer",
+      "role": "Senior Software Engineer",
+      "location": "California (remote)",
+      "special_clauses": ["equity_grant", "ip_assignment", "non_compete"]
+    },
+    "expectedOutputIncludes": [
+      "employment_agreement",
+      "california_specific",
+      "equity",
+      "ip_assignment"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 6000,
+      "maxTokens": 2500
+    },
+    "successCriteria": ["agreement_complete", "california_law_followed", "clauses_appropriate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.09,
+    "notes": "Legal Agent - Employment Agreement Customization. Customize employment agreement for California remote engineer",
+    "category": "generation"
+  },
+  {
+    "sourceId": "legal_p1_011",
+    "scenarioName": "Legal Agent - Contract Negotiation Strategy",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "negotiation", "strategy", "advisory"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Recommend negotiation strategy for vendor contract",
+      "vendor_terms": {
+        "price": "$50,000/year",
+        "term": "3 years auto-renew",
+        "termination": "90 days notice",
+        "liability_cap": "$100,000"
+      },
+      "market_benchmarks": "avg $35,000/year, 1-year terms"
+    },
+    "expectedOutputIncludes": ["negotiation_strategy", "leverage_points", "fallback_positions"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1200
+    },
+    "successCriteria": ["strategy_sound", "leverage_identified", "realistic_targets"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "Legal Agent - Contract Negotiation Strategy. Recommend negotiation strategy for vendor contract",
+    "category": "strategy"
+  },
+  {
+    "sourceId": "legal_p1_012",
+    "scenarioName": "Legal Agent - Data Breach Response Protocol",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "data_breach", "incident_response", "gdpr"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Generate data breach response plan for GDPR compliance",
+      "breach_details": {
+        "records_affected": 5000,
+        "data_types": ["email", "name", "phone"],
+        "jurisdictions": ["EU", "UK"]
+      },
+      "notification_deadline": "72 hours"
+    },
+    "expectedOutputIncludes": ["breach_response", "notification_plan", "gdpr_compliance"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["response_complete", "gdpr_compliant", "timeline_met"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Legal Agent - Data Breach Response Protocol. Generate data breach response plan for GDPR compliance",
+    "category": "incident"
+  },
+  {
+    "sourceId": "legal_p1_013",
+    "scenarioName": "Legal Agent - IP Portfolio Analysis",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "ip", "patent", "trademark"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Analyze IP portfolio and recommend filing strategy",
+      "current_ip": {
+        "patents": ["US123456 - AI Algorithm", "US789012 - Data Processing"],
+        "trademarks": ["Company Name", "Product Logo"]
+      },
+      "new_innovations": ["Machine Learning Model", "API Gateway Design"]
+    },
+    "expectedOutputIncludes": ["ip_analysis", "filing_recommendations", "protection_gaps"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["analysis_thorough", "recommendations_strategic", "gaps_identified"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Legal Agent - IP Portfolio Analysis. Analyze IP portfolio and recommend filing strategy",
+    "category": "ip"
+  },
+  {
+    "sourceId": "legal_agent_p1_100",
+    "scenarioName": "Legal Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p1_101",
+    "scenarioName": "Legal Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p1_102",
+    "scenarioName": "Legal Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p1_103",
+    "scenarioName": "Legal Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p1_104",
+    "scenarioName": "Legal Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p1_105",
+    "scenarioName": "Legal Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_agent_p1_106",
+    "scenarioName": "Legal Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority compliance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_agent_p1_107",
+    "scenarioName": "Legal Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "scalability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority scalability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "legal_agent_p1_108",
+    "scenarioName": "Legal Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "reliability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority reliability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "legal_agent_p1_109",
+    "scenarioName": "Legal Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "data_quality"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "legal_agent_p1_110",
+    "scenarioName": "Legal Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p1_111",
+    "scenarioName": "Legal Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p1_112",
+    "scenarioName": "Legal Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p1_113",
+    "scenarioName": "Legal Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p1_114",
+    "scenarioName": "Legal Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p1_115",
+    "scenarioName": "Legal Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_agent_p1_116",
+    "scenarioName": "Legal Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority compliance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_agent_p1_117",
+    "scenarioName": "Legal Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "scalability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority scalability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "legal_agent_p1_118",
+    "scenarioName": "Legal Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "reliability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority reliability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "legal_agent_p1_119",
+    "scenarioName": "Legal Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "data_quality"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "legal_agent_p1_120",
+    "scenarioName": "Legal Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p1_121",
+    "scenarioName": "Legal Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p1_122",
+    "scenarioName": "Legal Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p1_123",
+    "scenarioName": "Legal Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p1_124",
+    "scenarioName": "Legal Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p1_125",
+    "scenarioName": "Legal Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_agent_p1_126",
+    "scenarioName": "Legal Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority compliance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_agent_p1_127",
+    "scenarioName": "Legal Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "scalability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority scalability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "legal_agent_p1_128",
+    "scenarioName": "Legal Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "reliability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority reliability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "legal_agent_p1_129",
+    "scenarioName": "Legal Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "legal",
+    "agentTags": ["legal", "high", "p1", "data_quality"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "legal_agent_p2_001",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p2_002",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p2_003",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p2_004",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p2_005",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p2_006",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_agent_p2_007",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_agent_p2_008",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "scalability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "legal_agent_p2_009",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "reliability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "legal_agent_p2_010",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "legal_agent_p2_011",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "success"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority success test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "legal_agent_p2_012",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "legal_agent_p2_013",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "legal_agent_p2_014",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "performance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority performance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "legal_agent_p2_015",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "integration"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority integration test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "legal_agent_p2_016",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "security"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority security test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "legal_agent_p2_017",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "compliance"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "legal_agent_p2_018",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "scalability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "legal_agent_p2_019",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "reliability"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "legal_agent_p2_020",
+    "scenarioName": "Legal Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "legal",
+    "agentTags": ["legal", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "legal",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for legal_agent",
+      "agent": "legal",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Legal Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

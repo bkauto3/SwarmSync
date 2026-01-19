@@ -1,0 +1,95 @@
+# syntax = docker/dockerfile:1
+
+# Adjust NODE_VERSION as desired
+ARG NODE_VERSION=20.18.1
+FROM node:${NODE_VERSION}-slim AS base
+
+LABEL fly_launch_runtime="NestJS/Prisma"
+
+# NestJS/Prisma app lives here
+WORKDIR /app
+
+# Set production environment
+ENV NODE_ENV="production"
+ENV HUSKY="0"
+
+
+# Throw-away build stage to reduce size of final image
+FROM base AS build
+
+# Disable husky in build stage
+ENV HUSKY="0"
+
+# Install packages needed to build node modules
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y build-essential node-gyp openssl pkg-config python-is-python3
+
+# Copy root package files for workspace setup
+COPY package.json package-lock.json ./
+COPY apps/api/package.json apps/api/
+COPY packages/config/package.json packages/config/
+COPY packages/sdk/package.json packages/sdk/
+
+# Copy tsconfig.base.json needed for package builds
+COPY tsconfig.base.json ./
+
+# Install all dependencies (including workspace packages and dev dependencies for building)
+# Skip prepare script (husky) during install
+RUN npm ci --ignore-scripts --include=dev
+
+# Build workspace packages first
+COPY packages/config packages/config
+COPY packages/sdk packages/sdk
+# Build config package
+RUN npm run build --workspace @agent-market/config
+# Build SDK package using npx to ensure tsup is found
+RUN cd packages/sdk && npx tsup src/index.ts --format esm,cjs --dts
+
+# Generate Prisma Client
+COPY apps/api/prisma apps/api/prisma
+RUN cd apps/api && npx prisma generate
+
+# Copy API application code
+COPY apps/api apps/api
+
+# Build API application
+RUN cd apps/api && npm run build
+
+
+# Final stage for app image
+FROM base
+
+# Disable husky in final stage
+ENV HUSKY="0"
+
+# Install packages needed for deployment
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y openssl && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
+# Copy package files
+COPY --from=build /app/package.json /app/package-lock.json ./
+COPY --from=build /app/apps/api/package.json ./apps/api/
+COPY --from=build /app/packages/config/package.json ./packages/config/
+COPY --from=build /app/packages/sdk/package.json ./packages/sdk/
+
+# Install only production dependencies (skip prepare scripts)
+RUN npm ci --omit=dev --ignore-scripts
+
+# Copy built packages (dist folders)
+COPY --from=build /app/packages/config/dist ./packages/config/dist
+COPY --from=build /app/packages/sdk/dist ./packages/sdk/dist
+
+# Copy built API application and Prisma schema
+COPY --from=build /app/apps/api/dist ./apps/api/dist
+COPY --from=build /app/apps/api/prisma ./apps/api/prisma
+
+# Copy Prisma generated client from build stage
+COPY --from=build /app/node_modules/.prisma ./node_modules/.prisma
+COPY --from=build /app/node_modules/@prisma ./node_modules/@prisma
+
+# Start the server by default, this can be overwritten at runtime
+EXPOSE 4000
+WORKDIR /app/apps/api
+CMD [ "node", "dist/main.js" ]
+

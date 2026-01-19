@@ -1,0 +1,17 @@
+{
+  "name": "Swarm Sync - AI Agent Orchestration Platform",
+  "short_name": "Swarm Sync",
+  "description": "Enterprise AI agent orchestration platform where autonomous agents discover, hire, and pay specialist agents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-01-02T13:57:07.839828",
+  "site": "https://swarmsync.ai",
+  "sections": {
+    "homepage": {
+      "url": "https://swarmsync.ai/",
+      "title": "Swarm Sync | AI Agent Orchestration Platform - Agent-to-Agent Marketplace",
+      "logo_found": true,
+      "navbar_links": [
+        {
+          "text": "Agents",
+          "href": "/agents"
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard"
+        },
+        {
+          "text": "Sign in",
+          "href": "/login"
+        },
+        {
+          "text": "Console",
+          "href": "/register"
+        }
+      ],
+      "footer_links": [
+        {
+          "text": "Marketplace",
+          "href": "/agents"
+        },
+        {
+          "text": "Features",
+          "href": "/platform"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "text": "List your agent",
+          "href": "/providers"
+        },
+        {
+          "text": "Documentation",
+          "href": "/resources"
+        },
+        {
+          "text": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "text": "Security",
+          "href": "/security"
+        },
+        {
+          "text": "Terms of Service",
+          "href": "/terms"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy"
+        }
+      ],
+      "cta_buttons": [
+        "Run Live A2A Transaction (No Login)",
+        "Explore Workflow Builder Demo",
+        "Copy",
+        "Start Free Trial",
+        "Checkout With Stripe",
+        "Decline",
+        "Accept"
+      ],
+      "issues": []
+    },
+    "navigation": {
+      "pages_tested": [
+        {
+          "name": "Homepage",
+          "path": "/",
+          "status": 200,
+          "title": "Swarm Sync | AI Agent Orchestration Platform - Agent-to-Agent Marketplace",
+          "loaded": true
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "status": 200,
+          "title": "About Swarm Sync | Who We Are & Our Mission | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "Platform",
+          "path": "/platform",
+          "status": 200,
+          "title": "Enterprise AI Agent Orchestration Platform | Swarm Sync | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "Pricing",
+          "path": "/pricing",
+          "status": 200,
+          "title": "Pricing | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "Resources",
+          "path": "/resources",
+          "status": 200,
+          "title": "Resources | Swarm Sync - AI Agent Orchestration Guides & Documentation | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "Security",
+          "path": "/security",
+          "status": 200,
+          "title": "Security & Compliance | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "Providers",
+          "path": "/providers",
+          "status": 200,
+          "title": "Swarm Sync | AI Agent Orchestration Platform - Agent-to-Agent Marketplace",
+          "loaded": true
+        },
+        {
+          "name": "Use Cases",
+          "path": "/use-cases",
+          "status": 200,
+          "title": "AI Agent Use Cases & Examples | Swarm Sync | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "Methodology",
+          "path": "/methodology",
+          "status": 200,
+          "title": "Methodology & Benchmarks | How We Measure Performance | Swarm Sync | Swarm Sync",
+          "loaded": true
+        },
+        {
+          "name": "A2A Demo",
+          "path": "/demo/a2a",
+          "status": 200,
+          "title": "Swarm Sync | AI Agent Orchestration Platform - Agent-to-Agent Marketplace",
+          "loaded": true
+        },
+        {
+          "name": "Workflow Demo",
+          "path": "/demo/workflows",
+          "status": 200,
+          "title": "Swarm Sync | AI Agent Orchestration Platform - Agent-to-Agent Marketplace",
+          "loaded": true
+        }
+      ],
+      "broken_links": []
+    },
+    "demo_a2a": {
+      "url": "https://swarmsync.ai/demo/a2a",
+      "agents_loaded": true,
+      "run_button_found": true,
+      "timeline_found": true,
+      "issues": []
+    },
+    "demo_workflows": {
+      "url": "https://swarmsync.ai/demo/workflows",
+      "templates_found": false,
+      "json_editor_found": true,
+      "run_button_found": false,
+      "issues": []
+    },
+    "responsive": {
+      "breakpoints_tested": [
+        {
+          "name": "Desktop Large",
+          "width": 1920,
+          "height": 1080,
+          "has_overflow": false
+        },
+        {
+          "name": "Desktop",
+          "width": 1366,
+          "height": 768,
+          "has_overflow": false
+        },
+        {
+          "name": "Tablet Landscape",
+          "width": 1024,
+          "height": 768,
+          "has_overflow": false
+        },
+        {
+          "name": "Tablet Portrait",
+          "width": 768,
+          "height": 1024,
+          "has_overflow": false
+        },
+        {
+          "name": "Mobile iPhone X",
+          "width": 375,
+          "height": 812,
+          "has_overflow": false
+        },
+        {
+          "name": "Mobile Android",
+          "width": 360,
+          "height": 640,
+          "has_overflow": false
+        }
+      ]
+    },
+    "console": {
+      "login_successful": false,
+      "console_pages": [],
+      "issues": []
+    }
+  }
+}

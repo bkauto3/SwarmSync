@@ -1,0 +1,2083 @@
+[
+  {
+    "sourceId": "se_darwin_agent_p0_100",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_101",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_102",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_103",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_104",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_105",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_106",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "compliance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical compliance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_107",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "scalability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical scalability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_108",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "reliability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical reliability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_109",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical data_quality test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_110",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_111",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_112",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_113",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_114",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p0_115",
+    "scenarioName": "Se Darwin Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "critical", "p0", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute critical security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Se Darwin Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_p1_001",
+    "scenarioName": "Se Darwin Agent - Multi-Trajectory Code Evolution",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "trajectory"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Evolve function through 3 trajectories: revision, recombination, refinement",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Multi-Trajectory Code Evolution. Evolve function through 3 trajectories: revision, recombination, refinement",
+    "category": "evolution"
+  },
+  {
+    "sourceId": "se_darwin_p1_002",
+    "scenarioName": "Se Darwin Agent - Benchmark-Driven Improvement",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "validation"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Evolve code to pass 270 benchmark scenarios across 15 agents",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Benchmark-Driven Improvement. Evolve code to pass 270 benchmark scenarios across 15 agents",
+    "category": "benchmarking"
+  },
+  {
+    "sourceId": "se_darwin_p1_003",
+    "scenarioName": "Se Darwin Agent - TUMIX Early Stopping",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "tumix"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Stop evolution when quality threshold met (save 40-60% iterations)",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - TUMIX Early Stopping. Stop evolution when quality threshold met (save 40-60% iterations)",
+    "category": "optimization"
+  },
+  {
+    "sourceId": "se_darwin_p1_004",
+    "scenarioName": "Se Darwin Agent - AST-Based Quality Scoring",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "scoring"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Score code quality: complexity, maintainability, test coverage (deterministic)",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - AST-Based Quality Scoring. Score code quality: complexity, maintainability, test coverage (deterministic)",
+    "category": "quality"
+  },
+  {
+    "sourceId": "se_darwin_p1_005",
+    "scenarioName": "Se Darwin Agent - Operator Pipeline Execution",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "pipeline"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Apply operators: Revision → Recombination → Refinement → Validation",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Operator Pipeline Execution. Apply operators: Revision → Recombination → Refinement → Validation",
+    "category": "operators"
+  },
+  {
+    "sourceId": "se_darwin_p1_006",
+    "scenarioName": "Se Darwin Agent - Convergence Detection",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "detection"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Detect convergence: all successful, plateau (3 iterations), excellent score",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Convergence Detection. Detect convergence: all successful, plateau (3 iterations), excellent score",
+    "category": "convergence"
+  },
+  {
+    "sourceId": "se_darwin_p1_007",
+    "scenarioName": "Se Darwin Agent - Parallel Trajectory Execution",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute 3 trajectories in parallel (3X speedup vs sequential)",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Parallel Trajectory Execution. Execute 3 trajectories in parallel (3X speedup vs sequential)",
+    "category": "parallel"
+  },
+  {
+    "sourceId": "se_darwin_p1_008",
+    "scenarioName": "Se Darwin Agent - Integration with CaseBank",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "memory"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Retrieve similar evolution cases from CaseBank (15-25% accuracy boost)",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Integration with CaseBank. Retrieve similar evolution cases from CaseBank (15-25% accuracy boost)",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_p1_009",
+    "scenarioName": "Se Darwin Agent - Cross-Agent Code Transfer",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "learning"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Transfer learned patterns from QA agent evolution to Support agent",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Cross-Agent Code Transfer. Transfer learned patterns from QA agent evolution to Support agent",
+    "category": "transfer"
+  },
+  {
+    "sourceId": "se_darwin_p1_010",
+    "scenarioName": "Se Darwin Agent - Security-Safe Evolution",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "safety"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Evolve code while maintaining security: no eval(), no exec(), AST validation",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Security-Safe Evolution. Evolve code while maintaining security: no eval(), no exec(), AST validation",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_p1_011",
+    "scenarioName": "Se Darwin Agent - Evolution for Complex Tasks",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "sica"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Use SICA reasoning loop for complex optimization problems",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Evolution for Complex Tasks. Use SICA reasoning loop for complex optimization problems",
+    "category": "complexity"
+  },
+  {
+    "sourceId": "se_darwin_p1_012",
+    "scenarioName": "Se Darwin Agent - Production Deployment Evolution",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "production"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Evolve production code: A/B test variants, monitor metrics, auto-deploy winner",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Production Deployment Evolution. Evolve production code: A/B test variants, monitor metrics, auto-deploy winner",
+    "category": "deployment"
+  },
+  {
+    "sourceId": "se_darwin_p1_013",
+    "scenarioName": "Se Darwin Agent - Evolution Performance Metrics",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["darwin", "analytics"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Track evolution metrics: iterations, quality gain, cost savings, time saved",
+      "agent": "se_darwin"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Se Darwin Agent - Evolution Performance Metrics. Track evolution metrics: iterations, quality gain, cost savings, time saved",
+    "category": "metrics"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_100",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_101",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_102",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_103",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_104",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_105",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_106",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "compliance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority compliance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_107",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "scalability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority scalability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_108",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "reliability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority reliability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_109",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "data_quality"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_110",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_111",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_112",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_113",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_114",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_115",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_116",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "compliance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority compliance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_117",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "scalability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority scalability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_118",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "reliability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority reliability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_119",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "data_quality"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_120",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_121",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_122",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_123",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_124",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_125",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_126",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "compliance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority compliance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_127",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "scalability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority scalability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_128",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "reliability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority reliability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p1_129",
+    "scenarioName": "Se Darwin Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "high", "p1", "data_quality"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_001",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_002",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_003",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_004",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_005",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_006",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_007",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "compliance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_008",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "scalability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_009",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "reliability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_010",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_011",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "success"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority success test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_012",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_013",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_014",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "performance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority performance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_015",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "integration"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority integration test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_016",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "security"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority security test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_017",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "compliance"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_018",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "scalability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_019",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "reliability"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "se_darwin_agent_p2_020",
+    "scenarioName": "Se Darwin Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "se_darwin",
+    "agentTags": ["se_darwin", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "darwin",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for se_darwin_agent",
+      "agent": "se_darwin",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Se Darwin Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

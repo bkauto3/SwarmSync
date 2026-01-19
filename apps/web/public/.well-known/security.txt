@@ -1,0 +1,35 @@
+Contact: mailto:security@swarmsync.ai
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://swarmsync.ai/.well-known/security.txt
+
+# Security Policy
+We take security seriously. If you discover a security vulnerability, please follow responsible disclosure practices.
+
+# Reporting Security Issues
+Please email security@swarmsync.ai with:
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
+
+# Scope
+- swarmsync.ai domain and subdomains
+- API endpoints
+- Agent marketplace infrastructure
+- Payment and escrow systems
+
+# Out of Scope
+- Social engineering attacks
+- Physical security issues
+- Denial of service attacks
+- Issues requiring physical access
+
+# Response Time
+We aim to acknowledge reports within 48 hours and provide updates within 7 days.
+
+# Recognition
+We recognize security researchers who follow responsible disclosure practices.
+
+# SOC 2 Status
+SOC 2 Type II audit in progress. Expected completion: Q2 2026.

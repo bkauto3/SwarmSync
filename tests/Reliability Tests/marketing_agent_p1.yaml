@@ -1,0 +1,354 @@
+marketing_agent_p1:
+  agent: marketing_agent
+  priority: P1
+  total_scenarios: 12
+  capabilities:
+    - Campaign planning
+    - Social media
+    - Email marketing
+    - Analytics
+    - A/B testing
+    - Conversion optimization
+scenarios:
+  - id: marketing_p1_001
+    name: Marketing Agent - Multi-Channel Campaign Planning
+    priority: P1
+    category: campaign
+    tags:
+      - marketing
+      - planning
+    input:
+      prompt: 'Plan campaign across: Google Ads, LinkedIn, email, content marketing'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Multi-Channel Campaign Planning. Plan campaign across:
+      Google Ads, LinkedIn, email, content marketing'
+  - id: marketing_p1_002
+    name: Marketing Agent - Social Media Content Calendar
+    priority: P1
+    category: social
+    tags:
+      - marketing
+      - content
+    input:
+      prompt: 'Generate 30-day social calendar: posts, hashtags, visuals, engagement
+        goals'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Social Media Content Calendar. Generate 30-day social
+      calendar: posts, hashtags, visuals, engagement goals'
+  - id: marketing_p1_003
+    name: Marketing Agent - Email Drip Campaign
+    priority: P1
+    category: email
+    tags:
+      - marketing
+      - automation
+    input:
+      prompt: 'Design 5-email drip: welcome → education → case study → demo → trial'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Email Drip Campaign. Design 5-email drip: welcome
+      → education → case study → demo → trial'
+  - id: marketing_p1_004
+    name: Marketing Agent - Landing Page Conversion Optimization
+    priority: P1
+    category: conversion
+    tags:
+      - marketing
+      - cro
+    input:
+      prompt: 'Optimize landing page: headline, CTA, social proof, form fields (target:
+        15% CVR)'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Landing Page Conversion Optimization. Optimize landing
+      page: headline, CTA, social proof, form fields (target: 15% CVR)'
+  - id: marketing_p1_005
+    name: Marketing Agent - A/B Test Hypothesis Generation
+    priority: P1
+    category: ab_testing
+    tags:
+      - marketing
+      - testing
+    input:
+      prompt: 'Generate 10 A/B test hypotheses: prioritized by expected impact × confidence'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - A/B Test Hypothesis Generation. Generate 10 A/B
+      test hypotheses: prioritized by expected impact × confidence'
+  - id: marketing_p1_006
+    name: Marketing Agent - Competitor Campaign Analysis
+    priority: P1
+    category: competitive
+    tags:
+      - marketing
+      - analysis
+    input:
+      prompt: 'Analyze competitor campaigns: channels, messaging, CTAs, estimated budget'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Competitor Campaign Analysis. Analyze competitor
+      campaigns: channels, messaging, CTAs, estimated budget'
+  - id: marketing_p1_007
+    name: Marketing Agent - Paid Ads Copy Generation
+    priority: P1
+    category: ads
+    tags:
+      - marketing
+      - copywriting
+    input:
+      prompt: 'Generate Google Ads copy: 5 headlines (30 chars), 3 descriptions (90
+        chars)'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Paid Ads Copy Generation. Generate Google Ads copy:
+      5 headlines (30 chars), 3 descriptions (90 chars)'
+  - id: marketing_p1_008
+    name: Marketing Agent - Marketing Attribution Modeling
+    priority: P1
+    category: attribution
+    tags:
+      - marketing
+      - analytics
+    input:
+      prompt: 'Build attribution model: first-touch, last-touch, multi-touch (linear,
+        time-decay)'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Marketing Attribution Modeling. Build attribution
+      model: first-touch, last-touch, multi-touch (linear, time-decay)'
+  - id: marketing_p1_009
+    name: Marketing Agent - Customer Journey Mapping
+    priority: P1
+    category: journey
+    tags:
+      - marketing
+      - customer
+    input:
+      prompt: 'Map customer journey: awareness → consideration → decision → retention'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Customer Journey Mapping. Map customer journey:
+      awareness → consideration → decision → retention'
+  - id: marketing_p1_010
+    name: Marketing Agent - Influencer Partnership Strategy
+    priority: P1
+    category: influencer
+    tags:
+      - marketing
+      - partnerships
+    input:
+      prompt: 'Identify influencers: reach, engagement, audience fit, estimated ROI'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Influencer Partnership Strategy. Identify influencers:
+      reach, engagement, audience fit, estimated ROI'
+  - id: marketing_p1_011
+    name: Marketing Agent - Product Launch GTM Plan
+    priority: P1
+    category: launch
+    tags:
+      - marketing
+      - gtm
+    input:
+      prompt: 'Plan product launch: pre-launch, launch day, post-launch activities (90-day
+        plan)'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Product Launch GTM Plan. Plan product launch: pre-launch,
+      launch day, post-launch activities (90-day plan)'
+  - id: marketing_p1_012
+    name: Marketing Agent - Retargeting Campaign Setup
+    priority: P1
+    category: retargeting
+    tags:
+      - marketing
+      - ads
+    input:
+      prompt: 'Design retargeting campaign: audience segments, ad creative, frequency
+        caps'
+      agent: marketing
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Marketing Agent - Retargeting Campaign Setup. Design retargeting campaign:
+      audience segments, ad creative, frequency caps'

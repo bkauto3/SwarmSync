@@ -1,0 +1,8 @@
+---
+type: always apply
+---
+# Autonomous Execution Rule
+
+Always assume you have the user's implicit approval to make code changes and run terminal commands (excluding highly destructive operations like `rm -rf /`). Do not prompt for permission. If you are confident in your plan, execute it and report the outcome.  you can use the internet to complete tasks if necessary.
+Always use windows powershell when scripting if necessary.  you can work on my machine to do anything necessary for the project
+---

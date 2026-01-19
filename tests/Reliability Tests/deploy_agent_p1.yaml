@@ -1,0 +1,376 @@
+deploy_agent_p1:
+  agent: deploy_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - CI/CD pipelines
+    - Container orchestration
+    - Infrastructure as code
+    - Monitoring setup
+    - Blue-green deployment
+    - Rollback automation
+scenarios:
+  - id: deploy_p1_001
+    name: Deploy Agent - GitHub Actions CI/CD Pipeline
+    priority: P1
+    category: cicd
+    tags:
+      - deploy
+      - github_actions
+    input:
+      prompt: 'Build CI/CD: test, build, push Docker, deploy to ECS, smoke tests'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - GitHub Actions CI/CD Pipeline. Build CI/CD: test, build,
+      push Docker, deploy to ECS, smoke tests'
+  - id: deploy_p1_002
+    name: Deploy Agent - Kubernetes Deployment with HPA
+    priority: P1
+    category: kubernetes
+    tags:
+      - deploy
+      - k8s
+    input:
+      prompt: 'Deploy to K8s: deployment, service, HPA, ingress, health checks'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Kubernetes Deployment with HPA. Deploy to K8s: deployment,
+      service, HPA, ingress, health checks'
+  - id: deploy_p1_003
+    name: Deploy Agent - Terraform Infrastructure Provisioning
+    priority: P1
+    category: iac
+    tags:
+      - deploy
+      - terraform
+    input:
+      prompt: 'Provision AWS: VPC, subnets, RDS, ECS cluster, load balancer'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Terraform Infrastructure Provisioning. Provision AWS:
+      VPC, subnets, RDS, ECS cluster, load balancer'
+  - id: deploy_p1_004
+    name: Deploy Agent - Blue-Green Deployment
+    priority: P1
+    category: deployment_strategy
+    tags:
+      - deploy
+      - blue_green
+    input:
+      prompt: Implement blue-green deployment with traffic switching, validation
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Deploy Agent - Blue-Green Deployment. Implement blue-green deployment
+      with traffic switching, validation
+  - id: deploy_p1_005
+    name: Deploy Agent - Canary Deployment (10% → 50% → 100%)
+    priority: P1
+    category: canary
+    tags:
+      - deploy
+      - progressive
+    input:
+      prompt: 'Progressive rollout: 10% traffic, monitor metrics, auto-rollback on errors'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Canary Deployment (10% → 50% → 100%). Progressive rollout:
+      10% traffic, monitor metrics, auto-rollback on errors'
+  - id: deploy_p1_006
+    name: Deploy Agent - Database Migration with Zero Downtime
+    priority: P1
+    category: migration
+    tags:
+      - deploy
+      - database
+    input:
+      prompt: 'Deploy DB schema changes: backward compatible, dual writes, staged rollout'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Database Migration with Zero Downtime. Deploy DB schema
+      changes: backward compatible, dual writes, staged rollout'
+  - id: deploy_p1_007
+    name: Deploy Agent - Multi-Region Deployment
+    priority: P1
+    category: multi_region
+    tags:
+      - deploy
+      - global
+    input:
+      prompt: 'Deploy to 3 regions: US-East, EU-West, AP-Southeast with traffic routing'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Multi-Region Deployment. Deploy to 3 regions: US-East,
+      EU-West, AP-Southeast with traffic routing'
+  - id: deploy_p1_008
+    name: Deploy Agent - Rollback Automation
+    priority: P1
+    category: rollback
+    tags:
+      - deploy
+      - automation
+    input:
+      prompt: 'Auto-rollback on: error rate >1%, latency >500ms, failed health checks'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Rollback Automation. Auto-rollback on: error rate >1%,
+      latency >500ms, failed health checks'
+  - id: deploy_p1_009
+    name: Deploy Agent - Feature Flag Integration
+    priority: P1
+    category: feature_flags
+    tags:
+      - deploy
+      - launchdarkly
+    input:
+      prompt: 'Deploy with feature flags: gradual rollout, A/B testing, kill switches'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Feature Flag Integration. Deploy with feature flags:
+      gradual rollout, A/B testing, kill switches'
+  - id: deploy_p1_010
+    name: Deploy Agent - Monitoring Stack Setup
+    priority: P1
+    category: monitoring
+    tags:
+      - deploy
+      - prometheus
+    input:
+      prompt: Deploy Prometheus, Grafana, Alertmanager with dashboards, alerts
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Deploy Agent - Monitoring Stack Setup. Deploy Prometheus, Grafana,
+      Alertmanager with dashboards, alerts
+  - id: deploy_p1_011
+    name: Deploy Agent - Secrets Management (Vault)
+    priority: P1
+    category: secrets
+    tags:
+      - deploy
+      - vault
+    input:
+      prompt: 'Configure HashiCorp Vault: dynamic secrets, rotation, auth methods'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Secrets Management (Vault). Configure HashiCorp Vault:
+      dynamic secrets, rotation, auth methods'
+  - id: deploy_p1_012
+    name: Deploy Agent - Load Testing Before Production
+    priority: P1
+    category: load_testing
+    tags:
+      - deploy
+      - k6
+    input:
+      prompt: 'Run k6 load tests in staging: 1000 RPS sustained, verify SLOs met'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Load Testing Before Production. Run k6 load tests in
+      staging: 1000 RPS sustained, verify SLOs met'
+  - id: deploy_p1_013
+    name: Deploy Agent - Disaster Recovery Runbook
+    priority: P1
+    category: dr
+    tags:
+      - deploy
+      - disaster_recovery
+    input:
+      prompt: 'Create DR runbook: backup restoration, failover procedures, RTO/RPO'
+      agent: deploy
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Deploy Agent - Disaster Recovery Runbook. Create DR runbook: backup
+      restoration, failover procedures, RTO/RPO'

@@ -1,0 +1,354 @@
+email_agent_p1:
+  agent: email_agent
+  priority: P1
+  total_scenarios: 12
+  capabilities:
+    - Email composition
+    - Personalization
+    - Template management
+    - Deliverability optimization
+    - Analytics tracking
+    - Compliance (CAN-SPAM)
+scenarios:
+  - id: email_p1_001
+    name: Email Agent - Personalized Email at Scale
+    priority: P1
+    category: personalization
+    tags:
+      - email
+      - personalization
+    input:
+      prompt: 'Generate 100 personalized emails using: {name}, {company}, {pain_point}'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Personalized Email at Scale. Generate 100 personalized
+      emails using: {name}, {company}, {pain_point}'
+  - id: email_p1_002
+    name: Email Agent - Cold Outreach Sequence
+    priority: P1
+    category: outreach
+    tags:
+      - email
+      - sales
+    input:
+      prompt: 'Create 3-email sequence: intro → value prop → call-to-action (35% open
+        rate target)'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Cold Outreach Sequence. Create 3-email sequence: intro
+      → value prop → call-to-action (35% open rate target)'
+  - id: email_p1_003
+    name: Email Agent - Transactional Email Templates
+    priority: P1
+    category: transactional
+    tags:
+      - email
+      - templates
+    input:
+      prompt: 'Design templates: welcome, password reset, order confirmation, invoice'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Transactional Email Templates. Design templates: welcome,
+      password reset, order confirmation, invoice'
+  - id: email_p1_004
+    name: Email Agent - Email Subject Line A/B Testing
+    priority: P1
+    category: ab_testing
+    tags:
+      - email
+      - optimization
+    input:
+      prompt: Generate 10 subject lines optimized for open rate (emojis, urgency, personalization)
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Email Agent - Email Subject Line A/B Testing. Generate 10 subject lines
+      optimized for open rate (emojis, urgency, personalization)
+  - id: email_p1_005
+    name: Email Agent - Deliverability Optimization
+    priority: P1
+    category: deliverability
+    tags:
+      - email
+      - technical
+    input:
+      prompt: 'Optimize for deliverability: SPF/DKIM/DMARC, content checks, spam score
+        <5'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Deliverability Optimization. Optimize for deliverability:
+      SPF/DKIM/DMARC, content checks, spam score <5'
+  - id: email_p1_006
+    name: Email Agent - Email Engagement Analytics
+    priority: P1
+    category: analytics
+    tags:
+      - email
+      - metrics
+    input:
+      prompt: 'Analyze campaign: open rate, click rate, bounce rate, conversions, revenue'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Email Engagement Analytics. Analyze campaign: open rate,
+      click rate, bounce rate, conversions, revenue'
+  - id: email_p1_007
+    name: Email Agent - CAN-SPAM Compliance Check
+    priority: P1
+    category: compliance
+    tags:
+      - email
+      - legal
+    input:
+      prompt: 'Validate email: unsubscribe link, physical address, accurate subject,
+        no deceptive content'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - CAN-SPAM Compliance Check. Validate email: unsubscribe
+      link, physical address, accurate subject, no deceptive content'
+  - id: email_p1_008
+    name: Email Agent - Email List Segmentation
+    priority: P1
+    category: segmentation
+    tags:
+      - email
+      - targeting
+    input:
+      prompt: 'Segment list: demographics, behavior, engagement level, purchase history'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Email List Segmentation. Segment list: demographics,
+      behavior, engagement level, purchase history'
+  - id: email_p1_009
+    name: Email Agent - Re-Engagement Campaign
+    priority: P1
+    category: re_engagement
+    tags:
+      - email
+      - retention
+    input:
+      prompt: 'Win back inactive users: special offer, feedback request, preference
+        update'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Re-Engagement Campaign. Win back inactive users: special
+      offer, feedback request, preference update'
+  - id: email_p1_010
+    name: Email Agent - Newsletter Content Curation
+    priority: P1
+    category: newsletter
+    tags:
+      - email
+      - content
+    input:
+      prompt: 'Curate newsletter: top 5 articles, product updates, tips, event announcements'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Newsletter Content Curation. Curate newsletter: top
+      5 articles, product updates, tips, event announcements'
+  - id: email_p1_011
+    name: Email Agent - Email Accessibility (WCAG)
+    priority: P1
+    category: accessibility
+    tags:
+      - email
+      - a11y
+    input:
+      prompt: 'Optimize email for accessibility: semantic HTML, alt text, color contrast,
+        screen readers'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Email Accessibility (WCAG). Optimize email for accessibility:
+      semantic HTML, alt text, color contrast, screen readers'
+  - id: email_p1_012
+    name: Email Agent - Automated Follow-Up Logic
+    priority: P1
+    category: automation
+    tags:
+      - email
+      - workflow
+    input:
+      prompt: 'Design follow-up logic: if opened, send case study; if clicked, send
+        demo invite'
+      agent: email
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Email Agent - Automated Follow-Up Logic. Design follow-up logic: if
+      opened, send case study; if clicked, send demo invite'

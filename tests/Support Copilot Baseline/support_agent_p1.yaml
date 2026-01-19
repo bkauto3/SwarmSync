@@ -1,0 +1,478 @@
+support_agent_p1:
+  agent: support_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Advanced ticket triage
+    - OCR image processing
+    - Multi-language support
+    - Escalation workflows
+    - Sentiment analysis
+    - Knowledge base integration
+scenarios:
+  - id: support_p1_001
+    name: Support Agent - Multi-Language Ticket Processing
+    priority: P1
+    category: advanced
+    tags:
+      - support
+      - multi_language
+      - translation
+    input:
+      prompt: Handle support ticket in Spanish, respond in user's language
+      ticket: Mi aplicación se bloquea cuando intento iniciar sesión. Error 500.
+      preferred_language: es
+    expected_output:
+      contains:
+        - Spanish
+        - respuesta
+        - solución
+      language_detected: es
+      response_language: es
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - language_correct
+        - solution_provided
+        - professional_tone
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: Support Agent - Multi-Language Ticket Processing. Handle support ticket
+      in Spanish, respond in user's language
+  - id: support_p1_002
+    name: Support Agent - OCR Screenshot Analysis
+    priority: P1
+    category: ocr
+    tags:
+      - support
+      - ocr
+      - screenshot
+      - error_detection
+    input:
+      prompt: Analyze error screenshot and provide troubleshooting steps
+      screenshot_path: /tests/screenshots/error_500.png
+      user_description: App crashes on login
+    expected_output:
+      contains:
+        - error_identified
+        - troubleshooting
+        - steps
+      error_extracted: true
+      confidence_score: '>0.85'
+      steps_count: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - ocr_successful
+        - error_diagnosed
+        - steps_actionable
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Support Agent - OCR Screenshot Analysis. Analyze error screenshot and
+      provide troubleshooting steps
+  - id: support_p1_003
+    name: Support Agent - Sentiment-Based Escalation
+    priority: P1
+    category: escalation
+    tags:
+      - support
+      - sentiment
+      - escalation
+      - priority
+    input:
+      prompt: Detect angry customer sentiment and escalate ticket
+      ticket: This is the THIRD time reporting this bug! Completely unacceptable! Cancelling
+        subscription!
+      sentiment_threshold: -0.7
+    expected_output:
+      contains:
+        - escalation_triggered
+        - negative_sentiment
+        - priority_raised
+      sentiment_score: <-0.6
+      escalation_level: high
+      priority: P0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - sentiment_detected
+        - escalation_correct
+        - priority_appropriate
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: Support Agent - Sentiment-Based Escalation. Detect angry customer sentiment
+      and escalate ticket
+  - id: support_p1_004
+    name: Support Agent - Knowledge Base Auto-Linking
+    priority: P1
+    category: knowledge_base
+    tags:
+      - support
+      - kb
+      - auto_link
+      - rag
+    input:
+      prompt: Find relevant KB articles for password reset issue
+      ticket: Can't reset my password, email not arriving
+      kb_available: true
+    expected_output:
+      contains:
+        - kb_articles
+        - password_reset
+        - email_verification
+      articles_linked: '>=2'
+      relevance_score: '>0.80'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - articles_relevant
+        - links_provided
+        - context_appropriate
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: Support Agent - Knowledge Base Auto-Linking. Find relevant KB articles
+      for password reset issue
+  - id: support_p1_005
+    name: Support Agent - Multi-Ticket Pattern Detection
+    priority: P1
+    category: pattern_detection
+    tags:
+      - support
+      - pattern
+      - incident
+      - proactive
+    input:
+      prompt: 'Detect pattern: 10 users report same login error in last hour'
+      tickets:
+        - user: user1
+          issue: login_error_500
+          timestamp: '2025-10-30T10:00:00Z'
+        - user: user2
+          issue: login_error_500
+          timestamp: '2025-10-30T10:15:00Z'
+        - user: user3
+          issue: login_error_500
+          timestamp: '2025-10-30T10:30:00Z'
+      pattern_threshold: 5
+    expected_output:
+      contains:
+        - pattern_detected
+        - incident_created
+        - proactive_alert
+      pattern_type: login_failure_spike
+      incident_severity: high
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - pattern_identified
+        - incident_created
+        - alert_sent
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: 'Support Agent - Multi-Ticket Pattern Detection. Detect pattern: 10
+      users report same login error in last hour'
+  - id: support_p1_006
+    name: Support Agent - SLA Breach Prevention
+    priority: P1
+    category: sla
+    tags:
+      - support
+      - sla
+      - breach
+      - proactive
+    input:
+      prompt: Predict SLA breach and auto-escalate ticket
+      ticket_age_hours: 22
+      sla_target_hours: 24
+      resolution_estimated_hours: 4
+    expected_output:
+      contains:
+        - sla_breach_predicted
+        - auto_escalation
+        - assignment_changed
+      breach_predicted: true
+      escalation_triggered: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - breach_prediction_correct
+        - escalation_timely
+        - reassignment_appropriate
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: Support Agent - SLA Breach Prevention. Predict SLA breach and auto-escalate
+      ticket
+  - id: support_p1_007
+    name: Support Agent - Automated Refund Workflow
+    priority: P1
+    category: automation
+    tags:
+      - support
+      - refund
+      - workflow
+      - automation
+    input:
+      prompt: Process refund request meeting auto-approval criteria
+      ticket: Request refund for failed transaction
+      transaction_amount: 25.0
+      transaction_date: '2025-10-29'
+      auto_approval_limit: 50.0
+    expected_output:
+      contains:
+        - refund_approved
+        - automated
+        - confirmation
+      refund_amount: 25.0
+      approval_method: automatic
+      confirmation_sent: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - criteria_met
+        - refund_processed
+        - confirmation_appropriate
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: Support Agent - Automated Refund Workflow. Process refund request meeting
+      auto-approval criteria
+  - id: support_p1_008
+    name: Support Agent - Complex Multi-Step Troubleshooting
+    priority: P1
+    category: troubleshooting
+    tags:
+      - support
+      - troubleshooting
+      - multi_step
+      - diagnostic
+    input:
+      prompt: Guide user through multi-step API connection troubleshooting
+      issue: API returns 401 Unauthorized
+      context:
+        framework: Python requests
+        auth_type: Bearer token
+    expected_output:
+      contains:
+        - diagnostic_steps
+        - token_validation
+        - network_check
+        - endpoint_verification
+      steps_count: '>=5'
+      diagnostic_tree: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - steps_logical
+        - comprehensive
+        - user_friendly
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: Support Agent - Complex Multi-Step Troubleshooting. Guide user through
+      multi-step API connection troubleshooting
+  - id: support_p1_009
+    name: Support Agent - Ticket Classification with Confidence Scores
+    priority: P1
+    category: classification
+    tags:
+      - support
+      - classification
+      - confidence
+      - ml
+    input:
+      prompt: Classify ticket and provide confidence scores for top 3 categories
+      ticket: Website is slow when uploading images. Takes 30 seconds per image.
+      categories:
+        - performance
+        - bug
+        - feature_request
+        - configuration
+        - user_error
+    expected_output:
+      contains:
+        - classification
+        - confidence
+        - performance
+      top_category: performance
+      confidence_score: '>0.75'
+      top_n_categories: 3
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - classification_correct
+        - confidence_reasonable
+        - top_n_provided
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: Support Agent - Ticket Classification with Confidence Scores. Classify
+      ticket and provide confidence scores for top 3 categories
+  - id: support_p1_010
+    name: Support Agent - Proactive User Education
+    priority: P1
+    category: education
+    tags:
+      - support
+      - education
+      - proactive
+      - documentation
+    input:
+      prompt: Identify knowledge gap and suggest relevant tutorials
+      ticket_history:
+        - How do I reset password?
+        - Can't find password reset link
+        - Password reset email not working
+      knowledge_gap: password_management
+    expected_output:
+      contains:
+        - knowledge_gap_identified
+        - tutorial_suggested
+        - documentation_linked
+      gap_category: password_management
+      resources_provided: '>=2'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - gap_identified
+        - resources_relevant
+        - proactive_approach
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: Support Agent - Proactive User Education. Identify knowledge gap and
+      suggest relevant tutorials
+  - id: support_p1_011
+    name: Support Agent - Integration with External Systems (Jira)
+    priority: P1
+    category: integration
+    tags:
+      - support
+      - jira
+      - integration
+      - bug_tracking
+    input:
+      prompt: Create Jira ticket for confirmed bug report
+      ticket: Application crashes when uploading files larger than 10MB
+      bug_confirmed: true
+      severity: high
+    expected_output:
+      contains:
+        - jira_ticket_created
+        - bug
+        - severity_high
+      jira_id: provided
+      linked_to_support_ticket: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - jira_created
+        - fields_populated
+        - linking_correct
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: Support Agent - Integration with External Systems (Jira). Create Jira
+      ticket for confirmed bug report
+  - id: support_p1_012
+    name: Support Agent - Customer History Context Awareness
+    priority: P1
+    category: context
+    tags:
+      - support
+      - history
+      - context
+      - personalization
+    input:
+      prompt: Provide support with full customer interaction history
+      customer_id: cust_12345
+      history:
+        - date: '2025-10-15'
+          issue: billing_question
+          resolved: true
+        - date: '2025-10-20'
+          issue: feature_request
+          status: in_progress
+        - date: '2025-10-25'
+          issue: login_problem
+          resolved: true
+      current_issue: Another login problem
+    expected_output:
+      contains:
+        - history_considered
+        - recurring_issue_detected
+        - pattern_analysis
+      recurring_issue: login_problem
+      recommendation: escalate_to_engineering
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - history_used
+        - pattern_detected
+        - recommendation_appropriate
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Support Agent - Customer History Context Awareness. Provide support
+      with full customer interaction history
+  - id: support_p1_013
+    name: Support Agent - Feedback Loop Integration
+    priority: P1
+    category: feedback
+    tags:
+      - support
+      - feedback
+      - improvement
+      - csat
+    input:
+      prompt: Analyze CSAT feedback and suggest process improvements
+      feedback:
+        - ticket_id: T001
+          rating: 2
+          comment: Response too slow
+        - ticket_id: T002
+          rating: 5
+          comment: Very helpful!
+        - ticket_id: T003
+          rating: 1
+          comment: Problem not solved
+      avg_csat_target: 4.0
+    expected_output:
+      contains:
+        - csat_analyzed
+        - improvement_suggested
+        - pattern_identified
+      avg_csat: provided
+      improvement_areas:
+        - response_time
+        - resolution_quality
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - analysis_correct
+        - patterns_identified
+        - suggestions_actionable
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Support Agent - Feedback Loop Integration. Analyze CSAT feedback and
+      suggest process improvements

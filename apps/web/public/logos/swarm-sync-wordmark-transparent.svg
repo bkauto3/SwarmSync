@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <!-- S Symbol with geometric pattern -->
+  <g id="s-symbol" transform="translate(250, 150)">
+    <!-- Upper curve triangles -->
+    <polygon points="0,-80 30,-65 0,-50" fill="#D4A574"/>
+    <polygon points="0,-50 30,-65 30,-35" fill="#E8C4A0"/>
+    <polygon points="30,-35 30,-65 60,-50" fill="#C89968"/>
+
+    <!-- Middle section -->
+    <polygon points="0,-20 40,-20 20,0" fill="#5B4A7D"/>
+    <polygon points="20,0 40,-20 60,0" fill="#4A3A6B"/>
+    <polygon points="0,-20 20,0 -20,0" fill="#6B5A8D"/>
+
+    <!-- Lower curve triangles -->
+    <polygon points="0,20 30,35 30,65" fill="#D4A574"/>
+    <polygon points="30,35 60,50 30,65" fill="#C89968"/>
+    <polygon points="0,50 30,65 0,80" fill="#E8C4A0"/>
+
+    <!-- Connecting elements -->
+    <polygon points="-20,0 0,20 -20,40" fill="#8B7AA0"/>
+    <polygon points="60,0 80,20 60,40" fill="#7B6A90"/>
+  </g>
+
+  <!-- SWARM text -->
+  <text x="50" y="180" font-family="'Bodoni MT', 'Bodoni 72', Georgia, serif" font-size="72" font-weight="600" fill="#5B4A7D" letter-spacing="4">SWARM</text>
+
+  <!-- SYNC text -->
+  <text x="480" y="180" font-family="'Bodoni MT', 'Bodoni 72', Georgia, serif" font-size="72" font-weight="600" fill="#5B4A7D" letter-spacing="4">SYNC</text>
+</svg>

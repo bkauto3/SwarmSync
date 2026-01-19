@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-01-02T14:34:43.358986",
+  "agent_creation": {
+    "via_button_url": "https://swarmsync.ai/agents/new",
+    "status": "BLOCKED - requires provider role"
+  },
+  "workflow_creation": {
+    "form_found": false
+  },
+  "existing_workflows_count": 0,
+  "demo_workflow": {
+    "template_loaded": true
+  }
+}

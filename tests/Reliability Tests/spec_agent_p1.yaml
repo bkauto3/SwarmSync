@@ -1,0 +1,382 @@
+spec_agent_p1:
+  agent: spec_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Requirements gathering
+    - API specification
+    - Architecture design
+    - Documentation
+    - UML diagrams
+    - Technical writing
+scenarios:
+  - id: spec_p1_001
+    name: Spec Agent - OpenAPI 3.0 Specification
+    priority: P1
+    category: api_spec
+    tags:
+      - spec
+      - openapi
+    input:
+      prompt: Generate OpenAPI spec for user management API with schemas, examples
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Spec Agent - OpenAPI 3.0 Specification. Generate OpenAPI spec for user
+      management API with schemas, examples
+  - id: spec_p1_002
+    name: Spec Agent - System Architecture Diagram
+    priority: P1
+    category: architecture
+    tags:
+      - spec
+      - diagram
+    input:
+      prompt: 'Create system architecture diagram for microservices: C4 model, component
+        view'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - System Architecture Diagram. Create system architecture
+      diagram for microservices: C4 model, component view'
+  - id: spec_p1_003
+    name: Spec Agent - Database Schema ERD
+    priority: P1
+    category: database
+    tags:
+      - spec
+      - erd
+    input:
+      prompt: 'Generate ER diagram for e-commerce DB: entities, relationships, cardinality'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Database Schema ERD. Generate ER diagram for e-commerce
+      DB: entities, relationships, cardinality'
+  - id: spec_p1_004
+    name: Spec Agent - User Stories from Requirements
+    priority: P1
+    category: requirements
+    tags:
+      - spec
+      - user_stories
+    input:
+      prompt: Convert requirements into user stories with acceptance criteria, estimates
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Spec Agent - User Stories from Requirements. Convert requirements into
+      user stories with acceptance criteria, estimates
+  - id: spec_p1_005
+    name: Spec Agent - Technical RFC Document
+    priority: P1
+    category: rfc
+    tags:
+      - spec
+      - documentation
+    input:
+      prompt: 'Write RFC for new feature: problem, proposal, alternatives, migration
+        path'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Technical RFC Document. Write RFC for new feature: problem,
+      proposal, alternatives, migration path'
+  - id: spec_p1_006
+    name: Spec Agent - API Integration Guide
+    priority: P1
+    category: integration
+    tags:
+      - spec
+      - guide
+    input:
+      prompt: 'Create integration guide: authentication, rate limits, code examples
+        (Python, JS)'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - API Integration Guide. Create integration guide: authentication,
+      rate limits, code examples (Python, JS)'
+  - id: spec_p1_007
+    name: Spec Agent - Sequence Diagram for Auth Flow
+    priority: P1
+    category: sequence
+    tags:
+      - spec
+      - uml
+    input:
+      prompt: Generate sequence diagram for OAuth2 authorization code flow
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Spec Agent - Sequence Diagram for Auth Flow. Generate sequence diagram
+      for OAuth2 authorization code flow
+  - id: spec_p1_008
+    name: Spec Agent - Non-Functional Requirements
+    priority: P1
+    category: nfr
+    tags:
+      - spec
+      - requirements
+    input:
+      prompt: 'Define NFRs: performance (P95 <200ms), availability (99.9%), scalability'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Non-Functional Requirements. Define NFRs: performance
+      (P95 <200ms), availability (99'
+  - id: spec_p1_009
+    name: Spec Agent - Migration Plan Document
+    priority: P1
+    category: migration
+    tags:
+      - spec
+      - planning
+    input:
+      prompt: 'Create migration plan: monolith to microservices, timeline, risks, rollback'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Migration Plan Document. Create migration plan: monolith
+      to microservices, timeline, risks, rollback'
+  - id: spec_p1_010
+    name: Spec Agent - Security Requirements Specification
+    priority: P1
+    category: security
+    tags:
+      - spec
+      - security
+    input:
+      prompt: 'Define security requirements: authentication, authorization, encryption,
+        auditing'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Security Requirements Specification. Define security
+      requirements: authentication, authorization, encryption, auditing'
+  - id: spec_p1_011
+    name: Spec Agent - API Versioning Strategy
+    priority: P1
+    category: versioning
+    tags:
+      - spec
+      - api
+    input:
+      prompt: 'Design API versioning strategy: URI versioning, deprecation policy, changelog'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - API Versioning Strategy. Design API versioning strategy:
+      URI versioning, deprecation policy, changelog'
+  - id: spec_p1_012
+    name: Spec Agent - Technical Onboarding Guide
+    priority: P1
+    category: onboarding
+    tags:
+      - spec
+      - documentation
+    input:
+      prompt: 'Create onboarding guide: setup, architecture overview, dev workflow,
+        FAQs'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Technical Onboarding Guide. Create onboarding guide:
+      setup, architecture overview, dev workflow, FAQs'
+  - id: spec_p1_013
+    name: Spec Agent - Capacity Planning Specification
+    priority: P1
+    category: capacity
+    tags:
+      - spec
+      - planning
+    input:
+      prompt: 'Spec capacity needs: traffic projections, infrastructure sizing, cost
+        estimates'
+      agent: spec
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Spec Agent - Capacity Planning Specification. Spec capacity needs:
+      traffic projections, infrastructure sizing, cost estimates'

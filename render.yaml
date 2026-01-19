@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: swarmsync-web
+    runtime: docker
+    region: oregon
+    plan: free
+    dockerfilePath: ./apps/web/Dockerfile
+    dockerContext: .
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.1
+      - key: NEXT_PUBLIC_API_URL
+        value: https://api.swarmsync.ai
+      - key: NEXT_PUBLIC_APP_URL
+        value: https://www.swarmsync.ai
+
+  - type: web
+    name: swarmsync-api
+    runtime: docker
+    region: oregon
+    plan: free
+    dockerfilePath: ./apps/api/Dockerfile
+    dockerContext: .
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_v0RtJymP2rcw@ep-cold-butterfly-aenonb7s.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require
+      - key: JWT_SECRET
+        value: NYs0Ts_M8XDa0hBgjELcA4i_FfqLlP_eapMQUbKeaoA
+      - key: STRIPE_SECRET_KEY
+        value: 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
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://www.swarmsync.ai,https://swarmsync.ai

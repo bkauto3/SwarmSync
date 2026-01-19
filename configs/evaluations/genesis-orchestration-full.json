@@ -1,0 +1,5732 @@
+[
+  {
+    "sourceId": "htdag_p0_001",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "decomposition", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Create a landing page for Genesis platform",
+      "constraints": []
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Simple task decomposition into 5-10 subtasks",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_002",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "complex", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build a complete e-commerce website with payment processing",
+      "constraints": ["requires builder, deploy, security agents"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.05",
+    "notes": "Complex multi-agent workflow decomposition",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_003",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "parallel", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Deploy 3 microservices simultaneously",
+      "constraints": ["services are independent"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Parallel task generation for independent work",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_004",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "sequential", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Set up complete CI/CD pipeline",
+      "constraints": ["must follow build -> test -> deploy order"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Sequential dependency chain validation",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_005",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "nested", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Implement complete authentication system",
+      "constraints": ["include OAuth, JWT, session management"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Nested subtask decomposition (3 levels deep)",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_006",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "empty_task", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "",
+      "constraints": []
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Reject empty task description",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "htdag_p0_007",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "ambiguous", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Fix it",
+      "constraints": []
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Request clarification for ambiguous task",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "htdag_p0_008",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "circular_dependency", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Create circular workflow",
+      "forced_dependencies": {
+        "task_a": "task_b",
+        "task_b": "task_c",
+        "task_c": "task_a"
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect and reject circular dependencies",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "htdag_p0_009",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "max_depth", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Extremely nested task with 15 levels",
+      "force_depth": 15
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Enforce maximum decomposition depth",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "htdag_p0_010",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "llm_timeout", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build complex system",
+      "simulate_timeout": true
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Fallback to heuristic when LLM times out",
+    "category": "failure"
+  },
+  {
+    "sourceId": "htdag_p0_011",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "resource_constraints", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Deploy with limited agent availability",
+      "constraints": ["max_agents: 3", "parallel_tasks: 2"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Handle resource-constrained task planning",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_012",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "time_bound", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Deploy new feature to production",
+      "constraints": ["deadline: 1 hour"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Create time-bound execution plan",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_013",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "multi_language", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build full-stack app with Python backend and React frontend",
+      "constraints": []
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Multi-language code generation workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_014",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "database", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Upgrade PostgreSQL schema with zero downtime",
+      "constraints": ["production environment", "rollback plan required"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Safe database migration plan",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_015",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "api_integration", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Integrate 5 external APIs (Stripe, SendGrid, Twilio, AWS S3, Auth0)",
+      "constraints": []
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "External API integration workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_016",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "testing", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Create testing plan for microservices architecture",
+      "constraints": ["unit, integration, e2e tests required"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Comprehensive testing strategy generation",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_017",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "documentation", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate comprehensive API documentation for REST API",
+      "constraints": ["OpenAPI spec", "code examples", "auth guide"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "API documentation generation workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_018",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "security", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Perform comprehensive security review of web application",
+      "constraints": ["OWASP Top 10", "penetration testing", "compliance check"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Security audit workflow generation",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_019",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "performance", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Optimize slow database queries and API response times",
+      "constraints": ["measure before and after", "no breaking changes"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Performance optimization workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_020",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "refactoring", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Refactor legacy monolith into microservices",
+      "constraints": ["incremental migration", "no downtime"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Safe refactoring plan generation",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_021",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "feature_flag", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Deploy new checkout flow with feature flag",
+      "constraints": ["staged rollout: 1% -> 10% -> 50% -> 100%"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Feature flag rollout strategy",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_022",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "data_pipeline", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build ETL pipeline for analytics data",
+      "constraints": ["extract from 3 sources", "validate data quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "ETL data pipeline design",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_023",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "ml_workflow", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Train and deploy ML model for fraud detection",
+      "constraints": ["data preparation", "experiment tracking", "A/B testing"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Machine learning training workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_024",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "infrastructure", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Set up production Kubernetes cluster on AWS",
+      "constraints": ["high availability", "auto-scaling", "monitoring"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Kubernetes cluster provisioning",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_025",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "monitoring", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Configure Prometheus + Grafana monitoring stack",
+      "constraints": ["SLOs defined", "alerting rules", "dashboards"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Comprehensive monitoring setup",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_026",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "compliance", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Perform GDPR compliance audit for SaaS platform",
+      "constraints": ["data inventory", "consent management", "data deletion"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "GDPR compliance audit checklist",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_027",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "incident_response", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Create incident response procedure for production outage",
+      "constraints": ["escalation path", "communication plan", "postmortem"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Production incident response plan",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_028",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "code_review", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Review pull request with 500 lines of code",
+      "constraints": ["security check", "performance review", "test coverage"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Code review workflow for large PR",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_029",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "dependency_upgrade", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Upgrade Python from 3.11 to 3.12",
+      "constraints": ["test all dependencies", "backward compatibility"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Safe dependency upgrade workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "htdag_p0_030",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "multi_region", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Deploy application to 3 AWS regions (us-east-1, eu-west-1, ap-southeast-1)",
+      "constraints": ["region-specific configs", "consistent state"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Multi-region deployment workflow",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_001",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "legal", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Review SaaS contract for legal compliance",
+      "task_type": "legal_review"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route legal contract review to legal agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_002",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "qa", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate pytest suite for authentication module",
+      "task_type": "code_testing"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route test generation to QA agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_003",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "support", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Customer unable to login - password reset needed",
+      "task_type": "customer_support"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route customer support ticket to support agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_004",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "analyst", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Analyze Q4 revenue trends and forecast Q1",
+      "task_type": "financial_analysis"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route financial analysis to analyst agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_005",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "content", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Write SEO-optimized blog post about AI agents",
+      "task_type": "content_creation"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route blog writing to content agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_006",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "security", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Perform penetration testing on authentication system",
+      "task_type": "security_review"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route security audit to security agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_007",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "deploy", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Deploy Docker containers to Kubernetes cluster",
+      "task_type": "infra_deploy"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route infrastructure deployment to deploy agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_008",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "spec", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Write technical specification for REST API",
+      "task_type": "requirements_doc"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route requirements documentation to spec agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_009",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "darwin", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Optimize slow database query function",
+      "task_type": "code_improvement"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route code improvement to SE-Darwin agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_010",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "routing", "vision", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Extract text from invoice PDF",
+      "task_type": "image_ocr",
+      "file_path": "/documents/invoice.pdf"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route image OCR to vision agent",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_011",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "load_balancing", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "tasks": [
+        "qa_task_1",
+        "qa_task_2",
+        "qa_task_3",
+        "qa_task_4",
+        "qa_task_5",
+        "qa_task_6",
+        "qa_task_7",
+        "qa_task_8",
+        "qa_task_9",
+        "qa_task_10"
+      ],
+      "available_agents": ["qa_agent_1", "qa_agent_2", "qa_agent_3"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Load balance 10 QA tasks across 3 QA agents",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_012",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "fallback", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate pytest tests",
+      "primary_agent": "qa_agent_1",
+      "primary_status": "unavailable"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Fallback to secondary agent when primary unavailable",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_013",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "priority", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Critical production bug - database connection failing",
+      "priority": "P0",
+      "task_type": "debugging"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Priority routing for high-priority task",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_014",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "explainability", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Review contract terms",
+      "task_type": "legal_review"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Provide routing explanation",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_015",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "multi_agent", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build and deploy new authentication feature with security audit",
+      "requires_agents": ["builder", "deploy", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Select multiple agents for collaborative task",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_016",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "context_aware", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Continue previous analysis",
+      "context": "previous_task_id: analyst_task_123"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Context-aware routing based on task history",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_017",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "skill_based", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build Python microservice with Docker",
+      "required_skills": ["python", "docker", "microservices"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Skill-based routing requiring multiple capabilities",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_018",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "geographic", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Process customer data",
+      "region": "EU",
+      "compliance": "GDPR"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Geographic routing for EU data residency",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_019",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "cost_optimized", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Extract email from text",
+      "complexity": "simple",
+      "optimize_for": "cost"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Cost-optimized routing for simple task",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_020",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "quality_optimized", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Write comprehensive legal analysis of patent application",
+      "complexity": "high",
+      "optimize_for": "quality"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.05",
+    "notes": "Quality-optimized routing for complex task",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_021",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "dynamic_agent_creation", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Process Fortran 77 code",
+      "required_capability": "fortran_77"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Create specialized agent when no suitable agent exists",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_022",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "rule_based", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Security vulnerability detected in production",
+      "rule": "IF security_issue AND production THEN security_agent"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Rule-based routing with IF-THEN logic",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_023",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "hierarchical", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build new microservice from scratch",
+      "routing_mode": "hierarchical"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Hierarchical routing through planning -> design -> execution",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_024",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "retry_logic", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate unit tests",
+      "agent_timeout": true,
+      "first_agent": "qa_agent_1"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Retry with different agent on timeout",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_025",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "circuit_breaker", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Process data",
+      "agent": "analyst_agent",
+      "failure_count": 5
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Trigger circuit breaker after 5 agent failures",
+    "category": "success"
+  },
+  {
+    "sourceId": "halo_p0_026",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "unknown_task", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Perform quantum computing simulation",
+      "task_type": "unknown"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Route unknown task type to orchestration agent",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "halo_p0_027",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "ambiguous_task", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Fix the bug",
+      "matched_agents": ["qa_agent", "builder_agent", "security_agent"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Request disambiguation for ambiguous task",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "halo_p0_028",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "all_agents_busy", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate tests",
+      "all_agents_status": "busy"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Queue task when all agents busy",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "halo_p0_029",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "llm_timeout", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Build microservice",
+      "llm_timeout": true
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Fallback to heuristic routing on LLM timeout",
+    "category": "failure"
+  },
+  {
+    "sourceId": "halo_p0_030",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "empty_registry", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Any task",
+      "agent_registry": "empty"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Error when agent registry is empty",
+    "category": "failure"
+  },
+  {
+    "sourceId": "aop_p0_001",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "solvability", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["build_python_api", "deploy_to_aws", "setup_monitoring"],
+        "required_capabilities": ["python", "aws", "prometheus"]
+      },
+      "available_agents": [
+        {
+          "name": "builder_agent",
+          "capabilities": ["python", "javascript"]
+        },
+        {
+          "name": "deploy_agent",
+          "capabilities": ["aws", "kubernetes"]
+        },
+        {
+          "name": "monitoring_agent",
+          "capabilities": ["prometheus", "grafana"]
+        }
+      ]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan is solvable with available agents",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_002",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "completeness", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "dag": {
+          "tasks": ["task_1", "task_2", "task_3", "task_4"]
+        },
+        "assignments": {
+          "task_1": "builder_agent",
+          "task_2": "qa_agent",
+          "task_3": "deploy_agent",
+          "task_4": "monitoring_agent"
+        }
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate all DAG tasks have agent assignments",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_003",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "redundancy", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": [
+          {
+            "id": "task_1",
+            "action": "build_api",
+            "params": {
+              "lang": "python"
+            }
+          },
+          {
+            "id": "task_2",
+            "action": "build_api",
+            "params": {
+              "lang": "python"
+            }
+          },
+          {
+            "id": "task_3",
+            "action": "deploy_api"
+          }
+        ]
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect and remove redundant tasks",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_004",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "reward_model", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["task_1", "task_2", "task_3"],
+        "complexity_score": 0.7,
+        "coverage_score": 0.9,
+        "efficiency_score": 0.8
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Calculate quality score using reward model",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_005",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "all_three_checks", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["write_spec", "build_feature", "test_feature", "deploy_feature"],
+        "assignments": {
+          "write_spec": "spec_agent",
+          "build_feature": "builder_agent",
+          "test_feature": "qa_agent",
+          "deploy_feature": "deploy_agent"
+        }
+      },
+      "available_agents": ["spec_agent", "builder_agent", "qa_agent", "deploy_agent"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Pass all three AOP checks (solvability, completeness, non-redundancy)",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_006",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "complex_plan", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "task_count": 20,
+        "agents_required": 8,
+        "dependencies": 25
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Validate complex 20-task plan",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_007",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "agent_capabilities", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": {
+        "action": "build_react_app",
+        "required_skills": ["react", "typescript", "css"]
+      },
+      "agent": {
+        "name": "builder_agent",
+        "skills": ["react", "typescript", "css", "node"]
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Match task requirements to agent capabilities",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_008",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "dependency_validation", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "task_a": {
+          "depends_on": [],
+          "assigned_to": "spec_agent"
+        },
+        "task_b": {
+          "depends_on": ["task_a"],
+          "assigned_to": "builder_agent"
+        },
+        "task_c": {
+          "depends_on": ["task_b"],
+          "assigned_to": "qa_agent"
+        }
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate task dependencies are properly assigned",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_009",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "resource_constraints", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": 10,
+        "max_parallel_agents": 3,
+        "proposed_parallel_tasks": 3
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan respects resource constraints",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_010",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "time_constraints", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": [
+          {
+            "name": "task_1",
+            "estimated_time": "10m"
+          },
+          {
+            "name": "task_2",
+            "estimated_time": "15m"
+          }
+        ],
+        "deadline": "30m"
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan meets time deadline",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_011",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "quality_threshold", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "quality_factors": {
+          "complexity": 0.8,
+          "coverage": 0.9,
+          "efficiency": 0.85
+        },
+        "min_quality": 0.75
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan meets minimum quality threshold",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_012",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "security_requirements", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["build_feature", "security_audit", "pen_test", "deploy"],
+        "security_required": true
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan includes required security tasks",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_013",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "testing_requirements", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["build", "unit_test", "integration_test", "e2e_test", "deploy"],
+        "testing_required": true
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan includes adequate testing",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_014",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "documentation_requirements", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["build_api", "write_api_docs", "create_user_guide", "deploy"],
+        "documentation_required": true
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan includes documentation tasks",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_015",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "monitoring_requirements", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["deploy_app", "setup_metrics", "configure_alerts", "create_dashboards"],
+        "monitoring_required": true
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Validate plan includes monitoring setup",
+    "category": "success"
+  },
+  {
+    "sourceId": "aop_p0_016",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "unsolvable_task", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["compile_fortran_code"],
+        "required_capabilities": ["fortran"]
+      },
+      "available_agents": [
+        {
+          "name": "builder_agent",
+          "capabilities": ["python", "javascript"]
+        }
+      ]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect unsolvable task (no capable agent)",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_017",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "incomplete_plan", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["task_1", "task_2", "task_3"],
+        "assignments": {
+          "task_1": "agent_1",
+          "task_2": "agent_2"
+        }
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect incomplete plan (unassigned tasks)",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_018",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "high_redundancy", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": [
+          {
+            "id": "task_1",
+            "action": "build"
+          },
+          {
+            "id": "task_2",
+            "action": "build"
+          },
+          {
+            "id": "task_3",
+            "action": "test"
+          },
+          {
+            "id": "task_4",
+            "action": "build"
+          }
+        ]
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect high redundancy (50%+ duplicate tasks)",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_019",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "low_quality_score", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "quality_factors": {
+          "complexity": 0.4,
+          "coverage": 0.5,
+          "efficiency": 0.6
+        },
+        "min_quality": 0.75
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Warn on low quality score below threshold",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_020",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "empty_plan", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": []
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Reject empty plan (no tasks)",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_021",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "missing_dependencies", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "task_a": {
+          "depends_on": ["task_b"],
+          "assigned_to": "agent_1"
+        },
+        "task_c": {
+          "depends_on": [],
+          "assigned_to": "agent_2"
+        }
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect missing task dependencies",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_022",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "circular_dependencies", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "task_a": {
+          "depends_on": ["task_b"]
+        },
+        "task_b": {
+          "depends_on": ["task_c"]
+        },
+        "task_c": {
+          "depends_on": ["task_a"]
+        }
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect circular dependencies in plan",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_023",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "resource_overload", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": 10,
+        "max_parallel_agents": 3,
+        "proposed_parallel_tasks": 5
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect resource constraint violation",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_024",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "deadline_infeasible", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": [
+          {
+            "name": "task_1",
+            "estimated_time": "20m"
+          },
+          {
+            "name": "task_2",
+            "estimated_time": "20m"
+          }
+        ],
+        "deadline": "30m"
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Detect infeasible time deadline",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_025",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "missing_security", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["build_feature", "deploy"],
+        "security_required": true
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Warn on missing required security tasks",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_026",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "insufficient_testing", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["build", "deploy"],
+        "testing_required": true
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Warn on insufficient testing coverage",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "aop_p0_027",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "reward_model_error", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "quality_factors": {
+          "complexity": null,
+          "coverage": 0.9,
+          "efficiency": 0.8
+        }
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Handle reward model calculation error",
+    "category": "failure"
+  },
+  {
+    "sourceId": "aop_p0_028",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "malformed_plan", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": "this is not a valid plan"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Reject malformed plan structure",
+    "category": "failure"
+  },
+  {
+    "sourceId": "aop_p0_029",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "timeout", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "task_count": 10000,
+        "timeout": "1s"
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Handle validation timeout on very large plan",
+    "category": "failure"
+  },
+  {
+    "sourceId": "aop_p0_030",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "adaptive_reward", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "plan": {
+        "tasks": ["task_1", "task_2"],
+        "historical_outcomes": [
+          {
+            "plan_id": "prev_1",
+            "quality": 0.9,
+            "success": true
+          }
+        ]
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Adaptive reward model learning from task outcomes",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_001",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_optimization", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Extract email address from text: 'Contact us at support@example.com'",
+      "complexity": "simple"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Route simple task to cheap model (Gemini Flash)",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_002",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "quality_routing", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Write comprehensive legal analysis of patent infringement case",
+      "complexity": "high"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.05",
+    "notes": "Route complex task to premium model (GPT-4o)",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_003",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_reduction", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "tasks": [
+        {
+          "complexity": "simple",
+          "baseline_cost": "$0.02"
+        },
+        {
+          "complexity": "simple",
+          "baseline_cost": "$0.02"
+        },
+        {
+          "complexity": "simple",
+          "baseline_cost": "$0.02"
+        },
+        {
+          "complexity": "medium",
+          "baseline_cost": "$0.04"
+        },
+        {
+          "complexity": "high",
+          "baseline_cost": "$0.10"
+        }
+      ]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.11",
+    "notes": "Validate 48% cost reduction target",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_004",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "quality_vs_cost", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate product description for e-commerce",
+      "requirements": {
+        "min_quality": 0.85,
+        "max_cost": "$0.02"
+      }
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Balance quality and cost tradeoffs",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_005",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "budget_enforcement", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "current_month_spend": "$95",
+      "monthly_budget": "$100",
+      "task_cost": "$10"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Enforce monthly budget constraint",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_006",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "model_fallback", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Summarize article",
+      "preferred_model": "gpt-4o",
+      "remaining_budget": "$0.01"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Fallback to cheaper model when budget constrained",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_007",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "complexity_detection", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Implement quicksort algorithm with edge cases and optimize for memory efficiency"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Automatically detect task complexity",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_008",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "batch_optimization", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "tasks": [
+        {
+          "task": "Summarize text 1",
+          "complexity": "simple"
+        },
+        {
+          "task": "Summarize text 2",
+          "complexity": "simple"
+        },
+        {
+          "task": "Summarize text 3",
+          "complexity": "simple"
+        }
+      ]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Optimize cost for batch of tasks",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_009",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_tracking", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "agent": "qa_agent",
+      "task": "Generate tests",
+      "model": "claude-4-haiku",
+      "cost": "$0.02"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Track costs per agent type",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_010",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "model_selection", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Medium complexity data analysis",
+      "available_models": [
+        "gpt-4o",
+        "claude-4-sonnet",
+        "claude-4-haiku",
+        "gemini-2.5-flash",
+        "deepseek-r1"
+      ],
+      "optimize_for": "cost"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Select among 5 available models",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_011",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "code_generation", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Implement REST API endpoint with authentication",
+      "task_type": "code_generation"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Route code generation to Claude Sonnet (72.7% SWE-bench)",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_012",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "orchestration_tasks", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Decompose complex project into subtasks",
+      "task_type": "orchestration"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.05",
+    "notes": "Route orchestration to GPT-4o",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_013",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "high_throughput", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task_count": 100,
+      "task_type": "simple_extraction",
+      "optimize_for": "throughput"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.03",
+    "notes": "Route high-throughput tasks to Gemini Flash (372 tokens/sec)",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_014",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "fallback_model", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Data analysis task",
+      "primary_models_unavailable": true
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Use DeepSeek R1 as open-source fallback",
+    "category": "success"
+  },
+  {
+    "sourceId": "daao_p0_015",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "budget_exceeded", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "current_month_spend": "$100",
+      "monthly_budget": "$100",
+      "task_cost": "$0.05"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Block task when budget exceeded",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "daao_p0_016",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "no_model_fits_budget", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Complex analysis",
+      "max_cost": "$0.001"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Error when no model fits budget constraint",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "daao_p0_017",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "ambiguous_complexity", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Process data"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.02",
+    "notes": "Handle ambiguous task complexity",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "daao_p0_018",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "model_api_failure", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Generate summary",
+      "selected_model": "gpt-4o",
+      "api_status": "unavailable"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.04",
+    "notes": "Fallback when selected model API fails",
+    "category": "failure"
+  },
+  {
+    "sourceId": "daao_p0_019",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "all_models_unavailable", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Any task",
+      "all_models_status": "unavailable"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.00",
+    "notes": "Error when all models unavailable",
+    "category": "failure"
+  },
+  {
+    "sourceId": "daao_p0_020",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_report", "critical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "month": "2025-10"
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.01",
+    "notes": "Generate monthly cost report",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p0_200",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P0 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p0_201",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P0 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p0_202",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P0 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p0_203",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P0 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p0_204",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P0 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p0_205",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P0 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p0_206",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P0 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p0_207",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P0 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p0_208",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P0 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p0_209",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P0 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p0_210",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator success functionality",
+      "constraints": ["P0 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p0_211",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router edge_case functionality",
+      "constraints": ["P0 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p0_212",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner error_handling functionality",
+      "constraints": ["P0 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p0_213",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router performance functionality",
+      "constraints": ["P0 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p0_214",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator integration functionality",
+      "constraints": ["P0 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p0_215",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router security functionality",
+      "constraints": ["P0 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p0_216",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner compliance functionality",
+      "constraints": ["P0 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p0_217",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router scalability functionality",
+      "constraints": ["P0 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p0_218",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator reliability functionality",
+      "constraints": ["P0 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p0_219",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router data_quality functionality",
+      "constraints": ["P0 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p0_220",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P0 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p0_221",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P0 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p0_222",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P0 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p0_223",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P0 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p0_224",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P0 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p0_225",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P0 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p0_226",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p0", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P0 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration aop_validator - P0 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p0_227",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p0", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P0 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration daao_router - P0 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p0_228",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p0", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P0 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration htdag_planner - P0 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p0_229",
+    "priority": "P0",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p0", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P0 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$0.012",
+    "notes": "Orchestration halo_router - P0 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orch_p1_001",
+    "scenarioName": "Full pipeline: HTDAG → HALO → AOP → DAAO execution",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "aop", "daao", "full_pipeline"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Build a complete SaaS MVP with authentication, payment processing, and deployment",
+      "constraints": ["Must use all orchestration layers", "Requires 5+ agents"]
+    },
+    "expectedOutputIncludes": [
+      "task_dag",
+      "routing_plan",
+      "validation_result",
+      "cost_optimization"
+    ],
+    "minOutputLength": 500,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 2000
+    },
+    "successCriteria": [
+      "htdag_decomposition",
+      "halo_routing",
+      "aop_validation",
+      "daao_optimization"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "Full pipeline: HTDAG → HALO → AOP → DAAO execution. Build a complete SaaS MVP with authentication, payment processing, and deployment",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_002",
+    "scenarioName": "HTDAG decomposition with dynamic task insertion",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "dynamic_update", "feedback_loop"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Deploy API, but discover during deployment that database migration is needed",
+      "context": {
+        "initial_tasks": ["design_api", "implement_api", "deploy_api"],
+        "discovered_requirement": "database_migration"
+      }
+    },
+    "expectedOutputIncludes": ["updated_dag", "migration_task_added", "dependency_reordered"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["dynamic_insertion", "dependency_correctness", "acyclicity_preserved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HTDAG decomposition with dynamic task insertion. Deploy API, but discover during deployment that database migration is needed",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_003",
+    "scenarioName": "HALO routing with agent capacity constraints",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "load_balancing", "capacity_check"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Route 20 tasks across 5 agents, where 2 agents are at 80% capacity",
+      "context": {
+        "available_agents": ["builder", "deploy", "qa", "security", "analyst"],
+        "agent_capacity": {
+          "builder": 0.8,
+          "deploy": 0.8,
+          "qa": 0.3,
+          "security": 0.5,
+          "analyst": 0.4
+        }
+      }
+    },
+    "expectedOutputIncludes": ["routing_plan", "load_balanced", "no_overload"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["load_balancing", "capacity_respect", "task_distribution"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "HALO routing with agent capacity constraints. Route 20 tasks across 5 agents, where 2 agents are at 80% capacity",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_004",
+    "scenarioName": "AOP validation with solvability failure recovery",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "validation", "solvability_check"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Validate routing plan where deploy agent lacks AWS credentials",
+      "context": {
+        "routing_plan": [
+          {
+            "task": "deploy_to_aws",
+            "agent": "deploy_agent",
+            "required_tools": ["aws_cli", "aws_credentials"]
+          }
+        ],
+        "agent_capabilities": {
+          "deploy_agent": {
+            "tools": ["aws_cli"],
+            "missing": ["aws_credentials"]
+          }
+        }
+      }
+    },
+    "expectedOutputIncludes": [
+      "solvability_failed",
+      "missing_credentials",
+      "remediation_suggested"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 1500,
+      "maxTokens": 600
+    },
+    "successCriteria": ["solvability_detection", "missing_tool_identified", "remediation_provided"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "AOP validation with solvability failure recovery. Validate routing plan where deploy agent lacks AWS credentials",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_005",
+    "scenarioName": "DAAO cost optimization with quality tradeoff",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_optimization", "quality_tradeoff"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Optimize routing plan: 10 simple tasks, 5 complex tasks",
+      "context": {
+        "simple_tasks": ["update_docs", "format_code", "send_notifications"],
+        "complex_tasks": ["design_architecture", "implement_authentication", "security_audit"],
+        "budget": "$1.00"
+      }
+    },
+    "expectedOutputIncludes": ["optimized_plan", "cost_breakdown", "quality_score"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["cost_within_budget", "quality_maintained", "appropriate_model_selection"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "DAAO cost optimization with quality tradeoff. Optimize routing plan: 10 simple tasks, 5 complex tasks",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_006",
+    "scenarioName": "HTDAG → HALO with parallel branch routing",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "parallel_execution"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Build 3 microservices in parallel: auth-service, payment-service, notification-service",
+      "constraints": ["Services are independent", "Each requires builder + deploy agents"]
+    },
+    "expectedOutputIncludes": ["parallel_branches", "independent_routing", "no_blocking"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1200
+    },
+    "successCriteria": ["parallel_decomposition", "independent_routing", "no_artificial_deps"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "HTDAG → HALO with parallel branch routing. Build 3 microservices in parallel: auth-service, payment-service, notification-service",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_007",
+    "scenarioName": "AOP completeness check with missing task detection",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "completeness", "gap_detection"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Validate routing plan for SaaS MVP",
+      "context": {
+        "routing_plan": [
+          "research_market → analyst",
+          "design_architecture → spec",
+          "implement_backend → builder",
+          "implement_frontend → builder"
+        ],
+        "dag_tasks": [
+          "research_market",
+          "design_architecture",
+          "implement_backend",
+          "implement_frontend",
+          "deploy_infrastructure",
+          "setup_database"
+        ]
+      }
+    },
+    "expectedOutputIncludes": [
+      "completeness_failed",
+      "unassigned_tasks",
+      "deploy_infrastructure",
+      "setup_database"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 1500,
+      "maxTokens": 600
+    },
+    "successCriteria": ["gap_detection", "unassigned_identification", "coverage_completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "AOP completeness check with missing task detection. Validate routing plan for SaaS MVP",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_008",
+    "scenarioName": "HTDAG → AOP with circular dependency prevention",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "aop", "cycle_detection"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Decompose task with potential circular dependency: A depends on B, B depends on C, C depends on A",
+      "context": {
+        "malicious_dag": ["task_a → task_b", "task_b → task_c", "task_c → task_a"]
+      }
+    },
+    "expectedOutputIncludes": ["cycle_detected", "validation_failed", "dag_rejected"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 600
+    },
+    "successCriteria": ["cycle_detection", "rejection_correct", "error_message_clear"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "HTDAG → AOP with circular dependency prevention. Decompose task with potential circular dependency: A depends on B, B depends on C, C depends on A",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_009",
+    "scenarioName": "DAAO → HALO with model fallback when budget exceeded",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "halo", "fallback", "budget_constraint"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Optimize 50 tasks with $0.50 budget (would cost $2.00 with GPT-4o)",
+      "context": {
+        "task_count": 50,
+        "budget": 0.5,
+        "default_cost_gpt4o": 2
+      }
+    },
+    "expectedOutputIncludes": ["fallback_triggered", "gemini_flash_used", "budget_respected"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["budget_respected", "fallback_appropriate", "quality_acceptable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "DAAO → HALO with model fallback when budget exceeded. Optimize 50 tasks with $0",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_010",
+    "scenarioName": "Full pipeline with AOP non-redundancy detection",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "aop", "redundancy_check"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Build landing page where analyst and marketing both run competitor analysis",
+      "context": {
+        "routing_plan": ["competitor_analysis_1 → analyst", "competitor_analysis_2 → marketing"]
+      }
+    },
+    "expectedOutputIncludes": ["redundancy_detected", "duplicate_tasks", "consolidation_suggested"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": [
+      "redundancy_detection",
+      "duplicate_identification",
+      "consolidation_recommendation"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Full pipeline with AOP non-redundancy detection. Build landing page where analyst and marketing both run competitor analysis",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_011",
+    "scenarioName": "HTDAG hierarchical decomposition (4 levels deep)",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "nested", "hierarchical"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Build complete e-commerce platform with admin panel, customer portal, payment gateway, inventory system",
+      "constraints": ["Allow nested decomposition up to 4 levels"]
+    },
+    "expectedOutputIncludes": ["hierarchical_dag", "max_depth_4", "leaf_tasks_actionable"],
+    "tolerances": {
+      "maxLatencyMs": 10000,
+      "maxTokens": 3000
+    },
+    "successCriteria": ["depth_limit_respected", "hierarchy_clear", "actionable_leaves"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "HTDAG hierarchical decomposition (4 levels deep). Build complete e-commerce platform with admin panel, customer portal, payment gateway, inventory system",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_012",
+    "scenarioName": "HALO dynamic agent creation for specialized task",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "dynamic_agent", "specialization"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Route task requiring blockchain smart contract deployment",
+      "context": {
+        "task": "deploy_smart_contract_to_ethereum",
+        "available_agents": ["builder", "deploy", "qa"],
+        "none_have_blockchain_skills": true
+      }
+    },
+    "expectedOutputIncludes": ["dynamic_agent_created", "blockchain_specialist", "web3_tools"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": [
+      "specialization_identified",
+      "agent_creation_triggered",
+      "tools_appropriate"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HALO dynamic agent creation for specialized task. Route task requiring blockchain smart contract deployment",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_013",
+    "scenarioName": "AOP reward model evaluation for plan comparison",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "reward_model", "plan_comparison"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Compare two routing plans for deploying API",
+      "context": {
+        "plan_a": {
+          "success_prob": 0.85,
+          "quality": 0.82,
+          "cost": 0.5,
+          "time": 600
+        },
+        "plan_b": {
+          "success_prob": 0.78,
+          "quality": 0.75,
+          "cost": 0.2,
+          "time": 300
+        }
+      }
+    },
+    "expectedOutputIncludes": ["plan_scores", "recommendation", "tradeoff_analysis"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["scoring_correct", "tradeoff_clear", "recommendation_justified"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "AOP reward model evaluation for plan comparison. Compare two routing plans for deploying API",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_014",
+    "scenarioName": "HTDAG → DAAO with task complexity estimation",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "daao", "complexity_estimation"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Decompose and estimate complexity for: Implement OAuth2 authentication with Google, GitHub, and Microsoft",
+      "constraints": ["Estimate task complexity for model routing"]
+    },
+    "expectedOutputIncludes": ["task_dag", "complexity_scores", "model_recommendations"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["complexity_estimation", "model_routing_appropriate", "cost_optimization"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "HTDAG → DAAO with task complexity estimation. Decompose and estimate complexity for: Implement OAuth2 authentication with Google, GitHub, and Microsoft",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_015",
+    "scenarioName": "HALO → AOP with agent capability mismatch",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "aop", "capability_check"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Route security audit task to builder agent (wrong agent)",
+      "context": {
+        "task": "perform_penetration_testing",
+        "routed_to": "builder_agent",
+        "builder_capabilities": ["code_generation", "api_integration"],
+        "required_capabilities": ["security_testing", "vulnerability_scanning"]
+      }
+    },
+    "expectedOutputIncludes": ["solvability_failed", "capability_mismatch", "re_routing_suggested"],
+    "tolerances": {
+      "maxLatencyMs": 1500,
+      "maxTokens": 600
+    },
+    "successCriteria": ["mismatch_detected", "correct_agent_identified", "re_routing_recommended"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "HALO → AOP with agent capability mismatch. Route security audit task to builder agent (wrong agent)",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_016",
+    "scenarioName": "Full pipeline with TUMIX early stopping integration",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "aop", "daao", "tumix"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Execute iterative refinement loop for code generation, stop early when quality threshold met",
+      "context": {
+        "initial_code_quality": 0.65,
+        "target_quality": 0.85,
+        "max_iterations": 5
+      }
+    },
+    "expectedOutputIncludes": [
+      "early_stopping_triggered",
+      "quality_threshold_met",
+      "iterations_saved"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["early_stopping_correct", "quality_achieved", "cost_saved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Full pipeline with TUMIX early stopping integration. Execute iterative refinement loop for code generation, stop early when quality threshold met",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_017",
+    "scenarioName": "HTDAG → HALO with sequential dependency propagation",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "sequential", "dependency"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Set up CI/CD pipeline: build → unit_test → integration_test → security_scan → deploy",
+      "constraints": ["Each stage depends on previous stage success"]
+    },
+    "expectedOutputIncludes": ["sequential_routing", "dependency_order", "stage_agents"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["order_correct", "dependencies_enforced", "agent_selection_appropriate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HTDAG → HALO with sequential dependency propagation. Set up CI/CD pipeline: build → unit_test → integration_test → security_scan → deploy",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_018",
+    "scenarioName": "AOP validation with all three principles failing",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "validation", "comprehensive_failure"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Validate intentionally bad routing plan",
+      "context": {
+        "routing_plan": [
+          "deploy_to_aws → builder (missing credentials)",
+          "unassigned_task → none",
+          "duplicate_research → analyst",
+          "duplicate_research → marketing"
+        ]
+      }
+    },
+    "expectedOutputIncludes": ["solvability_failed", "completeness_failed", "redundancy_detected"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 1000
+    },
+    "successCriteria": [
+      "all_failures_detected",
+      "clear_error_messages",
+      "remediation_comprehensive"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "AOP validation with all three principles failing. Validate intentionally bad routing plan",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_019",
+    "scenarioName": "DAAO cost tracking across multi-stage workflow",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "cost_tracking", "multi_stage"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Track cumulative cost across 3-stage workflow: research → design → implement",
+      "context": {
+        "research_tasks": 5,
+        "design_tasks": 8,
+        "implement_tasks": 12,
+        "budget": "$3.00"
+      }
+    },
+    "expectedOutputIncludes": ["stage_costs", "cumulative_cost", "budget_tracking"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["cost_tracking_accurate", "budget_respected", "stage_breakdown_clear"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "DAAO cost tracking across multi-stage workflow. Track cumulative cost across 3-stage workflow: research → design → implement",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_020",
+    "scenarioName": "HALO explainability: why agent X was chosen over agent Y",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "explainability", "routing_decision"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Explain why spec_agent was chosen over builder_agent for API design task",
+      "context": {
+        "task": "design_rest_api_endpoints",
+        "chosen_agent": "spec_agent",
+        "alternative_agent": "builder_agent"
+      }
+    },
+    "expectedOutputIncludes": [
+      "routing_rationale",
+      "agent_capabilities_comparison",
+      "rule_applied"
+    ],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 600
+    },
+    "successCriteria": ["explanation_clear", "capabilities_compared", "rule_referenced"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "HALO explainability: why agent X was chosen over agent Y. Explain why spec_agent was chosen over builder_agent for API design task",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orch_p1_021",
+    "scenarioName": "HALO circuit breaker + DAAO fallback integration",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "daao", "circuit_breaker", "fallback"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Trigger circuit breaker after 5 routing failures, fallback to DAAO cheap model routing",
+      "context": {
+        "consecutive_failures": 5,
+        "circuit_breaker_threshold": 5
+      }
+    },
+    "expectedOutputIncludes": ["circuit_breaker_open", "fallback_triggered", "cheap_model_routing"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["circuit_breaker_correct", "fallback_appropriate", "recovery_possible"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "HALO circuit breaker + DAAO fallback integration. Trigger circuit breaker after 5 routing failures, fallback to DAAO cheap model routing",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_022",
+    "scenarioName": "AOP solvability check + HTDAG re-decomposition",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "htdag", "re_decomposition"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "When solvability fails, trigger HTDAG to re-decompose task into smaller subtasks",
+      "context": {
+        "task": "implement_blockchain_integration",
+        "agent": "builder_agent",
+        "solvability": false,
+        "reason": "task_too_complex"
+      }
+    },
+    "expectedOutputIncludes": ["re_decomposition_triggered", "subtasks_generated", "new_routing"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1200
+    },
+    "successCriteria": ["re_decomposition_correct", "subtasks_actionable", "re_routing_successful"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "AOP solvability check + HTDAG re-decomposition. When solvability fails, trigger HTDAG to re-decompose task into smaller subtasks",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_023",
+    "scenarioName": "HALO load balancing + agent health monitoring",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "load_balancing", "health_check"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Route tasks to healthy agents only, avoid agents with high failure rate",
+      "context": {
+        "agents": {
+          "builder": {
+            "health": 0.95,
+            "capacity": 0.5
+          },
+          "deploy": {
+            "health": 0.6,
+            "capacity": 0.3
+          },
+          "qa": {
+            "health": 0.98,
+            "capacity": 0.7
+          }
+        },
+        "health_threshold": 0.8
+      }
+    },
+    "expectedOutputIncludes": ["healthy_agents_only", "deploy_avoided", "load_balanced"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["health_check_enforced", "unhealthy_avoided", "load_balance_respected"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "HALO load balancing + agent health monitoring. Route tasks to healthy agents only, avoid agents with high failure rate",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_024",
+    "scenarioName": "HTDAG → AOP → DAAO task priority propagation",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "aop", "daao", "priority"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "High-priority tasks should get expensive models, low-priority tasks get cheap models",
+      "context": {
+        "tasks": [
+          {
+            "name": "critical_security_patch",
+            "priority": "P0"
+          },
+          {
+            "name": "update_documentation",
+            "priority": "P2"
+          },
+          {
+            "name": "refactor_test_suite",
+            "priority": "P1"
+          }
+        ]
+      }
+    },
+    "expectedOutputIncludes": ["priority_routing", "model_assignment", "cost_optimized"],
+    "tolerances": {
+      "maxLatencyMs": 2500,
+      "maxTokens": 800
+    },
+    "successCriteria": ["priority_respected", "model_appropriate", "cost_efficient"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "HTDAG → AOP → DAAO task priority propagation. High-priority tasks should get expensive models, low-priority tasks get cheap models",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_025",
+    "scenarioName": "HALO routing + OTEL observability integration",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "otel", "observability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Route task and emit OTEL spans for: routing_decision, agent_selection, execution_time",
+      "context": {
+        "task": "deploy_api",
+        "observability_enabled": true
+      }
+    },
+    "expectedOutputIncludes": ["otel_spans", "routing_decision_span", "agent_selection_span"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["spans_emitted", "correlation_id_present", "metrics_tracked"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "HALO routing + OTEL observability integration. Route task and emit OTEL spans for: routing_decision, agent_selection, execution_time",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_026",
+    "scenarioName": "AOP validation + error handler integration",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "error_handler", "graceful_degradation"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "When validation fails, trigger error handler with graceful degradation",
+      "context": {
+        "validation_failures": ["solvability", "completeness"],
+        "error_handler_levels": ["llm_retry", "heuristic_fallback", "minimal_plan"]
+      }
+    },
+    "expectedOutputIncludes": [
+      "error_handler_triggered",
+      "degradation_level",
+      "recovery_attempted"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["error_handler_invoked", "degradation_appropriate", "recovery_successful"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "AOP validation + error handler integration. When validation fails, trigger error handler with graceful degradation",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_027",
+    "scenarioName": "DAAO cost estimation + budget approval workflow",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "budget", "approval"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Estimate cost exceeds budget, trigger approval workflow",
+      "context": {
+        "estimated_cost": 5,
+        "budget": 2,
+        "approval_threshold": 2.5
+      }
+    },
+    "expectedOutputIncludes": ["budget_exceeded", "approval_required", "workflow_triggered"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 600
+    },
+    "successCriteria": ["budget_check_correct", "approval_triggered", "cost_estimate_accurate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "DAAO cost estimation + budget approval workflow. Estimate cost exceeds budget, trigger approval workflow",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_028",
+    "scenarioName": "HTDAG task queue + HALO batch routing",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "batch_processing"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Queue 50 tasks from DAG, batch route in groups of 10 for efficiency",
+      "context": {
+        "task_count": 50,
+        "batch_size": 10
+      }
+    },
+    "expectedOutputIncludes": ["batch_routing", "queue_management", "efficiency_gain"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["batching_correct", "queue_ordered", "efficiency_improved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "HTDAG task queue + HALO batch routing. Queue 50 tasks from DAG, batch route in groups of 10 for efficiency",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_029",
+    "scenarioName": "AOP reward model + learning from execution outcomes",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "reward_model", "learning"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Update reward model weights based on actual execution success rates",
+      "context": {
+        "plan_prediction": {
+          "success_prob": 0.85,
+          "actual_success": 0.72
+        },
+        "execution_data": {
+          "cost": 0.45,
+          "time": 550,
+          "quality": 0.78
+        }
+      }
+    },
+    "expectedOutputIncludes": ["weights_updated", "learning_occurred", "prediction_improved"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["learning_correct", "weights_adjusted", "future_predictions_improved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "AOP reward model + learning from execution outcomes. Update reward model weights based on actual execution success rates",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_030",
+    "scenarioName": "HALO dynamic agent creation + agent registry update",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "dynamic_agent", "registry"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Create specialized agent and register it for future use",
+      "context": {
+        "task": "deploy_kubernetes_cluster",
+        "agent_created": "k8s_specialist"
+      }
+    },
+    "expectedOutputIncludes": ["agent_created", "registry_updated", "available_for_future"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["agent_creation_successful", "registry_updated", "reusable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HALO dynamic agent creation + agent registry update. Create specialized agent and register it for future use",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_031",
+    "scenarioName": "HTDAG → DAAO → memory compression integration",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "daao", "memory", "compression"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "For long-running workflows, compress old DAG nodes using DeepSeek-OCR",
+      "context": {
+        "workflow_age_hours": 24,
+        "dag_node_count": 100,
+        "compression_threshold_hours": 12
+      }
+    },
+    "expectedOutputIncludes": ["compression_triggered", "old_nodes_compressed", "memory_saved"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["compression_appropriate", "memory_savings_achieved", "old_data_preserved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "HTDAG → DAAO → memory compression integration. For long-running workflows, compress old DAG nodes using DeepSeek-OCR",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_032",
+    "scenarioName": "HALO routing + A2A protocol agent discovery",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "a2a", "discovery"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Discover external agent via A2A protocol and route task",
+      "context": {
+        "task": "process_payment_with_stripe",
+        "internal_agents": ["builder", "deploy"],
+        "external_agent_available": "stripe_payment_agent"
+      }
+    },
+    "expectedOutputIncludes": ["external_agent_discovered", "a2a_routing", "task_routed"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["discovery_successful", "a2a_protocol_used", "routing_correct"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HALO routing + A2A protocol agent discovery. Discover external agent via A2A protocol and route task",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_033",
+    "scenarioName": "AOP validation + security validator integration",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "security", "validation"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Validate routing plan for security vulnerabilities before execution",
+      "context": {
+        "routing_plan": ["execute_user_provided_code → builder", "deploy_without_review → deploy"]
+      }
+    },
+    "expectedOutputIncludes": [
+      "security_validation",
+      "vulnerabilities_detected",
+      "execution_blocked"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": [
+      "security_check_performed",
+      "vulnerabilities_identified",
+      "execution_prevented"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "AOP validation + security validator integration. Validate routing plan for security vulnerabilities before execution",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_034",
+    "scenarioName": "HTDAG → HALO → CaseBank memory retrieval",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "casebank", "memory"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Retrieve similar past workflows from CaseBank to inform routing decisions",
+      "context": {
+        "current_task": "deploy_nodejs_api",
+        "casebank_has_similar": true,
+        "past_workflow_success": 0.92
+      }
+    },
+    "expectedOutputIncludes": ["casebank_retrieved", "similar_workflow_found", "routing_informed"],
+    "tolerances": {
+      "maxLatencyMs": 2500,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["casebank_queried", "similar_case_found", "routing_improved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "HTDAG → HALO → CaseBank memory retrieval. Retrieve similar past workflows from CaseBank to inform routing decisions",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_035",
+    "scenarioName": "DAAO → HALO with Memory×Router coupling",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "halo", "memory_router_coupling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Use CaseBank signals to increase cheap model usage (+13.1% target)",
+      "context": {
+        "task": "format_python_code",
+        "casebank_similar_tasks_success_cheap_model": 0.95,
+        "default_model": "gpt-4o"
+      }
+    },
+    "expectedOutputIncludes": ["cheap_model_routed", "casebank_signal_used", "cost_saved"],
+    "tolerances": {
+      "maxLatencyMs": 2000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["casebank_signal_correct", "cheap_model_appropriate", "cost_optimized"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "DAAO → HALO with Memory×Router coupling. Use CaseBank signals to increase cheap model usage (+13",
+    "category": "cross_component"
+  },
+  {
+    "sourceId": "orch_p1_036",
+    "scenarioName": "HTDAG decomposition for 100 concurrent tasks",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "concurrent", "load"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Decompose 100 independent tasks concurrently",
+      "context": {
+        "task_count": 100,
+        "concurrent": true
+      }
+    },
+    "expectedOutputIncludes": ["all_tasks_decomposed", "no_deadlocks", "parallel_processing"],
+    "tolerances": {
+      "maxLatencyMs": 15000,
+      "maxTokens": 5000
+    },
+    "successCriteria": ["concurrency_handled", "no_race_conditions", "performance_acceptable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "HTDAG decomposition for 100 concurrent tasks. Decompose 100 independent tasks concurrently",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_037",
+    "scenarioName": "HALO routing with all 15 agents at 90% capacity",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "capacity", "stress"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Route 50 tasks when all agents are near capacity",
+      "context": {
+        "task_count": 50,
+        "agent_capacity_all": 0.9,
+        "agents": 15
+      }
+    },
+    "expectedOutputIncludes": ["queue_management", "no_overload", "graceful_handling"],
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 2000
+    },
+    "successCriteria": ["capacity_respected", "queueing_correct", "no_failures"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "HALO routing with all 15 agents at 90% capacity. Route 50 tasks when all agents are near capacity",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_038",
+    "scenarioName": "AOP validation for 1000-task DAG",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "large_dag", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Validate routing plan for massive 1000-task workflow",
+      "context": {
+        "task_count": 1000,
+        "routing_plan_size": 1000
+      }
+    },
+    "expectedOutputIncludes": ["validation_complete", "performance_acceptable", "all_checks_run"],
+    "tolerances": {
+      "maxLatencyMs": 20000,
+      "maxTokens": 3000
+    },
+    "successCriteria": ["validation_thorough", "scalability_demonstrated", "no_timeouts"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "AOP validation for 1000-task DAG. Validate routing plan for massive 1000-task workflow",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_039",
+    "scenarioName": "DAAO cost tracking for high-throughput workflow",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "throughput", "cost_tracking"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Track cumulative cost across 500 tasks in real-time",
+      "context": {
+        "task_count": 500,
+        "cost_tracking_enabled": true
+      }
+    },
+    "expectedOutputIncludes": ["real_time_tracking", "cumulative_cost", "no_lag"],
+    "tolerances": {
+      "maxLatencyMs": 10000,
+      "maxTokens": 2000
+    },
+    "successCriteria": ["tracking_accurate", "low_overhead", "real_time_updates"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "DAAO cost tracking for high-throughput workflow. Track cumulative cost across 500 tasks in real-time",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_040",
+    "scenarioName": "HTDAG dynamic updates under sustained load",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "dynamic_update", "sustained_load"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Perform 50 dynamic DAG updates while system is processing 100 tasks",
+      "context": {
+        "initial_tasks": 100,
+        "dynamic_updates": 50,
+        "concurrent": true
+      }
+    },
+    "expectedOutputIncludes": ["updates_successful", "no_corruption", "consistency_maintained"],
+    "tolerances": {
+      "maxLatencyMs": 12000,
+      "maxTokens": 3000
+    },
+    "successCriteria": ["consistency_maintained", "concurrency_safe", "performance_acceptable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "HTDAG dynamic updates under sustained load. Perform 50 dynamic DAG updates while system is processing 100 tasks",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_041",
+    "scenarioName": "HALO routing with 100 parallel batch requests",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["halo", "batch", "parallel"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Process 100 parallel routing requests simultaneously",
+      "context": {
+        "batch_count": 100,
+        "tasks_per_batch": 5,
+        "concurrent": true
+      }
+    },
+    "expectedOutputIncludes": ["all_batches_processed", "no_timeouts", "fair_scheduling"],
+    "tolerances": {
+      "maxLatencyMs": 10000,
+      "maxTokens": 3000
+    },
+    "successCriteria": ["throughput_high", "no_timeouts", "fair_resource_allocation"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "HALO routing with 100 parallel batch requests. Process 100 parallel routing requests simultaneously",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_042",
+    "scenarioName": "Memory usage for long-running orchestration (24 hours)",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["memory", "long_running", "leak_detection"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Monitor memory usage over simulated 24-hour workflow",
+      "context": {
+        "duration_hours": 24,
+        "task_rate_per_hour": 50,
+        "memory_limit_mb": 1024
+      }
+    },
+    "expectedOutputIncludes": ["memory_stable", "no_leaks", "within_limits"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["memory_stable", "no_leaks", "limits_respected"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Memory usage for long-running orchestration (24 hours). Monitor memory usage over simulated 24-hour workflow",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_043",
+    "scenarioName": "AOP validation throughput benchmark",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["aop", "throughput", "benchmark"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Validate 100 routing plans per second",
+      "context": {
+        "plan_count": 100,
+        "time_window_seconds": 1
+      }
+    },
+    "expectedOutputIncludes": ["throughput_achieved", "latency_acceptable", "all_validated"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["throughput_met", "latency_low", "accuracy_maintained"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "AOP validation throughput benchmark. Validate 100 routing plans per second",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_044",
+    "scenarioName": "DAAO optimization for burst traffic (10x normal load)",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["daao", "burst", "spike_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Handle 10x traffic spike with cost optimization maintained",
+      "context": {
+        "normal_load_tasks_per_min": 10,
+        "burst_load_tasks_per_min": 100,
+        "duration_minutes": 5
+      }
+    },
+    "expectedOutputIncludes": ["burst_handled", "optimization_maintained", "no_degradation"],
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 2000
+    },
+    "successCriteria": ["burst_handled", "cost_optimized", "quality_preserved"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "DAAO optimization for burst traffic (10x normal load). Handle 10x traffic spike with cost optimization maintained",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_045",
+    "scenarioName": "Full pipeline performance under realistic production load",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["htdag", "halo", "aop", "daao", "production_load"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Process 1000 tasks through full pipeline over 10 minutes",
+      "context": {
+        "task_count": 1000,
+        "duration_minutes": 10,
+        "target_throughput": 100
+      }
+    },
+    "expectedOutputIncludes": ["throughput_achieved", "all_layers_functional", "slos_met"],
+    "tolerances": {
+      "maxLatencyMs": 15000,
+      "maxTokens": 5000
+    },
+    "successCriteria": ["throughput_met", "latency_acceptable", "error_rate_low"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.1,
+    "notes": "Full pipeline performance under realistic production load. Process 1000 tasks through full pipeline over 10 minutes",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orch_p1_046",
+    "scenarioName": "Graceful degradation when 3 agents fail simultaneously",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["error_handler", "graceful_degradation", "agent_failure"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Handle simultaneous failure of builder, deploy, and qa agents",
+      "context": {
+        "failed_agents": ["builder", "deploy", "qa"],
+        "remaining_agents": ["analyst", "security", "spec"],
+        "active_tasks": 20
+      }
+    },
+    "expectedOutputIncludes": ["degradation_triggered", "tasks_re_routed", "partial_service"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["graceful_handling", "partial_service_maintained", "recovery_possible"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Graceful degradation when 3 agents fail simultaneously. Handle simultaneous failure of builder, deploy, and qa agents",
+    "category": "error_recovery"
+  },
+  {
+    "sourceId": "orch_p1_047",
+    "scenarioName": "Retry logic for transient LLM failures",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["error_handler", "retry", "llm_failure"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Retry task decomposition after GPT-4o timeout",
+      "context": {
+        "initial_attempt_failed": true,
+        "failure_reason": "timeout",
+        "retry_budget": 3
+      }
+    },
+    "expectedOutputIncludes": ["retry_triggered", "exponential_backoff", "eventual_success"],
+    "tolerances": {
+      "maxLatencyMs": 10000,
+      "maxTokens": 2000
+    },
+    "successCriteria": ["retry_appropriate", "backoff_correct", "eventual_success"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.08,
+    "notes": "Retry logic for transient LLM failures. Retry task decomposition after GPT-4o timeout",
+    "category": "error_recovery"
+  },
+  {
+    "sourceId": "orch_p1_048",
+    "scenarioName": "Rollback on partial task completion failure",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["error_handler", "rollback", "partial_failure"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Rollback workflow when task 5 of 10 fails",
+      "context": {
+        "completed_tasks": ["task_1", "task_2", "task_3", "task_4"],
+        "failed_task": "task_5",
+        "remaining_tasks": ["task_6", "task_7", "task_8", "task_9", "task_10"]
+      }
+    },
+    "expectedOutputIncludes": ["rollback_triggered", "cleanup_performed", "state_restored"],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["rollback_correct", "cleanup_thorough", "state_consistent"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Rollback on partial task completion failure. Rollback workflow when task 5 of 10 fails",
+    "category": "error_recovery"
+  },
+  {
+    "sourceId": "orch_p1_049",
+    "scenarioName": "Circuit breaker recovery after cooldown period",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["error_handler", "circuit_breaker", "recovery"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Recover from open circuit breaker after 60s cooldown",
+      "context": {
+        "circuit_state": "open",
+        "failure_count": 5,
+        "cooldown_seconds": 60,
+        "time_elapsed": 60
+      }
+    },
+    "expectedOutputIncludes": ["circuit_half_open", "test_request_sent", "recovery_attempted"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["cooldown_respected", "test_request_sent", "recovery_correct"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Circuit breaker recovery after cooldown period. Recover from open circuit breaker after 60s cooldown",
+    "category": "error_recovery"
+  },
+  {
+    "sourceId": "orch_p1_050",
+    "scenarioName": "Error propagation and logging across all orchestration layers",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["error_handler", "logging", "propagation"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "prompt": "Trace error from HTDAG through HALO, AOP, DAAO to execution",
+      "context": {
+        "error_origin": "htdag_decomposition",
+        "error_type": "InvalidTaskError",
+        "trace_enabled": true
+      }
+    },
+    "expectedOutputIncludes": ["error_traced", "all_layers_logged", "correlation_id"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["tracing_complete", "all_layers_captured", "debugging_enabled"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Error propagation and logging across all orchestration layers. Trace error from HTDAG through HALO, AOP, DAAO to execution",
+    "category": "error_recovery"
+  },
+  {
+    "sourceId": "orchestration_p1_200",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P1 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p1_201",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P1 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p1_202",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P1 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p1_203",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P1 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p1_204",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P1 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p1_205",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P1 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p1_206",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P1 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p1_207",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P1 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p1_208",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P1 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p1_209",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P1 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p1_210",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator success functionality",
+      "constraints": ["P1 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p1_211",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router edge_case functionality",
+      "constraints": ["P1 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p1_212",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner error_handling functionality",
+      "constraints": ["P1 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p1_213",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router performance functionality",
+      "constraints": ["P1 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p1_214",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator integration functionality",
+      "constraints": ["P1 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p1_215",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router security functionality",
+      "constraints": ["P1 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p1_216",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner compliance functionality",
+      "constraints": ["P1 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p1_217",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router scalability functionality",
+      "constraints": ["P1 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p1_218",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator reliability functionality",
+      "constraints": ["P1 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p1_219",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router data_quality functionality",
+      "constraints": ["P1 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p1_220",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P1 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p1_221",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P1 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p1_222",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P1 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p1_223",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P1 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p1_224",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P1 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p1_225",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P1 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p1_226",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P1 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p1_227",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P1 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p1_228",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P1 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p1_229",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P1 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p1_230",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator success functionality",
+      "constraints": ["P1 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p1_231",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router edge_case functionality",
+      "constraints": ["P1 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p1_232",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner error_handling functionality",
+      "constraints": ["P1 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p1_233",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router performance functionality",
+      "constraints": ["P1 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p1_234",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator integration functionality",
+      "constraints": ["P1 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p1_235",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router security functionality",
+      "constraints": ["P1 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p1_236",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner compliance functionality",
+      "constraints": ["P1 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p1_237",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router scalability functionality",
+      "constraints": ["P1 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p1_238",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator reliability functionality",
+      "constraints": ["P1 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p1_239",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router data_quality functionality",
+      "constraints": ["P1 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p1_240",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P1 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p1_241",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P1 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p1_242",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P1 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p1_243",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P1 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p1_244",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P1 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p1_245",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P1 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p1_246",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p1", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P1 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P1 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p1_247",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p1", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P1 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P1 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p1_248",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p1", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P1 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P1 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p1_249",
+    "priority": "P1",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p1", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P1 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P1 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p2_001",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P2 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p2_002",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P2 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p2_003",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P2 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p2_004",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P2 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p2_005",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P2 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p2_006",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P2 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p2_007",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P2 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p2_008",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P2 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p2_009",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P2 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p2_010",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P2 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p2_011",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator success functionality",
+      "constraints": ["P2 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p2_012",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router edge_case functionality",
+      "constraints": ["P2 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p2_013",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner error_handling functionality",
+      "constraints": ["P2 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p2_014",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router performance functionality",
+      "constraints": ["P2 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p2_015",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator integration functionality",
+      "constraints": ["P2 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p2_016",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router security functionality",
+      "constraints": ["P2 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p2_017",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner compliance functionality",
+      "constraints": ["P2 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p2_018",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router scalability functionality",
+      "constraints": ["P2 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p2_019",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator reliability functionality",
+      "constraints": ["P2 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p2_020",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router data_quality functionality",
+      "constraints": ["P2 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p2_021",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P2 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p2_022",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P2 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p2_023",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P2 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p2_024",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P2 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p2_025",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P2 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p2_026",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P2 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p2_027",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P2 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p2_028",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P2 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p2_029",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P2 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p2_030",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P2 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p2_031",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator success functionality",
+      "constraints": ["P2 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p2_032",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router edge_case functionality",
+      "constraints": ["P2 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p2_033",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner error_handling functionality",
+      "constraints": ["P2 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p2_034",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router performance functionality",
+      "constraints": ["P2 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p2_035",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator integration functionality",
+      "constraints": ["P2 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p2_036",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router security functionality",
+      "constraints": ["P2 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p2_037",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner compliance functionality",
+      "constraints": ["P2 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p2_038",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router scalability functionality",
+      "constraints": ["P2 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p2_039",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator reliability functionality",
+      "constraints": ["P2 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p2_040",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router data_quality functionality",
+      "constraints": ["P2 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "orchestration_p2_041",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "success"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner success functionality",
+      "constraints": ["P2 priority", "success"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "orchestration_p2_042",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "edge_case"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router edge_case functionality",
+      "constraints": ["P2 priority", "edge_case"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "orchestration_p2_043",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "error_handling"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator error_handling functionality",
+      "constraints": ["P2 priority", "error_handling"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "orchestration_p2_044",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "performance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router performance functionality",
+      "constraints": ["P2 priority", "performance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "orchestration_p2_045",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "integration"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner integration functionality",
+      "constraints": ["P2 priority", "integration"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "orchestration_p2_046",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "security"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router security functionality",
+      "constraints": ["P2 priority", "security"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "orchestration_p2_047",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "aop_validator", "p2", "compliance"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test aop_validator compliance functionality",
+      "constraints": ["P2 priority", "compliance"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration aop_validator - P2 compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "orchestration_p2_048",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "daao_router", "p2", "scalability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test daao_router scalability functionality",
+      "constraints": ["P2 priority", "scalability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration daao_router - P2 scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "orchestration_p2_049",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "htdag_planner", "p2", "reliability"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test htdag_planner reliability functionality",
+      "constraints": ["P2 priority", "reliability"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration htdag_planner - P2 reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "orchestration_p2_050",
+    "priority": "P2",
+    "vertical": "orchestration",
+    "agentTags": ["orchestration", "halo_router", "p2", "data_quality"],
+    "agentNameIncludes": "orchestration",
+    "input": {
+      "task": "Test halo_router data_quality functionality",
+      "constraints": ["P2 priority", "data_quality"]
+    },
+    "expectedOutputIncludes": [],
+    "tolerances": {},
+    "successCriteria": [],
+    "costEstimate": "$3e-05",
+    "notes": "Orchestration halo_router - P2 data_quality test",
+    "category": "data_quality"
+  }
+]

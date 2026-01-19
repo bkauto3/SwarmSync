@@ -1,0 +1,58 @@
+{
+  "name": "@agent-market/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "cross-env TS_NODE_PROJECT=tsconfig.json TS_NODE_TRANSPILE_ONLY=1 node --watch --loader ts-node/esm src/main.ts",
+    "start": "node dist/main.js",
+    "test:smoke": "tsx scripts/load-smoke.ts",
+    "prisma:generate": "prisma generate",
+    "seed:agents": "tsx prisma/seed-agents.ts"
+  },
+  "dependencies": {
+    "@coinbase/coinbase-sdk": "^0.25.0",
+    "@nestjs/common": "^10.3.3",
+    "@nestjs/config": "^3.2.0",
+    "@nestjs/core": "^10.3.3",
+    "@nestjs/jwt": "^10.2.0",
+    "@nestjs/passport": "^10.0.3",
+    "@nestjs/platform-express": "^11.1.11",
+    "@nestjs/platform-socket.io": "^10.3.3",
+    "@nestjs/schedule": "^6.0.1",
+    "@nestjs/throttler": "^6.4.0",
+    "@nestjs/websockets": "^10.3.3",
+    "@prisma/client": "^5.9.1",
+    "argon2": "^0.41.1",
+    "bullmq": "^5.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "ethers": "^6.13.4",
+    "express": "^4.21.2",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.3.2",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "socket.io": "^4.7.2",
+    "stripe": "^19.3.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10",
+    "@nestjs/testing": "^10.3.3",
+    "@types/express": "^4.17.21",
+    "@types/supertest": "^2.0.16",
+    "cross-env": "^7.0.3",
+    "prisma": "^5.9.1",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.11.0",
+    "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "rimraf": "5.0.5"
+  }
+}

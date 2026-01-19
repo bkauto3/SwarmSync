@@ -1,0 +1,2161 @@
+[
+  {
+    "sourceId": "support_agent_p0_100",
+    "scenarioName": "Support Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p0_101",
+    "scenarioName": "Support Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p0_102",
+    "scenarioName": "Support Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p0_103",
+    "scenarioName": "Support Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p0_104",
+    "scenarioName": "Support Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p0_105",
+    "scenarioName": "Support Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_agent_p0_106",
+    "scenarioName": "Support Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "compliance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical compliance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "support_agent_p0_107",
+    "scenarioName": "Support Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "scalability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical scalability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "support_agent_p0_108",
+    "scenarioName": "Support Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "reliability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical reliability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "support_agent_p0_109",
+    "scenarioName": "Support Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical data_quality test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "support_agent_p0_110",
+    "scenarioName": "Support Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p0_111",
+    "scenarioName": "Support Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p0_112",
+    "scenarioName": "Support Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p0_113",
+    "scenarioName": "Support Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p0_114",
+    "scenarioName": "Support Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p0_115",
+    "scenarioName": "Support Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "support",
+    "agentTags": ["support", "critical", "p0", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute critical security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Support Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_p1_001",
+    "scenarioName": "Support Agent - Multi-Language Ticket Processing",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "multi_language", "translation"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Handle support ticket in Spanish, respond in user's language",
+      "ticket": "Mi aplicación se bloquea cuando intento iniciar sesión. Error 500.",
+      "preferred_language": "es"
+    },
+    "expectedOutputIncludes": ["Spanish", "respuesta", "solución"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["language_correct", "solution_provided", "professional_tone"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Support Agent - Multi-Language Ticket Processing. Handle support ticket in Spanish, respond in user's language",
+    "category": "advanced"
+  },
+  {
+    "sourceId": "support_p1_002",
+    "scenarioName": "Support Agent - OCR Screenshot Analysis",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "ocr", "screenshot", "error_detection"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Analyze error screenshot and provide troubleshooting steps",
+      "screenshot_path": "/tests/screenshots/error_500.png",
+      "user_description": "App crashes on login"
+    },
+    "expectedOutputIncludes": ["error_identified", "troubleshooting", "steps"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["ocr_successful", "error_diagnosed", "steps_actionable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Support Agent - OCR Screenshot Analysis. Analyze error screenshot and provide troubleshooting steps",
+    "category": "ocr"
+  },
+  {
+    "sourceId": "support_p1_003",
+    "scenarioName": "Support Agent - Sentiment-Based Escalation",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "sentiment", "escalation", "priority"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Detect angry customer sentiment and escalate ticket",
+      "ticket": "This is the THIRD time reporting this bug! Completely unacceptable! Cancelling subscription!",
+      "sentiment_threshold": -0.7
+    },
+    "expectedOutputIncludes": ["escalation_triggered", "negative_sentiment", "priority_raised"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 600
+    },
+    "successCriteria": ["sentiment_detected", "escalation_correct", "priority_appropriate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "Support Agent - Sentiment-Based Escalation. Detect angry customer sentiment and escalate ticket",
+    "category": "escalation"
+  },
+  {
+    "sourceId": "support_p1_004",
+    "scenarioName": "Support Agent - Knowledge Base Auto-Linking",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "kb", "auto_link", "rag"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Find relevant KB articles for password reset issue",
+      "ticket": "Can't reset my password, email not arriving",
+      "kb_available": true
+    },
+    "expectedOutputIncludes": ["kb_articles", "password_reset", "email_verification"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["articles_relevant", "links_provided", "context_appropriate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Support Agent - Knowledge Base Auto-Linking. Find relevant KB articles for password reset issue",
+    "category": "knowledge_base"
+  },
+  {
+    "sourceId": "support_p1_005",
+    "scenarioName": "Support Agent - Multi-Ticket Pattern Detection",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "pattern", "incident", "proactive"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Detect pattern: 10 users report same login error in last hour",
+      "tickets": [
+        {
+          "user": "user1",
+          "issue": "login_error_500",
+          "timestamp": "2025-10-30T10:00:00Z"
+        },
+        {
+          "user": "user2",
+          "issue": "login_error_500",
+          "timestamp": "2025-10-30T10:15:00Z"
+        },
+        {
+          "user": "user3",
+          "issue": "login_error_500",
+          "timestamp": "2025-10-30T10:30:00Z"
+        }
+      ],
+      "pattern_threshold": 5
+    },
+    "expectedOutputIncludes": ["pattern_detected", "incident_created", "proactive_alert"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["pattern_identified", "incident_created", "alert_sent"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Support Agent - Multi-Ticket Pattern Detection. Detect pattern: 10 users report same login error in last hour",
+    "category": "pattern_detection"
+  },
+  {
+    "sourceId": "support_p1_006",
+    "scenarioName": "Support Agent - SLA Breach Prevention",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "sla", "breach", "proactive"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Predict SLA breach and auto-escalate ticket",
+      "ticket_age_hours": 22,
+      "sla_target_hours": 24,
+      "resolution_estimated_hours": 4
+    },
+    "expectedOutputIncludes": ["sla_breach_predicted", "auto_escalation", "assignment_changed"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 600
+    },
+    "successCriteria": [
+      "breach_prediction_correct",
+      "escalation_timely",
+      "reassignment_appropriate"
+    ],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "Support Agent - SLA Breach Prevention. Predict SLA breach and auto-escalate ticket",
+    "category": "sla"
+  },
+  {
+    "sourceId": "support_p1_007",
+    "scenarioName": "Support Agent - Automated Refund Workflow",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "refund", "workflow", "automation"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Process refund request meeting auto-approval criteria",
+      "ticket": "Request refund for failed transaction",
+      "transaction_amount": 25,
+      "transaction_date": "2025-10-29",
+      "auto_approval_limit": 50
+    },
+    "expectedOutputIncludes": ["refund_approved", "automated", "confirmation"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["criteria_met", "refund_processed", "confirmation_appropriate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Support Agent - Automated Refund Workflow. Process refund request meeting auto-approval criteria",
+    "category": "automation"
+  },
+  {
+    "sourceId": "support_p1_008",
+    "scenarioName": "Support Agent - Complex Multi-Step Troubleshooting",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "troubleshooting", "multi_step", "diagnostic"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Guide user through multi-step API connection troubleshooting",
+      "issue": "API returns 401 Unauthorized",
+      "context": {
+        "framework": "Python requests",
+        "auth_type": "Bearer token"
+      }
+    },
+    "expectedOutputIncludes": [
+      "diagnostic_steps",
+      "token_validation",
+      "network_check",
+      "endpoint_verification"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1200
+    },
+    "successCriteria": ["steps_logical", "comprehensive", "user_friendly"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.06,
+    "notes": "Support Agent - Complex Multi-Step Troubleshooting. Guide user through multi-step API connection troubleshooting",
+    "category": "troubleshooting"
+  },
+  {
+    "sourceId": "support_p1_009",
+    "scenarioName": "Support Agent - Ticket Classification with Confidence Scores",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "classification", "confidence", "ml"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Classify ticket and provide confidence scores for top 3 categories",
+      "ticket": "Website is slow when uploading images. Takes 30 seconds per image.",
+      "categories": ["performance", "bug", "feature_request", "configuration", "user_error"]
+    },
+    "expectedOutputIncludes": ["classification", "confidence", "performance"],
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 600
+    },
+    "successCriteria": ["classification_correct", "confidence_reasonable", "top_n_provided"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.03,
+    "notes": "Support Agent - Ticket Classification with Confidence Scores. Classify ticket and provide confidence scores for top 3 categories",
+    "category": "classification"
+  },
+  {
+    "sourceId": "support_p1_010",
+    "scenarioName": "Support Agent - Proactive User Education",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "education", "proactive", "documentation"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Identify knowledge gap and suggest relevant tutorials",
+      "ticket_history": [
+        "How do I reset password?",
+        "Can't find password reset link",
+        "Password reset email not working"
+      ],
+      "knowledge_gap": "password_management"
+    },
+    "expectedOutputIncludes": [
+      "knowledge_gap_identified",
+      "tutorial_suggested",
+      "documentation_linked"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["gap_identified", "resources_relevant", "proactive_approach"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Support Agent - Proactive User Education. Identify knowledge gap and suggest relevant tutorials",
+    "category": "education"
+  },
+  {
+    "sourceId": "support_p1_011",
+    "scenarioName": "Support Agent - Integration with External Systems (Jira)",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "jira", "integration", "bug_tracking"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Create Jira ticket for confirmed bug report",
+      "ticket": "Application crashes when uploading files larger than 10MB",
+      "bug_confirmed": true,
+      "severity": "high"
+    },
+    "expectedOutputIncludes": ["jira_ticket_created", "bug", "severity_high"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["jira_created", "fields_populated", "linking_correct"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.04,
+    "notes": "Support Agent - Integration with External Systems (Jira). Create Jira ticket for confirmed bug report",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_p1_012",
+    "scenarioName": "Support Agent - Customer History Context Awareness",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "history", "context", "personalization"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Provide support with full customer interaction history",
+      "customer_id": "cust_12345",
+      "history": [
+        {
+          "date": "2025-10-15",
+          "issue": "billing_question",
+          "resolved": true
+        },
+        {
+          "date": "2025-10-20",
+          "issue": "feature_request",
+          "status": "in_progress"
+        },
+        {
+          "date": "2025-10-25",
+          "issue": "login_problem",
+          "resolved": true
+        }
+      ],
+      "current_issue": "Another login problem"
+    },
+    "expectedOutputIncludes": [
+      "history_considered",
+      "recurring_issue_detected",
+      "pattern_analysis"
+    ],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["history_used", "pattern_detected", "recommendation_appropriate"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Support Agent - Customer History Context Awareness. Provide support with full customer interaction history",
+    "category": "context"
+  },
+  {
+    "sourceId": "support_p1_013",
+    "scenarioName": "Support Agent - Feedback Loop Integration",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "feedback", "improvement", "csat"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Analyze CSAT feedback and suggest process improvements",
+      "feedback": [
+        {
+          "ticket_id": "T001",
+          "rating": 2,
+          "comment": "Response too slow"
+        },
+        {
+          "ticket_id": "T002",
+          "rating": 5,
+          "comment": "Very helpful!"
+        },
+        {
+          "ticket_id": "T003",
+          "rating": 1,
+          "comment": "Problem not solved"
+        }
+      ],
+      "avg_csat_target": 4
+    },
+    "expectedOutputIncludes": ["csat_analyzed", "improvement_suggested", "pattern_identified"],
+    "tolerances": {
+      "maxLatencyMs": 4000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["analysis_correct", "patterns_identified", "suggestions_actionable"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.05,
+    "notes": "Support Agent - Feedback Loop Integration. Analyze CSAT feedback and suggest process improvements",
+    "category": "feedback"
+  },
+  {
+    "sourceId": "support_agent_p1_100",
+    "scenarioName": "Support Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p1_101",
+    "scenarioName": "Support Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p1_102",
+    "scenarioName": "Support Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p1_103",
+    "scenarioName": "Support Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p1_104",
+    "scenarioName": "Support Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p1_105",
+    "scenarioName": "Support Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_agent_p1_106",
+    "scenarioName": "Support Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "compliance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority compliance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "support_agent_p1_107",
+    "scenarioName": "Support Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "scalability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority scalability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "support_agent_p1_108",
+    "scenarioName": "Support Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "reliability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority reliability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "support_agent_p1_109",
+    "scenarioName": "Support Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "data_quality"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "support_agent_p1_110",
+    "scenarioName": "Support Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p1_111",
+    "scenarioName": "Support Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p1_112",
+    "scenarioName": "Support Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p1_113",
+    "scenarioName": "Support Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p1_114",
+    "scenarioName": "Support Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p1_115",
+    "scenarioName": "Support Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_agent_p1_116",
+    "scenarioName": "Support Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "compliance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority compliance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "support_agent_p1_117",
+    "scenarioName": "Support Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "scalability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority scalability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "support_agent_p1_118",
+    "scenarioName": "Support Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "reliability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority reliability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "support_agent_p1_119",
+    "scenarioName": "Support Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "data_quality"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "support_agent_p1_120",
+    "scenarioName": "Support Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p1_121",
+    "scenarioName": "Support Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p1_122",
+    "scenarioName": "Support Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p1_123",
+    "scenarioName": "Support Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p1_124",
+    "scenarioName": "Support Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p1_125",
+    "scenarioName": "Support Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_agent_p1_126",
+    "scenarioName": "Support Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "compliance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority compliance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "support_agent_p1_127",
+    "scenarioName": "Support Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "scalability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority scalability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "support_agent_p1_128",
+    "scenarioName": "Support Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "reliability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority reliability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "support_agent_p1_129",
+    "scenarioName": "Support Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "support",
+    "agentTags": ["support", "high", "p1", "data_quality"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "support_agent_p2_001",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p2_002",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p2_003",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p2_004",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p2_005",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p2_006",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_agent_p2_007",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "compliance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "support_agent_p2_008",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "scalability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "support_agent_p2_009",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "reliability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "support_agent_p2_010",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "support_agent_p2_011",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "success"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority success test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "support_agent_p2_012",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "support_agent_p2_013",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "support_agent_p2_014",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "performance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority performance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "support_agent_p2_015",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "integration"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority integration test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "support_agent_p2_016",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "security"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority security test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "support_agent_p2_017",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "compliance"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "support_agent_p2_018",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "scalability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "support_agent_p2_019",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "reliability"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "support_agent_p2_020",
+    "scenarioName": "Support Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "support",
+    "agentTags": ["support", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "support",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for support_agent",
+      "agent": "support",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Support Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

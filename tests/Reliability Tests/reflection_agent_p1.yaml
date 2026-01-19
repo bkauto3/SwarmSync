@@ -1,0 +1,378 @@
+reflection_agent_p1:
+  agent: reflection_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Code review
+    - Architecture critique
+    - Best practices
+    - Refactoring suggestions
+    - Performance analysis
+    - Learning from failures
+scenarios:
+  - id: reflection_p1_001
+    name: Reflection Agent - Code Quality Deep Review
+    priority: P1
+    category: code_review
+    tags:
+      - reflection
+      - quality
+    input:
+      prompt: 'Review codebase: complexity, maintainability, test coverage, tech debt'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Code Quality Deep Review. Review codebase: complexity,
+      maintainability, test coverage, tech debt'
+  - id: reflection_p1_002
+    name: Reflection Agent - Architecture Decision Review
+    priority: P1
+    category: architecture
+    tags:
+      - reflection
+      - design
+    input:
+      prompt: 'Critique architecture decisions: scalability, maintainability, alternatives'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Architecture Decision Review. Critique architecture
+      decisions: scalability, maintainability, alternatives'
+  - id: reflection_p1_003
+    name: Reflection Agent - Post-Incident Analysis
+    priority: P1
+    category: postmortem
+    tags:
+      - reflection
+      - incident
+    input:
+      prompt: 'Analyze production incident: root cause, timeline, prevention, action
+        items'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Post-Incident Analysis. Analyze production incident:
+      root cause, timeline, prevention, action items'
+  - id: reflection_p1_004
+    name: Reflection Agent - Sprint Retrospective Insights
+    priority: P1
+    category: retrospective
+    tags:
+      - reflection
+      - agile
+    input:
+      prompt: 'Extract insights from sprint: what went well, issues, improvements'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Sprint Retrospective Insights. Extract insights
+      from sprint: what went well, issues, improvements'
+  - id: reflection_p1_005
+    name: Reflection Agent - Technical Debt Assessment
+    priority: P1
+    category: tech_debt
+    tags:
+      - reflection
+      - debt
+    input:
+      prompt: 'Identify tech debt: hotspots, impact, remediation priority, effort estimates'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Technical Debt Assessment. Identify tech debt:
+      hotspots, impact, remediation priority, effort estimates'
+  - id: reflection_p1_006
+    name: Reflection Agent - Performance Bottleneck Analysis
+    priority: P1
+    category: performance
+    tags:
+      - reflection
+      - optimization
+    input:
+      prompt: 'Analyze performance: profiling data, bottlenecks, optimization opportunities'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Performance Bottleneck Analysis. Analyze performance:
+      profiling data, bottlenecks, optimization opportunities'
+  - id: reflection_p1_007
+    name: Reflection Agent - API Design Review
+    priority: P1
+    category: api
+    tags:
+      - reflection
+      - design
+    input:
+      prompt: 'Critique API design: consistency, REST principles, naming, error handling'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - API Design Review. Critique API design: consistency,
+      REST principles, naming, error handling'
+  - id: reflection_p1_008
+    name: Reflection Agent - Security Vulnerability Lessons
+    priority: P1
+    category: security
+    tags:
+      - reflection
+      - learning
+    input:
+      prompt: 'Extract lessons from security vulnerabilities: patterns, prevention,
+        training'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Security Vulnerability Lessons. Extract lessons
+      from security vulnerabilities: patterns, prevention, training'
+  - id: reflection_p1_009
+    name: Reflection Agent - Test Strategy Evaluation
+    priority: P1
+    category: testing
+    tags:
+      - reflection
+      - qa
+    input:
+      prompt: 'Evaluate test strategy: coverage gaps, flaky tests, test pyramid balance'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Test Strategy Evaluation. Evaluate test strategy:
+      coverage gaps, flaky tests, test pyramid balance'
+  - id: reflection_p1_010
+    name: Reflection Agent - Deployment Process Improvement
+    priority: P1
+    category: deployment
+    tags:
+      - reflection
+      - cicd
+    input:
+      prompt: 'Analyze deployment process: failures, delays, automation opportunities'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Deployment Process Improvement. Analyze deployment
+      process: failures, delays, automation opportunities'
+  - id: reflection_p1_011
+    name: Reflection Agent - Team Workflow Optimization
+    priority: P1
+    category: workflow
+    tags:
+      - reflection
+      - process
+    input:
+      prompt: 'Review team workflow: bottlenecks, communication gaps, tooling improvements'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Team Workflow Optimization. Review team workflow:
+      bottlenecks, communication gaps, tooling improvements'
+  - id: reflection_p1_012
+    name: Reflection Agent - Documentation Quality Assessment
+    priority: P1
+    category: documentation
+    tags:
+      - reflection
+      - docs
+    input:
+      prompt: 'Assess docs: completeness, clarity, examples, maintenance burden'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Documentation Quality Assessment. Assess docs:
+      completeness, clarity, examples, maintenance burden'
+  - id: reflection_p1_013
+    name: Reflection Agent - Onboarding Experience Review
+    priority: P1
+    category: onboarding
+    tags:
+      - reflection
+      - dx
+    input:
+      prompt: 'Critique onboarding: time to first commit, pain points, improvements'
+      agent: reflection
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Reflection Agent - Onboarding Experience Review. Critique onboarding:
+      time to first commit, pain points, improvements'

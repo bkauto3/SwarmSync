@@ -1,0 +1,2083 @@
+[
+  {
+    "sourceId": "spec_agent_p0_100",
+    "scenarioName": "Spec Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p0_101",
+    "scenarioName": "Spec Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p0_102",
+    "scenarioName": "Spec Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p0_103",
+    "scenarioName": "Spec Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p0_104",
+    "scenarioName": "Spec Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p0_105",
+    "scenarioName": "Spec Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_agent_p0_106",
+    "scenarioName": "Spec Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "compliance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical compliance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "spec_agent_p0_107",
+    "scenarioName": "Spec Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "scalability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical scalability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "spec_agent_p0_108",
+    "scenarioName": "Spec Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "reliability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical reliability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "spec_agent_p0_109",
+    "scenarioName": "Spec Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical data_quality test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "spec_agent_p0_110",
+    "scenarioName": "Spec Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p0_111",
+    "scenarioName": "Spec Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p0_112",
+    "scenarioName": "Spec Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p0_113",
+    "scenarioName": "Spec Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p0_114",
+    "scenarioName": "Spec Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p0_115",
+    "scenarioName": "Spec Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "spec",
+    "agentTags": ["spec", "critical", "p0", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute critical security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Spec Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_p1_001",
+    "scenarioName": "Spec Agent - OpenAPI 3.0 Specification",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "openapi"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Generate OpenAPI spec for user management API with schemas, examples",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - OpenAPI 3.0 Specification. Generate OpenAPI spec for user management API with schemas, examples",
+    "category": "api_spec"
+  },
+  {
+    "sourceId": "spec_p1_002",
+    "scenarioName": "Spec Agent - System Architecture Diagram",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "diagram"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Create system architecture diagram for microservices: C4 model, component view",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - System Architecture Diagram. Create system architecture diagram for microservices: C4 model, component view",
+    "category": "architecture"
+  },
+  {
+    "sourceId": "spec_p1_003",
+    "scenarioName": "Spec Agent - Database Schema ERD",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "erd"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Generate ER diagram for e-commerce DB: entities, relationships, cardinality",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Database Schema ERD. Generate ER diagram for e-commerce DB: entities, relationships, cardinality",
+    "category": "database"
+  },
+  {
+    "sourceId": "spec_p1_004",
+    "scenarioName": "Spec Agent - User Stories from Requirements",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "user_stories"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Convert requirements into user stories with acceptance criteria, estimates",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - User Stories from Requirements. Convert requirements into user stories with acceptance criteria, estimates",
+    "category": "requirements"
+  },
+  {
+    "sourceId": "spec_p1_005",
+    "scenarioName": "Spec Agent - Technical RFC Document",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "documentation"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Write RFC for new feature: problem, proposal, alternatives, migration path",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Technical RFC Document. Write RFC for new feature: problem, proposal, alternatives, migration path",
+    "category": "rfc"
+  },
+  {
+    "sourceId": "spec_p1_006",
+    "scenarioName": "Spec Agent - API Integration Guide",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "guide"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Create integration guide: authentication, rate limits, code examples (Python, JS)",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - API Integration Guide. Create integration guide: authentication, rate limits, code examples (Python, JS)",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_p1_007",
+    "scenarioName": "Spec Agent - Sequence Diagram for Auth Flow",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "uml"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Generate sequence diagram for OAuth2 authorization code flow",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Sequence Diagram for Auth Flow. Generate sequence diagram for OAuth2 authorization code flow",
+    "category": "sequence"
+  },
+  {
+    "sourceId": "spec_p1_008",
+    "scenarioName": "Spec Agent - Non-Functional Requirements",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "requirements"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Define NFRs: performance (P95 <200ms), availability (99.9%), scalability",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Non-Functional Requirements. Define NFRs: performance (P95 <200ms), availability (99",
+    "category": "nfr"
+  },
+  {
+    "sourceId": "spec_p1_009",
+    "scenarioName": "Spec Agent - Migration Plan Document",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "planning"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Create migration plan: monolith to microservices, timeline, risks, rollback",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Migration Plan Document. Create migration plan: monolith to microservices, timeline, risks, rollback",
+    "category": "migration"
+  },
+  {
+    "sourceId": "spec_p1_010",
+    "scenarioName": "Spec Agent - Security Requirements Specification",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Define security requirements: authentication, authorization, encryption, auditing",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Security Requirements Specification. Define security requirements: authentication, authorization, encryption, auditing",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_p1_011",
+    "scenarioName": "Spec Agent - API Versioning Strategy",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "api"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Design API versioning strategy: URI versioning, deprecation policy, changelog",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - API Versioning Strategy. Design API versioning strategy: URI versioning, deprecation policy, changelog",
+    "category": "versioning"
+  },
+  {
+    "sourceId": "spec_p1_012",
+    "scenarioName": "Spec Agent - Technical Onboarding Guide",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "documentation"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Create onboarding guide: setup, architecture overview, dev workflow, FAQs",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Technical Onboarding Guide. Create onboarding guide: setup, architecture overview, dev workflow, FAQs",
+    "category": "onboarding"
+  },
+  {
+    "sourceId": "spec_p1_013",
+    "scenarioName": "Spec Agent - Capacity Planning Specification",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "planning"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Spec capacity needs: traffic projections, infrastructure sizing, cost estimates",
+      "agent": "spec"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Spec Agent - Capacity Planning Specification. Spec capacity needs: traffic projections, infrastructure sizing, cost estimates",
+    "category": "capacity"
+  },
+  {
+    "sourceId": "spec_agent_p1_100",
+    "scenarioName": "Spec Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p1_101",
+    "scenarioName": "Spec Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p1_102",
+    "scenarioName": "Spec Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p1_103",
+    "scenarioName": "Spec Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p1_104",
+    "scenarioName": "Spec Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p1_105",
+    "scenarioName": "Spec Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_agent_p1_106",
+    "scenarioName": "Spec Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "compliance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority compliance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "spec_agent_p1_107",
+    "scenarioName": "Spec Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "scalability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority scalability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "spec_agent_p1_108",
+    "scenarioName": "Spec Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "reliability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority reliability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "spec_agent_p1_109",
+    "scenarioName": "Spec Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "data_quality"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "spec_agent_p1_110",
+    "scenarioName": "Spec Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p1_111",
+    "scenarioName": "Spec Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p1_112",
+    "scenarioName": "Spec Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p1_113",
+    "scenarioName": "Spec Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p1_114",
+    "scenarioName": "Spec Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p1_115",
+    "scenarioName": "Spec Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_agent_p1_116",
+    "scenarioName": "Spec Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "compliance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority compliance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "spec_agent_p1_117",
+    "scenarioName": "Spec Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "scalability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority scalability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "spec_agent_p1_118",
+    "scenarioName": "Spec Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "reliability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority reliability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "spec_agent_p1_119",
+    "scenarioName": "Spec Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "data_quality"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "spec_agent_p1_120",
+    "scenarioName": "Spec Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p1_121",
+    "scenarioName": "Spec Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p1_122",
+    "scenarioName": "Spec Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p1_123",
+    "scenarioName": "Spec Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p1_124",
+    "scenarioName": "Spec Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p1_125",
+    "scenarioName": "Spec Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_agent_p1_126",
+    "scenarioName": "Spec Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "compliance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority compliance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "spec_agent_p1_127",
+    "scenarioName": "Spec Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "scalability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority scalability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "spec_agent_p1_128",
+    "scenarioName": "Spec Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "reliability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority reliability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "spec_agent_p1_129",
+    "scenarioName": "Spec Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "spec",
+    "agentTags": ["spec", "high", "p1", "data_quality"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "spec_agent_p2_001",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p2_002",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p2_003",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p2_004",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p2_005",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p2_006",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_agent_p2_007",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "compliance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "spec_agent_p2_008",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "scalability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "spec_agent_p2_009",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "reliability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "spec_agent_p2_010",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "spec_agent_p2_011",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "success"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority success test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "spec_agent_p2_012",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "spec_agent_p2_013",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "spec_agent_p2_014",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "performance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority performance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "spec_agent_p2_015",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "integration"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority integration test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "spec_agent_p2_016",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "security"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority security test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "spec_agent_p2_017",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "compliance"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "spec_agent_p2_018",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "scalability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "spec_agent_p2_019",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "reliability"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "spec_agent_p2_020",
+    "scenarioName": "Spec Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "spec",
+    "agentTags": ["spec", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "spec",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for spec_agent",
+      "agent": "spec",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Spec Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

@@ -1,0 +1,722 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  emailVerified DateTime?
+  displayName   String
+  image         String?
+  password      String?   // Optional for OAuth users
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  agents        Agent[]
+  reviews       AgentReview[]
+  executions    AgentExecution[] @relation("ExecutionInitiator")
+  wallets       Wallet[]         @relation("UserWallets")
+  certificationsReviewed AgentCertification[] @relation("CertificationReviewer")
+  outcomeVerifications OutcomeVerification[] @relation("VerificationReviewer")
+  serviceAgreements ServiceAgreement[] @relation("AgreementBuyer")
+  memberships   OrganizationMembership[]
+}
+
+// NextAuth required models
+model Account {
+  id                String  @id @default(uuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?  @db.Text
+  access_token      String?  @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?  @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Agent {
+  id              String          @id @default(uuid())
+  slug            String          @unique
+  name            String
+  description     String
+  status          AgentStatus     @default(DRAFT)
+  visibility      AgentVisibility @default(PUBLIC)
+  categories      String[]
+  tags            String[]
+  pricingModel    String
+  pricingType     String?
+  priceAmount     Float?
+  creatorId       String
+  creator         User            @relation(fields: [creatorId], references: [id])
+  organizationId  String?
+  organization    Organization?   @relation(fields: [organizationId], references: [id])
+  executions      AgentExecution[]
+  reviews         AgentReview[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  wallets         Wallet[]        @relation("AgentWallets")
+  requestsSent    AgentCollaboration[] @relation("RequesterAgent")
+  requestsReceived AgentCollaboration[] @relation("ResponderAgent")
+  budgets         AgentBudget[]
+  metricsPrimary  AgentEngagementMetric[] @relation("AgentMetricPrimary")
+  metricsCounter  AgentEngagementMetric[] @relation("AgentMetricCounter")
+  certifications  AgentCertification[]
+  serviceAgreements ServiceAgreement[]
+  evaluationResults EvaluationResult[]
+  verificationStatus VerificationStatus @default(UNVERIFIED)
+  verifiedAt      DateTime?
+  trustScore      Int              @default(50)
+  successCount    Int              @default(0)
+  failureCount    Int              @default(0)
+  lastExecutedAt  DateTime?
+  basePriceCents  Int?
+  x402Enabled     Boolean         @default(false)
+  x402WalletAddress String?
+  x402Network     String?
+  x402Price       Float?
+  inputSchema     Json?
+  outputSchema    Json?
+  ap2Endpoint     String?
+  serviceAccounts ServiceAccount[]
+  x402Transactions X402Transaction[]
+  testRuns        TestRun[]
+  badges          String[]            @default([])
+
+  @@index([x402Enabled])
+}
+
+model AgentExecution {
+  id            String         @id @default(uuid())
+  agentId       String
+  agent         Agent          @relation(fields: [agentId], references: [id])
+  initiatorId   String
+  initiator     User           @relation("ExecutionInitiator", fields: [initiatorId], references: [id])
+  initiatorType InitiatorType  @default(USER)
+  sourceWalletId String?
+  sourceWallet  Wallet?        @relation("ExecutionSourceWallet", fields: [sourceWalletId], references: [id])
+  input         Json
+  output        Json?
+  status        ExecutionStatus @default(PENDING)
+  cost          Decimal?       @db.Decimal(10, 2)
+  error         String?
+  createdAt     DateTime       @default(now())
+  completedAt   DateTime?
+}
+
+model AgentReview {
+  id          String      @id @default(uuid())
+  agentId     String
+  agent       Agent       @relation(fields: [agentId], references: [id])
+  reviewerId  String
+  reviewer    User        @relation(fields: [reviewerId], references: [id])
+  status      ReviewStatus
+  notes       String?
+  createdAt   DateTime    @default(now())
+}
+
+model AgentCollaboration {
+  id               String            @id @default(uuid())
+  requesterAgentId String
+  requesterAgent   Agent             @relation("RequesterAgent", fields: [requesterAgentId], references: [id])
+  responderAgentId String
+  responderAgent   Agent             @relation("ResponderAgent", fields: [responderAgentId], references: [id])
+  status           CollaborationStatus @default(PENDING)
+  payload          Json?
+  counterPayload   Json?
+  serviceAgreementId String?          @unique
+  serviceAgreement   ServiceAgreement? @relation("Ap2CollaborationAgreement", fields: [serviceAgreementId], references: [id])
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+}
+
+enum CollaborationStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+  COUNTERED
+}
+
+enum AgentStatus {
+  DRAFT
+  PENDING
+  APPROVED
+  REJECTED
+  DISABLED
+}
+
+enum AgentVisibility {
+  PUBLIC
+  PRIVATE
+  UNLISTED
+  ORGANIZATION
+}
+
+enum VerificationStatus {
+  UNVERIFIED
+  PENDING
+  VERIFIED
+  REVOKED
+}
+
+enum ExecutionStatus {
+  PENDING
+  RUNNING
+  SUCCEEDED
+  FAILED
+}
+
+enum ReviewStatus {
+  APPROVED
+  REJECTED
+  NEEDS_WORK
+}
+
+model Wallet {
+  id               String          @id @default(uuid())
+  ownerType        WalletOwnerType
+  ownerUserId      String?
+  ownerUser        User?           @relation("UserWallets", fields: [ownerUserId], references: [id])
+  ownerAgentId     String?
+  ownerAgent       Agent?          @relation("AgentWallets", fields: [ownerAgentId], references: [id])
+  organizationId   String?
+  organization     Organization?   @relation("OrganizationWallets", fields: [organizationId], references: [id])
+  currency         String          @default("USD")
+  balance          Decimal         @db.Decimal(14, 2) @default(0)
+  reserved         Decimal         @db.Decimal(14, 2) @default(0)
+  stripeAccountId  String?
+  externalId       String?
+  status           WalletStatus    @default(ACTIVE)
+  budgetPolicyId   String?
+  policy           WalletPolicy?   @relation(fields: [budgetPolicyId], references: [id])
+  spendCeiling     Decimal?        @db.Decimal(14, 2)
+  autoApproveThreshold Decimal?    @db.Decimal(14, 2)
+  cryptoAddress    String?
+  cryptoNetwork    String?
+  transactions     Transaction[]
+  escrowsSource    Escrow[]        @relation("EscrowSource")
+  escrowsDestination Escrow[]      @relation("EscrowDestination")
+  budgets          AgentBudget[]
+  executionsSource AgentExecution[] @relation("ExecutionSourceWallet")
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+}
+
+model Transaction {
+  id          String             @id @default(uuid())
+  walletId    String
+  wallet      Wallet             @relation(fields: [walletId], references: [id])
+  type        TransactionType
+  status      TransactionStatus  @default(PENDING)
+  amount      Decimal            @db.Decimal(14, 2)
+  reference   String?
+  metadata    Json?
+  createdAt   DateTime           @default(now())
+  settledAt   DateTime?
+  escrow      Escrow?
+  paymentEvents PaymentEvent[]
+}
+
+model X402Transaction {
+  id            String                  @id @default(uuid())
+  agentId       String
+  agent         Agent                   @relation(fields: [agentId], references: [id])
+  buyerAddress  String
+  sellerAddress String
+  amount        Decimal                 @db.Decimal(14, 6)
+  currency      String
+  network       String
+  txHash        String                  @unique
+  status        X402TransactionStatus   @default(PENDING)
+  createdAt     DateTime                @default(now())
+  confirmedAt   DateTime?
+
+  @@index([agentId])
+  @@index([txHash])
+  @@index([status])
+}
+
+model Escrow {
+  id                   String        @id @default(uuid())
+  sourceWalletId       String
+  sourceWallet         Wallet        @relation("EscrowSource", fields: [sourceWalletId], references: [id])
+  destinationWalletId  String
+  destinationWallet    Wallet        @relation("EscrowDestination", fields: [destinationWalletId], references: [id])
+  transactionId        String        @unique
+  transaction          Transaction   @relation(fields: [transactionId], references: [id])
+  status               EscrowStatus  @default(HELD)
+  amount               Decimal       @db.Decimal(14, 2)
+  releaseCondition     String?
+  createdAt            DateTime      @default(now())
+  releasedAt           DateTime?
+  refundedAt           DateTime?
+  serviceAgreement     ServiceAgreement?
+  verification         OutcomeVerification?
+}
+
+enum WalletOwnerType {
+  USER
+  AGENT
+  PLATFORM
+}
+
+enum WalletStatus {
+  ACTIVE
+  SUSPENDED
+  CLOSED
+}
+
+enum TransactionType {
+  CREDIT
+  DEBIT
+  HOLD
+  RELEASE
+}
+
+enum TransactionStatus {
+  PENDING
+  SETTLED
+  FAILED
+  CANCELLED
+}
+
+enum X402TransactionStatus {
+  PENDING
+  CONFIRMED
+  FAILED
+}
+
+enum EscrowStatus {
+  HELD
+  RELEASED
+  REFUNDED
+}
+
+model Workflow {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  creatorId   String
+  steps       Json
+  budget      Decimal  @db.Decimal(14, 2)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  runs        WorkflowRun[]
+}
+
+model WorkflowRun {
+  id          String             @id @default(uuid())
+  workflowId  String
+  workflow    Workflow           @relation(fields: [workflowId], references: [id])
+  status      WorkflowRunStatus  @default(PENDING)
+  context     Json?
+  totalCost   Decimal?           @db.Decimal(14, 2)
+  createdAt   DateTime           @default(now())
+  completedAt DateTime?
+}
+
+enum WorkflowRunStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+enum BudgetApprovalMode {
+  AUTO
+  MANUAL
+  ESCROW
+}
+
+enum PaymentEventStatus {
+  INITIATED
+  AUTHORIZED
+  SETTLED
+  FAILED
+}
+
+enum InitiatorType {
+  USER
+  AGENT
+  WORKFLOW
+}
+
+enum CertificationStatus {
+  DRAFT
+  SUBMITTED
+  QA_TESTS
+  SECURITY_REVIEW
+  CERTIFIED
+  EXPIRED
+  REVOKED
+}
+
+enum EvaluationStatus {
+  PENDING
+  RUNNING
+  PASSED
+  FAILED
+}
+
+enum OutcomeType {
+  LEAD
+  CONTENT
+  SUPPORT_TICKET
+  WORKFLOW
+  GENERIC
+}
+
+enum ServiceAgreementStatus {
+  PENDING
+  ACTIVE
+  COMPLETED
+  DISPUTED
+  CANCELLED
+}
+
+enum OutcomeVerificationStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+  EXPIRED
+}
+
+model WalletPolicy {
+  id                   String   @id @default(uuid())
+  name                 String
+  currency             String   @default("USD")
+  allowAgentToAgent    Boolean  @default(true)
+  requireManualApproval Boolean @default(false)
+  autoApproveThreshold Decimal? @db.Decimal(14, 2)
+  spendCeiling         Decimal? @db.Decimal(14, 2)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  wallets              Wallet[]
+}
+
+model AgentBudget {
+  id            String            @id @default(uuid())
+  agentId       String
+  agent         Agent             @relation(fields: [agentId], references: [id])
+  walletId      String
+  wallet        Wallet            @relation(fields: [walletId], references: [id])
+  monthlyLimit  Decimal           @db.Decimal(14, 2)
+  remaining     Decimal           @db.Decimal(14, 2)
+  approvalMode  BudgetApprovalMode @default(AUTO)
+  resetsOn      DateTime
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+}
+
+model PaymentEvent {
+  id                  String             @id @default(uuid())
+  transactionId       String?
+  transaction         Transaction?       @relation(fields: [transactionId], references: [id])
+  protocol            String?
+  status              PaymentEventStatus
+  sourceWalletId      String
+  destinationWalletId String
+  amount              Decimal            @db.Decimal(14, 2)
+  initiatorType       InitiatorType
+  metadata            Json?
+  rawPayload          Json?
+  createdAt           DateTime           @default(now())
+}
+
+model AgentEngagementMetric {
+  id               String        @id @default(uuid())
+  agentId          String
+  agent            Agent         @relation("AgentMetricPrimary", fields: [agentId], references: [id])
+  counterAgentId   String?
+  counterAgent     Agent?        @relation("AgentMetricCounter", fields: [counterAgentId], references: [id])
+  initiatorType    InitiatorType
+  a2aCount         Int           @default(0)
+  totalSpend       Decimal       @db.Decimal(14, 2) @default(0)
+  lastInteraction  DateTime?
+
+  @@unique([agentId, counterAgentId, initiatorType])
+}
+
+model CertificationChecklist {
+  id        String   @id @default(uuid())
+  name      String
+  vertical  String?
+  items     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  certifications AgentCertification[]
+}
+
+model AgentCertification {
+  id             String              @id @default(uuid())
+  agentId        String
+  agent          Agent               @relation(fields: [agentId], references: [id])
+  status         CertificationStatus @default(DRAFT)
+  reviewerId     String?
+  reviewer       User?               @relation("CertificationReviewer", fields: [reviewerId], references: [id])
+  checklistId    String?
+  checklist      CertificationChecklist? @relation(fields: [checklistId], references: [id])
+  evidence       Json?
+  expiresAt      DateTime?
+  notes          String?
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+  evaluations    EvaluationResult[]
+}
+
+model EvaluationScenario {
+  id          String   @id @default(uuid())
+  name        String
+  vertical    String?
+  input       Json
+  expected    Json?
+  tolerances  Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  evaluations EvaluationResult[]
+}
+
+model EvaluationResult {
+  id               String            @id @default(uuid())
+  agentId          String
+  agent            Agent             @relation(fields: [agentId], references: [id])
+  scenarioId       String
+  scenario         EvaluationScenario @relation(fields: [scenarioId], references: [id])
+  status           EvaluationStatus  @default(PENDING)
+  latencyMs        Int?
+  cost             Decimal?          @db.Decimal(10, 2)
+  logs             Json?
+  certificationId  String?
+  certification    AgentCertification? @relation(fields: [certificationId], references: [id])
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+}
+
+model ServiceAgreement {
+  id                 String                 @id @default(uuid())
+  agentId            String
+  agent              Agent                  @relation(fields: [agentId], references: [id])
+  buyerId            String?
+  buyer              User?                  @relation("AgreementBuyer", fields: [buyerId], references: [id])
+  workflowId         String?
+  escrowId           String?                @unique
+  escrow             Escrow?                @relation(fields: [escrowId], references: [id])
+  outcomeType        OutcomeType            @default(GENERIC)
+  targetDescription  String
+  status             ServiceAgreementStatus @default(PENDING)
+  createdAt          DateTime               @default(now())
+  updatedAt          DateTime               @updatedAt
+  verifications      OutcomeVerification[]
+  ap2Negotiation     AgentCollaboration?    @relation("Ap2CollaborationAgreement")
+}
+
+model Organization {
+  id          String    @id @default(uuid())
+  name        String
+  slug        String    @unique
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  members     OrganizationMembership[]
+  agents      Agent[]
+  wallets     Wallet[]  @relation("OrganizationWallets")
+  subscription OrganizationSubscription?
+  stripeCustomerId String?
+  serviceAccounts ServiceAccount[]
+}
+
+model OrganizationMembership {
+  id             String        @id @default(uuid())
+  userId         String
+  organizationId String
+  role           OrganizationRole @default(MEMBER)
+  createdAt      DateTime       @default(now())
+  user           User           @relation(fields: [userId], references: [id])
+  organization   Organization   @relation(fields: [organizationId], references: [id])
+
+  @@unique([userId, organizationId])
+}
+
+enum OrganizationRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+model BillingPlan {
+  id             String   @id
+  name           String
+  slug           String   @unique
+  priceCents     Int
+  seats          Int
+  agentLimit     Int
+  workflowLimit  Int
+  monthlyCredits Int
+  takeRateBasisPoints Int
+  features       String[]
+  subscriptions  OrganizationSubscription[]
+}
+
+model OrganizationSubscription {
+  id                 String     @id @default(uuid())
+  organizationId     String     @unique
+  organization       Organization @relation(fields: [organizationId], references: [id])
+  planSlug           String
+  plan               BillingPlan @relation(fields: [planSlug], references: [slug])
+  status             SubscriptionStatus @default(ACTIVE)
+  currentPeriodStart DateTime
+  currentPeriodEnd   DateTime
+  paymentProvider    String?
+  paymentMethodId    String?
+  stripeSubscriptionId String?
+  creditAllowance    Int
+  creditUsed         Int      @default(0)
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+  invoices           Invoice[]
+}
+
+model Invoice {
+  id             String     @id @default(uuid())
+  subscriptionId String
+  subscription   OrganizationSubscription @relation(fields: [subscriptionId], references: [id])
+  amountCents    Int
+  currency       String    @default("USD")
+  issuedAt       DateTime  @default(now())
+  dueAt          DateTime
+  paidAt         DateTime?
+  status         InvoiceStatus @default(OPEN)
+  lineItems      Json
+  stripeInvoiceId String?
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  TRIALING
+}
+
+enum InvoiceStatus {
+  OPEN
+  PAID
+  VOID
+}
+
+model ServiceAccount {
+  id              String                @id @default(uuid())
+  name            String
+  description     String?
+  apiKeyHash      String                @unique
+  organizationId  String?
+  organization    Organization?         @relation(fields: [organizationId], references: [id])
+  agentId         String?
+  agent           Agent?                @relation(fields: [agentId], references: [id])
+  scopes          String[]              @default([])
+  status          ServiceAccountStatus  @default(ACTIVE)
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+
+  @@index([organizationId])
+  @@index([agentId])
+}
+
+enum ServiceAccountStatus {
+  ACTIVE
+  DISABLED
+}
+
+model OutcomeVerification {
+  id               String                     @id @default(uuid())
+  serviceAgreementId String
+  serviceAgreement ServiceAgreement           @relation(fields: [serviceAgreementId], references: [id])
+  escrowId         String?                    @unique
+  escrow           Escrow?                    @relation(fields: [escrowId], references: [id])
+  status           OutcomeVerificationStatus  @default(PENDING)
+  evidence         Json?
+  notes            String?
+  verifiedBy       String?
+  reviewer         User?                      @relation("VerificationReviewer", fields: [verifiedBy], references: [id])
+  verifiedAt       DateTime?
+  createdAt        DateTime                   @default(now())
+}
+
+model TestSuite {
+  id                    String   @id @default(cuid())
+  slug                  String   @unique
+  name                  String
+  description           String
+  category              String // e.g. "smoke", "reliability", "reasoning", "security", "domain"
+  recommendedAgentTypes String[] // e.g. ["support", "orchestrator"]
+  estimatedDurationSec  Int
+  approximateCostUsd    Float
+  isRecommended         Boolean  @default(false)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  runs                  TestRun[]
+}
+
+model TestRun {
+  id            String   @id @default(cuid())
+  agentId       String
+  suiteId       String
+  userId        String
+  status        TestRunStatus @default(QUEUED)
+  score         Int?     // 0–100, null until completed
+  startedAt     DateTime?
+  completedAt   DateTime?
+  rawResults    Json?
+  metadata      Json?
+
+  suite         TestSuite @relation(fields: [suiteId], references: [id])
+  agent         Agent     @relation(fields: [agentId], references: [id])
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([agentId])
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum TestRunStatus {
+  QUEUED
+  RUNNING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+

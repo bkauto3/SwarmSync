@@ -1,0 +1,31 @@
+# Run lint-staged - use full paths to avoid Windows/Git bash PATH issues
+# Use git to find the project root (most reliable method)
+PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
+
+if [ -z "$PROJECT_ROOT" ] || [ ! -f "$PROJECT_ROOT/package.json" ]; then
+  echo "Error: Could not find project root (package.json). Are you in a git repository?"
+  exit 1
+fi
+
+cd "$PROJECT_ROOT" || exit 1
+
+# Try to find node - check common Windows locations
+if [ -f "/c/nvm4w/nodejs/node.exe" ]; then
+  NODE="/c/nvm4w/nodejs/node.exe"
+elif [ -f "/c/Program Files/nodejs/node.exe" ]; then
+  NODE="/c/Program Files/nodejs/node.exe"
+elif command -v node >/dev/null 2>&1; then
+  NODE="node"
+else
+  echo "Error: Could not find node.exe"
+  exit 1
+fi
+
+# Run lint-staged using node directly
+if [ -f "$PROJECT_ROOT/node_modules/lint-staged/bin/lint-staged.js" ]; then
+  "$NODE" "$PROJECT_ROOT/node_modules/lint-staged/bin/lint-staged.js" || exit 1
+else
+  echo "Error: lint-staged not found at $PROJECT_ROOT/node_modules/lint-staged/bin/lint-staged.js"
+  exit 1
+fi
+

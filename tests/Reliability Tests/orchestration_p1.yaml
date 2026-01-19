@@ -1,0 +1,1776 @@
+orchestration_p1:
+  name: orchestration_layer1_p1
+  priority: P1
+  total_scenarios: 50
+  components:
+    - htdag_planner
+    - halo_router
+    - aop_validator
+    - daao_router
+  business_context: |
+    P1 high-priority tests for Layer 1 orchestration focusing on advanced integration scenarios,
+    cross-component workflows, performance under load, and error recovery capabilities.
+scenarios:
+  - id: orch_p1_001
+    name: 'Full pipeline: HTDAG → HALO → AOP → DAAO execution'
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - halo
+      - aop
+      - daao
+      - full_pipeline
+    input:
+      prompt: Build a complete SaaS MVP with authentication, payment processing, and
+        deployment
+      constraints:
+        - Must use all orchestration layers
+        - Requires 5+ agents
+    expected_output:
+      contains:
+        - task_dag
+        - routing_plan
+        - validation_result
+        - cost_optimization
+      min_length: 500
+      all_layers_executed: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - htdag_decomposition
+        - halo_routing
+        - aop_validation
+        - daao_optimization
+    performance:
+      max_latency_ms: 8000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: 'Full pipeline: HTDAG → HALO → AOP → DAAO execution. Build a complete
+      SaaS MVP with authentication, payment processing, and deployment'
+  - id: orch_p1_002
+    name: HTDAG decomposition with dynamic task insertion
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - dynamic_update
+      - feedback_loop
+    input:
+      prompt: Deploy API, but discover during deployment that database migration is
+        needed
+      context:
+        initial_tasks:
+          - design_api
+          - implement_api
+          - deploy_api
+        discovered_requirement: database_migration
+    expected_output:
+      contains:
+        - updated_dag
+        - migration_task_added
+        - dependency_reordered
+      dag_updated: true
+      cycle_detected: false
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - dynamic_insertion
+        - dependency_correctness
+        - acyclicity_preserved
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: HTDAG decomposition with dynamic task insertion. Deploy API, but discover
+      during deployment that database migration is needed
+  - id: orch_p1_003
+    name: HALO routing with agent capacity constraints
+    priority: P1
+    category: integration
+    tags:
+      - halo
+      - load_balancing
+      - capacity_check
+    input:
+      prompt: Route 20 tasks across 5 agents, where 2 agents are at 80% capacity
+      context:
+        available_agents:
+          - builder
+          - deploy
+          - qa
+          - security
+          - analyst
+        agent_capacity:
+          builder: 0.8
+          deploy: 0.8
+          qa: 0.3
+          security: 0.5
+          analyst: 0.4
+    expected_output:
+      contains:
+        - routing_plan
+        - load_balanced
+        - no_overload
+      builder_tasks: <=3
+      deploy_tasks: <=3
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - load_balancing
+        - capacity_respect
+        - task_distribution
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: HALO routing with agent capacity constraints. Route 20 tasks across
+      5 agents, where 2 agents are at 80% capacity
+  - id: orch_p1_004
+    name: AOP validation with solvability failure recovery
+    priority: P1
+    category: integration
+    tags:
+      - aop
+      - validation
+      - solvability_check
+    input:
+      prompt: Validate routing plan where deploy agent lacks AWS credentials
+      context:
+        routing_plan:
+          - task: deploy_to_aws
+            agent: deploy_agent
+            required_tools:
+              - aws_cli
+              - aws_credentials
+        agent_capabilities:
+          deploy_agent:
+            tools:
+              - aws_cli
+            missing:
+              - aws_credentials
+    expected_output:
+      contains:
+        - solvability_failed
+        - missing_credentials
+        - remediation_suggested
+      validation_passed: false
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - solvability_detection
+        - missing_tool_identified
+        - remediation_provided
+    performance:
+      max_latency_ms: 1500
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: AOP validation with solvability failure recovery. Validate routing
+      plan where deploy agent lacks AWS credentials
+  - id: orch_p1_005
+    name: DAAO cost optimization with quality tradeoff
+    priority: P1
+    category: integration
+    tags:
+      - daao
+      - cost_optimization
+      - quality_tradeoff
+    input:
+      prompt: 'Optimize routing plan: 10 simple tasks, 5 complex tasks'
+      context:
+        simple_tasks:
+          - update_docs
+          - format_code
+          - send_notifications
+        complex_tasks:
+          - design_architecture
+          - implement_authentication
+          - security_audit
+        budget: $1.00
+    expected_output:
+      contains:
+        - optimized_plan
+        - cost_breakdown
+        - quality_score
+      simple_model: gemini-2.0-flash
+      complex_model: gpt-4o
+      total_cost: <=1.00
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - cost_within_budget
+        - quality_maintained
+        - appropriate_model_selection
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: 'DAAO cost optimization with quality tradeoff. Optimize routing plan:
+      10 simple tasks, 5 complex tasks'
+  - id: orch_p1_006
+    name: HTDAG → HALO with parallel branch routing
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - halo
+      - parallel_execution
+    input:
+      prompt: 'Build 3 microservices in parallel: auth-service, payment-service, notification-service'
+      constraints:
+        - Services are independent
+        - Each requires builder + deploy agents
+    expected_output:
+      contains:
+        - parallel_branches
+        - independent_routing
+        - no_blocking
+      parallel_count: 3
+      agents_per_branch: '>=2'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - parallel_decomposition
+        - independent_routing
+        - no_artificial_deps
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: 'HTDAG → HALO with parallel branch routing. Build 3 microservices in
+      parallel: auth-service, payment-service, notification-service'
+  - id: orch_p1_007
+    name: AOP completeness check with missing task detection
+    priority: P1
+    category: integration
+    tags:
+      - aop
+      - completeness
+      - gap_detection
+    input:
+      prompt: Validate routing plan for SaaS MVP
+      context:
+        routing_plan:
+          - research_market → analyst
+          - design_architecture → spec
+          - implement_backend → builder
+          - implement_frontend → builder
+        dag_tasks:
+          - research_market
+          - design_architecture
+          - implement_backend
+          - implement_frontend
+          - deploy_infrastructure
+          - setup_database
+    expected_output:
+      contains:
+        - completeness_failed
+        - unassigned_tasks
+        - deploy_infrastructure
+        - setup_database
+      validation_passed: false
+      missing_count: 2
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - gap_detection
+        - unassigned_identification
+        - coverage_completeness
+    performance:
+      max_latency_ms: 1500
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: AOP completeness check with missing task detection. Validate routing
+      plan for SaaS MVP
+  - id: orch_p1_008
+    name: HTDAG → AOP with circular dependency prevention
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - aop
+      - cycle_detection
+    input:
+      prompt: 'Decompose task with potential circular dependency: A depends on B, B
+        depends on C, C depends on A'
+      context:
+        malicious_dag:
+          - task_a → task_b
+          - task_b → task_c
+          - task_c → task_a
+    expected_output:
+      contains:
+        - cycle_detected
+        - validation_failed
+        - dag_rejected
+      cycle_exists: true
+      dag_accepted: false
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - cycle_detection
+        - rejection_correct
+        - error_message_clear
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: 'HTDAG → AOP with circular dependency prevention. Decompose task with
+      potential circular dependency: A depends on B, B depends on C, C depends on A'
+  - id: orch_p1_009
+    name: DAAO → HALO with model fallback when budget exceeded
+    priority: P1
+    category: integration
+    tags:
+      - daao
+      - halo
+      - fallback
+      - budget_constraint
+    input:
+      prompt: Optimize 50 tasks with $0.50 budget (would cost $2.00 with GPT-4o)
+      context:
+        task_count: 50
+        budget: 0.5
+        default_cost_gpt4o: 2.0
+    expected_output:
+      contains:
+        - fallback_triggered
+        - gemini_flash_used
+        - budget_respected
+      total_cost: <=0.50
+      model_mix:
+        - gemini-2.0-flash
+        - gpt-4o-mini
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - budget_respected
+        - fallback_appropriate
+        - quality_acceptable
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: DAAO → HALO with model fallback when budget exceeded. Optimize 50 tasks
+      with $0
+  - id: orch_p1_010
+    name: Full pipeline with AOP non-redundancy detection
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - halo
+      - aop
+      - redundancy_check
+    input:
+      prompt: Build landing page where analyst and marketing both run competitor analysis
+      context:
+        routing_plan:
+          - competitor_analysis_1 → analyst
+          - competitor_analysis_2 → marketing
+    expected_output:
+      contains:
+        - redundancy_detected
+        - duplicate_tasks
+        - consolidation_suggested
+      validation_passed: false
+      redundant_count: 1
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - redundancy_detection
+        - duplicate_identification
+        - consolidation_recommendation
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: Full pipeline with AOP non-redundancy detection. Build landing page
+      where analyst and marketing both run competitor analysis
+  - id: orch_p1_011
+    name: HTDAG hierarchical decomposition (4 levels deep)
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - nested
+      - hierarchical
+    input:
+      prompt: Build complete e-commerce platform with admin panel, customer portal,
+        payment gateway, inventory system
+      constraints:
+        - Allow nested decomposition up to 4 levels
+    expected_output:
+      contains:
+        - hierarchical_dag
+        - max_depth_4
+        - leaf_tasks_actionable
+      max_depth: 4
+      task_count: '>=40'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - depth_limit_respected
+        - hierarchy_clear
+        - actionable_leaves
+    performance:
+      max_latency_ms: 10000
+      max_tokens: 3000
+    cost_estimate: 0.1
+    description: HTDAG hierarchical decomposition (4 levels deep). Build complete e-commerce
+      platform with admin panel, customer portal, payment gateway, inventory system
+  - id: orch_p1_012
+    name: HALO dynamic agent creation for specialized task
+    priority: P1
+    category: integration
+    tags:
+      - halo
+      - dynamic_agent
+      - specialization
+    input:
+      prompt: Route task requiring blockchain smart contract deployment
+      context:
+        task: deploy_smart_contract_to_ethereum
+        available_agents:
+          - builder
+          - deploy
+          - qa
+        none_have_blockchain_skills: true
+    expected_output:
+      contains:
+        - dynamic_agent_created
+        - blockchain_specialist
+        - web3_tools
+      agent_created: true
+      agent_type: specialized_blockchain_agent
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - specialization_identified
+        - agent_creation_triggered
+        - tools_appropriate
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: HALO dynamic agent creation for specialized task. Route task requiring
+      blockchain smart contract deployment
+  - id: orch_p1_013
+    name: AOP reward model evaluation for plan comparison
+    priority: P1
+    category: integration
+    tags:
+      - aop
+      - reward_model
+      - plan_comparison
+    input:
+      prompt: Compare two routing plans for deploying API
+      context:
+        plan_a:
+          success_prob: 0.85
+          quality: 0.82
+          cost: 0.5
+          time: 600
+        plan_b:
+          success_prob: 0.78
+          quality: 0.75
+          cost: 0.2
+          time: 300
+    expected_output:
+      contains:
+        - plan_scores
+        - recommendation
+        - tradeoff_analysis
+      plan_a_score: '>0.75'
+      plan_b_score: '>0.70'
+      recommended_plan: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - scoring_correct
+        - tradeoff_clear
+        - recommendation_justified
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: AOP reward model evaluation for plan comparison. Compare two routing
+      plans for deploying API
+  - id: orch_p1_014
+    name: HTDAG → DAAO with task complexity estimation
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - daao
+      - complexity_estimation
+    input:
+      prompt: 'Decompose and estimate complexity for: Implement OAuth2 authentication
+        with Google, GitHub, and Microsoft'
+      constraints:
+        - Estimate task complexity for model routing
+    expected_output:
+      contains:
+        - task_dag
+        - complexity_scores
+        - model_recommendations
+      simple_tasks: '>=3'
+      complex_tasks: '>=5'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - complexity_estimation
+        - model_routing_appropriate
+        - cost_optimization
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1500
+    cost_estimate: 0.06
+    description: 'HTDAG → DAAO with task complexity estimation. Decompose and estimate
+      complexity for: Implement OAuth2 authentication with Google, GitHub, and Microsoft'
+  - id: orch_p1_015
+    name: HALO → AOP with agent capability mismatch
+    priority: P1
+    category: integration
+    tags:
+      - halo
+      - aop
+      - capability_check
+    input:
+      prompt: Route security audit task to builder agent (wrong agent)
+      context:
+        task: perform_penetration_testing
+        routed_to: builder_agent
+        builder_capabilities:
+          - code_generation
+          - api_integration
+        required_capabilities:
+          - security_testing
+          - vulnerability_scanning
+    expected_output:
+      contains:
+        - solvability_failed
+        - capability_mismatch
+        - re_routing_suggested
+      validation_passed: false
+      correct_agent: security_agent
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - mismatch_detected
+        - correct_agent_identified
+        - re_routing_recommended
+    performance:
+      max_latency_ms: 1500
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: HALO → AOP with agent capability mismatch. Route security audit task
+      to builder agent (wrong agent)
+  - id: orch_p1_016
+    name: Full pipeline with TUMIX early stopping integration
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - halo
+      - aop
+      - daao
+      - tumix
+    input:
+      prompt: Execute iterative refinement loop for code generation, stop early when
+        quality threshold met
+      context:
+        initial_code_quality: 0.65
+        target_quality: 0.85
+        max_iterations: 5
+    expected_output:
+      contains:
+        - early_stopping_triggered
+        - quality_threshold_met
+        - iterations_saved
+      iterations_used: <=3
+      final_quality: '>=0.85'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - early_stopping_correct
+        - quality_achieved
+        - cost_saved
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Full pipeline with TUMIX early stopping integration. Execute iterative
+      refinement loop for code generation, stop early when quality threshold met
+  - id: orch_p1_017
+    name: HTDAG → HALO with sequential dependency propagation
+    priority: P1
+    category: integration
+    tags:
+      - htdag
+      - halo
+      - sequential
+      - dependency
+    input:
+      prompt: 'Set up CI/CD pipeline: build → unit_test → integration_test → security_scan
+        → deploy'
+      constraints:
+        - Each stage depends on previous stage success
+    expected_output:
+      contains:
+        - sequential_routing
+        - dependency_order
+        - stage_agents
+      stage_count: 5
+      dependencies_correct: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - order_correct
+        - dependencies_enforced
+        - agent_selection_appropriate
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: 'HTDAG → HALO with sequential dependency propagation. Set up CI/CD
+      pipeline: build → unit_test → integration_test → security_scan → deploy'
+  - id: orch_p1_018
+    name: AOP validation with all three principles failing
+    priority: P1
+    category: integration
+    tags:
+      - aop
+      - validation
+      - comprehensive_failure
+    input:
+      prompt: Validate intentionally bad routing plan
+      context:
+        routing_plan:
+          - deploy_to_aws → builder (missing credentials)
+          - unassigned_task → none
+          - duplicate_research → analyst
+          - duplicate_research → marketing
+    expected_output:
+      contains:
+        - solvability_failed
+        - completeness_failed
+        - redundancy_detected
+      validation_passed: false
+      failure_count: 3
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - all_failures_detected
+        - clear_error_messages
+        - remediation_comprehensive
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 1000
+    cost_estimate: 0.04
+    description: AOP validation with all three principles failing. Validate intentionally
+      bad routing plan
+  - id: orch_p1_019
+    name: DAAO cost tracking across multi-stage workflow
+    priority: P1
+    category: integration
+    tags:
+      - daao
+      - cost_tracking
+      - multi_stage
+    input:
+      prompt: 'Track cumulative cost across 3-stage workflow: research → design → implement'
+      context:
+        research_tasks: 5
+        design_tasks: 8
+        implement_tasks: 12
+        budget: $3.00
+    expected_output:
+      contains:
+        - stage_costs
+        - cumulative_cost
+        - budget_tracking
+      research_cost: provided
+      design_cost: provided
+      implement_cost: provided
+      total_cost: <=3.00
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - cost_tracking_accurate
+        - budget_respected
+        - stage_breakdown_clear
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: 'DAAO cost tracking across multi-stage workflow. Track cumulative cost
+      across 3-stage workflow: research → design → implement'
+  - id: orch_p1_020
+    name: 'HALO explainability: why agent X was chosen over agent Y'
+    priority: P1
+    category: integration
+    tags:
+      - halo
+      - explainability
+      - routing_decision
+    input:
+      prompt: Explain why spec_agent was chosen over builder_agent for API design task
+      context:
+        task: design_rest_api_endpoints
+        chosen_agent: spec_agent
+        alternative_agent: builder_agent
+    expected_output:
+      contains:
+        - routing_rationale
+        - agent_capabilities_comparison
+        - rule_applied
+      explanation_provided: true
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - explanation_clear
+        - capabilities_compared
+        - rule_referenced
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: 'HALO explainability: why agent X was chosen over agent Y. Explain
+      why spec_agent was chosen over builder_agent for API design task'
+  - id: orch_p1_021
+    name: HALO circuit breaker + DAAO fallback integration
+    priority: P1
+    category: cross_component
+    tags:
+      - halo
+      - daao
+      - circuit_breaker
+      - fallback
+    input:
+      prompt: Trigger circuit breaker after 5 routing failures, fallback to DAAO cheap
+        model routing
+      context:
+        consecutive_failures: 5
+        circuit_breaker_threshold: 5
+    expected_output:
+      contains:
+        - circuit_breaker_open
+        - fallback_triggered
+        - cheap_model_routing
+      circuit_state: open
+      fallback_model: gemini-2.0-flash
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - circuit_breaker_correct
+        - fallback_appropriate
+        - recovery_possible
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: HALO circuit breaker + DAAO fallback integration. Trigger circuit breaker
+      after 5 routing failures, fallback to DAAO cheap model routing
+  - id: orch_p1_022
+    name: AOP solvability check + HTDAG re-decomposition
+    priority: P1
+    category: cross_component
+    tags:
+      - aop
+      - htdag
+      - re_decomposition
+    input:
+      prompt: When solvability fails, trigger HTDAG to re-decompose task into smaller
+        subtasks
+      context:
+        task: implement_blockchain_integration
+        agent: builder_agent
+        solvability: false
+        reason: task_too_complex
+    expected_output:
+      contains:
+        - re_decomposition_triggered
+        - subtasks_generated
+        - new_routing
+      subtask_count: '>=3'
+      new_dag_created: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - re_decomposition_correct
+        - subtasks_actionable
+        - re_routing_successful
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: AOP solvability check + HTDAG re-decomposition. When solvability fails,
+      trigger HTDAG to re-decompose task into smaller subtasks
+  - id: orch_p1_023
+    name: HALO load balancing + agent health monitoring
+    priority: P1
+    category: cross_component
+    tags:
+      - halo
+      - load_balancing
+      - health_check
+    input:
+      prompt: Route tasks to healthy agents only, avoid agents with high failure rate
+      context:
+        agents:
+          builder:
+            health: 0.95
+            capacity: 0.5
+          deploy:
+            health: 0.6
+            capacity: 0.3
+          qa:
+            health: 0.98
+            capacity: 0.7
+        health_threshold: 0.8
+    expected_output:
+      contains:
+        - healthy_agents_only
+        - deploy_avoided
+        - load_balanced
+      deploy_tasks: 0
+      builder_tasks: '>=1'
+      qa_tasks: '>=1'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - health_check_enforced
+        - unhealthy_avoided
+        - load_balance_respected
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: HALO load balancing + agent health monitoring. Route tasks to healthy
+      agents only, avoid agents with high failure rate
+  - id: orch_p1_024
+    name: HTDAG → AOP → DAAO task priority propagation
+    priority: P1
+    category: cross_component
+    tags:
+      - htdag
+      - aop
+      - daao
+      - priority
+    input:
+      prompt: High-priority tasks should get expensive models, low-priority tasks get
+        cheap models
+      context:
+        tasks:
+          - name: critical_security_patch
+            priority: P0
+          - name: update_documentation
+            priority: P2
+          - name: refactor_test_suite
+            priority: P1
+    expected_output:
+      contains:
+        - priority_routing
+        - model_assignment
+        - cost_optimized
+      p0_model: gpt-4o
+      p2_model: gemini-2.0-flash
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - priority_respected
+        - model_appropriate
+        - cost_efficient
+    performance:
+      max_latency_ms: 2500
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: HTDAG → AOP → DAAO task priority propagation. High-priority tasks should
+      get expensive models, low-priority tasks get cheap models
+  - id: orch_p1_025
+    name: HALO routing + OTEL observability integration
+    priority: P1
+    category: cross_component
+    tags:
+      - halo
+      - otel
+      - observability
+    input:
+      prompt: 'Route task and emit OTEL spans for: routing_decision, agent_selection,
+        execution_time'
+      context:
+        task: deploy_api
+        observability_enabled: true
+    expected_output:
+      contains:
+        - otel_spans
+        - routing_decision_span
+        - agent_selection_span
+      span_count: '>=3'
+      correlation_id: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - spans_emitted
+        - correlation_id_present
+        - metrics_tracked
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: 'HALO routing + OTEL observability integration. Route task and emit
+      OTEL spans for: routing_decision, agent_selection, execution_time'
+  - id: orch_p1_026
+    name: AOP validation + error handler integration
+    priority: P1
+    category: cross_component
+    tags:
+      - aop
+      - error_handler
+      - graceful_degradation
+    input:
+      prompt: When validation fails, trigger error handler with graceful degradation
+      context:
+        validation_failures:
+          - solvability
+          - completeness
+        error_handler_levels:
+          - llm_retry
+          - heuristic_fallback
+          - minimal_plan
+    expected_output:
+      contains:
+        - error_handler_triggered
+        - degradation_level
+        - recovery_attempted
+      degradation_level: heuristic_fallback
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - error_handler_invoked
+        - degradation_appropriate
+        - recovery_successful
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: AOP validation + error handler integration. When validation fails,
+      trigger error handler with graceful degradation
+  - id: orch_p1_027
+    name: DAAO cost estimation + budget approval workflow
+    priority: P1
+    category: cross_component
+    tags:
+      - daao
+      - budget
+      - approval
+    input:
+      prompt: Estimate cost exceeds budget, trigger approval workflow
+      context:
+        estimated_cost: 5.0
+        budget: 2.0
+        approval_threshold: 2.5
+    expected_output:
+      contains:
+        - budget_exceeded
+        - approval_required
+        - workflow_triggered
+      approval_needed: true
+      estimated_cost: 5.0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - budget_check_correct
+        - approval_triggered
+        - cost_estimate_accurate
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 600
+    cost_estimate: 0.03
+    description: DAAO cost estimation + budget approval workflow. Estimate cost exceeds
+      budget, trigger approval workflow
+  - id: orch_p1_028
+    name: HTDAG task queue + HALO batch routing
+    priority: P1
+    category: cross_component
+    tags:
+      - htdag
+      - halo
+      - batch_processing
+    input:
+      prompt: Queue 50 tasks from DAG, batch route in groups of 10 for efficiency
+      context:
+        task_count: 50
+        batch_size: 10
+    expected_output:
+      contains:
+        - batch_routing
+        - queue_management
+        - efficiency_gain
+      batch_count: 5
+      routing_calls: 5
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - batching_correct
+        - queue_ordered
+        - efficiency_improved
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: HTDAG task queue + HALO batch routing. Queue 50 tasks from DAG, batch
+      route in groups of 10 for efficiency
+  - id: orch_p1_029
+    name: AOP reward model + learning from execution outcomes
+    priority: P1
+    category: cross_component
+    tags:
+      - aop
+      - reward_model
+      - learning
+    input:
+      prompt: Update reward model weights based on actual execution success rates
+      context:
+        plan_prediction:
+          success_prob: 0.85
+          actual_success: 0.72
+        execution_data:
+          cost: 0.45
+          time: 550
+          quality: 0.78
+    expected_output:
+      contains:
+        - weights_updated
+        - learning_occurred
+        - prediction_improved
+      weight_adjustment: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - learning_correct
+        - weights_adjusted
+        - future_predictions_improved
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: AOP reward model + learning from execution outcomes. Update reward
+      model weights based on actual execution success rates
+  - id: orch_p1_030
+    name: HALO dynamic agent creation + agent registry update
+    priority: P1
+    category: cross_component
+    tags:
+      - halo
+      - dynamic_agent
+      - registry
+    input:
+      prompt: Create specialized agent and register it for future use
+      context:
+        task: deploy_kubernetes_cluster
+        agent_created: k8s_specialist
+    expected_output:
+      contains:
+        - agent_created
+        - registry_updated
+        - available_for_future
+      registry_size_increase: 1
+      agent_name: k8s_specialist
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - agent_creation_successful
+        - registry_updated
+        - reusable
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: HALO dynamic agent creation + agent registry update. Create specialized
+      agent and register it for future use
+  - id: orch_p1_031
+    name: HTDAG → DAAO → memory compression integration
+    priority: P1
+    category: cross_component
+    tags:
+      - htdag
+      - daao
+      - memory
+      - compression
+    input:
+      prompt: For long-running workflows, compress old DAG nodes using DeepSeek-OCR
+      context:
+        workflow_age_hours: 24
+        dag_node_count: 100
+        compression_threshold_hours: 12
+    expected_output:
+      contains:
+        - compression_triggered
+        - old_nodes_compressed
+        - memory_saved
+      compressed_nodes: '>=50'
+      compression_ratio: '>=10x'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - compression_appropriate
+        - memory_savings_achieved
+        - old_data_preserved
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: HTDAG → DAAO → memory compression integration. For long-running workflows,
+      compress old DAG nodes using DeepSeek-OCR
+  - id: orch_p1_032
+    name: HALO routing + A2A protocol agent discovery
+    priority: P1
+    category: cross_component
+    tags:
+      - halo
+      - a2a
+      - discovery
+    input:
+      prompt: Discover external agent via A2A protocol and route task
+      context:
+        task: process_payment_with_stripe
+        internal_agents:
+          - builder
+          - deploy
+        external_agent_available: stripe_payment_agent
+    expected_output:
+      contains:
+        - external_agent_discovered
+        - a2a_routing
+        - task_routed
+      agent_type: external
+      agent_name: stripe_payment_agent
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - discovery_successful
+        - a2a_protocol_used
+        - routing_correct
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: HALO routing + A2A protocol agent discovery. Discover external agent
+      via A2A protocol and route task
+  - id: orch_p1_033
+    name: AOP validation + security validator integration
+    priority: P1
+    category: cross_component
+    tags:
+      - aop
+      - security
+      - validation
+    input:
+      prompt: Validate routing plan for security vulnerabilities before execution
+      context:
+        routing_plan:
+          - execute_user_provided_code → builder
+          - deploy_without_review → deploy
+    expected_output:
+      contains:
+        - security_validation
+        - vulnerabilities_detected
+        - execution_blocked
+      security_passed: false
+      vulnerabilities:
+        - code_execution_risk
+        - unreviewed_deployment
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - security_check_performed
+        - vulnerabilities_identified
+        - execution_prevented
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: AOP validation + security validator integration. Validate routing plan
+      for security vulnerabilities before execution
+  - id: orch_p1_034
+    name: HTDAG → HALO → CaseBank memory retrieval
+    priority: P1
+    category: cross_component
+    tags:
+      - htdag
+      - halo
+      - casebank
+      - memory
+    input:
+      prompt: Retrieve similar past workflows from CaseBank to inform routing decisions
+      context:
+        current_task: deploy_nodejs_api
+        casebank_has_similar: true
+        past_workflow_success: 0.92
+    expected_output:
+      contains:
+        - casebank_retrieved
+        - similar_workflow_found
+        - routing_informed
+      similarity_score: '>=0.80'
+      routing_adjustment: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - casebank_queried
+        - similar_case_found
+        - routing_improved
+    performance:
+      max_latency_ms: 2500
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: HTDAG → HALO → CaseBank memory retrieval. Retrieve similar past workflows
+      from CaseBank to inform routing decisions
+  - id: orch_p1_035
+    name: DAAO → HALO with Memory×Router coupling
+    priority: P1
+    category: cross_component
+    tags:
+      - daao
+      - halo
+      - memory_router_coupling
+    input:
+      prompt: Use CaseBank signals to increase cheap model usage (+13.1% target)
+      context:
+        task: format_python_code
+        casebank_similar_tasks_success_cheap_model: 0.95
+        default_model: gpt-4o
+    expected_output:
+      contains:
+        - cheap_model_routed
+        - casebank_signal_used
+        - cost_saved
+      model_used: gemini-2.0-flash
+      confidence_from_casebank: '>=0.90'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - casebank_signal_correct
+        - cheap_model_appropriate
+        - cost_optimized
+    performance:
+      max_latency_ms: 2000
+      max_tokens: 800
+    cost_estimate: 0.04
+    description: DAAO → HALO with Memory×Router coupling. Use CaseBank signals to increase
+      cheap model usage (+13
+  - id: orch_p1_036
+    name: HTDAG decomposition for 100 concurrent tasks
+    priority: P1
+    category: performance
+    tags:
+      - htdag
+      - concurrent
+      - load
+    input:
+      prompt: Decompose 100 independent tasks concurrently
+      context:
+        task_count: 100
+        concurrent: true
+    expected_output:
+      contains:
+        - all_tasks_decomposed
+        - no_deadlocks
+        - parallel_processing
+      task_count: 100
+      errors: 0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - concurrency_handled
+        - no_race_conditions
+        - performance_acceptable
+    performance:
+      max_latency_ms: 15000
+      max_tokens: 5000
+    cost_estimate: 0.1
+    description: HTDAG decomposition for 100 concurrent tasks. Decompose 100 independent
+      tasks concurrently
+  - id: orch_p1_037
+    name: HALO routing with all 15 agents at 90% capacity
+    priority: P1
+    category: performance
+    tags:
+      - halo
+      - capacity
+      - stress
+    input:
+      prompt: Route 50 tasks when all agents are near capacity
+      context:
+        task_count: 50
+        agent_capacity_all: 0.9
+        agents: 15
+    expected_output:
+      contains:
+        - queue_management
+        - no_overload
+        - graceful_handling
+      tasks_queued: '>=40'
+      tasks_rejected: 0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - capacity_respected
+        - queueing_correct
+        - no_failures
+    performance:
+      max_latency_ms: 8000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: HALO routing with all 15 agents at 90% capacity. Route 50 tasks when
+      all agents are near capacity
+  - id: orch_p1_038
+    name: AOP validation for 1000-task DAG
+    priority: P1
+    category: performance
+    tags:
+      - aop
+      - large_dag
+      - scalability
+    input:
+      prompt: Validate routing plan for massive 1000-task workflow
+      context:
+        task_count: 1000
+        routing_plan_size: 1000
+    expected_output:
+      contains:
+        - validation_complete
+        - performance_acceptable
+        - all_checks_run
+      validation_time: <=20s
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - validation_thorough
+        - scalability_demonstrated
+        - no_timeouts
+    performance:
+      max_latency_ms: 20000
+      max_tokens: 3000
+    cost_estimate: 0.1
+    description: AOP validation for 1000-task DAG. Validate routing plan for massive
+      1000-task workflow
+  - id: orch_p1_039
+    name: DAAO cost tracking for high-throughput workflow
+    priority: P1
+    category: performance
+    tags:
+      - daao
+      - throughput
+      - cost_tracking
+    input:
+      prompt: Track cumulative cost across 500 tasks in real-time
+      context:
+        task_count: 500
+        cost_tracking_enabled: true
+    expected_output:
+      contains:
+        - real_time_tracking
+        - cumulative_cost
+        - no_lag
+      tracking_overhead: <=5%
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - tracking_accurate
+        - low_overhead
+        - real_time_updates
+    performance:
+      max_latency_ms: 10000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: DAAO cost tracking for high-throughput workflow. Track cumulative cost
+      across 500 tasks in real-time
+  - id: orch_p1_040
+    name: HTDAG dynamic updates under sustained load
+    priority: P1
+    category: performance
+    tags:
+      - htdag
+      - dynamic_update
+      - sustained_load
+    input:
+      prompt: Perform 50 dynamic DAG updates while system is processing 100 tasks
+      context:
+        initial_tasks: 100
+        dynamic_updates: 50
+        concurrent: true
+    expected_output:
+      contains:
+        - updates_successful
+        - no_corruption
+        - consistency_maintained
+      updates_applied: 50
+      corruption_incidents: 0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - consistency_maintained
+        - concurrency_safe
+        - performance_acceptable
+    performance:
+      max_latency_ms: 12000
+      max_tokens: 3000
+    cost_estimate: 0.1
+    description: HTDAG dynamic updates under sustained load. Perform 50 dynamic DAG
+      updates while system is processing 100 tasks
+  - id: orch_p1_041
+    name: HALO routing with 100 parallel batch requests
+    priority: P1
+    category: performance
+    tags:
+      - halo
+      - batch
+      - parallel
+    input:
+      prompt: Process 100 parallel routing requests simultaneously
+      context:
+        batch_count: 100
+        tasks_per_batch: 5
+        concurrent: true
+    expected_output:
+      contains:
+        - all_batches_processed
+        - no_timeouts
+        - fair_scheduling
+      batches_processed: 100
+      timeout_count: 0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - throughput_high
+        - no_timeouts
+        - fair_resource_allocation
+    performance:
+      max_latency_ms: 10000
+      max_tokens: 3000
+    cost_estimate: 0.1
+    description: HALO routing with 100 parallel batch requests. Process 100 parallel
+      routing requests simultaneously
+  - id: orch_p1_042
+    name: Memory usage for long-running orchestration (24 hours)
+    priority: P1
+    category: performance
+    tags:
+      - memory
+      - long_running
+      - leak_detection
+    input:
+      prompt: Monitor memory usage over simulated 24-hour workflow
+      context:
+        duration_hours: 24
+        task_rate_per_hour: 50
+        memory_limit_mb: 1024
+    expected_output:
+      contains:
+        - memory_stable
+        - no_leaks
+        - within_limits
+      memory_growth: <=10%
+      memory_leaks_detected: false
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - memory_stable
+        - no_leaks
+        - limits_respected
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Memory usage for long-running orchestration (24 hours). Monitor memory
+      usage over simulated 24-hour workflow
+  - id: orch_p1_043
+    name: AOP validation throughput benchmark
+    priority: P1
+    category: performance
+    tags:
+      - aop
+      - throughput
+      - benchmark
+    input:
+      prompt: Validate 100 routing plans per second
+      context:
+        plan_count: 100
+        time_window_seconds: 1
+    expected_output:
+      contains:
+        - throughput_achieved
+        - latency_acceptable
+        - all_validated
+      plans_per_second: '>=100'
+      avg_latency_ms: <=10
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - throughput_met
+        - latency_low
+        - accuracy_maintained
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: AOP validation throughput benchmark. Validate 100 routing plans per
+      second
+  - id: orch_p1_044
+    name: DAAO optimization for burst traffic (10x normal load)
+    priority: P1
+    category: performance
+    tags:
+      - daao
+      - burst
+      - spike_handling
+    input:
+      prompt: Handle 10x traffic spike with cost optimization maintained
+      context:
+        normal_load_tasks_per_min: 10
+        burst_load_tasks_per_min: 100
+        duration_minutes: 5
+    expected_output:
+      contains:
+        - burst_handled
+        - optimization_maintained
+        - no_degradation
+      cost_increase: <=10%
+      quality_maintained: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - burst_handled
+        - cost_optimized
+        - quality_preserved
+    performance:
+      max_latency_ms: 8000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: DAAO optimization for burst traffic (10x normal load). Handle 10x traffic
+      spike with cost optimization maintained
+  - id: orch_p1_045
+    name: Full pipeline performance under realistic production load
+    priority: P1
+    category: performance
+    tags:
+      - htdag
+      - halo
+      - aop
+      - daao
+      - production_load
+    input:
+      prompt: Process 1000 tasks through full pipeline over 10 minutes
+      context:
+        task_count: 1000
+        duration_minutes: 10
+        target_throughput: 100
+    expected_output:
+      contains:
+        - throughput_achieved
+        - all_layers_functional
+        - slos_met
+      tasks_per_minute: '>=100'
+      p95_latency_ms: <=2000
+      error_rate: <=0.1%
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - throughput_met
+        - latency_acceptable
+        - error_rate_low
+    performance:
+      max_latency_ms: 15000
+      max_tokens: 5000
+    cost_estimate: 0.1
+    description: Full pipeline performance under realistic production load. Process
+      1000 tasks through full pipeline over 10 minutes
+  - id: orch_p1_046
+    name: Graceful degradation when 3 agents fail simultaneously
+    priority: P1
+    category: error_recovery
+    tags:
+      - error_handler
+      - graceful_degradation
+      - agent_failure
+    input:
+      prompt: Handle simultaneous failure of builder, deploy, and qa agents
+      context:
+        failed_agents:
+          - builder
+          - deploy
+          - qa
+        remaining_agents:
+          - analyst
+          - security
+          - spec
+        active_tasks: 20
+    expected_output:
+      contains:
+        - degradation_triggered
+        - tasks_re_routed
+        - partial_service
+      re_routed_tasks: '>=15'
+      failed_tasks: <=5
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - graceful_handling
+        - partial_service_maintained
+        - recovery_possible
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Graceful degradation when 3 agents fail simultaneously. Handle simultaneous
+      failure of builder, deploy, and qa agents
+  - id: orch_p1_047
+    name: Retry logic for transient LLM failures
+    priority: P1
+    category: error_recovery
+    tags:
+      - error_handler
+      - retry
+      - llm_failure
+    input:
+      prompt: Retry task decomposition after GPT-4o timeout
+      context:
+        initial_attempt_failed: true
+        failure_reason: timeout
+        retry_budget: 3
+    expected_output:
+      contains:
+        - retry_triggered
+        - exponential_backoff
+        - eventual_success
+      retry_count: <=3
+      final_status: success
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - retry_appropriate
+        - backoff_correct
+        - eventual_success
+    performance:
+      max_latency_ms: 10000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Retry logic for transient LLM failures. Retry task decomposition after
+      GPT-4o timeout
+  - id: orch_p1_048
+    name: Rollback on partial task completion failure
+    priority: P1
+    category: error_recovery
+    tags:
+      - error_handler
+      - rollback
+      - partial_failure
+    input:
+      prompt: Rollback workflow when task 5 of 10 fails
+      context:
+        completed_tasks:
+          - task_1
+          - task_2
+          - task_3
+          - task_4
+        failed_task: task_5
+        remaining_tasks:
+          - task_6
+          - task_7
+          - task_8
+          - task_9
+          - task_10
+    expected_output:
+      contains:
+        - rollback_triggered
+        - cleanup_performed
+        - state_restored
+      rollback_successful: true
+      tasks_rolled_back: 4
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - rollback_correct
+        - cleanup_thorough
+        - state_consistent
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Rollback on partial task completion failure. Rollback workflow when
+      task 5 of 10 fails
+  - id: orch_p1_049
+    name: Circuit breaker recovery after cooldown period
+    priority: P1
+    category: error_recovery
+    tags:
+      - error_handler
+      - circuit_breaker
+      - recovery
+    input:
+      prompt: Recover from open circuit breaker after 60s cooldown
+      context:
+        circuit_state: open
+        failure_count: 5
+        cooldown_seconds: 60
+        time_elapsed: 60
+    expected_output:
+      contains:
+        - circuit_half_open
+        - test_request_sent
+        - recovery_attempted
+      circuit_state: half_open
+      test_successful: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - cooldown_respected
+        - test_request_sent
+        - recovery_correct
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Circuit breaker recovery after cooldown period. Recover from open circuit
+      breaker after 60s cooldown
+  - id: orch_p1_050
+    name: Error propagation and logging across all orchestration layers
+    priority: P1
+    category: error_recovery
+    tags:
+      - error_handler
+      - logging
+      - propagation
+    input:
+      prompt: Trace error from HTDAG through HALO, AOP, DAAO to execution
+      context:
+        error_origin: htdag_decomposition
+        error_type: InvalidTaskError
+        trace_enabled: true
+    expected_output:
+      contains:
+        - error_traced
+        - all_layers_logged
+        - correlation_id
+      layers_logged:
+        - htdag
+        - halo
+        - aop
+        - daao
+      correlation_id: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - tracing_complete
+        - all_layers_captured
+        - debugging_enabled
+    performance:
+      max_latency_ms: 3000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Error propagation and logging across all orchestration layers. Trace
+      error from HTDAG through HALO, AOP, DAAO to execution

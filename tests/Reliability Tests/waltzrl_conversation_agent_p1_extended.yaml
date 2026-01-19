@@ -1,0 +1,935 @@
+waltzrl_conversation_agent_p1_extended:
+  agent: waltzrl_conversation_agent
+  priority: P1
+  total_scenarios: 30
+  scenarios:
+    - id: waltzrl_conversation_agent_p1_100
+      name: Waltzrl Conversation Agent - P1 High Priority Test 100
+      priority: P1
+      category: success
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - success
+      input:
+        prompt: Execute high-priority success test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: success
+          priority: high
+      expected_output:
+        contains:
+          - success
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority success test
+    - id: waltzrl_conversation_agent_p1_101
+      name: Waltzrl Conversation Agent - P1 High Priority Test 101
+      priority: P1
+      category: edge_case
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - edge_case
+      input:
+        prompt: Execute high-priority edge_case test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: edge_case
+          priority: high
+      expected_output:
+        contains:
+          - edge_case
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority edge_case test
+    - id: waltzrl_conversation_agent_p1_102
+      name: Waltzrl Conversation Agent - P1 High Priority Test 102
+      priority: P1
+      category: error_handling
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - error_handling
+      input:
+        prompt: Execute high-priority error_handling test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: error_handling
+          priority: high
+      expected_output:
+        contains:
+          - error_handling
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority error_handling test
+    - id: waltzrl_conversation_agent_p1_103
+      name: Waltzrl Conversation Agent - P1 High Priority Test 103
+      priority: P1
+      category: performance
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - performance
+      input:
+        prompt: Execute high-priority performance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: performance
+          priority: high
+      expected_output:
+        contains:
+          - performance
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority performance test
+    - id: waltzrl_conversation_agent_p1_104
+      name: Waltzrl Conversation Agent - P1 High Priority Test 104
+      priority: P1
+      category: integration
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - integration
+      input:
+        prompt: Execute high-priority integration test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: integration
+          priority: high
+      expected_output:
+        contains:
+          - integration
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority integration test
+    - id: waltzrl_conversation_agent_p1_105
+      name: Waltzrl Conversation Agent - P1 High Priority Test 105
+      priority: P1
+      category: security
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - security
+      input:
+        prompt: Execute high-priority security test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: security
+          priority: high
+      expected_output:
+        contains:
+          - security
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority security test
+    - id: waltzrl_conversation_agent_p1_106
+      name: Waltzrl Conversation Agent - P1 High Priority Test 106
+      priority: P1
+      category: compliance
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - compliance
+      input:
+        prompt: Execute high-priority compliance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: compliance
+          priority: high
+      expected_output:
+        contains:
+          - compliance
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority compliance test
+    - id: waltzrl_conversation_agent_p1_107
+      name: Waltzrl Conversation Agent - P1 High Priority Test 107
+      priority: P1
+      category: scalability
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - scalability
+      input:
+        prompt: Execute high-priority scalability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: scalability
+          priority: high
+      expected_output:
+        contains:
+          - scalability
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority scalability test
+    - id: waltzrl_conversation_agent_p1_108
+      name: Waltzrl Conversation Agent - P1 High Priority Test 108
+      priority: P1
+      category: reliability
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - reliability
+      input:
+        prompt: Execute high-priority reliability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: reliability
+          priority: high
+      expected_output:
+        contains:
+          - reliability
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority reliability test
+    - id: waltzrl_conversation_agent_p1_109
+      name: Waltzrl Conversation Agent - P1 High Priority Test 109
+      priority: P1
+      category: data_quality
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - data_quality
+      input:
+        prompt: Execute high-priority data_quality test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: data_quality
+          priority: high
+      expected_output:
+        contains:
+          - data_quality
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority data_quality test
+    - id: waltzrl_conversation_agent_p1_110
+      name: Waltzrl Conversation Agent - P1 High Priority Test 110
+      priority: P1
+      category: success
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - success
+      input:
+        prompt: Execute high-priority success test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: success
+          priority: high
+      expected_output:
+        contains:
+          - success
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority success test
+    - id: waltzrl_conversation_agent_p1_111
+      name: Waltzrl Conversation Agent - P1 High Priority Test 111
+      priority: P1
+      category: edge_case
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - edge_case
+      input:
+        prompt: Execute high-priority edge_case test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: edge_case
+          priority: high
+      expected_output:
+        contains:
+          - edge_case
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority edge_case test
+    - id: waltzrl_conversation_agent_p1_112
+      name: Waltzrl Conversation Agent - P1 High Priority Test 112
+      priority: P1
+      category: error_handling
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - error_handling
+      input:
+        prompt: Execute high-priority error_handling test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: error_handling
+          priority: high
+      expected_output:
+        contains:
+          - error_handling
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority error_handling test
+    - id: waltzrl_conversation_agent_p1_113
+      name: Waltzrl Conversation Agent - P1 High Priority Test 113
+      priority: P1
+      category: performance
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - performance
+      input:
+        prompt: Execute high-priority performance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: performance
+          priority: high
+      expected_output:
+        contains:
+          - performance
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority performance test
+    - id: waltzrl_conversation_agent_p1_114
+      name: Waltzrl Conversation Agent - P1 High Priority Test 114
+      priority: P1
+      category: integration
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - integration
+      input:
+        prompt: Execute high-priority integration test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: integration
+          priority: high
+      expected_output:
+        contains:
+          - integration
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority integration test
+    - id: waltzrl_conversation_agent_p1_115
+      name: Waltzrl Conversation Agent - P1 High Priority Test 115
+      priority: P1
+      category: security
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - security
+      input:
+        prompt: Execute high-priority security test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: security
+          priority: high
+      expected_output:
+        contains:
+          - security
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority security test
+    - id: waltzrl_conversation_agent_p1_116
+      name: Waltzrl Conversation Agent - P1 High Priority Test 116
+      priority: P1
+      category: compliance
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - compliance
+      input:
+        prompt: Execute high-priority compliance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: compliance
+          priority: high
+      expected_output:
+        contains:
+          - compliance
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority compliance test
+    - id: waltzrl_conversation_agent_p1_117
+      name: Waltzrl Conversation Agent - P1 High Priority Test 117
+      priority: P1
+      category: scalability
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - scalability
+      input:
+        prompt: Execute high-priority scalability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: scalability
+          priority: high
+      expected_output:
+        contains:
+          - scalability
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority scalability test
+    - id: waltzrl_conversation_agent_p1_118
+      name: Waltzrl Conversation Agent - P1 High Priority Test 118
+      priority: P1
+      category: reliability
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - reliability
+      input:
+        prompt: Execute high-priority reliability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: reliability
+          priority: high
+      expected_output:
+        contains:
+          - reliability
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority reliability test
+    - id: waltzrl_conversation_agent_p1_119
+      name: Waltzrl Conversation Agent - P1 High Priority Test 119
+      priority: P1
+      category: data_quality
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - data_quality
+      input:
+        prompt: Execute high-priority data_quality test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: data_quality
+          priority: high
+      expected_output:
+        contains:
+          - data_quality
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority data_quality test
+    - id: waltzrl_conversation_agent_p1_120
+      name: Waltzrl Conversation Agent - P1 High Priority Test 120
+      priority: P1
+      category: success
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - success
+      input:
+        prompt: Execute high-priority success test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: success
+          priority: high
+      expected_output:
+        contains:
+          - success
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority success test
+    - id: waltzrl_conversation_agent_p1_121
+      name: Waltzrl Conversation Agent - P1 High Priority Test 121
+      priority: P1
+      category: edge_case
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - edge_case
+      input:
+        prompt: Execute high-priority edge_case test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: edge_case
+          priority: high
+      expected_output:
+        contains:
+          - edge_case
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority edge_case test
+    - id: waltzrl_conversation_agent_p1_122
+      name: Waltzrl Conversation Agent - P1 High Priority Test 122
+      priority: P1
+      category: error_handling
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - error_handling
+      input:
+        prompt: Execute high-priority error_handling test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: error_handling
+          priority: high
+      expected_output:
+        contains:
+          - error_handling
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority error_handling test
+    - id: waltzrl_conversation_agent_p1_123
+      name: Waltzrl Conversation Agent - P1 High Priority Test 123
+      priority: P1
+      category: performance
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - performance
+      input:
+        prompt: Execute high-priority performance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: performance
+          priority: high
+      expected_output:
+        contains:
+          - performance
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority performance test
+    - id: waltzrl_conversation_agent_p1_124
+      name: Waltzrl Conversation Agent - P1 High Priority Test 124
+      priority: P1
+      category: integration
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - integration
+      input:
+        prompt: Execute high-priority integration test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: integration
+          priority: high
+      expected_output:
+        contains:
+          - integration
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority integration test
+    - id: waltzrl_conversation_agent_p1_125
+      name: Waltzrl Conversation Agent - P1 High Priority Test 125
+      priority: P1
+      category: security
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - security
+      input:
+        prompt: Execute high-priority security test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: security
+          priority: high
+      expected_output:
+        contains:
+          - security
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority security test
+    - id: waltzrl_conversation_agent_p1_126
+      name: Waltzrl Conversation Agent - P1 High Priority Test 126
+      priority: P1
+      category: compliance
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - compliance
+      input:
+        prompt: Execute high-priority compliance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: compliance
+          priority: high
+      expected_output:
+        contains:
+          - compliance
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority compliance test
+    - id: waltzrl_conversation_agent_p1_127
+      name: Waltzrl Conversation Agent - P1 High Priority Test 127
+      priority: P1
+      category: scalability
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - scalability
+      input:
+        prompt: Execute high-priority scalability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: scalability
+          priority: high
+      expected_output:
+        contains:
+          - scalability
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority scalability test
+    - id: waltzrl_conversation_agent_p1_128
+      name: Waltzrl Conversation Agent - P1 High Priority Test 128
+      priority: P1
+      category: reliability
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - reliability
+      input:
+        prompt: Execute high-priority reliability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: reliability
+          priority: high
+      expected_output:
+        contains:
+          - reliability
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority reliability test
+    - id: waltzrl_conversation_agent_p1_129
+      name: Waltzrl Conversation Agent - P1 High Priority Test 129
+      priority: P1
+      category: data_quality
+      tags:
+        - waltzrl_conversation
+        - high
+        - p1
+        - data_quality
+      input:
+        prompt: Execute high-priority data_quality test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: data_quality
+          priority: high
+      expected_output:
+        contains:
+          - data_quality
+          - validated
+        min_length: 80
+        requires_validation: true
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+          - completeness
+      performance:
+        max_latency_ms: 5000
+        max_tokens: 800
+      cost_estimate: 3.0e-05
+      description: Waltzrl Conversation Agent - P1 high-priority data_quality test

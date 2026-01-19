@@ -1,0 +1,2083 @@
+[
+  {
+    "sourceId": "reflection_agent_p0_100",
+    "scenarioName": "Reflection Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p0_101",
+    "scenarioName": "Reflection Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p0_102",
+    "scenarioName": "Reflection Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p0_103",
+    "scenarioName": "Reflection Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p0_104",
+    "scenarioName": "Reflection Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p0_105",
+    "scenarioName": "Reflection Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_agent_p0_106",
+    "scenarioName": "Reflection Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "compliance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical compliance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "reflection_agent_p0_107",
+    "scenarioName": "Reflection Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "scalability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical scalability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "reflection_agent_p0_108",
+    "scenarioName": "Reflection Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "reliability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical reliability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "reflection_agent_p0_109",
+    "scenarioName": "Reflection Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical data_quality test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "reflection_agent_p0_110",
+    "scenarioName": "Reflection Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p0_111",
+    "scenarioName": "Reflection Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p0_112",
+    "scenarioName": "Reflection Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p0_113",
+    "scenarioName": "Reflection Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p0_114",
+    "scenarioName": "Reflection Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p0_115",
+    "scenarioName": "Reflection Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "critical", "p0", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute critical security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Reflection Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_p1_001",
+    "scenarioName": "Reflection Agent - Code Quality Deep Review",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Review codebase: complexity, maintainability, test coverage, tech debt",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Code Quality Deep Review. Review codebase: complexity, maintainability, test coverage, tech debt",
+    "category": "code_review"
+  },
+  {
+    "sourceId": "reflection_p1_002",
+    "scenarioName": "Reflection Agent - Architecture Decision Review",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "design"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Critique architecture decisions: scalability, maintainability, alternatives",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Architecture Decision Review. Critique architecture decisions: scalability, maintainability, alternatives",
+    "category": "architecture"
+  },
+  {
+    "sourceId": "reflection_p1_003",
+    "scenarioName": "Reflection Agent - Post-Incident Analysis",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "incident"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Analyze production incident: root cause, timeline, prevention, action items",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Post-Incident Analysis. Analyze production incident: root cause, timeline, prevention, action items",
+    "category": "postmortem"
+  },
+  {
+    "sourceId": "reflection_p1_004",
+    "scenarioName": "Reflection Agent - Sprint Retrospective Insights",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "agile"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Extract insights from sprint: what went well, issues, improvements",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Sprint Retrospective Insights. Extract insights from sprint: what went well, issues, improvements",
+    "category": "retrospective"
+  },
+  {
+    "sourceId": "reflection_p1_005",
+    "scenarioName": "Reflection Agent - Technical Debt Assessment",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "debt"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Identify tech debt: hotspots, impact, remediation priority, effort estimates",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Technical Debt Assessment. Identify tech debt: hotspots, impact, remediation priority, effort estimates",
+    "category": "tech_debt"
+  },
+  {
+    "sourceId": "reflection_p1_006",
+    "scenarioName": "Reflection Agent - Performance Bottleneck Analysis",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "optimization"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Analyze performance: profiling data, bottlenecks, optimization opportunities",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Performance Bottleneck Analysis. Analyze performance: profiling data, bottlenecks, optimization opportunities",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_p1_007",
+    "scenarioName": "Reflection Agent - API Design Review",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "design"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Critique API design: consistency, REST principles, naming, error handling",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - API Design Review. Critique API design: consistency, REST principles, naming, error handling",
+    "category": "api"
+  },
+  {
+    "sourceId": "reflection_p1_008",
+    "scenarioName": "Reflection Agent - Security Vulnerability Lessons",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "learning"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Extract lessons from security vulnerabilities: patterns, prevention, training",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Security Vulnerability Lessons. Extract lessons from security vulnerabilities: patterns, prevention, training",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_p1_009",
+    "scenarioName": "Reflection Agent - Test Strategy Evaluation",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "qa"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Evaluate test strategy: coverage gaps, flaky tests, test pyramid balance",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Test Strategy Evaluation. Evaluate test strategy: coverage gaps, flaky tests, test pyramid balance",
+    "category": "testing"
+  },
+  {
+    "sourceId": "reflection_p1_010",
+    "scenarioName": "Reflection Agent - Deployment Process Improvement",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "cicd"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Analyze deployment process: failures, delays, automation opportunities",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Deployment Process Improvement. Analyze deployment process: failures, delays, automation opportunities",
+    "category": "deployment"
+  },
+  {
+    "sourceId": "reflection_p1_011",
+    "scenarioName": "Reflection Agent - Team Workflow Optimization",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "process"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Review team workflow: bottlenecks, communication gaps, tooling improvements",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Team Workflow Optimization. Review team workflow: bottlenecks, communication gaps, tooling improvements",
+    "category": "workflow"
+  },
+  {
+    "sourceId": "reflection_p1_012",
+    "scenarioName": "Reflection Agent - Documentation Quality Assessment",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "docs"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Assess docs: completeness, clarity, examples, maintenance burden",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Documentation Quality Assessment. Assess docs: completeness, clarity, examples, maintenance burden",
+    "category": "documentation"
+  },
+  {
+    "sourceId": "reflection_p1_013",
+    "scenarioName": "Reflection Agent - Onboarding Experience Review",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "dx"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Critique onboarding: time to first commit, pain points, improvements",
+      "agent": "reflection"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Reflection Agent - Onboarding Experience Review. Critique onboarding: time to first commit, pain points, improvements",
+    "category": "onboarding"
+  },
+  {
+    "sourceId": "reflection_agent_p1_100",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p1_101",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p1_102",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p1_103",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p1_104",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p1_105",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_agent_p1_106",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "compliance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority compliance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "reflection_agent_p1_107",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "scalability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority scalability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "reflection_agent_p1_108",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "reliability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority reliability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "reflection_agent_p1_109",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "data_quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "reflection_agent_p1_110",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p1_111",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p1_112",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p1_113",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p1_114",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p1_115",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_agent_p1_116",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "compliance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority compliance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "reflection_agent_p1_117",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "scalability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority scalability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "reflection_agent_p1_118",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "reliability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority reliability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "reflection_agent_p1_119",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "data_quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "reflection_agent_p1_120",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p1_121",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p1_122",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p1_123",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p1_124",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p1_125",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_agent_p1_126",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "compliance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority compliance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "reflection_agent_p1_127",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "scalability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority scalability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "reflection_agent_p1_128",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "reliability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority reliability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "reflection_agent_p1_129",
+    "scenarioName": "Reflection Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "high", "p1", "data_quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "reflection_agent_p2_001",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p2_002",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p2_003",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p2_004",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p2_005",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p2_006",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_agent_p2_007",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "compliance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "reflection_agent_p2_008",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "scalability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "reflection_agent_p2_009",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "reliability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "reflection_agent_p2_010",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "reflection_agent_p2_011",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "success"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority success test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "reflection_agent_p2_012",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "reflection_agent_p2_013",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "reflection_agent_p2_014",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "performance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority performance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "reflection_agent_p2_015",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "integration"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority integration test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "reflection_agent_p2_016",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "security"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority security test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "reflection_agent_p2_017",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "compliance"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "reflection_agent_p2_018",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "scalability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "reflection_agent_p2_019",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "reliability"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "reflection_agent_p2_020",
+    "scenarioName": "Reflection Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "reflection",
+    "agentTags": ["reflection", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "reflection",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for reflection_agent",
+      "agent": "reflection",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Reflection Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

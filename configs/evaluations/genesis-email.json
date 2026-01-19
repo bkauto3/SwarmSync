@@ -1,0 +1,2060 @@
+[
+  {
+    "sourceId": "email_agent_p0_100",
+    "scenarioName": "Email Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p0_101",
+    "scenarioName": "Email Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p0_102",
+    "scenarioName": "Email Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p0_103",
+    "scenarioName": "Email Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p0_104",
+    "scenarioName": "Email Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p0_105",
+    "scenarioName": "Email Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_agent_p0_106",
+    "scenarioName": "Email Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "compliance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical compliance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_agent_p0_107",
+    "scenarioName": "Email Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "scalability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical scalability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "email_agent_p0_108",
+    "scenarioName": "Email Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "reliability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical reliability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "email_agent_p0_109",
+    "scenarioName": "Email Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical data_quality test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "email_agent_p0_110",
+    "scenarioName": "Email Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p0_111",
+    "scenarioName": "Email Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p0_112",
+    "scenarioName": "Email Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p0_113",
+    "scenarioName": "Email Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p0_114",
+    "scenarioName": "Email Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p0_115",
+    "scenarioName": "Email Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "email",
+    "agentTags": ["email", "critical", "p0", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute critical security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Email Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_p1_001",
+    "scenarioName": "Email Agent - Personalized Email at Scale",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "personalization"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Generate 100 personalized emails using: {name}, {company}, {pain_point}",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Personalized Email at Scale. Generate 100 personalized emails using: {name}, {company}, {pain_point}",
+    "category": "personalization"
+  },
+  {
+    "sourceId": "email_p1_002",
+    "scenarioName": "Email Agent - Cold Outreach Sequence",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "sales"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Create 3-email sequence: intro → value prop → call-to-action (35% open rate target)",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Cold Outreach Sequence. Create 3-email sequence: intro → value prop → call-to-action (35% open rate target)",
+    "category": "outreach"
+  },
+  {
+    "sourceId": "email_p1_003",
+    "scenarioName": "Email Agent - Transactional Email Templates",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "templates"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Design templates: welcome, password reset, order confirmation, invoice",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Transactional Email Templates. Design templates: welcome, password reset, order confirmation, invoice",
+    "category": "transactional"
+  },
+  {
+    "sourceId": "email_p1_004",
+    "scenarioName": "Email Agent - Email Subject Line A/B Testing",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "optimization"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Generate 10 subject lines optimized for open rate (emojis, urgency, personalization)",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Email Subject Line A/B Testing. Generate 10 subject lines optimized for open rate (emojis, urgency, personalization)",
+    "category": "ab_testing"
+  },
+  {
+    "sourceId": "email_p1_005",
+    "scenarioName": "Email Agent - Deliverability Optimization",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "technical"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Optimize for deliverability: SPF/DKIM/DMARC, content checks, spam score <5",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Deliverability Optimization. Optimize for deliverability: SPF/DKIM/DMARC, content checks, spam score <5",
+    "category": "deliverability"
+  },
+  {
+    "sourceId": "email_p1_006",
+    "scenarioName": "Email Agent - Email Engagement Analytics",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "metrics"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Analyze campaign: open rate, click rate, bounce rate, conversions, revenue",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Email Engagement Analytics. Analyze campaign: open rate, click rate, bounce rate, conversions, revenue",
+    "category": "analytics"
+  },
+  {
+    "sourceId": "email_p1_007",
+    "scenarioName": "Email Agent - CAN-SPAM Compliance Check",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "legal"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Validate email: unsubscribe link, physical address, accurate subject, no deceptive content",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - CAN-SPAM Compliance Check. Validate email: unsubscribe link, physical address, accurate subject, no deceptive content",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_p1_008",
+    "scenarioName": "Email Agent - Email List Segmentation",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "targeting"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Segment list: demographics, behavior, engagement level, purchase history",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Email List Segmentation. Segment list: demographics, behavior, engagement level, purchase history",
+    "category": "segmentation"
+  },
+  {
+    "sourceId": "email_p1_009",
+    "scenarioName": "Email Agent - Re-Engagement Campaign",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "retention"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Win back inactive users: special offer, feedback request, preference update",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Re-Engagement Campaign. Win back inactive users: special offer, feedback request, preference update",
+    "category": "re_engagement"
+  },
+  {
+    "sourceId": "email_p1_010",
+    "scenarioName": "Email Agent - Newsletter Content Curation",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "content"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Curate newsletter: top 5 articles, product updates, tips, event announcements",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Newsletter Content Curation. Curate newsletter: top 5 articles, product updates, tips, event announcements",
+    "category": "newsletter"
+  },
+  {
+    "sourceId": "email_p1_011",
+    "scenarioName": "Email Agent - Email Accessibility (WCAG)",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "a11y"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Optimize email for accessibility: semantic HTML, alt text, color contrast, screen readers",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Email Accessibility (WCAG). Optimize email for accessibility: semantic HTML, alt text, color contrast, screen readers",
+    "category": "accessibility"
+  },
+  {
+    "sourceId": "email_p1_012",
+    "scenarioName": "Email Agent - Automated Follow-Up Logic",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "workflow"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Design follow-up logic: if opened, send case study; if clicked, send demo invite",
+      "agent": "email"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Email Agent - Automated Follow-Up Logic. Design follow-up logic: if opened, send case study; if clicked, send demo invite",
+    "category": "automation"
+  },
+  {
+    "sourceId": "email_agent_p1_100",
+    "scenarioName": "Email Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p1_101",
+    "scenarioName": "Email Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p1_102",
+    "scenarioName": "Email Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p1_103",
+    "scenarioName": "Email Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p1_104",
+    "scenarioName": "Email Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p1_105",
+    "scenarioName": "Email Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_agent_p1_106",
+    "scenarioName": "Email Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "compliance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority compliance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_agent_p1_107",
+    "scenarioName": "Email Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "scalability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority scalability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "email_agent_p1_108",
+    "scenarioName": "Email Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "reliability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority reliability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "email_agent_p1_109",
+    "scenarioName": "Email Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "data_quality"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "email_agent_p1_110",
+    "scenarioName": "Email Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p1_111",
+    "scenarioName": "Email Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p1_112",
+    "scenarioName": "Email Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p1_113",
+    "scenarioName": "Email Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p1_114",
+    "scenarioName": "Email Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p1_115",
+    "scenarioName": "Email Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_agent_p1_116",
+    "scenarioName": "Email Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "compliance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority compliance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_agent_p1_117",
+    "scenarioName": "Email Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "scalability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority scalability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "email_agent_p1_118",
+    "scenarioName": "Email Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "reliability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority reliability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "email_agent_p1_119",
+    "scenarioName": "Email Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "data_quality"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "email_agent_p1_120",
+    "scenarioName": "Email Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p1_121",
+    "scenarioName": "Email Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p1_122",
+    "scenarioName": "Email Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p1_123",
+    "scenarioName": "Email Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p1_124",
+    "scenarioName": "Email Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p1_125",
+    "scenarioName": "Email Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_agent_p1_126",
+    "scenarioName": "Email Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "compliance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority compliance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_agent_p1_127",
+    "scenarioName": "Email Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "scalability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority scalability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "email_agent_p1_128",
+    "scenarioName": "Email Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "reliability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority reliability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "email_agent_p1_129",
+    "scenarioName": "Email Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "email",
+    "agentTags": ["email", "high", "p1", "data_quality"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "email_agent_p2_001",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p2_002",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p2_003",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p2_004",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p2_005",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p2_006",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_agent_p2_007",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "compliance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_agent_p2_008",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "scalability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "email_agent_p2_009",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "reliability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "email_agent_p2_010",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "email_agent_p2_011",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "success"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority success test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "email_agent_p2_012",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "email_agent_p2_013",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "email_agent_p2_014",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "performance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority performance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "email_agent_p2_015",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "integration"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority integration test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "email_agent_p2_016",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "security"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority security test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "email_agent_p2_017",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "compliance"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "email_agent_p2_018",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "scalability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "email_agent_p2_019",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "reliability"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "email_agent_p2_020",
+    "scenarioName": "Email Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "email",
+    "agentTags": ["email", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "email",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for email_agent",
+      "agent": "email",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Email Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

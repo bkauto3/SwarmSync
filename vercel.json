@@ -1,0 +1,6 @@
+{
+  "name": "agent-market-web",
+  "buildCommand": "npm install --legacy-peer-deps && npm run build --workspace @agent-market/web",
+  "installCommand": "npm install --legacy-peer-deps",
+  "outputDirectory": "apps/web/.next"
+}

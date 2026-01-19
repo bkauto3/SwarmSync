@@ -1,0 +1,2083 @@
+[
+  {
+    "sourceId": "security_agent_p0_100",
+    "scenarioName": "Security Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p0_101",
+    "scenarioName": "Security Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p0_102",
+    "scenarioName": "Security Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p0_103",
+    "scenarioName": "Security Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p0_104",
+    "scenarioName": "Security Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p0_105",
+    "scenarioName": "Security Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_agent_p0_106",
+    "scenarioName": "Security Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "compliance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical compliance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_agent_p0_107",
+    "scenarioName": "Security Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "scalability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical scalability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "security_agent_p0_108",
+    "scenarioName": "Security Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "reliability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical reliability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "security_agent_p0_109",
+    "scenarioName": "Security Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical data_quality test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "security_agent_p0_110",
+    "scenarioName": "Security Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p0_111",
+    "scenarioName": "Security Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p0_112",
+    "scenarioName": "Security Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p0_113",
+    "scenarioName": "Security Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p0_114",
+    "scenarioName": "Security Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p0_115",
+    "scenarioName": "Security Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "security",
+    "agentTags": ["security", "critical", "p0", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute critical security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Security Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_p1_001",
+    "scenarioName": "Security Agent - Automated OWASP Top 10 Scanning",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "owasp"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Scan web app for OWASP Top 10 vulnerabilities: injection, XSS, CSRF",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Automated OWASP Top 10 Scanning. Scan web app for OWASP Top 10 vulnerabilities: injection, XSS, CSRF",
+    "category": "scanning"
+  },
+  {
+    "sourceId": "security_p1_002",
+    "scenarioName": "Security Agent - API Security Audit",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "api"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Audit REST API: auth bypass, rate limiting, input validation, CORS",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - API Security Audit. Audit REST API: auth bypass, rate limiting, input validation, CORS",
+    "category": "api_security"
+  },
+  {
+    "sourceId": "security_p1_003",
+    "scenarioName": "Security Agent - Threat Modeling (STRIDE)",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "stride"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Create STRIDE threat model for payment processing system",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Threat Modeling (STRIDE). Create STRIDE threat model for payment processing system",
+    "category": "threat_modeling"
+  },
+  {
+    "sourceId": "security_p1_004",
+    "scenarioName": "Security Agent - Container Security Scan (Docker)",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "docker"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Scan Docker images for: outdated packages, exposed secrets, misconfigurations",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Container Security Scan (Docker). Scan Docker images for: outdated packages, exposed secrets, misconfigurations",
+    "category": "container"
+  },
+  {
+    "sourceId": "security_p1_005",
+    "scenarioName": "Security Agent - Infrastructure as Code (IaC) Security",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "terraform"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Audit Terraform configs: S3 public access, unencrypted DBs, overly permissive IAM",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Infrastructure as Code (IaC) Security. Audit Terraform configs: S3 public access, unencrypted DBs, overly permissive IAM",
+    "category": "iac"
+  },
+  {
+    "sourceId": "security_p1_006",
+    "scenarioName": "Security Agent - Dependency Vulnerability Check",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "supply_chain"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Scan package.json for: critical CVEs, malicious packages, license issues",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Dependency Vulnerability Check. Scan package",
+    "category": "dependencies"
+  },
+  {
+    "sourceId": "security_p1_007",
+    "scenarioName": "Security Agent - Security Code Review (SAST)",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "code_review"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Static analysis: hardcoded secrets, SQL injection, insecure deserialization",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Security Code Review (SAST). Static analysis: hardcoded secrets, SQL injection, insecure deserialization",
+    "category": "sast"
+  },
+  {
+    "sourceId": "security_p1_008",
+    "scenarioName": "Security Agent - Incident Response Playbook",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "ir"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Generate IR playbook for: data breach, ransomware, DDoS scenarios",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Incident Response Playbook. Generate IR playbook for: data breach, ransomware, DDoS scenarios",
+    "category": "incident"
+  },
+  {
+    "sourceId": "security_p1_009",
+    "scenarioName": "Security Agent - Compliance Audit (SOC 2 Type II)",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "soc2"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Validate SOC 2 controls: access management, encryption, logging, monitoring",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Compliance Audit (SOC 2 Type II). Validate SOC 2 controls: access management, encryption, logging, monitoring",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_p1_010",
+    "scenarioName": "Security Agent - Penetration Test Report Generation",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "reporting"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Generate pentest report: findings, severity, remediation, executive summary",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Penetration Test Report Generation. Generate pentest report: findings, severity, remediation, executive summary",
+    "category": "pentest"
+  },
+  {
+    "sourceId": "security_p1_011",
+    "scenarioName": "Security Agent - Security Awareness Training Content",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "education"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Create phishing awareness training: simulations, quizzes, best practices",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Security Awareness Training Content. Create phishing awareness training: simulations, quizzes, best practices",
+    "category": "training"
+  },
+  {
+    "sourceId": "security_p1_012",
+    "scenarioName": "Security Agent - Zero Trust Architecture Assessment",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "architecture"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Assess current architecture against zero trust principles: verification, least privilege",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Zero Trust Architecture Assessment. Assess current architecture against zero trust principles: verification, least privilege",
+    "category": "zero_trust"
+  },
+  {
+    "sourceId": "security_p1_013",
+    "scenarioName": "Security Agent - Secret Management Audit",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "credentials"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Audit: hardcoded credentials, .env leaks, exposed API keys in Git history",
+      "agent": "security"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Security Agent - Secret Management Audit. Audit: hardcoded credentials,",
+    "category": "secrets"
+  },
+  {
+    "sourceId": "security_agent_p1_100",
+    "scenarioName": "Security Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p1_101",
+    "scenarioName": "Security Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p1_102",
+    "scenarioName": "Security Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p1_103",
+    "scenarioName": "Security Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p1_104",
+    "scenarioName": "Security Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p1_105",
+    "scenarioName": "Security Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_agent_p1_106",
+    "scenarioName": "Security Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "compliance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority compliance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_agent_p1_107",
+    "scenarioName": "Security Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "scalability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority scalability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "security_agent_p1_108",
+    "scenarioName": "Security Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "reliability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority reliability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "security_agent_p1_109",
+    "scenarioName": "Security Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "data_quality"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "security_agent_p1_110",
+    "scenarioName": "Security Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p1_111",
+    "scenarioName": "Security Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p1_112",
+    "scenarioName": "Security Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p1_113",
+    "scenarioName": "Security Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p1_114",
+    "scenarioName": "Security Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p1_115",
+    "scenarioName": "Security Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_agent_p1_116",
+    "scenarioName": "Security Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "compliance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority compliance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_agent_p1_117",
+    "scenarioName": "Security Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "scalability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority scalability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "security_agent_p1_118",
+    "scenarioName": "Security Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "reliability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority reliability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "security_agent_p1_119",
+    "scenarioName": "Security Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "data_quality"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "security_agent_p1_120",
+    "scenarioName": "Security Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p1_121",
+    "scenarioName": "Security Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p1_122",
+    "scenarioName": "Security Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p1_123",
+    "scenarioName": "Security Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p1_124",
+    "scenarioName": "Security Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p1_125",
+    "scenarioName": "Security Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_agent_p1_126",
+    "scenarioName": "Security Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "compliance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority compliance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_agent_p1_127",
+    "scenarioName": "Security Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "scalability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority scalability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "security_agent_p1_128",
+    "scenarioName": "Security Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "reliability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority reliability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "security_agent_p1_129",
+    "scenarioName": "Security Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "security",
+    "agentTags": ["security", "high", "p1", "data_quality"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "security_agent_p2_001",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p2_002",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p2_003",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p2_004",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p2_005",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p2_006",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_agent_p2_007",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "compliance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_agent_p2_008",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "scalability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "security_agent_p2_009",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "reliability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "security_agent_p2_010",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "security_agent_p2_011",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "success"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority success test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "security_agent_p2_012",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "security_agent_p2_013",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "security_agent_p2_014",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "performance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority performance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "security_agent_p2_015",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "integration"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority integration test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "security_agent_p2_016",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "security"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority security test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "security_agent_p2_017",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "compliance"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "security_agent_p2_018",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "scalability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "security_agent_p2_019",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "reliability"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "security_agent_p2_020",
+    "scenarioName": "Security Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "security",
+    "agentTags": ["security", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "security",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for security_agent",
+      "agent": "security",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Security Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

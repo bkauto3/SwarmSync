@@ -1,0 +1,533 @@
+waltzrl_conversation_agent_p0:
+  agent: waltzrl_conversation_agent
+  priority: P0
+  total_scenarios: 16
+  scenarios:
+    - id: waltzrl_conversation_agent_p0_100
+      name: Waltzrl Conversation Agent - P0 Critical Test 100
+      priority: P0
+      category: success
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - success
+      input:
+        prompt: Execute critical success test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: success
+          priority: critical
+      expected_output:
+        contains:
+          - success
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical success test
+    - id: waltzrl_conversation_agent_p0_101
+      name: Waltzrl Conversation Agent - P0 Critical Test 101
+      priority: P0
+      category: edge_case
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - edge_case
+      input:
+        prompt: Execute critical edge_case test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: edge_case
+          priority: critical
+      expected_output:
+        contains:
+          - edge_case
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical edge_case test
+    - id: waltzrl_conversation_agent_p0_102
+      name: Waltzrl Conversation Agent - P0 Critical Test 102
+      priority: P0
+      category: error_handling
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - error_handling
+      input:
+        prompt: Execute critical error_handling test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: error_handling
+          priority: critical
+      expected_output:
+        contains:
+          - error_handling
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical error_handling test
+    - id: waltzrl_conversation_agent_p0_103
+      name: Waltzrl Conversation Agent - P0 Critical Test 103
+      priority: P0
+      category: performance
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - performance
+      input:
+        prompt: Execute critical performance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: performance
+          priority: critical
+      expected_output:
+        contains:
+          - performance
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical performance test
+    - id: waltzrl_conversation_agent_p0_104
+      name: Waltzrl Conversation Agent - P0 Critical Test 104
+      priority: P0
+      category: integration
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - integration
+      input:
+        prompt: Execute critical integration test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: integration
+          priority: critical
+      expected_output:
+        contains:
+          - integration
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical integration test
+    - id: waltzrl_conversation_agent_p0_105
+      name: Waltzrl Conversation Agent - P0 Critical Test 105
+      priority: P0
+      category: security
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - security
+      input:
+        prompt: Execute critical security test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: security
+          priority: critical
+      expected_output:
+        contains:
+          - security
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical security test
+    - id: waltzrl_conversation_agent_p0_106
+      name: Waltzrl Conversation Agent - P0 Critical Test 106
+      priority: P0
+      category: compliance
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - compliance
+      input:
+        prompt: Execute critical compliance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: compliance
+          priority: critical
+      expected_output:
+        contains:
+          - compliance
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical compliance test
+    - id: waltzrl_conversation_agent_p0_107
+      name: Waltzrl Conversation Agent - P0 Critical Test 107
+      priority: P0
+      category: scalability
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - scalability
+      input:
+        prompt: Execute critical scalability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: scalability
+          priority: critical
+      expected_output:
+        contains:
+          - scalability
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical scalability test
+    - id: waltzrl_conversation_agent_p0_108
+      name: Waltzrl Conversation Agent - P0 Critical Test 108
+      priority: P0
+      category: reliability
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - reliability
+      input:
+        prompt: Execute critical reliability test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: reliability
+          priority: critical
+      expected_output:
+        contains:
+          - reliability
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical reliability test
+    - id: waltzrl_conversation_agent_p0_109
+      name: Waltzrl Conversation Agent - P0 Critical Test 109
+      priority: P0
+      category: data_quality
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - data_quality
+      input:
+        prompt: Execute critical data_quality test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: data_quality
+          priority: critical
+      expected_output:
+        contains:
+          - data_quality
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical data_quality test
+    - id: waltzrl_conversation_agent_p0_110
+      name: Waltzrl Conversation Agent - P0 Critical Test 110
+      priority: P0
+      category: success
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - success
+      input:
+        prompt: Execute critical success test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: success
+          priority: critical
+      expected_output:
+        contains:
+          - success
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical success test
+    - id: waltzrl_conversation_agent_p0_111
+      name: Waltzrl Conversation Agent - P0 Critical Test 111
+      priority: P0
+      category: edge_case
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - edge_case
+      input:
+        prompt: Execute critical edge_case test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: edge_case
+          priority: critical
+      expected_output:
+        contains:
+          - edge_case
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical edge_case test
+    - id: waltzrl_conversation_agent_p0_112
+      name: Waltzrl Conversation Agent - P0 Critical Test 112
+      priority: P0
+      category: error_handling
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - error_handling
+      input:
+        prompt: Execute critical error_handling test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: error_handling
+          priority: critical
+      expected_output:
+        contains:
+          - error_handling
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical error_handling test
+    - id: waltzrl_conversation_agent_p0_113
+      name: Waltzrl Conversation Agent - P0 Critical Test 113
+      priority: P0
+      category: performance
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - performance
+      input:
+        prompt: Execute critical performance test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: performance
+          priority: critical
+      expected_output:
+        contains:
+          - performance
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical performance test
+    - id: waltzrl_conversation_agent_p0_114
+      name: Waltzrl Conversation Agent - P0 Critical Test 114
+      priority: P0
+      category: integration
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - integration
+      input:
+        prompt: Execute critical integration test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: integration
+          priority: critical
+      expected_output:
+        contains:
+          - integration
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical integration test
+    - id: waltzrl_conversation_agent_p0_115
+      name: Waltzrl Conversation Agent - P0 Critical Test 115
+      priority: P0
+      category: security
+      tags:
+        - waltzrl_conversation
+        - critical
+        - p0
+        - security
+      input:
+        prompt: Execute critical security test for waltzrl_conversation_agent
+        agent: waltzrl_conversation
+        context:
+          test_type: security
+          priority: critical
+      expected_output:
+        contains:
+          - security
+          - success
+          - validated
+        min_length: 100
+        requires_validation: true
+      judge:
+        model: gpt-4o
+        criteria:
+          - accuracy
+          - completeness
+          - compliance
+      performance:
+        max_latency_ms: 3000
+        max_tokens: 500
+      cost_estimate: 0.012
+      description: Waltzrl Conversation Agent - P0 critical security test

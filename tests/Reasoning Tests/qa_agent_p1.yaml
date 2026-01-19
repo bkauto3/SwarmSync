@@ -1,0 +1,474 @@
+qa_agent_p1:
+  agent: qa_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Advanced test generation
+    - OCR-based UI validation
+    - Multi-source knowledge integration
+    - Performance testing
+    - Security testing
+    - Code quality analysis
+scenarios:
+  - id: qa_p1_001
+    name: QA Agent - Multi-Source Knowledge Integration
+    priority: P1
+    category: integration
+    tags:
+      - qa
+      - multi-source
+      - advanced
+    input:
+      prompt: Compare information from CaseBank, vector memory, and LLM knowledge about
+        Darwin evolution
+      agent: qa
+      context:
+        sources:
+          - casebank
+          - vector_memory
+          - llm
+    expected_output:
+      contains:
+        - Darwin
+        - evolution
+        - multi-trajectory
+        - synthesis
+      min_length: 200
+      requires_synthesis: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - accuracy
+        - completeness
+        - synthesis_quality
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Multi-Source Knowledge Integration. Compare information
+      from CaseBank, vector memory, and LLM knowledge about Darwin evolution
+  - id: qa_p1_002
+    name: QA Agent - Performance Test Generation
+    priority: P1
+    category: performance
+    tags:
+      - qa
+      - performance_testing
+      - load_testing
+    input:
+      prompt: Generate locust.py performance test for API handling 1000 req/sec
+      code: |
+        @app.post("/api/users")
+        def create_user(user: User):
+            return {"id": db.insert(user)}
+      requirements:
+        - 1000 req/sec
+        - P95 <200ms
+        - Error rate <0.1%
+    expected_output:
+      contains:
+        - locust
+        - load_test
+        - '1000'
+        - concurrent
+      test_framework: locust
+      min_length: 150
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - locust_syntax
+        - load_parameters
+        - assertions
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: QA Agent - Performance Test Generation. Generate locust
+  - id: qa_p1_003
+    name: QA Agent - Mutation Testing Generation
+    priority: P1
+    category: advanced
+    tags:
+      - qa
+      - mutation_testing
+      - test_quality
+    input:
+      prompt: Generate mutation tests to validate test suite quality
+      code: |
+        def calculate_discount(price, coupon):
+            if coupon == "SAVE10":
+                return price * 0.9
+            return price
+      requirements:
+        - mutmut framework
+        - 100% mutation coverage
+    expected_output:
+      contains:
+        - mutmut
+        - mutation
+        - operators
+      mutation_operators: '>=5'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - mutation_framework
+        - operator_coverage
+        - quality_validation
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Mutation Testing Generation. Generate mutation tests to
+      validate test suite quality
+  - id: qa_p1_004
+    name: QA Agent - Visual Regression Testing
+    priority: P1
+    category: visual
+    tags:
+      - qa
+      - visual_regression
+      - ocr
+      - screenshot
+    input:
+      prompt: Compare two dashboard screenshots for visual regressions
+      screenshot_before: /tests/screenshots/dashboard_v1.png
+      screenshot_after: /tests/screenshots/dashboard_v2.png
+      expected_elements:
+        - header
+        - sidebar
+        - chart
+    expected_output:
+      contains:
+        - diff_analysis
+        - visual_changes
+        - regressions
+      changes_detected: provided
+      confidence_score: '>0.85'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - diff_accurate
+        - regressions_identified
+        - confidence_high
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Visual Regression Testing. Compare two dashboard screenshots
+      for visual regressions
+  - id: qa_p1_005
+    name: QA Agent - Contract Testing (Consumer/Provider)
+    priority: P1
+    category: integration
+    tags:
+      - qa
+      - contract_testing
+      - pact
+    input:
+      prompt: Generate Pact contract tests for microservices
+      services:
+        consumer: user-service
+        provider: auth-service
+      endpoints:
+        - /auth/validate
+        - /auth/refresh
+    expected_output:
+      contains:
+        - pact
+        - consumer
+        - provider
+        - contract
+      test_count: '>=2'
+      framework: pact-python
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - pact_syntax
+        - contract_complete
+        - both_sides_tested
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: QA Agent - Contract Testing (Consumer/Provider). Generate Pact contract
+      tests for microservices
+  - id: qa_p1_006
+    name: QA Agent - Property-Based Testing (Hypothesis)
+    priority: P1
+    category: advanced
+    tags:
+      - qa
+      - property_testing
+      - hypothesis
+    input:
+      prompt: Generate property-based tests using Hypothesis
+      code: |
+        def sort_list(items):
+            return sorted(items)
+      requirements:
+        - All sorted lists are ordered
+        - Length preserved
+        - Elements unchanged
+    expected_output:
+      contains:
+        - hypothesis
+        - property
+        - strategies
+      property_count: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - hypothesis_syntax
+        - properties_correct
+        - strategies_appropriate
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Property-Based Testing (Hypothesis). Generate property-based
+      tests using Hypothesis
+  - id: qa_p1_007
+    name: QA Agent - Security Fuzzing Tests
+    priority: P1
+    category: security
+    tags:
+      - qa
+      - fuzzing
+      - security
+    input:
+      prompt: Generate fuzzing tests for API input validation
+      endpoints:
+        - /api/search
+        - /api/filter
+      attack_vectors:
+        - sql_injection
+        - xss
+        - command_injection
+    expected_output:
+      contains:
+        - fuzzing
+        - payloads
+        - security
+      payload_count: '>=20'
+      attack_types:
+        - sql
+        - xss
+        - command
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - fuzzing_comprehensive
+        - payloads_realistic
+        - vectors_covered
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: QA Agent - Security Fuzzing Tests. Generate fuzzing tests for API input
+      validation
+  - id: qa_p1_008
+    name: QA Agent - Chaos Engineering Tests
+    priority: P1
+    category: resilience
+    tags:
+      - qa
+      - chaos
+      - resilience
+    input:
+      prompt: Generate chaos engineering tests for microservice resilience
+      scenarios:
+        - network_delay
+        - service_failure
+        - resource_exhaustion
+      target: payment-service
+    expected_output:
+      contains:
+        - chaos
+        - resilience
+        - failure_injection
+      scenario_count: 3
+      framework: chaos-toolkit
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - chaos_syntax
+        - scenarios_realistic
+        - resilience_validated
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: QA Agent - Chaos Engineering Tests. Generate chaos engineering tests
+      for microservice resilience
+  - id: qa_p1_009
+    name: QA Agent - Cross-Browser Compatibility Tests
+    priority: P1
+    category: compatibility
+    tags:
+      - qa
+      - cross_browser
+      - selenium
+    input:
+      prompt: Generate cross-browser tests for Chrome, Firefox, Safari
+      workflow:
+        - Login
+        - Navigate dashboard
+        - Submit form
+      browsers:
+        - chrome
+        - firefox
+        - safari
+    expected_output:
+      contains:
+        - selenium
+        - cross_browser
+        - webdriver
+      browser_count: 3
+      workflow_steps: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - cross_browser_setup
+        - workflow_complete
+        - compatibility_checked
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: QA Agent - Cross-Browser Compatibility Tests. Generate cross-browser
+      tests for Chrome, Firefox, Safari
+  - id: qa_p1_010
+    name: QA Agent - API Rate Limiting Tests
+    priority: P1
+    category: performance
+    tags:
+      - qa
+      - rate_limiting
+      - api
+    input:
+      prompt: Generate tests to validate API rate limiting (100 req/min)
+      endpoint: /api/search
+      rate_limit: 100/minute
+      expected_status: 429
+    expected_output:
+      contains:
+        - rate_limit
+        - '429'
+        - throttling
+      test_validates_limit: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - rate_limit_tested
+        - 429_validated
+        - throttling_checked
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - API Rate Limiting Tests. Generate tests to validate API
+      rate limiting (100 req/min)
+  - id: qa_p1_011
+    name: QA Agent - Database Migration Testing
+    priority: P1
+    category: integration
+    tags:
+      - qa
+      - migration
+      - database
+    input:
+      prompt: Generate tests for database migration scripts
+      migrations:
+        - add_user_email_index
+        - alter_orders_add_status
+      database: postgresql
+    expected_output:
+      contains:
+        - migration
+        - rollback
+        - data_integrity
+      migration_count: 2
+      rollback_tested: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - migration_validated
+        - rollback_tested
+        - integrity_checked
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Database Migration Testing. Generate tests for database
+      migration scripts
+  - id: qa_p1_012
+    name: QA Agent - Accessibility Testing (WCAG 2.2)
+    priority: P1
+    category: accessibility
+    tags:
+      - qa
+      - accessibility
+      - wcag
+      - a11y
+    input:
+      prompt: Generate accessibility tests for WCAG 2.2 AA compliance
+      page: /dashboard
+      wcag_level: AA
+      criteria:
+        - contrast
+        - keyboard_navigation
+        - aria_labels
+    expected_output:
+      contains:
+        - wcag
+        - accessibility
+        - aria
+        - contrast
+      criteria_count: '>=3'
+      framework: axe-core
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - wcag_compliance
+        - criteria_covered
+        - framework_correct
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Accessibility Testing (WCAG 2.2). Generate accessibility
+      tests for WCAG 2
+  - id: qa_p1_013
+    name: QA Agent - Snapshot Testing for API Responses
+    priority: P1
+    category: regression
+    tags:
+      - qa
+      - snapshot
+      - regression
+    input:
+      prompt: Generate snapshot tests for API response schemas
+      endpoints:
+        - /api/users
+        - /api/orders
+        - /api/products
+      framework: pytest-snapshot
+    expected_output:
+      contains:
+        - snapshot
+        - schema
+        - regression
+      endpoint_count: 3
+      snapshots_generated: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - snapshot_syntax
+        - schema_captured
+        - regression_detected
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: QA Agent - Snapshot Testing for API Responses. Generate snapshot tests
+      for API response schemas

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-01-02T14:00:12.893702",
+  "login": {
+    "has_email_input": true,
+    "has_password_input": true,
+    "has_oauth": true,
+    "error": ""
+  },
+  "console_pages": [],
+  "agent_creation": {},
+  "marketplace": {
+    "agent_cards_found": 53,
+    "badges_found": 0
+  },
+  "issues": []
+}

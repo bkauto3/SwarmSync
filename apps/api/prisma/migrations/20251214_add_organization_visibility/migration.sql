@@ -1,0 +1,2 @@
+-- Add ORGANIZATION to AgentVisibility enum
+ALTER TYPE "AgentVisibility" ADD VALUE IF NOT EXISTS 'ORGANIZATION';

@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "module": "NodeNext",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@agent-market/sdk": ["../../packages/sdk/src"],
+      "@agent-market/config": ["../../packages/config/src"]
+    },
+    "strict": false
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "test", "**/*.spec.ts"]
+}

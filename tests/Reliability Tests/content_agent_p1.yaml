@@ -1,0 +1,379 @@
+content_agent_p1:
+  agent: content_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - SEO optimization
+    - Multi-format content
+    - Brand voice
+    - Content calendar
+    - Performance analytics
+    - A/B testing
+scenarios:
+  - id: content_p1_001
+    name: Content Agent - SEO-Optimized Blog Post Generation
+    priority: P1
+    category: seo
+    tags:
+      - content
+      - seo
+      - blog
+    input:
+      prompt: Generate blog post with target keyword 'AI agent frameworks', LSI keywords,
+        meta tags
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Content Agent - SEO-Optimized Blog Post Generation. Generate blog post
+      with target keyword 'AI agent frameworks', LSI keywords, meta tags
+  - id: content_p1_002
+    name: Content Agent - Multi-Format Content Repurposing
+    priority: P1
+    category: repurposing
+    tags:
+      - content
+      - multi_format
+    input:
+      prompt: 'Convert blog post into: tweet thread, LinkedIn post, Instagram carousel,
+        newsletter'
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Content Agent - Multi-Format Content Repurposing. Convert blog post
+      into: tweet thread, LinkedIn post, Instagram carousel, newsletter'
+  - id: content_p1_003
+    name: Content Agent - Brand Voice Consistency Check
+    priority: P1
+    category: brand
+    tags:
+      - content
+      - brand_voice
+    input:
+      prompt: 'Validate content against brand guidelines: tone, vocabulary, messaging'
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Content Agent - Brand Voice Consistency Check. Validate content against
+      brand guidelines: tone, vocabulary, messaging'
+  - id: content_p1_004
+    name: Content Agent - Content Calendar Planning (Q1 2026)
+    priority: P1
+    category: planning
+    tags:
+      - content
+      - calendar
+    input:
+      prompt: Generate 90-day content calendar with themes, keywords, distribution channels
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Content Agent - Content Calendar Planning (Q1 2026). Generate 90-day
+      content calendar with themes, keywords, distribution channels
+  - id: content_p1_005
+    name: Content Agent - Competitive Content Gap Analysis
+    priority: P1
+    category: competitive
+    tags:
+      - content
+      - analysis
+    input:
+      prompt: Identify content gaps vs top 5 competitors in AI/ML space
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Content Agent - Competitive Content Gap Analysis. Identify content
+      gaps vs top 5 competitors in AI/ML space
+  - id: content_p1_006
+    name: Content Agent - Long-Form Content (3000+ words)
+    priority: P1
+    category: long_form
+    tags:
+      - content
+      - comprehensive
+    input:
+      prompt: "Generate comprehensive guide: 'Complete Guide to Multi-Agent Systems'"
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: "Content Agent - Long-Form Content (3000+ words). Generate comprehensive
+      guide: 'Complete Guide to Multi-Agent Systems'"
+  - id: content_p1_007
+    name: Content Agent - Content Performance Prediction
+    priority: P1
+    category: analytics
+    tags:
+      - content
+      - prediction
+    input:
+      prompt: 'Predict engagement metrics: estimated views, shares, time-on-page'
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Content Agent - Content Performance Prediction. Predict engagement
+      metrics: estimated views, shares, time-on-page'
+  - id: content_p1_008
+    name: Content Agent - Localization for 3 Markets
+    priority: P1
+    category: localization
+    tags:
+      - content
+      - translation
+    input:
+      prompt: 'Adapt content for: US English, UK English, Australian English markets'
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Content Agent - Localization for 3 Markets. Adapt content for: US
+      English, UK English, Australian English markets'
+  - id: content_p1_009
+    name: Content Agent - Headline A/B Testing Variants
+    priority: P1
+    category: ab_testing
+    tags:
+      - content
+      - testing
+    input:
+      prompt: Generate 10 headline variants optimized for click-through rate
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Content Agent - Headline A/B Testing Variants. Generate 10 headline
+      variants optimized for click-through rate
+  - id: content_p1_010
+    name: Content Agent - Content Accessibility (WCAG 2.2)
+    priority: P1
+    category: accessibility
+    tags:
+      - content
+      - a11y
+    input:
+      prompt: Optimize content for screen readers, alt text, readability (Grade 8-10)
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Content Agent - Content Accessibility (WCAG 2.2). Optimize content
+      for screen readers, alt text, readability (Grade 8-10)
+  - id: content_p1_011
+    name: Content Agent - User-Generated Content Curation
+    priority: P1
+    category: ugc
+    tags:
+      - content
+      - curation
+    input:
+      prompt: Curate and moderate 50 user testimonials, filter spam/inappropriate
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Content Agent - User-Generated Content Curation. Curate and moderate
+      50 user testimonials, filter spam/inappropriate
+  - id: content_p1_012
+    name: Content Agent - Content ROI Attribution
+    priority: P1
+    category: roi
+    tags:
+      - content
+      - analytics
+    input:
+      prompt: 'Attribute revenue to content pieces: blog posts, case studies, whitepapers'
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Content Agent - Content ROI Attribution. Attribute revenue to content
+      pieces: blog posts, case studies, whitepapers'
+  - id: content_p1_013
+    name: Content Agent - Thought Leadership Content Strategy
+    priority: P1
+    category: strategy
+    tags:
+      - content
+      - thought_leadership
+    input:
+      prompt: 'Develop thought leadership strategy for CEO: topics, channels, cadence'
+      agent: content
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Content Agent - Thought Leadership Content Strategy. Develop thought
+      leadership strategy for CEO: topics, channels, cadence'

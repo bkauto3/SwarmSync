@@ -1,0 +1,379 @@
+se_darwin_agent_p1:
+  agent: se_darwin_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Code evolution
+    - Multi-trajectory generation
+    - Benchmark validation
+    - Operator pipeline
+    - Convergence detection
+    - Quality scoring
+scenarios:
+  - id: se_darwin_p1_001
+    name: Se Darwin Agent - Multi-Trajectory Code Evolution
+    priority: P1
+    category: evolution
+    tags:
+      - darwin
+      - trajectory
+    input:
+      prompt: 'Evolve function through 3 trajectories: revision, recombination, refinement'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - Multi-Trajectory Code Evolution. Evolve function
+      through 3 trajectories: revision, recombination, refinement'
+  - id: se_darwin_p1_002
+    name: Se Darwin Agent - Benchmark-Driven Improvement
+    priority: P1
+    category: benchmarking
+    tags:
+      - darwin
+      - validation
+    input:
+      prompt: Evolve code to pass 270 benchmark scenarios across 15 agents
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Se Darwin Agent - Benchmark-Driven Improvement. Evolve code to pass
+      270 benchmark scenarios across 15 agents
+  - id: se_darwin_p1_003
+    name: Se Darwin Agent - TUMIX Early Stopping
+    priority: P1
+    category: optimization
+    tags:
+      - darwin
+      - tumix
+    input:
+      prompt: Stop evolution when quality threshold met (save 40-60% iterations)
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Se Darwin Agent - TUMIX Early Stopping. Stop evolution when quality
+      threshold met (save 40-60% iterations)
+  - id: se_darwin_p1_004
+    name: Se Darwin Agent - AST-Based Quality Scoring
+    priority: P1
+    category: quality
+    tags:
+      - darwin
+      - scoring
+    input:
+      prompt: 'Score code quality: complexity, maintainability, test coverage (deterministic)'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - AST-Based Quality Scoring. Score code quality: complexity,
+      maintainability, test coverage (deterministic)'
+  - id: se_darwin_p1_005
+    name: Se Darwin Agent - Operator Pipeline Execution
+    priority: P1
+    category: operators
+    tags:
+      - darwin
+      - pipeline
+    input:
+      prompt: 'Apply operators: Revision → Recombination → Refinement → Validation'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - Operator Pipeline Execution. Apply operators: Revision
+      → Recombination → Refinement → Validation'
+  - id: se_darwin_p1_006
+    name: Se Darwin Agent - Convergence Detection
+    priority: P1
+    category: convergence
+    tags:
+      - darwin
+      - detection
+    input:
+      prompt: 'Detect convergence: all successful, plateau (3 iterations), excellent
+        score'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - Convergence Detection. Detect convergence: all successful,
+      plateau (3 iterations), excellent score'
+  - id: se_darwin_p1_007
+    name: Se Darwin Agent - Parallel Trajectory Execution
+    priority: P1
+    category: parallel
+    tags:
+      - darwin
+      - performance
+    input:
+      prompt: Execute 3 trajectories in parallel (3X speedup vs sequential)
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Se Darwin Agent - Parallel Trajectory Execution. Execute 3 trajectories
+      in parallel (3X speedup vs sequential)
+  - id: se_darwin_p1_008
+    name: Se Darwin Agent - Integration with CaseBank
+    priority: P1
+    category: integration
+    tags:
+      - darwin
+      - memory
+    input:
+      prompt: Retrieve similar evolution cases from CaseBank (15-25% accuracy boost)
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Se Darwin Agent - Integration with CaseBank. Retrieve similar evolution
+      cases from CaseBank (15-25% accuracy boost)
+  - id: se_darwin_p1_009
+    name: Se Darwin Agent - Cross-Agent Code Transfer
+    priority: P1
+    category: transfer
+    tags:
+      - darwin
+      - learning
+    input:
+      prompt: Transfer learned patterns from QA agent evolution to Support agent
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Se Darwin Agent - Cross-Agent Code Transfer. Transfer learned patterns
+      from QA agent evolution to Support agent
+  - id: se_darwin_p1_010
+    name: Se Darwin Agent - Security-Safe Evolution
+    priority: P1
+    category: security
+    tags:
+      - darwin
+      - safety
+    input:
+      prompt: 'Evolve code while maintaining security: no eval(), no exec(), AST validation'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - Security-Safe Evolution. Evolve code while maintaining
+      security: no eval(), no exec(), AST validation'
+  - id: se_darwin_p1_011
+    name: Se Darwin Agent - Evolution for Complex Tasks
+    priority: P1
+    category: complexity
+    tags:
+      - darwin
+      - sica
+    input:
+      prompt: Use SICA reasoning loop for complex optimization problems
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Se Darwin Agent - Evolution for Complex Tasks. Use SICA reasoning loop
+      for complex optimization problems
+  - id: se_darwin_p1_012
+    name: Se Darwin Agent - Production Deployment Evolution
+    priority: P1
+    category: deployment
+    tags:
+      - darwin
+      - production
+    input:
+      prompt: 'Evolve production code: A/B test variants, monitor metrics, auto-deploy
+        winner'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - Production Deployment Evolution. Evolve production
+      code: A/B test variants, monitor metrics, auto-deploy winner'
+  - id: se_darwin_p1_013
+    name: Se Darwin Agent - Evolution Performance Metrics
+    priority: P1
+    category: metrics
+    tags:
+      - darwin
+      - analytics
+    input:
+      prompt: 'Track evolution metrics: iterations, quality gain, cost savings, time
+        saved'
+      agent: se_darwin
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Se Darwin Agent - Evolution Performance Metrics. Track evolution metrics:
+      iterations, quality gain, cost savings, time saved'

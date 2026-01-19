@@ -1,0 +1,487 @@
+legal_agent_p1:
+  agent: legal_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Advanced contract analysis
+    - OCR document processing
+    - Multi-jurisdiction compliance
+    - Risk assessment
+    - Automated redaction
+    - Legal precedent research
+scenarios:
+  - id: legal_p1_001
+    name: Legal Agent - OCR Contract Clause Extraction
+    priority: P1
+    category: ocr
+    tags:
+      - legal
+      - ocr
+      - contract
+      - clause_extraction
+    input:
+      prompt: Extract liability clauses from scanned contract PDF
+      document_path: /tests/documents/contract_scanned.pdf
+      target_clauses:
+        - liability
+        - indemnification
+        - limitation_of_liability
+    expected_output:
+      contains:
+        - liability
+        - indemnification
+        - extracted_clauses
+      clauses_found: '>=2'
+      confidence_score: '>0.85'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - ocr_successful
+        - clauses_identified
+        - extraction_accurate
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Legal Agent - OCR Contract Clause Extraction. Extract liability clauses
+      from scanned contract PDF
+  - id: legal_p1_002
+    name: Legal Agent - Multi-Jurisdiction Compliance Check
+    priority: P1
+    category: compliance
+    tags:
+      - legal
+      - compliance
+      - multi_jurisdiction
+      - gdpr_ccpa
+    input:
+      prompt: Validate data processing agreement for GDPR and CCPA compliance
+      document: User data processing agreement for EU and California users
+      jurisdictions:
+        - EU-GDPR
+        - California-CCPA
+    expected_output:
+      contains:
+        - gdpr_compliant
+        - ccpa_compliant
+        - compliance_report
+      compliance_score: '>0.90'
+      violations_found: 0
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - gdpr_checked
+        - ccpa_checked
+        - violations_identified
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Legal Agent - Multi-Jurisdiction Compliance Check. Validate data processing
+      agreement for GDPR and CCPA compliance
+  - id: legal_p1_003
+    name: Legal Agent - Automated PII Redaction
+    priority: P1
+    category: redaction
+    tags:
+      - legal
+      - pii
+      - redaction
+      - privacy
+    input:
+      prompt: Redact all PII from legal discovery document
+      document: Contract mentions John Smith (john.smith@example.com, SSN 123-45-6789)
+      pii_types:
+        - names
+        - email
+        - ssn
+        - phone
+        - address
+    expected_output:
+      contains:
+        - redacted
+        - pii_removed
+        - '[REDACTED]'
+      pii_count_redacted: '>=3'
+      no_pii_leaked: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - all_pii_redacted
+        - no_false_positives
+        - document_readable
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Legal Agent - Automated PII Redaction. Redact all PII from legal discovery
+      document
+  - id: legal_p1_004
+    name: Legal Agent - Contract Risk Scoring
+    priority: P1
+    category: risk_assessment
+    tags:
+      - legal
+      - risk
+      - scoring
+      - analysis
+    input:
+      prompt: 'Assess contract risk: unlimited liability, auto-renewal, no termination
+        clause'
+      contract_clauses:
+        liability: unlimited
+        renewal: automatic_annual
+        termination: none
+      risk_categories:
+        - financial
+        - operational
+        - reputational
+    expected_output:
+      contains:
+        - risk_score
+        - high_risk
+        - recommendations
+      risk_score: '>0.70'
+      risk_level: high
+      recommendations_count: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - risk_identified
+        - scoring_appropriate
+        - recommendations_actionable
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: 'Legal Agent - Contract Risk Scoring. Assess contract risk: unlimited
+      liability, auto-renewal, no termination clause'
+  - id: legal_p1_005
+    name: Legal Agent - Legal Precedent Research
+    priority: P1
+    category: research
+    tags:
+      - legal
+      - precedent
+      - research
+      - case_law
+    input:
+      prompt: Find relevant case law for software liability dispute
+      issue: Software defect caused financial loss to user
+      jurisdiction: California
+      topic: software_liability
+    expected_output:
+      contains:
+        - case_law
+        - precedent
+        - relevant_cases
+      cases_found: '>=3'
+      relevance_score: '>0.75'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - cases_relevant
+        - jurisdiction_correct
+        - analysis_provided
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Legal Agent - Legal Precedent Research. Find relevant case law for
+      software liability dispute
+  - id: legal_p1_006
+    name: Legal Agent - Terms of Service Generation
+    priority: P1
+    category: generation
+    tags:
+      - legal
+      - tos
+      - generation
+      - saas
+    input:
+      prompt: Generate SaaS Terms of Service for B2B platform
+      business_model: B2B_SaaS
+      jurisdiction: Delaware
+      features:
+        - data_processing
+        - api_access
+        - user_generated_content
+    expected_output:
+      contains:
+        - terms_of_service
+        - liability
+        - warranty
+        - termination
+      section_count: '>=8'
+      jurisdiction_specific: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - tos_complete
+        - jurisdiction_appropriate
+        - sections_comprehensive
+    performance:
+      max_latency_ms: 7000
+      max_tokens: 3000
+    cost_estimate: 0.1
+    description: Legal Agent - Terms of Service Generation. Generate SaaS Terms of Service
+      for B2B platform
+  - id: legal_p1_007
+    name: Legal Agent - Contract Comparison Analysis
+    priority: P1
+    category: comparison
+    tags:
+      - legal
+      - comparison
+      - diff
+      - negotiation
+    input:
+      prompt: Compare two versions of NDA and highlight material changes
+      version_1: Standard NDA with 2-year confidentiality
+      version_2: Modified NDA with 5-year confidentiality and broader scope
+      focus_areas:
+        - confidentiality_period
+        - scope
+        - exceptions
+    expected_output:
+      contains:
+        - material_changes
+        - confidentiality_extended
+        - scope_broadened
+      changes_detected: '>=2'
+      impact_assessment: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - changes_identified
+        - materiality_assessed
+        - negotiation_advice
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Legal Agent - Contract Comparison Analysis. Compare two versions of
+      NDA and highlight material changes
+  - id: legal_p1_008
+    name: Legal Agent - Regulatory Filing Automation
+    priority: P1
+    category: automation
+    tags:
+      - legal
+      - filing
+      - automation
+      - regulatory
+    input:
+      prompt: Prepare SEC Form D filing for venture capital raise
+      raise_details:
+        amount: $2,000,000
+        investors: 10
+        offering_type: Regulation D 506(b)
+      company_info: Delaware C-Corp
+    expected_output:
+      contains:
+        - form_d
+        - regulation_d
+        - filing_prepared
+      form_complete: true
+      fields_populated: '>=10'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - form_correct
+        - fields_accurate
+        - filing_ready
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Legal Agent - Regulatory Filing Automation. Prepare SEC Form D filing
+      for venture capital raise
+  - id: legal_p1_009
+    name: Legal Agent - Open Source License Compliance
+    priority: P1
+    category: compliance
+    tags:
+      - legal
+      - open_source
+      - licensing
+      - compliance
+    input:
+      prompt: Check codebase for GPL license conflicts with proprietary code
+      dependencies:
+        - library_a (MIT)
+        - library_b (GPL-3.0)
+        - library_c (Apache-2.0)
+      project_license: proprietary
+    expected_output:
+      contains:
+        - license_conflict
+        - gpl_violation
+        - remediation
+      conflicts_found: '>=1'
+      conflict_type: copyleft
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - conflict_detected
+        - license_analyzed
+        - remediation_suggested
+    performance:
+      max_latency_ms: 4000
+      max_tokens: 1000
+    cost_estimate: 0.05
+    description: Legal Agent - Open Source License Compliance. Check codebase for GPL
+      license conflicts with proprietary code
+  - id: legal_p1_010
+    name: Legal Agent - Employment Agreement Customization
+    priority: P1
+    category: generation
+    tags:
+      - legal
+      - employment
+      - agreement
+      - hr
+    input:
+      prompt: Customize employment agreement for California remote engineer
+      role: Senior Software Engineer
+      location: California (remote)
+      special_clauses:
+        - equity_grant
+        - ip_assignment
+        - non_compete
+    expected_output:
+      contains:
+        - employment_agreement
+        - california_specific
+        - equity
+        - ip_assignment
+      california_compliant: true
+      sections: '>=12'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - agreement_complete
+        - california_law_followed
+        - clauses_appropriate
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2500
+    cost_estimate: 0.09
+    description: Legal Agent - Employment Agreement Customization. Customize employment
+      agreement for California remote engineer
+  - id: legal_p1_011
+    name: Legal Agent - Contract Negotiation Strategy
+    priority: P1
+    category: strategy
+    tags:
+      - legal
+      - negotiation
+      - strategy
+      - advisory
+    input:
+      prompt: Recommend negotiation strategy for vendor contract
+      vendor_terms:
+        price: $50,000/year
+        term: 3 years auto-renew
+        termination: 90 days notice
+        liability_cap: $100,000
+      market_benchmarks: avg $35,000/year, 1-year terms
+    expected_output:
+      contains:
+        - negotiation_strategy
+        - leverage_points
+        - fallback_positions
+      leverage_points: '>=3'
+      target_terms: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - strategy_sound
+        - leverage_identified
+        - realistic_targets
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1200
+    cost_estimate: 0.06
+    description: Legal Agent - Contract Negotiation Strategy. Recommend negotiation
+      strategy for vendor contract
+  - id: legal_p1_012
+    name: Legal Agent - Data Breach Response Protocol
+    priority: P1
+    category: incident
+    tags:
+      - legal
+      - data_breach
+      - incident_response
+      - gdpr
+    input:
+      prompt: Generate data breach response plan for GDPR compliance
+      breach_details:
+        records_affected: 5000
+        data_types:
+          - email
+          - name
+          - phone
+        jurisdictions:
+          - EU
+          - UK
+      notification_deadline: 72 hours
+    expected_output:
+      contains:
+        - breach_response
+        - notification_plan
+        - gdpr_compliance
+      notification_authorities: provided
+      timeline: within_72_hours
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - response_complete
+        - gdpr_compliant
+        - timeline_met
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Legal Agent - Data Breach Response Protocol. Generate data breach response
+      plan for GDPR compliance
+  - id: legal_p1_013
+    name: Legal Agent - IP Portfolio Analysis
+    priority: P1
+    category: ip
+    tags:
+      - legal
+      - ip
+      - patent
+      - trademark
+    input:
+      prompt: Analyze IP portfolio and recommend filing strategy
+      current_ip:
+        patents:
+          - US123456 - AI Algorithm
+          - US789012 - Data Processing
+        trademarks:
+          - Company Name
+          - Product Logo
+      new_innovations:
+        - Machine Learning Model
+        - API Gateway Design
+    expected_output:
+      contains:
+        - ip_analysis
+        - filing_recommendations
+        - protection_gaps
+      recommendations: '>=2'
+      protection_score: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - analysis_thorough
+        - recommendations_strategic
+        - gaps_identified
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Legal Agent - IP Portfolio Analysis. Analyze IP portfolio and recommend
+      filing strategy

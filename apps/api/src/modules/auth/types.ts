@@ -1,0 +1,1 @@
+export interface AuthenticatedUser { id: string; email: string; displayName: string; kind?: 'user' | 'service_account'; serviceAccountId?: string; organizationId?: string; agentId?: string; scopes?: string[]; }

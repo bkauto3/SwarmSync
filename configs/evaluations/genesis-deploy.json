@@ -1,0 +1,2083 @@
+[
+  {
+    "sourceId": "deploy_agent_p0_100",
+    "scenarioName": "Deploy Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p0_101",
+    "scenarioName": "Deploy Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p0_102",
+    "scenarioName": "Deploy Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p0_103",
+    "scenarioName": "Deploy Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p0_104",
+    "scenarioName": "Deploy Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p0_105",
+    "scenarioName": "Deploy Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_agent_p0_106",
+    "scenarioName": "Deploy Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "compliance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical compliance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "deploy_agent_p0_107",
+    "scenarioName": "Deploy Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "scalability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical scalability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "deploy_agent_p0_108",
+    "scenarioName": "Deploy Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "reliability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical reliability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "deploy_agent_p0_109",
+    "scenarioName": "Deploy Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical data_quality test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "deploy_agent_p0_110",
+    "scenarioName": "Deploy Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p0_111",
+    "scenarioName": "Deploy Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p0_112",
+    "scenarioName": "Deploy Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p0_113",
+    "scenarioName": "Deploy Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p0_114",
+    "scenarioName": "Deploy Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p0_115",
+    "scenarioName": "Deploy Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "critical", "p0", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute critical security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Deploy Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_p1_001",
+    "scenarioName": "Deploy Agent - GitHub Actions CI/CD Pipeline",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "github_actions"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Build CI/CD: test, build, push Docker, deploy to ECS, smoke tests",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - GitHub Actions CI/CD Pipeline. Build CI/CD: test, build, push Docker, deploy to ECS, smoke tests",
+    "category": "cicd"
+  },
+  {
+    "sourceId": "deploy_p1_002",
+    "scenarioName": "Deploy Agent - Kubernetes Deployment with HPA",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "k8s"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Deploy to K8s: deployment, service, HPA, ingress, health checks",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Kubernetes Deployment with HPA. Deploy to K8s: deployment, service, HPA, ingress, health checks",
+    "category": "kubernetes"
+  },
+  {
+    "sourceId": "deploy_p1_003",
+    "scenarioName": "Deploy Agent - Terraform Infrastructure Provisioning",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "terraform"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Provision AWS: VPC, subnets, RDS, ECS cluster, load balancer",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Terraform Infrastructure Provisioning. Provision AWS: VPC, subnets, RDS, ECS cluster, load balancer",
+    "category": "iac"
+  },
+  {
+    "sourceId": "deploy_p1_004",
+    "scenarioName": "Deploy Agent - Blue-Green Deployment",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "blue_green"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Implement blue-green deployment with traffic switching, validation",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Blue-Green Deployment. Implement blue-green deployment with traffic switching, validation",
+    "category": "deployment_strategy"
+  },
+  {
+    "sourceId": "deploy_p1_005",
+    "scenarioName": "Deploy Agent - Canary Deployment (10% → 50% → 100%)",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "progressive"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Progressive rollout: 10% traffic, monitor metrics, auto-rollback on errors",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Canary Deployment (10% → 50% → 100%). Progressive rollout: 10% traffic, monitor metrics, auto-rollback on errors",
+    "category": "canary"
+  },
+  {
+    "sourceId": "deploy_p1_006",
+    "scenarioName": "Deploy Agent - Database Migration with Zero Downtime",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "database"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Deploy DB schema changes: backward compatible, dual writes, staged rollout",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Database Migration with Zero Downtime. Deploy DB schema changes: backward compatible, dual writes, staged rollout",
+    "category": "migration"
+  },
+  {
+    "sourceId": "deploy_p1_007",
+    "scenarioName": "Deploy Agent - Multi-Region Deployment",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "global"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Deploy to 3 regions: US-East, EU-West, AP-Southeast with traffic routing",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Multi-Region Deployment. Deploy to 3 regions: US-East, EU-West, AP-Southeast with traffic routing",
+    "category": "multi_region"
+  },
+  {
+    "sourceId": "deploy_p1_008",
+    "scenarioName": "Deploy Agent - Rollback Automation",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "automation"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Auto-rollback on: error rate >1%, latency >500ms, failed health checks",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Rollback Automation. Auto-rollback on: error rate >1%, latency >500ms, failed health checks",
+    "category": "rollback"
+  },
+  {
+    "sourceId": "deploy_p1_009",
+    "scenarioName": "Deploy Agent - Feature Flag Integration",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "launchdarkly"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Deploy with feature flags: gradual rollout, A/B testing, kill switches",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Feature Flag Integration. Deploy with feature flags: gradual rollout, A/B testing, kill switches",
+    "category": "feature_flags"
+  },
+  {
+    "sourceId": "deploy_p1_010",
+    "scenarioName": "Deploy Agent - Monitoring Stack Setup",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "prometheus"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Deploy Prometheus, Grafana, Alertmanager with dashboards, alerts",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Monitoring Stack Setup. Deploy Prometheus, Grafana, Alertmanager with dashboards, alerts",
+    "category": "monitoring"
+  },
+  {
+    "sourceId": "deploy_p1_011",
+    "scenarioName": "Deploy Agent - Secrets Management (Vault)",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "vault"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Configure HashiCorp Vault: dynamic secrets, rotation, auth methods",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Secrets Management (Vault). Configure HashiCorp Vault: dynamic secrets, rotation, auth methods",
+    "category": "secrets"
+  },
+  {
+    "sourceId": "deploy_p1_012",
+    "scenarioName": "Deploy Agent - Load Testing Before Production",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "k6"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Run k6 load tests in staging: 1000 RPS sustained, verify SLOs met",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Load Testing Before Production. Run k6 load tests in staging: 1000 RPS sustained, verify SLOs met",
+    "category": "load_testing"
+  },
+  {
+    "sourceId": "deploy_p1_013",
+    "scenarioName": "Deploy Agent - Disaster Recovery Runbook",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "disaster_recovery"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Create DR runbook: backup restoration, failover procedures, RTO/RPO",
+      "agent": "deploy"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Deploy Agent - Disaster Recovery Runbook. Create DR runbook: backup restoration, failover procedures, RTO/RPO",
+    "category": "dr"
+  },
+  {
+    "sourceId": "deploy_agent_p1_100",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p1_101",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p1_102",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p1_103",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p1_104",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p1_105",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_agent_p1_106",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "compliance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority compliance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "deploy_agent_p1_107",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "scalability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority scalability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "deploy_agent_p1_108",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "reliability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority reliability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "deploy_agent_p1_109",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "data_quality"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "deploy_agent_p1_110",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p1_111",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p1_112",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p1_113",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p1_114",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p1_115",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_agent_p1_116",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "compliance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority compliance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "deploy_agent_p1_117",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "scalability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority scalability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "deploy_agent_p1_118",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "reliability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority reliability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "deploy_agent_p1_119",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "data_quality"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "deploy_agent_p1_120",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p1_121",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p1_122",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p1_123",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p1_124",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p1_125",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_agent_p1_126",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "compliance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority compliance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "deploy_agent_p1_127",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "scalability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority scalability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "deploy_agent_p1_128",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "reliability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority reliability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "deploy_agent_p1_129",
+    "scenarioName": "Deploy Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "high", "p1", "data_quality"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "deploy_agent_p2_001",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p2_002",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p2_003",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p2_004",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p2_005",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p2_006",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_agent_p2_007",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "compliance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "deploy_agent_p2_008",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "scalability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "deploy_agent_p2_009",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "reliability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "deploy_agent_p2_010",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "deploy_agent_p2_011",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "success"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority success test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "deploy_agent_p2_012",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "deploy_agent_p2_013",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "deploy_agent_p2_014",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "performance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority performance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "deploy_agent_p2_015",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "integration"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority integration test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "deploy_agent_p2_016",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "security"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority security test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "deploy_agent_p2_017",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "compliance"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "deploy_agent_p2_018",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "scalability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "deploy_agent_p2_019",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "reliability"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "deploy_agent_p2_020",
+    "scenarioName": "Deploy Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "deploy",
+    "agentTags": ["deploy", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "deploy",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for deploy_agent",
+      "agent": "deploy",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Deploy Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

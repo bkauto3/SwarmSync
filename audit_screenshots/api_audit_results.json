@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-01-02T14:01:48.241419",
+  "endpoints": [
+    {
+      "name": "Demo API",
+      "path": "/api/demo",
+      "status": 404,
+      "success": false
+    },
+    {
+      "name": "Marketplace API",
+      "path": "/api/marketplace",
+      "status": 404,
+      "success": false
+    },
+    {
+      "name": "Agents API",
+      "path": "/api/agents",
+      "status": 404,
+      "success": false
+    },
+    {
+      "name": "Health Check",
+      "path": "/api/health",
+      "status": 404,
+      "success": false
+    }
+  ],
+  "provider_form": true,
+  "enterprise_form": true,
+  "enterprise_form_fields": {
+    "name": true,
+    "email": true,
+    "message": true,
+    "submit": true
+  }
+}

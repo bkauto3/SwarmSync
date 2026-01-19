@@ -1,0 +1,2270 @@
+# Rogue Test Scenarios - Orchestration Layer P0 Critical Tests
+# 110 scenarios: HTDAG (30), HALO (30), AOP (30), DAAO (20)
+
+orchestration:
+  name: 'orchestration_layer1'
+  components:
+    - htdag_planner
+    - halo_router
+    - aop_validator
+    - daao_router
+  business_context: |
+    Layer 1 orchestration provides intelligent task decomposition, agent routing,
+    plan validation, and cost optimization for the Genesis multi-agent system.
+
+scenarios:
+  # ============================================================================
+  # HTDAG PLANNER - P0 CRITICAL (30 scenarios)
+  # ============================================================================
+
+  - id: 'htdag_p0_001'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'decomposition', 'critical']
+    description: 'Simple task decomposition into 5-10 subtasks'
+    input:
+      task: 'Create a landing page for Genesis platform'
+      constraints: []
+    expected_output:
+      status: 'success'
+      task_count: '5-10'
+      has_circular_deps: false
+      response_time: '<2s'
+    policy_checks:
+      - 'Valid DAG structure generated'
+      - 'No circular dependencies detected'
+      - 'All tasks have clear descriptions'
+      - 'Subtasks are actionable'
+    cost_estimate: '$0.02'
+
+  - id: 'htdag_p0_002'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'complex', 'critical']
+    description: 'Complex multi-agent workflow decomposition'
+    input:
+      task: 'Build a complete e-commerce website with payment processing'
+      constraints: ['requires builder, deploy, security agents']
+    expected_output:
+      status: 'success'
+      task_count: '20-30'
+      parallel_branches: '>=3'
+      response_time: '<5s'
+    policy_checks:
+      - 'DAG includes parallel execution paths'
+      - 'Dependencies correctly ordered'
+      - 'Security tasks included'
+      - 'Deployment tasks at end'
+    cost_estimate: '$0.05'
+
+  - id: 'htdag_p0_003'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'parallel', 'critical']
+    description: 'Parallel task generation for independent work'
+    input:
+      task: 'Deploy 3 microservices simultaneously'
+      constraints: ['services are independent']
+    expected_output:
+      status: 'success'
+      parallel_branches: '3'
+      has_dependencies: false
+      response_time: '<2s'
+    policy_checks:
+      - 'Three independent branches created'
+      - 'No artificial dependencies between services'
+      - 'Each branch has deploy tasks'
+    cost_estimate: '$0.02'
+
+  - id: 'htdag_p0_004'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'sequential', 'critical']
+    description: 'Sequential dependency chain validation'
+    input:
+      task: 'Set up complete CI/CD pipeline'
+      constraints: ['must follow build -> test -> deploy order']
+    expected_output:
+      status: 'success'
+      task_count: '>=10'
+      is_sequential: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Tasks in correct order'
+      - 'Build before test'
+      - 'Test before deploy'
+      - 'Each step has clear outputs'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_005'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'nested', 'critical']
+    description: 'Nested subtask decomposition (3 levels deep)'
+    input:
+      task: 'Implement complete authentication system'
+      constraints: ['include OAuth, JWT, session management']
+    expected_output:
+      status: 'success'
+      max_depth: '3'
+      task_count: '15-25'
+      response_time: '<4s'
+    policy_checks:
+      - 'Depth limit not exceeded'
+      - 'Each level has clear parent-child relationships'
+      - 'Leaf tasks are directly actionable'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_006'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['htdag', 'empty_task', 'critical']
+    description: 'Reject empty task description'
+    input:
+      task: ''
+      constraints: []
+    expected_output:
+      status: 'error'
+      error_type: 'ValidationError'
+      error_message: 'Task description is required'
+      response_time: '<1s'
+    policy_checks:
+      - 'Immediate validation failure'
+      - 'Clear error message'
+      - 'No partial DAG created'
+    cost_estimate: '$0.00'
+
+  - id: 'htdag_p0_007'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['htdag', 'ambiguous', 'critical']
+    description: 'Request clarification for ambiguous task'
+    input:
+      task: 'Fix it'
+      constraints: []
+    expected_output:
+      status: 'needs_clarification'
+      questions: '>=3'
+      response_time: '<1s'
+    policy_checks:
+      - 'Asks for context about what to fix'
+      - 'Requests target system/component'
+      - 'Does not make assumptions'
+    cost_estimate: '$0.01'
+
+  - id: 'htdag_p0_008'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['htdag', 'circular_dependency', 'critical']
+    description: 'Detect and reject circular dependencies'
+    input:
+      task: 'Create circular workflow'
+      forced_dependencies: { 'task_a': 'task_b', 'task_b': 'task_c', 'task_c': 'task_a' }
+    expected_output:
+      status: 'error'
+      error_type: 'CircularDependencyError'
+      cycle_detected: true
+      response_time: '<1s'
+    policy_checks:
+      - 'Cycle detection algorithm works'
+      - 'Identifies all nodes in cycle'
+      - 'Clear error explaining cycle'
+    cost_estimate: '$0.01'
+
+  - id: 'htdag_p0_009'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['htdag', 'max_depth', 'critical']
+    description: 'Enforce maximum decomposition depth'
+    input:
+      task: 'Extremely nested task with 15 levels'
+      force_depth: 15
+    expected_output:
+      status: 'warning'
+      warning_type: 'MaxDepthReached'
+      actual_depth: '10'
+      response_time: '<5s'
+    policy_checks:
+      - 'Depth limit enforced at 10 levels'
+      - 'Warning issued to user'
+      - 'DAG is still valid'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_010'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['htdag', 'llm_timeout', 'critical']
+    description: 'Fallback to heuristic when LLM times out'
+    input:
+      task: 'Build complex system'
+      simulate_timeout: true
+    expected_output:
+      status: 'success'
+      method_used: 'heuristic_fallback'
+      task_count: '>=5'
+      response_time: '<3s'
+    policy_checks:
+      - 'Graceful degradation to heuristics'
+      - 'Basic DAG still generated'
+      - 'User notified of fallback'
+    cost_estimate: '$0.01'
+
+  - id: 'htdag_p0_011'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'resource_constraints', 'critical']
+    description: 'Handle resource-constrained task planning'
+    input:
+      task: 'Deploy with limited agent availability'
+      constraints: ['max_agents: 3', 'parallel_tasks: 2']
+    expected_output:
+      status: 'success'
+      respects_constraints: true
+      max_parallel: '2'
+      response_time: '<2s'
+    policy_checks:
+      - 'Resource limits respected'
+      - 'Tasks serialized when needed'
+      - 'Priority tasks scheduled first'
+    cost_estimate: '$0.02'
+
+  - id: 'htdag_p0_012'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'time_bound', 'critical']
+    description: 'Create time-bound execution plan'
+    input:
+      task: 'Deploy new feature to production'
+      constraints: ['deadline: 1 hour']
+    expected_output:
+      status: 'success'
+      has_time_estimates: true
+      total_time: '<1h'
+      response_time: '<3s'
+    policy_checks:
+      - 'Each task has time estimate'
+      - 'Critical path identified'
+      - 'Deadline feasibility checked'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_013'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'multi_language', 'critical']
+    description: 'Multi-language code generation workflow'
+    input:
+      task: 'Build full-stack app with Python backend and React frontend'
+      constraints: []
+    expected_output:
+      status: 'success'
+      language_tracks: '2'
+      has_integration_tasks: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Separate tracks for Python and JavaScript'
+      - 'Integration tasks connect tracks'
+      - 'Correct agents assigned per language'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_014'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'database', 'critical']
+    description: 'Safe database migration plan'
+    input:
+      task: 'Upgrade PostgreSQL schema with zero downtime'
+      constraints: ['production environment', 'rollback plan required']
+    expected_output:
+      status: 'success'
+      has_rollback_plan: true
+      has_backup_step: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Backup task comes first'
+      - 'Rollback procedure defined'
+      - 'Testing steps included'
+      - 'Monitoring tasks added'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_015'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'api_integration', 'critical']
+    description: 'External API integration workflow'
+    input:
+      task: 'Integrate 5 external APIs (Stripe, SendGrid, Twilio, AWS S3, Auth0)'
+      constraints: []
+    expected_output:
+      status: 'success'
+      task_count: '>=15'
+      has_error_handling: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Each API has setup, test, error handling tasks'
+      - 'Authentication configured per API'
+      - 'Rate limiting considerations included'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_016'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'testing', 'critical']
+    description: 'Comprehensive testing strategy generation'
+    input:
+      task: 'Create testing plan for microservices architecture'
+      constraints: ['unit, integration, e2e tests required']
+    expected_output:
+      status: 'success'
+      test_types: '>=3'
+      coverage_targets: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Unit tests for each service'
+      - 'Integration tests for service communication'
+      - 'E2E tests for user workflows'
+      - 'Coverage targets specified'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_017'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'documentation', 'critical']
+    description: 'API documentation generation workflow'
+    input:
+      task: 'Generate comprehensive API documentation for REST API'
+      constraints: ['OpenAPI spec', 'code examples', 'auth guide']
+    expected_output:
+      status: 'success'
+      doc_sections: '>=5'
+      includes_examples: true
+      response_time: '<3s'
+    policy_checks:
+      - 'OpenAPI spec generation included'
+      - 'Authentication documented'
+      - 'Error responses documented'
+      - 'Code examples provided'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_018'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'security', 'critical']
+    description: 'Security audit workflow generation'
+    input:
+      task: 'Perform comprehensive security review of web application'
+      constraints: ['OWASP Top 10', 'penetration testing', 'compliance check']
+    expected_output:
+      status: 'success'
+      security_checks: '>=7'
+      includes_owasp: true
+      response_time: '<4s'
+    policy_checks:
+      - 'OWASP Top 10 checks included'
+      - 'Authentication/authorization audit'
+      - 'Input validation review'
+      - 'Compliance verification tasks'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_019'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'performance', 'critical']
+    description: 'Performance optimization workflow'
+    input:
+      task: 'Optimize slow database queries and API response times'
+      constraints: ['measure before and after', 'no breaking changes']
+    expected_output:
+      status: 'success'
+      has_baseline: true
+      has_monitoring: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Baseline measurements defined'
+      - 'Optimization tasks identified'
+      - 'Validation testing included'
+      - 'Rollback plan exists'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_020'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'refactoring', 'critical']
+    description: 'Safe refactoring plan generation'
+    input:
+      task: 'Refactor legacy monolith into microservices'
+      constraints: ['incremental migration', 'no downtime']
+    expected_output:
+      status: 'success'
+      migration_phases: '>=3'
+      has_validation: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Incremental migration steps'
+      - 'Testing after each phase'
+      - 'Rollback capability maintained'
+      - 'Traffic routing strategy'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_021'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'feature_flag', 'critical']
+    description: 'Feature flag rollout strategy'
+    input:
+      task: 'Deploy new checkout flow with feature flag'
+      constraints: ['staged rollout: 1% -> 10% -> 50% -> 100%']
+    expected_output:
+      status: 'success'
+      rollout_stages: '4'
+      has_monitoring: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Staged rollout percentages defined'
+      - 'Monitoring at each stage'
+      - 'Rollback triggers specified'
+      - 'Success criteria defined'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_022'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'data_pipeline', 'critical']
+    description: 'ETL data pipeline design'
+    input:
+      task: 'Build ETL pipeline for analytics data'
+      constraints: ['extract from 3 sources', 'validate data quality']
+    expected_output:
+      status: 'success'
+      pipeline_stages: '>=4'
+      has_validation: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Extract, Transform, Load stages defined'
+      - 'Data quality validation included'
+      - 'Error handling specified'
+      - 'Monitoring and alerts'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_023'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'ml_workflow', 'critical']
+    description: 'Machine learning training workflow'
+    input:
+      task: 'Train and deploy ML model for fraud detection'
+      constraints: ['data preparation', 'experiment tracking', 'A/B testing']
+    expected_output:
+      status: 'success'
+      ml_stages: '>=5'
+      has_experiment_tracking: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Data prep and feature engineering'
+      - 'Model training and evaluation'
+      - 'Experiment tracking setup'
+      - 'Deployment and A/B testing'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_024'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'infrastructure', 'critical']
+    description: 'Kubernetes cluster provisioning'
+    input:
+      task: 'Set up production Kubernetes cluster on AWS'
+      constraints: ['high availability', 'auto-scaling', 'monitoring']
+    expected_output:
+      status: 'success'
+      has_ha_config: true
+      has_monitoring: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Multi-AZ deployment'
+      - 'Auto-scaling configured'
+      - 'Monitoring and logging setup'
+      - 'Security groups and IAM'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_025'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'monitoring', 'critical']
+    description: 'Comprehensive monitoring setup'
+    input:
+      task: 'Configure Prometheus + Grafana monitoring stack'
+      constraints: ['SLOs defined', 'alerting rules', 'dashboards']
+    expected_output:
+      status: 'success'
+      has_slos: true
+      alert_count: '>=10'
+      response_time: '<3s'
+    policy_checks:
+      - 'SLOs defined for key metrics'
+      - 'Alert rules configured'
+      - 'Dashboards created'
+      - 'Retention policies set'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_026'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'compliance', 'critical']
+    description: 'GDPR compliance audit checklist'
+    input:
+      task: 'Perform GDPR compliance audit for SaaS platform'
+      constraints: ['data inventory', 'consent management', 'data deletion']
+    expected_output:
+      status: 'success'
+      compliance_checks: '>=15'
+      has_remediation: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Data inventory tasks'
+      - 'Consent mechanism review'
+      - 'Data deletion procedures'
+      - 'Privacy policy validation'
+    cost_estimate: '$0.04'
+
+  - id: 'htdag_p0_027'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'incident_response', 'critical']
+    description: 'Production incident response plan'
+    input:
+      task: 'Create incident response procedure for production outage'
+      constraints: ['escalation path', 'communication plan', 'postmortem']
+    expected_output:
+      status: 'success'
+      has_escalation: true
+      has_communication: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Escalation path defined'
+      - 'Communication templates'
+      - 'Investigation procedures'
+      - 'Postmortem process'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_028'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'code_review', 'critical']
+    description: 'Code review workflow for large PR'
+    input:
+      task: 'Review pull request with 500 lines of code'
+      constraints: ['security check', 'performance review', 'test coverage']
+    expected_output:
+      status: 'success'
+      review_sections: '>=5'
+      has_security_check: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Security vulnerability scan'
+      - 'Code quality checks'
+      - 'Test coverage validation'
+      - 'Performance implications'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_029'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'dependency_upgrade', 'critical']
+    description: 'Safe dependency upgrade workflow'
+    input:
+      task: 'Upgrade Python from 3.11 to 3.12'
+      constraints: ['test all dependencies', 'backward compatibility']
+    expected_output:
+      status: 'success'
+      has_testing: true
+      has_rollback: true
+      response_time: '<3s'
+    policy_checks:
+      - 'Compatibility check included'
+      - 'Test suite execution'
+      - 'Staging deployment first'
+      - 'Rollback procedure'
+    cost_estimate: '$0.03'
+
+  - id: 'htdag_p0_030'
+    priority: 'P0'
+    category: 'success'
+    tags: ['htdag', 'multi_region', 'critical']
+    description: 'Multi-region deployment workflow'
+    input:
+      task: 'Deploy application to 3 AWS regions (us-east-1, eu-west-1, ap-southeast-1)'
+      constraints: ['region-specific configs', 'consistent state']
+    expected_output:
+      status: 'success'
+      region_count: '3'
+      has_validation: true
+      response_time: '<4s'
+    policy_checks:
+      - 'Region-specific configurations'
+      - 'Database replication setup'
+      - 'Health checks per region'
+      - 'Rollback per region'
+    cost_estimate: '$0.04'
+
+  # ============================================================================
+  # HALO ROUTER - P0 CRITICAL (30 scenarios)
+  # ============================================================================
+
+  - id: 'halo_p0_001'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'legal', 'critical']
+    description: 'Route legal contract review to legal agent'
+    input:
+      task: 'Review SaaS contract for legal compliance'
+      task_type: 'legal_review'
+    expected_output:
+      status: 'success'
+      selected_agent: 'legal_agent'
+      routing_time: '<100ms'
+      confidence_score: '>0.9'
+    policy_checks:
+      - 'Legal agent selected'
+      - 'Routing explanation logged'
+      - 'Agent availability confirmed'
+      - 'Sub-100ms routing time'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_002'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'qa', 'critical']
+    description: 'Route test generation to QA agent'
+    input:
+      task: 'Generate pytest suite for authentication module'
+      task_type: 'code_testing'
+    expected_output:
+      status: 'success'
+      selected_agent: 'qa_agent'
+      routing_time: '<100ms'
+      confidence_score: '>0.9'
+    policy_checks:
+      - 'QA agent selected'
+      - 'Python testing capability verified'
+      - 'Routing decision explainable'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_003'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'support', 'critical']
+    description: 'Route customer support ticket to support agent'
+    input:
+      task: 'Customer unable to login - password reset needed'
+      task_type: 'customer_support'
+    expected_output:
+      status: 'success'
+      selected_agent: 'support_agent'
+      routing_time: '<100ms'
+      priority: 'high'
+    policy_checks:
+      - 'Support agent selected'
+      - 'Issue classified correctly'
+      - 'Priority assigned based on urgency'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_004'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'analyst', 'critical']
+    description: 'Route financial analysis to analyst agent'
+    input:
+      task: 'Analyze Q4 revenue trends and forecast Q1'
+      task_type: 'financial_analysis'
+    expected_output:
+      status: 'success'
+      selected_agent: 'analyst_agent'
+      routing_time: '<100ms'
+      capabilities_matched: ['data_analysis', 'forecasting']
+    policy_checks:
+      - 'Analyst agent selected'
+      - 'Financial analysis capability verified'
+      - 'Data access permissions checked'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_005'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'content', 'critical']
+    description: 'Route blog writing to content agent'
+    input:
+      task: 'Write SEO-optimized blog post about AI agents'
+      task_type: 'content_creation'
+    expected_output:
+      status: 'success'
+      selected_agent: 'content_agent'
+      routing_time: '<100ms'
+      seo_capability: true
+    policy_checks:
+      - 'Content agent selected'
+      - 'SEO capability verified'
+      - 'Writing style preferences considered'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_006'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'security', 'critical']
+    description: 'Route security audit to security agent'
+    input:
+      task: 'Perform penetration testing on authentication system'
+      task_type: 'security_review'
+    expected_output:
+      status: 'success'
+      selected_agent: 'security_agent'
+      routing_time: '<100ms'
+      security_clearance: true
+    policy_checks:
+      - 'Security agent selected'
+      - 'Pen testing capability verified'
+      - 'Authorization confirmed'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_007'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'deploy', 'critical']
+    description: 'Route infrastructure deployment to deploy agent'
+    input:
+      task: 'Deploy Docker containers to Kubernetes cluster'
+      task_type: 'infra_deploy'
+    expected_output:
+      status: 'success'
+      selected_agent: 'deploy_agent'
+      routing_time: '<100ms'
+      k8s_capability: true
+    policy_checks:
+      - 'Deploy agent selected'
+      - 'Kubernetes capability verified'
+      - 'Production access confirmed'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_008'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'spec', 'critical']
+    description: 'Route requirements documentation to spec agent'
+    input:
+      task: 'Write technical specification for REST API'
+      task_type: 'requirements_doc'
+    expected_output:
+      status: 'success'
+      selected_agent: 'spec_agent'
+      routing_time: '<100ms'
+      api_spec_capability: true
+    policy_checks:
+      - 'Spec agent selected'
+      - 'API documentation capability verified'
+      - 'OpenAPI spec support confirmed'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_009'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'darwin', 'critical']
+    description: 'Route code improvement to SE-Darwin agent'
+    input:
+      task: 'Optimize slow database query function'
+      task_type: 'code_improvement'
+    expected_output:
+      status: 'success'
+      selected_agent: 'se_darwin_agent'
+      routing_time: '<100ms'
+      optimization_capability: true
+    policy_checks:
+      - 'SE-Darwin agent selected'
+      - 'Code evolution capability verified'
+      - 'Benchmark validation planned'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_010'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'routing', 'vision', 'critical']
+    description: 'Route image OCR to vision agent'
+    input:
+      task: 'Extract text from invoice PDF'
+      task_type: 'image_ocr'
+      file_path: '/documents/invoice.pdf'
+    expected_output:
+      status: 'success'
+      selected_agent: 'vision_agent'
+      routing_time: '<100ms'
+      ocr_capability: true
+    policy_checks:
+      - 'Vision agent selected'
+      - 'OCR capability verified'
+      - 'PDF processing support confirmed'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_011'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'load_balancing', 'critical']
+    description: 'Load balance 10 QA tasks across 3 QA agents'
+    input:
+      tasks:
+        [
+          'qa_task_1',
+          'qa_task_2',
+          'qa_task_3',
+          'qa_task_4',
+          'qa_task_5',
+          'qa_task_6',
+          'qa_task_7',
+          'qa_task_8',
+          'qa_task_9',
+          'qa_task_10',
+        ]
+      available_agents: ['qa_agent_1', 'qa_agent_2', 'qa_agent_3']
+    expected_output:
+      status: 'success'
+      distribution: 'balanced'
+      tasks_per_agent: '3-4'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Tasks distributed evenly'
+      - 'No agent overloaded'
+      - 'Load balancing algorithm applied'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_012'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'fallback', 'critical']
+    description: 'Fallback to secondary agent when primary unavailable'
+    input:
+      task: 'Generate pytest tests'
+      primary_agent: 'qa_agent_1'
+      primary_status: 'unavailable'
+    expected_output:
+      status: 'success'
+      selected_agent: 'qa_agent_2'
+      routing_time: '<200ms'
+      fallback_triggered: true
+    policy_checks:
+      - 'Primary unavailability detected'
+      - 'Secondary agent selected'
+      - 'User notified of fallback'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_013'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'priority', 'critical']
+    description: 'Priority routing for high-priority task'
+    input:
+      task: 'Critical production bug - database connection failing'
+      priority: 'P0'
+      task_type: 'debugging'
+    expected_output:
+      status: 'success'
+      routing_time: '<50ms'
+      fastest_agent_selected: true
+    policy_checks:
+      - 'Priority recognized'
+      - 'Fastest available agent selected'
+      - 'Queue bypass applied'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_014'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'explainability', 'critical']
+    description: 'Provide routing explanation'
+    input:
+      task: 'Review contract terms'
+      task_type: 'legal_review'
+    expected_output:
+      status: 'success'
+      selected_agent: 'legal_agent'
+      explanation: 'contains_legal_reasoning'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Explanation includes reason for selection'
+      - 'Agent capabilities mentioned'
+      - 'Alternative agents listed'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_015'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'multi_agent', 'critical']
+    description: 'Select multiple agents for collaborative task'
+    input:
+      task: 'Build and deploy new authentication feature with security audit'
+      requires_agents: ['builder', 'deploy', 'security']
+    expected_output:
+      status: 'success'
+      selected_agents: '3'
+      agent_names: ['builder_agent', 'deploy_agent', 'security_agent']
+      routing_time: '<150ms'
+    policy_checks:
+      - 'All required agents selected'
+      - 'Coordination plan created'
+      - 'Task delegation defined'
+    cost_estimate: '$0.02'
+
+  - id: 'halo_p0_016'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'context_aware', 'critical']
+    description: 'Context-aware routing based on task history'
+    input:
+      task: 'Continue previous analysis'
+      context: 'previous_task_id: analyst_task_123'
+    expected_output:
+      status: 'success'
+      selected_agent: 'analyst_agent'
+      context_used: true
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Previous task context retrieved'
+      - 'Same agent selected for continuity'
+      - 'Context passed to agent'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_017'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'skill_based', 'critical']
+    description: 'Skill-based routing requiring multiple capabilities'
+    input:
+      task: 'Build Python microservice with Docker'
+      required_skills: ['python', 'docker', 'microservices']
+    expected_output:
+      status: 'success'
+      selected_agent: 'builder_agent'
+      skills_matched: '>=3'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'All required skills matched'
+      - 'Skill confidence scores provided'
+      - 'Agent experience level considered'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_018'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'geographic', 'critical']
+    description: 'Geographic routing for EU data residency'
+    input:
+      task: 'Process customer data'
+      region: 'EU'
+      compliance: 'GDPR'
+    expected_output:
+      status: 'success'
+      selected_agent: 'analyst_agent_eu'
+      region_match: 'EU'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'EU-based agent selected'
+      - 'Data residency requirement met'
+      - 'GDPR compliance verified'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_019'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'cost_optimized', 'critical']
+    description: 'Cost-optimized routing for simple task'
+    input:
+      task: 'Extract email from text'
+      complexity: 'simple'
+      optimize_for: 'cost'
+    expected_output:
+      status: 'success'
+      selected_model: 'gemini-2.5-flash'
+      cost_per_task: '<$0.01'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Cheapest capable model selected'
+      - 'Quality threshold maintained'
+      - 'Cost tracking enabled'
+    cost_estimate: '$0.00'
+
+  - id: 'halo_p0_020'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'quality_optimized', 'critical']
+    description: 'Quality-optimized routing for complex task'
+    input:
+      task: 'Write comprehensive legal analysis of patent application'
+      complexity: 'high'
+      optimize_for: 'quality'
+    expected_output:
+      status: 'success'
+      selected_model: 'gpt-4o'
+      quality_score: '>0.95'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Highest quality model selected'
+      - 'Complex reasoning capability verified'
+      - 'Cost trade-off acknowledged'
+    cost_estimate: '$0.05'
+
+  - id: 'halo_p0_021'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'dynamic_agent_creation', 'critical']
+    description: 'Create specialized agent when no suitable agent exists'
+    input:
+      task: 'Process Fortran 77 code'
+      required_capability: 'fortran_77'
+    expected_output:
+      status: 'success'
+      agent_created: true
+      agent_type: 'specialized_fortran_agent'
+      routing_time: '<500ms'
+    policy_checks:
+      - 'No existing agent found'
+      - 'New agent created dynamically'
+      - 'Agent capabilities verified'
+      - 'Agent registered in system'
+    cost_estimate: '$0.03'
+
+  - id: 'halo_p0_022'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'rule_based', 'critical']
+    description: 'Rule-based routing with IF-THEN logic'
+    input:
+      task: 'Security vulnerability detected in production'
+      rule: 'IF security_issue AND production THEN security_agent'
+    expected_output:
+      status: 'success'
+      selected_agent: 'security_agent'
+      rule_matched: 'security_production_rule'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Rule engine activated'
+      - 'Correct rule matched'
+      - 'Rule explanation provided'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_023'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'hierarchical', 'critical']
+    description: 'Hierarchical routing through planning -> design -> execution'
+    input:
+      task: 'Build new microservice from scratch'
+      routing_mode: 'hierarchical'
+    expected_output:
+      status: 'success'
+      tier_1_agent: 'spec_agent'
+      tier_2_agent: 'builder_agent'
+      tier_3_agent: 'deploy_agent'
+      routing_time: '<150ms'
+    policy_checks:
+      - 'Three-tier routing applied'
+      - 'Planning agent routes to design'
+      - 'Design agent routes to execution'
+    cost_estimate: '$0.02'
+
+  - id: 'halo_p0_024'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'retry_logic', 'critical']
+    description: 'Retry with different agent on timeout'
+    input:
+      task: 'Generate unit tests'
+      agent_timeout: true
+      first_agent: 'qa_agent_1'
+    expected_output:
+      status: 'success'
+      retry_triggered: true
+      second_agent: 'qa_agent_2'
+      routing_time: '<300ms'
+    policy_checks:
+      - 'Timeout detected'
+      - 'Different agent selected for retry'
+      - 'User notified of retry'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_025'
+    priority: 'P0'
+    category: 'success'
+    tags: ['halo', 'circuit_breaker', 'critical']
+    description: 'Trigger circuit breaker after 5 agent failures'
+    input:
+      task: 'Process data'
+      agent: 'analyst_agent'
+      failure_count: 5
+    expected_output:
+      status: 'error'
+      circuit_breaker_triggered: true
+      cooldown_time: '60s'
+      routing_time: '<100ms'
+    policy_checks:
+      - '5 failures detected'
+      - 'Circuit breaker activates'
+      - 'Cooldown period enforced'
+      - 'Alternative agents suggested'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_026'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['halo', 'unknown_task', 'critical']
+    description: 'Route unknown task type to orchestration agent'
+    input:
+      task: 'Perform quantum computing simulation'
+      task_type: 'unknown'
+    expected_output:
+      status: 'success'
+      selected_agent: 'orchestration_agent'
+      fallback_routing: true
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Unknown task type detected'
+      - 'Default to orchestration agent'
+      - 'User notified of uncertainty'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_027'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['halo', 'ambiguous_task', 'critical']
+    description: 'Request disambiguation for ambiguous task'
+    input:
+      task: 'Fix the bug'
+      matched_agents: ['qa_agent', 'builder_agent', 'security_agent']
+    expected_output:
+      status: 'needs_clarification'
+      clarification_questions: '>=2'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Multiple agents match'
+      - 'Asks user to clarify'
+      - 'Suggests agent options'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_028'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['halo', 'all_agents_busy', 'critical']
+    description: 'Queue task when all agents busy'
+    input:
+      task: 'Generate tests'
+      all_agents_status: 'busy'
+    expected_output:
+      status: 'queued'
+      queue_position: '>=1'
+      estimated_wait: 'provided'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'All agents busy detected'
+      - 'Task added to queue'
+      - 'Wait time estimated'
+      - 'User notified'
+    cost_estimate: '$0.01'
+
+  - id: 'halo_p0_029'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['halo', 'llm_timeout', 'critical']
+    description: 'Fallback to heuristic routing on LLM timeout'
+    input:
+      task: 'Build microservice'
+      llm_timeout: true
+    expected_output:
+      status: 'success'
+      routing_method: 'heuristic_fallback'
+      selected_agent: 'builder_agent'
+      routing_time: '<200ms'
+    policy_checks:
+      - 'LLM timeout detected'
+      - 'Heuristic routing applied'
+      - 'Reasonable agent selected'
+      - 'User notified of fallback'
+    cost_estimate: '$0.00'
+
+  - id: 'halo_p0_030'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['halo', 'empty_registry', 'critical']
+    description: 'Error when agent registry is empty'
+    input:
+      task: 'Any task'
+      agent_registry: 'empty'
+    expected_output:
+      status: 'error'
+      error_type: 'NoAgentsAvailable'
+      error_message: 'Agent registry is empty'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Empty registry detected'
+      - 'Clear error message'
+      - 'Suggests registering agents'
+    cost_estimate: '$0.00'
+
+  # ============================================================================
+  # AOP VALIDATOR - P0 CRITICAL (30 scenarios)
+  # ============================================================================
+
+  - id: 'aop_p0_001'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'solvability', 'critical']
+    description: 'Validate plan is solvable with available agents'
+    input:
+      plan:
+        tasks: ['build_python_api', 'deploy_to_aws', 'setup_monitoring']
+        required_capabilities: ['python', 'aws', 'prometheus']
+      available_agents:
+        - { name: 'builder_agent', capabilities: ['python', 'javascript'] }
+        - { name: 'deploy_agent', capabilities: ['aws', 'kubernetes'] }
+        - { name: 'monitoring_agent', capabilities: ['prometheus', 'grafana'] }
+    expected_output:
+      status: 'success'
+      solvability_check: 'passed'
+      all_tasks_solvable: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'All tasks have capable agents'
+      - 'Capability matching correct'
+      - 'No unsolvable tasks'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_002'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'completeness', 'critical']
+    description: 'Validate all DAG tasks have agent assignments'
+    input:
+      plan:
+        dag:
+          tasks: ['task_1', 'task_2', 'task_3', 'task_4']
+        assignments:
+          task_1: 'builder_agent'
+          task_2: 'qa_agent'
+          task_3: 'deploy_agent'
+          task_4: 'monitoring_agent'
+    expected_output:
+      status: 'success'
+      completeness_check: 'passed'
+      unassigned_tasks: '0'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'All tasks have assignments'
+      - 'No missing assignments'
+      - 'Assignment validity checked'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_003'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'redundancy', 'critical']
+    description: 'Detect and remove redundant tasks'
+    input:
+      plan:
+        tasks:
+          - { id: 'task_1', action: 'build_api', params: { lang: 'python' } }
+          - { id: 'task_2', action: 'build_api', params: { lang: 'python' } }
+          - { id: 'task_3', action: 'deploy_api' }
+    expected_output:
+      status: 'warning'
+      redundancy_check: 'found_redundancy'
+      redundant_tasks: ['task_2']
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Duplicate tasks detected'
+      - 'Redundancy clearly identified'
+      - 'Recommendation to merge tasks'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_004'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'reward_model', 'critical']
+    description: 'Calculate quality score using reward model'
+    input:
+      plan:
+        tasks: ['task_1', 'task_2', 'task_3']
+        complexity_score: 0.7
+        coverage_score: 0.9
+        efficiency_score: 0.8
+    expected_output:
+      status: 'success'
+      quality_score: '>=0.75'
+      score_breakdown: 'provided'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Reward model applied'
+      - 'Score is weighted sum of factors'
+      - 'Breakdown shows factor contributions'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_005'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'all_three_checks', 'critical']
+    description: 'Pass all three AOP checks (solvability, completeness, non-redundancy)'
+    input:
+      plan:
+        tasks: ['write_spec', 'build_feature', 'test_feature', 'deploy_feature']
+        assignments:
+          {
+            write_spec: 'spec_agent',
+            build_feature: 'builder_agent',
+            test_feature: 'qa_agent',
+            deploy_feature: 'deploy_agent',
+          }
+      available_agents: ['spec_agent', 'builder_agent', 'qa_agent', 'deploy_agent']
+    expected_output:
+      status: 'success'
+      solvability: 'passed'
+      completeness: 'passed'
+      non_redundancy: 'passed'
+      overall_quality: 'high'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'All three checks pass'
+      - 'Plan approved for execution'
+      - 'Quality score high'
+    cost_estimate: '$0.02'
+
+  - id: 'aop_p0_006'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'complex_plan', 'critical']
+    description: 'Validate complex 20-task plan'
+    input:
+      plan:
+        task_count: 20
+        agents_required: 8
+        dependencies: 25
+    expected_output:
+      status: 'success'
+      all_checks_passed: true
+      validation_time: '<1s'
+    policy_checks:
+      - 'Handles large plans'
+      - 'Dependency validation included'
+      - 'Performance acceptable'
+    cost_estimate: '$0.03'
+
+  - id: 'aop_p0_007'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'agent_capabilities', 'critical']
+    description: 'Match task requirements to agent capabilities'
+    input:
+      task:
+        action: 'build_react_app'
+        required_skills: ['react', 'typescript', 'css']
+      agent:
+        name: 'builder_agent'
+        skills: ['react', 'typescript', 'css', 'node']
+    expected_output:
+      status: 'success'
+      solvability: 'passed'
+      skill_match_score: '1.0'
+      validation_time: '<200ms'
+    policy_checks:
+      - 'All required skills matched'
+      - 'Agent has sufficient capabilities'
+      - 'Confidence score provided'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_008'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'dependency_validation', 'critical']
+    description: 'Validate task dependencies are properly assigned'
+    input:
+      plan:
+        task_a: { depends_on: [], assigned_to: 'spec_agent' }
+        task_b: { depends_on: ['task_a'], assigned_to: 'builder_agent' }
+        task_c: { depends_on: ['task_b'], assigned_to: 'qa_agent' }
+    expected_output:
+      status: 'success'
+      dependency_validation: 'passed'
+      dependency_order: 'correct'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Dependencies form valid DAG'
+      - 'No circular dependencies'
+      - 'Execution order feasible'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_009'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'resource_constraints', 'critical']
+    description: 'Validate plan respects resource constraints'
+    input:
+      plan:
+        tasks: 10
+        max_parallel_agents: 3
+        proposed_parallel_tasks: 3
+    expected_output:
+      status: 'success'
+      resource_check: 'passed'
+      constraint_respected: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Parallelism within limits'
+      - 'Resource allocation feasible'
+      - 'No constraint violations'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_010'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'time_constraints', 'critical']
+    description: 'Validate plan meets time deadline'
+    input:
+      plan:
+        tasks:
+          [{ name: 'task_1', estimated_time: '10m' }, { name: 'task_2', estimated_time: '15m' }]
+        deadline: '30m'
+    expected_output:
+      status: 'success'
+      time_check: 'passed'
+      total_time: '25m'
+      deadline_met: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Total time calculated'
+      - 'Deadline respected'
+      - 'Critical path identified'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_011'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'quality_threshold', 'critical']
+    description: 'Validate plan meets minimum quality threshold'
+    input:
+      plan:
+        quality_factors: { complexity: 0.8, coverage: 0.9, efficiency: 0.85 }
+        min_quality: 0.75
+    expected_output:
+      status: 'success'
+      quality_score: '>=0.75'
+      threshold_met: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Quality score calculated'
+      - 'Meets minimum threshold'
+      - 'Factor breakdown provided'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_012'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'security_requirements', 'critical']
+    description: 'Validate plan includes required security tasks'
+    input:
+      plan:
+        tasks: ['build_feature', 'security_audit', 'pen_test', 'deploy']
+        security_required: true
+    expected_output:
+      status: 'success'
+      security_check: 'passed'
+      security_tasks_present: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Security tasks identified'
+      - 'Security agent assigned'
+      - 'Compliance requirements met'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_013'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'testing_requirements', 'critical']
+    description: 'Validate plan includes adequate testing'
+    input:
+      plan:
+        tasks: ['build', 'unit_test', 'integration_test', 'e2e_test', 'deploy']
+        testing_required: true
+    expected_output:
+      status: 'success'
+      testing_check: 'passed'
+      test_coverage_adequate: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Testing tasks present'
+      - 'Multiple test types included'
+      - 'QA agent assigned'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_014'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'documentation_requirements', 'critical']
+    description: 'Validate plan includes documentation tasks'
+    input:
+      plan:
+        tasks: ['build_api', 'write_api_docs', 'create_user_guide', 'deploy']
+        documentation_required: true
+    expected_output:
+      status: 'success'
+      documentation_check: 'passed'
+      doc_tasks_present: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Documentation tasks present'
+      - 'Spec agent assigned'
+      - 'Docs cover user and developer needs'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_015'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'monitoring_requirements', 'critical']
+    description: 'Validate plan includes monitoring setup'
+    input:
+      plan:
+        tasks: ['deploy_app', 'setup_metrics', 'configure_alerts', 'create_dashboards']
+        monitoring_required: true
+    expected_output:
+      status: 'success'
+      monitoring_check: 'passed'
+      monitoring_tasks_present: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Monitoring tasks present'
+      - 'Alerts configured'
+      - 'Dashboards created'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_016'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'unsolvable_task', 'critical']
+    description: 'Detect unsolvable task (no capable agent)'
+    input:
+      plan:
+        tasks: ['compile_fortran_code']
+        required_capabilities: ['fortran']
+      available_agents: [{ name: 'builder_agent', capabilities: ['python', 'javascript'] }]
+    expected_output:
+      status: 'error'
+      solvability_check: 'failed'
+      unsolvable_tasks: ['compile_fortran_code']
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Unsolvable task detected'
+      - 'Missing capability identified'
+      - 'Suggests agent creation or alternatives'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_017'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'incomplete_plan', 'critical']
+    description: 'Detect incomplete plan (unassigned tasks)'
+    input:
+      plan:
+        tasks: ['task_1', 'task_2', 'task_3']
+        assignments: { task_1: 'agent_1', task_2: 'agent_2' }
+    expected_output:
+      status: 'error'
+      completeness_check: 'failed'
+      unassigned_tasks: ['task_3']
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Incomplete plan detected'
+      - 'Unassigned tasks listed'
+      - 'Suggests agent assignment'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_018'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'high_redundancy', 'critical']
+    description: 'Detect high redundancy (50%+ duplicate tasks)'
+    input:
+      plan:
+        tasks:
+          - { id: 'task_1', action: 'build' }
+          - { id: 'task_2', action: 'build' }
+          - { id: 'task_3', action: 'test' }
+          - { id: 'task_4', action: 'build' }
+    expected_output:
+      status: 'warning'
+      redundancy_check: 'high_redundancy'
+      redundancy_rate: '75%'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'High redundancy detected'
+      - 'Redundant tasks identified'
+      - 'Recommends plan optimization'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_019'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'low_quality_score', 'critical']
+    description: 'Warn on low quality score below threshold'
+    input:
+      plan:
+        quality_factors: { complexity: 0.4, coverage: 0.5, efficiency: 0.6 }
+        min_quality: 0.75
+    expected_output:
+      status: 'warning'
+      quality_score: '<0.75'
+      threshold_met: false
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Low quality detected'
+      - 'Below minimum threshold'
+      - 'Suggests plan improvements'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_020'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'empty_plan', 'critical']
+    description: 'Reject empty plan (no tasks)'
+    input:
+      plan:
+        tasks: []
+    expected_output:
+      status: 'error'
+      error_type: 'EmptyPlanError'
+      error_message: 'Plan contains no tasks'
+      validation_time: '<100ms'
+    policy_checks:
+      - 'Empty plan detected'
+      - 'Clear error message'
+      - 'Validation short-circuits'
+    cost_estimate: '$0.00'
+
+  - id: 'aop_p0_021'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'missing_dependencies', 'critical']
+    description: 'Detect missing task dependencies'
+    input:
+      plan:
+        task_a: { depends_on: ['task_b'], assigned_to: 'agent_1' }
+        task_c: { depends_on: [], assigned_to: 'agent_2' }
+    expected_output:
+      status: 'error'
+      dependency_check: 'failed'
+      missing_tasks: ['task_b']
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Missing dependency detected'
+      - 'Referenced task not in plan'
+      - 'Clear error message'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_022'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'circular_dependencies', 'critical']
+    description: 'Detect circular dependencies in plan'
+    input:
+      plan:
+        task_a: { depends_on: ['task_b'] }
+        task_b: { depends_on: ['task_c'] }
+        task_c: { depends_on: ['task_a'] }
+    expected_output:
+      status: 'error'
+      dependency_check: 'failed'
+      circular_dependency: true
+      cycle: ['task_a', 'task_b', 'task_c', 'task_a']
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Circular dependency detected'
+      - 'Cycle clearly identified'
+      - 'All nodes in cycle listed'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_023'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'resource_overload', 'critical']
+    description: 'Detect resource constraint violation'
+    input:
+      plan:
+        tasks: 10
+        max_parallel_agents: 3
+        proposed_parallel_tasks: 5
+    expected_output:
+      status: 'error'
+      resource_check: 'failed'
+      constraint_violated: 'max_parallel_agents'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Resource limit exceeded'
+      - 'Constraint violation identified'
+      - 'Suggests task serialization'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_024'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'deadline_infeasible', 'critical']
+    description: 'Detect infeasible time deadline'
+    input:
+      plan:
+        tasks:
+          [{ name: 'task_1', estimated_time: '20m' }, { name: 'task_2', estimated_time: '20m' }]
+        deadline: '30m'
+    expected_output:
+      status: 'error'
+      time_check: 'failed'
+      total_time: '40m'
+      deadline_met: false
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Deadline infeasible detected'
+      - 'Time calculation correct'
+      - 'Suggests deadline adjustment or parallelization'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_025'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'missing_security', 'critical']
+    description: 'Warn on missing required security tasks'
+    input:
+      plan:
+        tasks: ['build_feature', 'deploy']
+        security_required: true
+    expected_output:
+      status: 'warning'
+      security_check: 'failed'
+      security_tasks_present: false
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Missing security tasks detected'
+      - 'Compliance risk identified'
+      - 'Suggests adding security tasks'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_026'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['aop', 'insufficient_testing', 'critical']
+    description: 'Warn on insufficient testing coverage'
+    input:
+      plan:
+        tasks: ['build', 'deploy']
+        testing_required: true
+    expected_output:
+      status: 'warning'
+      testing_check: 'failed'
+      test_coverage_adequate: false
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Insufficient testing detected'
+      - 'Quality risk identified'
+      - 'Suggests adding test tasks'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_027'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['aop', 'reward_model_error', 'critical']
+    description: 'Handle reward model calculation error'
+    input:
+      plan:
+        quality_factors: { complexity: null, coverage: 0.9, efficiency: 0.8 }
+    expected_output:
+      status: 'error'
+      error_type: 'RewardModelError'
+      error_message: 'Invalid quality factor: complexity is null'
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Null value detected'
+      - 'Graceful error handling'
+      - 'Clear error message'
+    cost_estimate: '$0.01'
+
+  - id: 'aop_p0_028'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['aop', 'malformed_plan', 'critical']
+    description: 'Reject malformed plan structure'
+    input:
+      plan: 'this is not a valid plan'
+    expected_output:
+      status: 'error'
+      error_type: 'ValidationError'
+      error_message: 'Malformed plan structure'
+      validation_time: '<100ms'
+    policy_checks:
+      - 'Invalid structure detected'
+      - 'Immediate rejection'
+      - 'No partial validation attempted'
+    cost_estimate: '$0.00'
+
+  - id: 'aop_p0_029'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['aop', 'timeout', 'critical']
+    description: 'Handle validation timeout on very large plan'
+    input:
+      plan:
+        task_count: 10000
+        timeout: '1s'
+    expected_output:
+      status: 'error'
+      error_type: 'TimeoutError'
+      partial_validation: 'available'
+      validation_time: '<=1.1s'
+    policy_checks:
+      - 'Timeout enforced'
+      - 'Partial results returned'
+      - 'Suggests plan simplification'
+    cost_estimate: '$0.02'
+
+  - id: 'aop_p0_030'
+    priority: 'P0'
+    category: 'success'
+    tags: ['aop', 'adaptive_reward', 'critical']
+    description: 'Adaptive reward model learning from task outcomes'
+    input:
+      plan:
+        tasks: ['task_1', 'task_2']
+        historical_outcomes: [{ plan_id: 'prev_1', quality: 0.9, success: true }]
+    expected_output:
+      status: 'success'
+      quality_score: '>=0.80'
+      learning_applied: true
+      validation_time: '<500ms'
+    policy_checks:
+      - 'Historical data used'
+      - 'Weights adapted based on outcomes'
+      - 'Learning improves quality prediction'
+    cost_estimate: '$0.02'
+
+  # ============================================================================
+  # DAAO ROUTER - P0 CRITICAL (20 scenarios)
+  # ============================================================================
+
+  - id: 'daao_p0_001'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'cost_optimization', 'critical']
+    description: 'Route simple task to cheap model (Gemini Flash)'
+    input:
+      task: "Extract email address from text: 'Contact us at support@example.com'"
+      complexity: 'simple'
+    expected_output:
+      status: 'success'
+      selected_model: 'gemini-2.5-flash'
+      cost_per_task: '<$0.01'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Cheapest capable model selected'
+      - 'Quality threshold maintained'
+      - 'Cost savings tracked'
+    cost_estimate: '$0.00'
+
+  - id: 'daao_p0_002'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'quality_routing', 'critical']
+    description: 'Route complex task to premium model (GPT-4o)'
+    input:
+      task: 'Write comprehensive legal analysis of patent infringement case'
+      complexity: 'high'
+    expected_output:
+      status: 'success'
+      selected_model: 'gpt-4o'
+      quality_score: '>0.95'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'High quality model selected'
+      - 'Complex reasoning capability verified'
+      - 'Cost justified by quality'
+    cost_estimate: '$0.05'
+
+  - id: 'daao_p0_003'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'cost_reduction', 'critical']
+    description: 'Validate 48% cost reduction target'
+    input:
+      tasks:
+        [
+          { complexity: 'simple', baseline_cost: '$0.02' },
+          { complexity: 'simple', baseline_cost: '$0.02' },
+          { complexity: 'simple', baseline_cost: '$0.02' },
+          { complexity: 'medium', baseline_cost: '$0.04' },
+          { complexity: 'high', baseline_cost: '$0.10' },
+        ]
+    expected_output:
+      status: 'success'
+      baseline_total: '$0.20'
+      optimized_total: '<=0.11'
+      cost_reduction: '>=45%'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Cost reduction target met'
+      - 'Quality maintained'
+      - 'Savings tracked per task'
+    cost_estimate: '$0.11'
+
+  - id: 'daao_p0_004'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'quality_vs_cost', 'critical']
+    description: 'Balance quality and cost tradeoffs'
+    input:
+      task: 'Generate product description for e-commerce'
+      requirements: { min_quality: 0.85, max_cost: '$0.02' }
+    expected_output:
+      status: 'success'
+      selected_model: 'claude-4-haiku'
+      quality_score: '>=0.85'
+      cost: '<=0.02'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Quality threshold met'
+      - 'Cost limit respected'
+      - 'Optimal model selected'
+    cost_estimate: '$0.02'
+
+  - id: 'daao_p0_005'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'budget_enforcement', 'critical']
+    description: 'Enforce monthly budget constraint'
+    input:
+      current_month_spend: '$95'
+      monthly_budget: '$100'
+      task_cost: '$10'
+    expected_output:
+      status: 'warning'
+      budget_warning: 'approaching_limit'
+      remaining_budget: '$5'
+      routing_allowed: true
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Budget tracked'
+      - 'Warning issued approaching limit'
+      - 'User notified'
+    cost_estimate: '$0.00'
+
+  - id: 'daao_p0_006'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'model_fallback', 'critical']
+    description: 'Fallback to cheaper model when budget constrained'
+    input:
+      task: 'Summarize article'
+      preferred_model: 'gpt-4o'
+      remaining_budget: '$0.01'
+    expected_output:
+      status: 'success'
+      selected_model: 'gemini-2.5-flash'
+      fallback_triggered: true
+      cost: '$0.00'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Budget constraint detected'
+      - 'Cheaper model selected'
+      - 'User notified of fallback'
+    cost_estimate: '$0.00'
+
+  - id: 'daao_p0_007'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'complexity_detection', 'critical']
+    description: 'Automatically detect task complexity'
+    input:
+      task: 'Implement quicksort algorithm with edge cases and optimize for memory efficiency'
+    expected_output:
+      status: 'success'
+      detected_complexity: 'high'
+      reasoning: 'provided'
+      selected_model: 'claude-4-sonnet'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Complexity correctly detected'
+      - 'Reasoning provided'
+      - 'Appropriate model selected'
+    cost_estimate: '$0.04'
+
+  - id: 'daao_p0_008'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'batch_optimization', 'critical']
+    description: 'Optimize cost for batch of tasks'
+    input:
+      tasks:
+        [
+          { task: 'Summarize text 1', complexity: 'simple' },
+          { task: 'Summarize text 2', complexity: 'simple' },
+          { task: 'Summarize text 3', complexity: 'simple' },
+        ]
+    expected_output:
+      status: 'success'
+      batch_model: 'gemini-2.5-flash'
+      total_cost: '<$0.01'
+      cost_per_task: '<$0.005'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Batch processing recognized'
+      - 'Single cheap model for all'
+      - 'Cost savings from batching'
+    cost_estimate: '$0.01'
+
+  - id: 'daao_p0_009'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'cost_tracking', 'critical']
+    description: 'Track costs per agent type'
+    input:
+      agent: 'qa_agent'
+      task: 'Generate tests'
+      model: 'claude-4-haiku'
+      cost: '$0.02'
+    expected_output:
+      status: 'success'
+      cost_recorded: true
+      agent_total_cost: 'updated'
+      monthly_total: 'updated'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Cost tracked per agent'
+      - 'Running totals updated'
+      - 'Report available'
+    cost_estimate: '$0.02'
+
+  - id: 'daao_p0_010'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'model_selection', 'critical']
+    description: 'Select among 5 available models'
+    input:
+      task: 'Medium complexity data analysis'
+      available_models:
+        ['gpt-4o', 'claude-4-sonnet', 'claude-4-haiku', 'gemini-2.5-flash', 'deepseek-r1']
+      optimize_for: 'cost'
+    expected_output:
+      status: 'success'
+      selected_model: 'claude-4-haiku'
+      reason: 'best_cost_quality_balance'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'All models considered'
+      - 'Optimal model selected'
+      - 'Reasoning provided'
+    cost_estimate: '$0.02'
+
+  - id: 'daao_p0_011'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'code_generation', 'critical']
+    description: 'Route code generation to Claude Sonnet (72.7% SWE-bench)'
+    input:
+      task: 'Implement REST API endpoint with authentication'
+      task_type: 'code_generation'
+    expected_output:
+      status: 'success'
+      selected_model: 'claude-4-sonnet'
+      reason: 'highest_code_quality'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Code generation task detected'
+      - 'Claude Sonnet selected'
+      - 'Quality prioritized for code'
+    cost_estimate: '$0.04'
+
+  - id: 'daao_p0_012'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'orchestration_tasks', 'critical']
+    description: 'Route orchestration to GPT-4o'
+    input:
+      task: 'Decompose complex project into subtasks'
+      task_type: 'orchestration'
+    expected_output:
+      status: 'success'
+      selected_model: 'gpt-4o'
+      reason: 'best_reasoning_capability'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Orchestration task detected'
+      - 'GPT-4o selected'
+      - 'Strategic reasoning prioritized'
+    cost_estimate: '$0.05'
+
+  - id: 'daao_p0_013'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'high_throughput', 'critical']
+    description: 'Route high-throughput tasks to Gemini Flash (372 tokens/sec)'
+    input:
+      task_count: 100
+      task_type: 'simple_extraction'
+      optimize_for: 'throughput'
+    expected_output:
+      status: 'success'
+      selected_model: 'gemini-2.5-flash'
+      throughput: '>=300 tokens/sec'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'High throughput requirement detected'
+      - 'Gemini Flash selected'
+      - 'Batch processing enabled'
+    cost_estimate: '$0.03'
+
+  - id: 'daao_p0_014'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'fallback_model', 'critical']
+    description: 'Use DeepSeek R1 as open-source fallback'
+    input:
+      task: 'Data analysis task'
+      primary_models_unavailable: true
+    expected_output:
+      status: 'success'
+      selected_model: 'deepseek-r1'
+      fallback_triggered: true
+      cost: '$0.04'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Primary models unavailable'
+      - 'Open-source fallback used'
+      - 'Acceptable quality maintained'
+    cost_estimate: '$0.04'
+
+  - id: 'daao_p0_015'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['daao', 'budget_exceeded', 'critical']
+    description: 'Block task when budget exceeded'
+    input:
+      current_month_spend: '$100'
+      monthly_budget: '$100'
+      task_cost: '$0.05'
+    expected_output:
+      status: 'error'
+      error_type: 'BudgetExceeded'
+      error_message: 'Monthly budget limit reached'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Budget limit enforced'
+      - 'Task blocked'
+      - 'User notified with alternatives'
+    cost_estimate: '$0.00'
+
+  - id: 'daao_p0_016'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['daao', 'no_model_fits_budget', 'critical']
+    description: 'Error when no model fits budget constraint'
+    input:
+      task: 'Complex analysis'
+      max_cost: '$0.001'
+    expected_output:
+      status: 'error'
+      error_type: 'NoAffordableModel'
+      error_message: 'No model available within budget'
+      routing_time: '<50ms'
+    policy_checks:
+      - 'Budget constraint too tight'
+      - 'Clear error message'
+      - 'Suggests increasing budget'
+    cost_estimate: '$0.00'
+
+  - id: 'daao_p0_017'
+    priority: 'P0'
+    category: 'edge_case'
+    tags: ['daao', 'ambiguous_complexity', 'critical']
+    description: 'Handle ambiguous task complexity'
+    input:
+      task: 'Process data'
+    expected_output:
+      status: 'success'
+      detected_complexity: 'medium'
+      confidence: '<0.7'
+      selected_model: 'claude-4-haiku'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'Low confidence detected'
+      - 'Conservative model selection'
+      - 'User notified of uncertainty'
+    cost_estimate: '$0.02'
+
+  - id: 'daao_p0_018'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['daao', 'model_api_failure', 'critical']
+    description: 'Fallback when selected model API fails'
+    input:
+      task: 'Generate summary'
+      selected_model: 'gpt-4o'
+      api_status: 'unavailable'
+    expected_output:
+      status: 'success'
+      fallback_model: 'claude-4-sonnet'
+      fallback_triggered: true
+      routing_time: '<200ms'
+    policy_checks:
+      - 'API failure detected'
+      - 'Automatic fallback to alternative'
+      - 'User notified'
+    cost_estimate: '$0.04'
+
+  - id: 'daao_p0_019'
+    priority: 'P0'
+    category: 'failure'
+    tags: ['daao', 'all_models_unavailable', 'critical']
+    description: 'Error when all models unavailable'
+    input:
+      task: 'Any task'
+      all_models_status: 'unavailable'
+    expected_output:
+      status: 'error'
+      error_type: 'NoModelsAvailable'
+      error_message: 'All LLM models currently unavailable'
+      routing_time: '<100ms'
+    policy_checks:
+      - 'System-wide outage detected'
+      - 'Clear error message'
+      - 'Suggests retry later'
+    cost_estimate: '$0.00'
+
+  - id: 'daao_p0_020'
+    priority: 'P0'
+    category: 'success'
+    tags: ['daao', 'cost_report', 'critical']
+    description: 'Generate monthly cost report'
+    input:
+      month: '2025-10'
+    expected_output:
+      status: 'success'
+      total_cost: 'provided'
+      cost_by_agent: 'breakdown'
+      cost_by_model: 'breakdown'
+      savings_vs_baseline: '>=45%'
+      report_time: '<1s'
+    policy_checks:
+      - 'All costs tracked'
+      - 'Savings calculated'
+      - 'Report comprehensive'
+    cost_estimate: '$0.01'
+
+judge_llm:
+  model: 'openai/gpt-4o-mini'
+  fallback: 'google/gemini-2.5-flash'
+  temperature: 0.1
+  max_tokens: 2000
+
+cost_tracking:
+  enabled: true
+  target_cost_per_scenario: '$0.02'
+  monthly_budget: '$300'
+
+reporting:
+  output_format: 'markdown'
+  output_path: './reports/orchestration_p0_report.md'
+  json_export: true
+  json_path: './reports/orchestration_p0_results.json'

@@ -1,0 +1,378 @@
+builder_agent_p1:
+  agent: builder_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Full-stack development
+    - API design
+    - Database architecture
+    - Microservices
+    - Testing
+    - Performance optimization
+scenarios:
+  - id: builder_p1_001
+    name: Builder Agent - RESTful API with Authentication
+    priority: P1
+    category: api
+    tags:
+      - builder
+      - api
+      - auth
+    input:
+      prompt: Build REST API with JWT auth, CRUD endpoints, rate limiting
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Builder Agent - RESTful API with Authentication. Build REST API with
+      JWT auth, CRUD endpoints, rate limiting
+  - id: builder_p1_002
+    name: Builder Agent - React Dashboard with Real-Time Updates
+    priority: P1
+    category: frontend
+    tags:
+      - builder
+      - react
+    input:
+      prompt: Build React dashboard with WebSocket updates, charts, responsive design
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Builder Agent - React Dashboard with Real-Time Updates. Build React
+      dashboard with WebSocket updates, charts, responsive design
+  - id: builder_p1_003
+    name: Builder Agent - Microservice with Message Queue
+    priority: P1
+    category: microservice
+    tags:
+      - builder
+      - rabbitmq
+    input:
+      prompt: Implement payment processing microservice with RabbitMQ, retry logic
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Builder Agent - Microservice with Message Queue. Implement payment
+      processing microservice with RabbitMQ, retry logic
+  - id: builder_p1_004
+    name: Builder Agent - Database Schema with Migrations
+    priority: P1
+    category: database
+    tags:
+      - builder
+      - postgresql
+    input:
+      prompt: 'Design PostgreSQL schema for e-commerce: users, products, orders, reviews'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Database Schema with Migrations. Design PostgreSQL
+      schema for e-commerce: users, products, orders, reviews'
+  - id: builder_p1_005
+    name: Builder Agent - GraphQL API with DataLoader
+    priority: P1
+    category: graphql
+    tags:
+      - builder
+      - graphql
+    input:
+      prompt: Build GraphQL API with N+1 query optimization using DataLoader
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Builder Agent - GraphQL API with DataLoader. Build GraphQL API with
+      N+1 query optimization using DataLoader
+  - id: builder_p1_006
+    name: Builder Agent - Background Job Processing
+    priority: P1
+    category: background_jobs
+    tags:
+      - builder
+      - celery
+    input:
+      prompt: 'Implement async job processing with Celery: email sending, report generation'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Background Job Processing. Implement async job processing
+      with Celery: email sending, report generation'
+  - id: builder_p1_007
+    name: Builder Agent - OAuth2 Provider Implementation
+    priority: P1
+    category: oauth
+    tags:
+      - builder
+      - oauth2
+    input:
+      prompt: 'Implement OAuth2 server: authorization code flow, refresh tokens, scopes'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - OAuth2 Provider Implementation. Implement OAuth2 server:
+      authorization code flow, refresh tokens, scopes'
+  - id: builder_p1_008
+    name: Builder Agent - File Upload with S3 Integration
+    priority: P1
+    category: storage
+    tags:
+      - builder
+      - s3
+    input:
+      prompt: 'Build file upload service: chunked uploads, virus scanning, S3 storage'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - File Upload with S3 Integration. Build file upload
+      service: chunked uploads, virus scanning, S3 storage'
+  - id: builder_p1_009
+    name: Builder Agent - Search with Elasticsearch
+    priority: P1
+    category: search
+    tags:
+      - builder
+      - elasticsearch
+    input:
+      prompt: 'Implement full-text search: indexing, autocomplete, faceted filters'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Search with Elasticsearch. Implement full-text search:
+      indexing, autocomplete, faceted filters'
+  - id: builder_p1_010
+    name: Builder Agent - Rate Limiting Middleware
+    priority: P1
+    category: middleware
+    tags:
+      - builder
+      - rate_limiting
+    input:
+      prompt: 'Build rate limiter: token bucket algorithm, Redis backend, custom rules'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Rate Limiting Middleware. Build rate limiter: token
+      bucket algorithm, Redis backend, custom rules'
+  - id: builder_p1_011
+    name: Builder Agent - Webhook System with Retries
+    priority: P1
+    category: webhooks
+    tags:
+      - builder
+      - webhooks
+    input:
+      prompt: 'Implement webhook delivery: exponential backoff, signature verification'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Webhook System with Retries. Implement webhook delivery:
+      exponential backoff, signature verification'
+  - id: builder_p1_012
+    name: Builder Agent - Multi-Tenant SaaS Architecture
+    priority: P1
+    category: multi_tenant
+    tags:
+      - builder
+      - saas
+    input:
+      prompt: 'Design multi-tenant system: tenant isolation, shared schema vs separate
+        DBs'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Multi-Tenant SaaS Architecture. Design multi-tenant
+      system: tenant isolation, shared schema vs separate DBs'
+  - id: builder_p1_013
+    name: Builder Agent - Performance Optimization (1000 RPS)
+    priority: P1
+    category: performance
+    tags:
+      - builder
+      - optimization
+    input:
+      prompt: 'Optimize API to handle 1000 req/sec: caching, connection pooling, indexing'
+      agent: builder
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Builder Agent - Performance Optimization (1000 RPS). Optimize API
+      to handle 1000 req/sec: caching, connection pooling, indexing'

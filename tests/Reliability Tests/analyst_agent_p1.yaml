@@ -1,0 +1,496 @@
+analyst_agent_p1:
+  agent: analyst_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Advanced market research
+    - Competitive analysis
+    - Data visualization
+    - Trend prediction
+    - Financial modeling
+    - Customer segmentation
+scenarios:
+  - id: analyst_p1_001
+    name: Analyst Agent - Competitive Landscape Deep Dive
+    priority: P1
+    category: competitive
+    tags:
+      - analyst
+      - competitive_analysis
+      - market_research
+    input:
+      prompt: Analyze top 5 competitors in SaaS project management space
+      competitors:
+        - Asana
+        - Monday.com
+        - Jira
+        - ClickUp
+        - Trello
+      analysis_dimensions:
+        - pricing
+        - features
+        - market_share
+        - user_reviews
+    expected_output:
+      contains:
+        - competitive_matrix
+        - strengths
+        - weaknesses
+        - opportunities
+      competitors_analyzed: 5
+      dimensions: '>=4'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - analysis_comprehensive
+        - data_accurate
+        - insights_actionable
+    performance:
+      max_latency_ms: 8000
+      max_tokens: 3000
+    cost_estimate: 0.1
+    description: Analyst Agent - Competitive Landscape Deep Dive. Analyze top 5 competitors
+      in SaaS project management space
+  - id: analyst_p1_002
+    name: Analyst Agent - TAM/SAM/SOM Calculation
+    priority: P1
+    category: market_sizing
+    tags:
+      - analyst
+      - tam
+      - sam
+      - som
+      - market_sizing
+    input:
+      prompt: Calculate TAM/SAM/SOM for B2B project management SaaS
+      market: US Enterprise Project Management Software
+      target_segment: Tech companies 50-500 employees
+      price_point: $15/user/month
+    expected_output:
+      contains:
+        - tam
+        - sam
+        - som
+        - methodology
+      tam_calculated: true
+      confidence_level: '>0.70'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - methodology_sound
+        - calculations_reasonable
+        - assumptions_stated
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Analyst Agent - TAM/SAM/SOM Calculation. Calculate TAM/SAM/SOM for
+      B2B project management SaaS
+  - id: analyst_p1_003
+    name: Analyst Agent - Customer Persona Development
+    priority: P1
+    category: persona
+    tags:
+      - analyst
+      - persona
+      - segmentation
+      - customer
+    input:
+      prompt: Create detailed customer personas for DevOps SaaS
+      product: DevOps monitoring platform
+      segments:
+        - Enterprise DevOps Teams
+        - Startup Engineers
+        - Freelance Consultants
+    expected_output:
+      contains:
+        - personas
+        - pain_points
+        - goals
+        - buying_behavior
+      persona_count: 3
+      detail_level: comprehensive
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - personas_realistic
+        - pain_points_identified
+        - actionable_insights
+    performance:
+      max_latency_ms: 7000
+      max_tokens: 2500
+    cost_estimate: 0.09
+    description: Analyst Agent - Customer Persona Development. Create detailed customer
+      personas for DevOps SaaS
+  - id: analyst_p1_004
+    name: Analyst Agent - Pricing Strategy Recommendation
+    priority: P1
+    category: pricing
+    tags:
+      - analyst
+      - pricing
+      - strategy
+      - monetization
+    input:
+      prompt: 'Recommend pricing strategy: freemium vs paid tiers'
+      product: API management platform
+      competitor_pricing:
+        - $0-99/month
+        - $99-499/month
+        - $499+/month
+      cost_per_user: $5/month
+    expected_output:
+      contains:
+        - pricing_strategy
+        - tier_structure
+        - revenue_projection
+      tiers_recommended: '>=3'
+      justification: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - strategy_sound
+        - competitive_analysis
+        - revenue_modeled
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: 'Analyst Agent - Pricing Strategy Recommendation. Recommend pricing
+      strategy: freemium vs paid tiers'
+  - id: analyst_p1_005
+    name: Analyst Agent - Churn Analysis and Prediction
+    priority: P1
+    category: churn
+    tags:
+      - analyst
+      - churn
+      - prediction
+      - retention
+    input:
+      prompt: Analyze churn patterns and predict at-risk customers
+      data:
+        total_customers: 1000
+        churned_last_month: 50
+        avg_usage_churned: 2 hours/week
+        avg_usage_retained: 8 hours/week
+    expected_output:
+      contains:
+        - churn_analysis
+        - risk_factors
+        - predictions
+        - retention_strategy
+      churn_rate: 5%
+      risk_factors: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - analysis_thorough
+        - risk_factors_identified
+        - strategy_actionable
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Analyst Agent - Churn Analysis and Prediction. Analyze churn patterns
+      and predict at-risk customers
+  - id: analyst_p1_006
+    name: Analyst Agent - Market Trend Prediction
+    priority: P1
+    category: trends
+    tags:
+      - analyst
+      - trends
+      - prediction
+      - forecasting
+    input:
+      prompt: Predict AI/ML market trends for next 24 months
+      current_trends:
+        - GenAI adoption
+        - Agent frameworks
+        - Cost optimization
+      data_sources:
+        - Gartner
+        - Forrester
+        - industry_reports
+    expected_output:
+      contains:
+        - trend_predictions
+        - adoption_timeline
+        - market_impact
+      predictions: '>=5'
+      confidence_scores: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - predictions_reasonable
+        - sources_cited
+        - timeline_realistic
+    performance:
+      max_latency_ms: 7000
+      max_tokens: 2500
+    cost_estimate: 0.09
+    description: Analyst Agent - Market Trend Prediction. Predict AI/ML market trends
+      for next 24 months
+  - id: analyst_p1_007
+    name: Analyst Agent - Financial Modeling (P&L Projection)
+    priority: P1
+    category: financial
+    tags:
+      - analyst
+      - financial
+      - modeling
+      - projections
+    input:
+      prompt: Create 3-year P&L projection for SaaS startup
+      assumptions:
+        starting_mrr: $10,000
+        growth_rate: 15% monthly
+        cac: $500
+        ltv: $2,000
+    expected_output:
+      contains:
+        - p&l_projection
+        - revenue
+        - costs
+        - profitability
+      years_projected: 3
+      break_even_month: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - model_realistic
+        - assumptions_stated
+        - profitability_analyzed
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Analyst Agent - Financial Modeling (P&L Projection). Create 3-year
+      P&L projection for SaaS startup
+  - id: analyst_p1_008
+    name: Analyst Agent - Go-To-Market Strategy
+    priority: P1
+    category: gtm
+    tags:
+      - analyst
+      - gtm
+      - strategy
+      - launch
+    input:
+      prompt: Develop GTM strategy for new developer tools product
+      product: Code review automation tool
+      target_market: Software engineering teams 10-100 developers
+      launch_budget: $50,000
+    expected_output:
+      contains:
+        - gtm_strategy
+        - channels
+        - timeline
+        - budget_allocation
+      channels: '>=4'
+      timeline_months: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - strategy_comprehensive
+        - channels_appropriate
+        - budget_realistic
+    performance:
+      max_latency_ms: 7000
+      max_tokens: 2500
+    cost_estimate: 0.09
+    description: Analyst Agent - Go-To-Market Strategy. Develop GTM strategy for new
+      developer tools product
+  - id: analyst_p1_009
+    name: Analyst Agent - User Behavior Cohort Analysis
+    priority: P1
+    category: behavior
+    tags:
+      - analyst
+      - cohort
+      - behavior
+      - analytics
+    input:
+      prompt: Perform cohort analysis for user activation
+      cohorts:
+        - Jan 2025
+        - Feb 2025
+        - Mar 2025
+      activation_metric: completed_onboarding
+      retention_periods:
+        - Day 1
+        - Week 1
+        - Month 1
+    expected_output:
+      contains:
+        - cohort_analysis
+        - activation_rates
+        - retention_curves
+      cohorts_analyzed: 3
+      insights: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - analysis_correct
+        - trends_identified
+        - insights_actionable
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Analyst Agent - User Behavior Cohort Analysis. Perform cohort analysis
+      for user activation
+  - id: analyst_p1_010
+    name: Analyst Agent - Partnership Opportunity Analysis
+    priority: P1
+    category: partnerships
+    tags:
+      - analyst
+      - partnerships
+      - bd
+      - strategy
+    input:
+      prompt: Identify strategic partnership opportunities for fintech startup
+      company: B2B payment processing platform
+      partnership_types:
+        - technology
+        - distribution
+        - co_marketing
+    expected_output:
+      contains:
+        - partnership_opportunities
+        - potential_partners
+        - value_proposition
+      opportunities: '>=5'
+      partner_criteria: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - opportunities_relevant
+        - criteria_clear
+        - value_prop_strong
+    performance:
+      max_latency_ms: 7000
+      max_tokens: 2500
+    cost_estimate: 0.09
+    description: Analyst Agent - Partnership Opportunity Analysis. Identify strategic
+      partnership opportunities for fintech startup
+  - id: analyst_p1_011
+    name: Analyst Agent - Product-Market Fit Assessment
+    priority: P1
+    category: pmf
+    tags:
+      - analyst
+      - pmf
+      - product_market_fit
+      - metrics
+    input:
+      prompt: Assess product-market fit using Sean Ellis test + metrics
+      survey_data:
+        very_disappointed: 45%
+        somewhat_disappointed: 30%
+        not_disappointed: 25%
+      nps_score: 35
+      retention_rate: 65%
+    expected_output:
+      contains:
+        - pmf_score
+        - assessment
+        - recommendations
+      pmf_achieved: false
+      recommendations: '>=3'
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - assessment_accurate
+        - metrics_interpreted
+        - recommendations_actionable
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Analyst Agent - Product-Market Fit Assessment. Assess product-market
+      fit using Sean Ellis test + metrics
+  - id: analyst_p1_012
+    name: Analyst Agent - Competitive Positioning Map
+    priority: P1
+    category: positioning
+    tags:
+      - analyst
+      - positioning
+      - competitive
+      - strategy
+    input:
+      prompt: Create 2x2 positioning map for project management tools
+      competitors:
+        - Asana
+        - Monday
+        - Jira
+        - Linear
+        - Notion
+      dimensions:
+        - ease_of_use
+        - feature_richness
+    expected_output:
+      contains:
+        - positioning_map
+        - quadrants
+        - differentiation
+      competitors_mapped: 5
+      white_space_identified: true
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - map_accurate
+        - positioning_clear
+        - insights_strategic
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Analyst Agent - Competitive Positioning Map. Create 2x2 positioning
+      map for project management tools
+  - id: analyst_p1_013
+    name: Analyst Agent - Acquisition Channel ROI Analysis
+    priority: P1
+    category: marketing
+    tags:
+      - analyst
+      - roi
+      - acquisition
+      - channels
+    input:
+      prompt: Analyze ROI across acquisition channels and recommend budget allocation
+      channels:
+        - name: Google Ads
+          spend: $10,000
+          customers: 50
+          ltv: $2,000
+        - name: Content Marketing
+          spend: $5,000
+          customers: 30
+          ltv: $2,000
+        - name: Referrals
+          spend: $2,000
+          customers: 40
+          ltv: $2,000
+    expected_output:
+      contains:
+        - roi_analysis
+        - cac_by_channel
+        - budget_recommendation
+      channels_analyzed: 3
+      budget_reallocation: provided
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - roi_calculated
+        - analysis_sound
+        - recommendations_justified
+    performance:
+      max_latency_ms: 6000
+      max_tokens: 2000
+    cost_estimate: 0.08
+    description: Analyst Agent - Acquisition Channel ROI Analysis. Analyze ROI across
+      acquisition channels and recommend budget allocation

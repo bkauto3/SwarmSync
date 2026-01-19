@@ -1,0 +1,2083 @@
+[
+  {
+    "sourceId": "builder_agent_p0_100",
+    "scenarioName": "Builder Agent - P0 Critical Test 100",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p0_101",
+    "scenarioName": "Builder Agent - P0 Critical Test 101",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p0_102",
+    "scenarioName": "Builder Agent - P0 Critical Test 102",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p0_103",
+    "scenarioName": "Builder Agent - P0 Critical Test 103",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p0_104",
+    "scenarioName": "Builder Agent - P0 Critical Test 104",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p0_105",
+    "scenarioName": "Builder Agent - P0 Critical Test 105",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_agent_p0_106",
+    "scenarioName": "Builder Agent - P0 Critical Test 106",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "compliance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical compliance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "compliance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "builder_agent_p0_107",
+    "scenarioName": "Builder Agent - P0 Critical Test 107",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "scalability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical scalability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "scalability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "builder_agent_p0_108",
+    "scenarioName": "Builder Agent - P0 Critical Test 108",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "reliability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical reliability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "reliability",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "builder_agent_p0_109",
+    "scenarioName": "Builder Agent - P0 Critical Test 109",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "data_quality"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical data_quality test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "builder_agent_p0_110",
+    "scenarioName": "Builder Agent - P0 Critical Test 110",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["success", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p0_111",
+    "scenarioName": "Builder Agent - P0 Critical Test 111",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p0_112",
+    "scenarioName": "Builder Agent - P0 Critical Test 112",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p0_113",
+    "scenarioName": "Builder Agent - P0 Critical Test 113",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p0_114",
+    "scenarioName": "Builder Agent - P0 Critical Test 114",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p0_115",
+    "scenarioName": "Builder Agent - P0 Critical Test 115",
+    "priority": "P0",
+    "vertical": "builder",
+    "agentTags": ["builder", "critical", "p0", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute critical security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "critical"
+      }
+    },
+    "expectedOutputIncludes": ["security", "success", "validated"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 3000,
+      "maxTokens": 500
+    },
+    "successCriteria": ["accuracy", "completeness", "compliance"],
+    "judgeModel": "gpt-4o",
+    "costEstimate": 0.012,
+    "notes": "Builder Agent - P0 critical security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_p1_001",
+    "scenarioName": "Builder Agent - RESTful API with Authentication",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "api", "auth"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Build REST API with JWT auth, CRUD endpoints, rate limiting",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - RESTful API with Authentication. Build REST API with JWT auth, CRUD endpoints, rate limiting",
+    "category": "api"
+  },
+  {
+    "sourceId": "builder_p1_002",
+    "scenarioName": "Builder Agent - React Dashboard with Real-Time Updates",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "react"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Build React dashboard with WebSocket updates, charts, responsive design",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - React Dashboard with Real-Time Updates. Build React dashboard with WebSocket updates, charts, responsive design",
+    "category": "frontend"
+  },
+  {
+    "sourceId": "builder_p1_003",
+    "scenarioName": "Builder Agent - Microservice with Message Queue",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "rabbitmq"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Implement payment processing microservice with RabbitMQ, retry logic",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Microservice with Message Queue. Implement payment processing microservice with RabbitMQ, retry logic",
+    "category": "microservice"
+  },
+  {
+    "sourceId": "builder_p1_004",
+    "scenarioName": "Builder Agent - Database Schema with Migrations",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "postgresql"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Design PostgreSQL schema for e-commerce: users, products, orders, reviews",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Database Schema with Migrations. Design PostgreSQL schema for e-commerce: users, products, orders, reviews",
+    "category": "database"
+  },
+  {
+    "sourceId": "builder_p1_005",
+    "scenarioName": "Builder Agent - GraphQL API with DataLoader",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "graphql"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Build GraphQL API with N+1 query optimization using DataLoader",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - GraphQL API with DataLoader. Build GraphQL API with N+1 query optimization using DataLoader",
+    "category": "graphql"
+  },
+  {
+    "sourceId": "builder_p1_006",
+    "scenarioName": "Builder Agent - Background Job Processing",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "celery"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Implement async job processing with Celery: email sending, report generation",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Background Job Processing. Implement async job processing with Celery: email sending, report generation",
+    "category": "background_jobs"
+  },
+  {
+    "sourceId": "builder_p1_007",
+    "scenarioName": "Builder Agent - OAuth2 Provider Implementation",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "oauth2"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Implement OAuth2 server: authorization code flow, refresh tokens, scopes",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - OAuth2 Provider Implementation. Implement OAuth2 server: authorization code flow, refresh tokens, scopes",
+    "category": "oauth"
+  },
+  {
+    "sourceId": "builder_p1_008",
+    "scenarioName": "Builder Agent - File Upload with S3 Integration",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "s3"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Build file upload service: chunked uploads, virus scanning, S3 storage",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - File Upload with S3 Integration. Build file upload service: chunked uploads, virus scanning, S3 storage",
+    "category": "storage"
+  },
+  {
+    "sourceId": "builder_p1_009",
+    "scenarioName": "Builder Agent - Search with Elasticsearch",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "elasticsearch"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Implement full-text search: indexing, autocomplete, faceted filters",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Search with Elasticsearch. Implement full-text search: indexing, autocomplete, faceted filters",
+    "category": "search"
+  },
+  {
+    "sourceId": "builder_p1_010",
+    "scenarioName": "Builder Agent - Rate Limiting Middleware",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "rate_limiting"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Build rate limiter: token bucket algorithm, Redis backend, custom rules",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Rate Limiting Middleware. Build rate limiter: token bucket algorithm, Redis backend, custom rules",
+    "category": "middleware"
+  },
+  {
+    "sourceId": "builder_p1_011",
+    "scenarioName": "Builder Agent - Webhook System with Retries",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "webhooks"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Implement webhook delivery: exponential backoff, signature verification",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Webhook System with Retries. Implement webhook delivery: exponential backoff, signature verification",
+    "category": "webhooks"
+  },
+  {
+    "sourceId": "builder_p1_012",
+    "scenarioName": "Builder Agent - Multi-Tenant SaaS Architecture",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "saas"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Design multi-tenant system: tenant isolation, shared schema vs separate DBs",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Multi-Tenant SaaS Architecture. Design multi-tenant system: tenant isolation, shared schema vs separate DBs",
+    "category": "multi_tenant"
+  },
+  {
+    "sourceId": "builder_p1_013",
+    "scenarioName": "Builder Agent - Performance Optimization (1000 RPS)",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "optimization"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Optimize API to handle 1000 req/sec: caching, connection pooling, indexing",
+      "agent": "builder"
+    },
+    "expectedOutputIncludes": ["success", "result", "output"],
+    "minOutputLength": 100,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 1500
+    },
+    "successCriteria": ["correctness", "quality", "completeness"],
+    "judgeModel": "gpt-4o-mini",
+    "costEstimate": 0.07,
+    "notes": "Builder Agent - Performance Optimization (1000 RPS). Optimize API to handle 1000 req/sec: caching, connection pooling, indexing",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p1_100",
+    "scenarioName": "Builder Agent - P1 High Priority Test 100",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p1_101",
+    "scenarioName": "Builder Agent - P1 High Priority Test 101",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p1_102",
+    "scenarioName": "Builder Agent - P1 High Priority Test 102",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p1_103",
+    "scenarioName": "Builder Agent - P1 High Priority Test 103",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p1_104",
+    "scenarioName": "Builder Agent - P1 High Priority Test 104",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p1_105",
+    "scenarioName": "Builder Agent - P1 High Priority Test 105",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_agent_p1_106",
+    "scenarioName": "Builder Agent - P1 High Priority Test 106",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "compliance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority compliance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "builder_agent_p1_107",
+    "scenarioName": "Builder Agent - P1 High Priority Test 107",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "scalability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority scalability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "builder_agent_p1_108",
+    "scenarioName": "Builder Agent - P1 High Priority Test 108",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "reliability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority reliability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "builder_agent_p1_109",
+    "scenarioName": "Builder Agent - P1 High Priority Test 109",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "data_quality"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "builder_agent_p1_110",
+    "scenarioName": "Builder Agent - P1 High Priority Test 110",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p1_111",
+    "scenarioName": "Builder Agent - P1 High Priority Test 111",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p1_112",
+    "scenarioName": "Builder Agent - P1 High Priority Test 112",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p1_113",
+    "scenarioName": "Builder Agent - P1 High Priority Test 113",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p1_114",
+    "scenarioName": "Builder Agent - P1 High Priority Test 114",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p1_115",
+    "scenarioName": "Builder Agent - P1 High Priority Test 115",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_agent_p1_116",
+    "scenarioName": "Builder Agent - P1 High Priority Test 116",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "compliance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority compliance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "builder_agent_p1_117",
+    "scenarioName": "Builder Agent - P1 High Priority Test 117",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "scalability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority scalability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "builder_agent_p1_118",
+    "scenarioName": "Builder Agent - P1 High Priority Test 118",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "reliability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority reliability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "builder_agent_p1_119",
+    "scenarioName": "Builder Agent - P1 High Priority Test 119",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "data_quality"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "builder_agent_p1_120",
+    "scenarioName": "Builder Agent - P1 High Priority Test 120",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["success", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p1_121",
+    "scenarioName": "Builder Agent - P1 High Priority Test 121",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p1_122",
+    "scenarioName": "Builder Agent - P1 High Priority Test 122",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p1_123",
+    "scenarioName": "Builder Agent - P1 High Priority Test 123",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["performance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p1_124",
+    "scenarioName": "Builder Agent - P1 High Priority Test 124",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["integration", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p1_125",
+    "scenarioName": "Builder Agent - P1 High Priority Test 125",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["security", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_agent_p1_126",
+    "scenarioName": "Builder Agent - P1 High Priority Test 126",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "compliance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority compliance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "compliance",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["compliance", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "builder_agent_p1_127",
+    "scenarioName": "Builder Agent - P1 High Priority Test 127",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "scalability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority scalability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "scalability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["scalability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "builder_agent_p1_128",
+    "scenarioName": "Builder Agent - P1 High Priority Test 128",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "reliability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority reliability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "reliability",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["reliability", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "builder_agent_p1_129",
+    "scenarioName": "Builder Agent - P1 High Priority Test 129",
+    "priority": "P1",
+    "vertical": "builder",
+    "agentTags": ["builder", "high", "p1", "data_quality"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute high-priority data_quality test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "high"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality", "validated"],
+    "minOutputLength": 80,
+    "tolerances": {
+      "maxLatencyMs": 5000,
+      "maxTokens": 800
+    },
+    "successCriteria": ["accuracy", "completeness"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P1 high-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "builder_agent_p2_001",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 1",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p2_002",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 2",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p2_003",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 3",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p2_004",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 4",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p2_005",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 5",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p2_006",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 6",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_agent_p2_007",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 7",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "compliance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "builder_agent_p2_008",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 8",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "scalability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "builder_agent_p2_009",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 9",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "reliability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "builder_agent_p2_010",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 10",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  },
+  {
+    "sourceId": "builder_agent_p2_011",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 11",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "success"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority success test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "success",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["success"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority success test",
+    "category": "success"
+  },
+  {
+    "sourceId": "builder_agent_p2_012",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 12",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "edge_case"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority edge_case test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "edge_case",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["edge_case"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority edge_case test",
+    "category": "edge_case"
+  },
+  {
+    "sourceId": "builder_agent_p2_013",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 13",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "error_handling"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority error_handling test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "error_handling",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["error_handling"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority error_handling test",
+    "category": "error_handling"
+  },
+  {
+    "sourceId": "builder_agent_p2_014",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 14",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "performance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority performance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "performance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["performance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority performance test",
+    "category": "performance"
+  },
+  {
+    "sourceId": "builder_agent_p2_015",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 15",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "integration"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority integration test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "integration",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["integration"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority integration test",
+    "category": "integration"
+  },
+  {
+    "sourceId": "builder_agent_p2_016",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 16",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "security"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority security test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "security",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["security"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority security test",
+    "category": "security"
+  },
+  {
+    "sourceId": "builder_agent_p2_017",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 17",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "compliance"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority compliance test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "compliance",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["compliance"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority compliance test",
+    "category": "compliance"
+  },
+  {
+    "sourceId": "builder_agent_p2_018",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 18",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "scalability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority scalability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "scalability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["scalability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority scalability test",
+    "category": "scalability"
+  },
+  {
+    "sourceId": "builder_agent_p2_019",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 19",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "reliability"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority reliability test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "reliability",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["reliability"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority reliability test",
+    "category": "reliability"
+  },
+  {
+    "sourceId": "builder_agent_p2_020",
+    "scenarioName": "Builder Agent - P2 Medium Priority Test 20",
+    "priority": "P2",
+    "vertical": "builder",
+    "agentTags": ["builder", "medium", "p2", "data_quality"],
+    "agentNameIncludes": "builder",
+    "input": {
+      "prompt": "Execute medium-priority data_quality test for builder_agent",
+      "agent": "builder",
+      "context": {
+        "test_type": "data_quality",
+        "priority": "medium"
+      }
+    },
+    "expectedOutputIncludes": ["data_quality"],
+    "minOutputLength": 50,
+    "tolerances": {
+      "maxLatencyMs": 8000,
+      "maxTokens": 1000
+    },
+    "successCriteria": ["accuracy"],
+    "judgeModel": "gemini-2.5-flash",
+    "costEstimate": 0.00003,
+    "notes": "Builder Agent - P2 medium-priority data_quality test",
+    "category": "data_quality"
+  }
+]

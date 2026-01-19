@@ -1,0 +1,376 @@
+security_agent_p1:
+  agent: security_agent
+  priority: P1
+  total_scenarios: 13
+  capabilities:
+    - Vulnerability scanning
+    - Penetration testing
+    - Threat modeling
+    - Compliance auditing
+    - Incident response
+    - Security training
+scenarios:
+  - id: security_p1_001
+    name: Security Agent - Automated OWASP Top 10 Scanning
+    priority: P1
+    category: scanning
+    tags:
+      - security
+      - owasp
+    input:
+      prompt: 'Scan web app for OWASP Top 10 vulnerabilities: injection, XSS, CSRF'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Automated OWASP Top 10 Scanning. Scan web app for
+      OWASP Top 10 vulnerabilities: injection, XSS, CSRF'
+  - id: security_p1_002
+    name: Security Agent - API Security Audit
+    priority: P1
+    category: api_security
+    tags:
+      - security
+      - api
+    input:
+      prompt: 'Audit REST API: auth bypass, rate limiting, input validation, CORS'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - API Security Audit. Audit REST API: auth bypass,
+      rate limiting, input validation, CORS'
+  - id: security_p1_003
+    name: Security Agent - Threat Modeling (STRIDE)
+    priority: P1
+    category: threat_modeling
+    tags:
+      - security
+      - stride
+    input:
+      prompt: Create STRIDE threat model for payment processing system
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Security Agent - Threat Modeling (STRIDE). Create STRIDE threat model
+      for payment processing system
+  - id: security_p1_004
+    name: Security Agent - Container Security Scan (Docker)
+    priority: P1
+    category: container
+    tags:
+      - security
+      - docker
+    input:
+      prompt: 'Scan Docker images for: outdated packages, exposed secrets, misconfigurations'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Container Security Scan (Docker). Scan Docker images
+      for: outdated packages, exposed secrets, misconfigurations'
+  - id: security_p1_005
+    name: Security Agent - Infrastructure as Code (IaC) Security
+    priority: P1
+    category: iac
+    tags:
+      - security
+      - terraform
+    input:
+      prompt: 'Audit Terraform configs: S3 public access, unencrypted DBs, overly permissive
+        IAM'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Infrastructure as Code (IaC) Security. Audit Terraform
+      configs: S3 public access, unencrypted DBs, overly permissive IAM'
+  - id: security_p1_006
+    name: Security Agent - Dependency Vulnerability Check
+    priority: P1
+    category: dependencies
+    tags:
+      - security
+      - supply_chain
+    input:
+      prompt: 'Scan package.json for: critical CVEs, malicious packages, license issues'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: Security Agent - Dependency Vulnerability Check. Scan package
+  - id: security_p1_007
+    name: Security Agent - Security Code Review (SAST)
+    priority: P1
+    category: sast
+    tags:
+      - security
+      - code_review
+    input:
+      prompt: 'Static analysis: hardcoded secrets, SQL injection, insecure deserialization'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Security Code Review (SAST). Static analysis: hardcoded
+      secrets, SQL injection, insecure deserialization'
+  - id: security_p1_008
+    name: Security Agent - Incident Response Playbook
+    priority: P1
+    category: incident
+    tags:
+      - security
+      - ir
+    input:
+      prompt: 'Generate IR playbook for: data breach, ransomware, DDoS scenarios'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Incident Response Playbook. Generate IR playbook
+      for: data breach, ransomware, DDoS scenarios'
+  - id: security_p1_009
+    name: Security Agent - Compliance Audit (SOC 2 Type II)
+    priority: P1
+    category: compliance
+    tags:
+      - security
+      - soc2
+    input:
+      prompt: 'Validate SOC 2 controls: access management, encryption, logging, monitoring'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Compliance Audit (SOC 2 Type II). Validate SOC 2
+      controls: access management, encryption, logging, monitoring'
+  - id: security_p1_010
+    name: Security Agent - Penetration Test Report Generation
+    priority: P1
+    category: pentest
+    tags:
+      - security
+      - reporting
+    input:
+      prompt: 'Generate pentest report: findings, severity, remediation, executive summary'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Penetration Test Report Generation. Generate pentest
+      report: findings, severity, remediation, executive summary'
+  - id: security_p1_011
+    name: Security Agent - Security Awareness Training Content
+    priority: P1
+    category: training
+    tags:
+      - security
+      - education
+    input:
+      prompt: 'Create phishing awareness training: simulations, quizzes, best practices'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Security Awareness Training Content. Create phishing
+      awareness training: simulations, quizzes, best practices'
+  - id: security_p1_012
+    name: Security Agent - Zero Trust Architecture Assessment
+    priority: P1
+    category: zero_trust
+    tags:
+      - security
+      - architecture
+    input:
+      prompt: 'Assess current architecture against zero trust principles: verification,
+        least privilege'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Zero Trust Architecture Assessment. Assess current
+      architecture against zero trust principles: verification, least privilege'
+  - id: security_p1_013
+    name: Security Agent - Secret Management Audit
+    priority: P1
+    category: secrets
+    tags:
+      - security
+      - credentials
+    input:
+      prompt: 'Audit: hardcoded credentials, .env leaks, exposed API keys in Git history'
+      agent: security
+    expected_output:
+      contains:
+        - success
+        - result
+        - output
+      min_length: 100
+    judge:
+      model: gpt-4o-mini
+      criteria:
+        - correctness
+        - quality
+        - completeness
+    performance:
+      max_latency_ms: 5000
+      max_tokens: 1500
+    cost_estimate: 0.07
+    description: 'Security Agent - Secret Management Audit. Audit: hardcoded credentials,'

@@ -1,0 +1,585 @@
+deploy_agent_p2:
+  agent: deploy_agent
+  priority: P2
+  total_scenarios: 20
+  scenarios:
+    - id: deploy_agent_p2_001
+      name: Deploy Agent - P2 Medium Priority Test 1
+      priority: P2
+      category: success
+      tags:
+        - deploy
+        - medium
+        - p2
+        - success
+      input:
+        prompt: Execute medium-priority success test for deploy_agent
+        agent: deploy
+        context:
+          test_type: success
+          priority: medium
+      expected_output:
+        contains:
+          - success
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority success test
+    - id: deploy_agent_p2_002
+      name: Deploy Agent - P2 Medium Priority Test 2
+      priority: P2
+      category: edge_case
+      tags:
+        - deploy
+        - medium
+        - p2
+        - edge_case
+      input:
+        prompt: Execute medium-priority edge_case test for deploy_agent
+        agent: deploy
+        context:
+          test_type: edge_case
+          priority: medium
+      expected_output:
+        contains:
+          - edge_case
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority edge_case test
+    - id: deploy_agent_p2_003
+      name: Deploy Agent - P2 Medium Priority Test 3
+      priority: P2
+      category: error_handling
+      tags:
+        - deploy
+        - medium
+        - p2
+        - error_handling
+      input:
+        prompt: Execute medium-priority error_handling test for deploy_agent
+        agent: deploy
+        context:
+          test_type: error_handling
+          priority: medium
+      expected_output:
+        contains:
+          - error_handling
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority error_handling test
+    - id: deploy_agent_p2_004
+      name: Deploy Agent - P2 Medium Priority Test 4
+      priority: P2
+      category: performance
+      tags:
+        - deploy
+        - medium
+        - p2
+        - performance
+      input:
+        prompt: Execute medium-priority performance test for deploy_agent
+        agent: deploy
+        context:
+          test_type: performance
+          priority: medium
+      expected_output:
+        contains:
+          - performance
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority performance test
+    - id: deploy_agent_p2_005
+      name: Deploy Agent - P2 Medium Priority Test 5
+      priority: P2
+      category: integration
+      tags:
+        - deploy
+        - medium
+        - p2
+        - integration
+      input:
+        prompt: Execute medium-priority integration test for deploy_agent
+        agent: deploy
+        context:
+          test_type: integration
+          priority: medium
+      expected_output:
+        contains:
+          - integration
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority integration test
+    - id: deploy_agent_p2_006
+      name: Deploy Agent - P2 Medium Priority Test 6
+      priority: P2
+      category: security
+      tags:
+        - deploy
+        - medium
+        - p2
+        - security
+      input:
+        prompt: Execute medium-priority security test for deploy_agent
+        agent: deploy
+        context:
+          test_type: security
+          priority: medium
+      expected_output:
+        contains:
+          - security
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority security test
+    - id: deploy_agent_p2_007
+      name: Deploy Agent - P2 Medium Priority Test 7
+      priority: P2
+      category: compliance
+      tags:
+        - deploy
+        - medium
+        - p2
+        - compliance
+      input:
+        prompt: Execute medium-priority compliance test for deploy_agent
+        agent: deploy
+        context:
+          test_type: compliance
+          priority: medium
+      expected_output:
+        contains:
+          - compliance
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority compliance test
+    - id: deploy_agent_p2_008
+      name: Deploy Agent - P2 Medium Priority Test 8
+      priority: P2
+      category: scalability
+      tags:
+        - deploy
+        - medium
+        - p2
+        - scalability
+      input:
+        prompt: Execute medium-priority scalability test for deploy_agent
+        agent: deploy
+        context:
+          test_type: scalability
+          priority: medium
+      expected_output:
+        contains:
+          - scalability
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority scalability test
+    - id: deploy_agent_p2_009
+      name: Deploy Agent - P2 Medium Priority Test 9
+      priority: P2
+      category: reliability
+      tags:
+        - deploy
+        - medium
+        - p2
+        - reliability
+      input:
+        prompt: Execute medium-priority reliability test for deploy_agent
+        agent: deploy
+        context:
+          test_type: reliability
+          priority: medium
+      expected_output:
+        contains:
+          - reliability
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority reliability test
+    - id: deploy_agent_p2_010
+      name: Deploy Agent - P2 Medium Priority Test 10
+      priority: P2
+      category: data_quality
+      tags:
+        - deploy
+        - medium
+        - p2
+        - data_quality
+      input:
+        prompt: Execute medium-priority data_quality test for deploy_agent
+        agent: deploy
+        context:
+          test_type: data_quality
+          priority: medium
+      expected_output:
+        contains:
+          - data_quality
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority data_quality test
+    - id: deploy_agent_p2_011
+      name: Deploy Agent - P2 Medium Priority Test 11
+      priority: P2
+      category: success
+      tags:
+        - deploy
+        - medium
+        - p2
+        - success
+      input:
+        prompt: Execute medium-priority success test for deploy_agent
+        agent: deploy
+        context:
+          test_type: success
+          priority: medium
+      expected_output:
+        contains:
+          - success
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority success test
+    - id: deploy_agent_p2_012
+      name: Deploy Agent - P2 Medium Priority Test 12
+      priority: P2
+      category: edge_case
+      tags:
+        - deploy
+        - medium
+        - p2
+        - edge_case
+      input:
+        prompt: Execute medium-priority edge_case test for deploy_agent
+        agent: deploy
+        context:
+          test_type: edge_case
+          priority: medium
+      expected_output:
+        contains:
+          - edge_case
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority edge_case test
+    - id: deploy_agent_p2_013
+      name: Deploy Agent - P2 Medium Priority Test 13
+      priority: P2
+      category: error_handling
+      tags:
+        - deploy
+        - medium
+        - p2
+        - error_handling
+      input:
+        prompt: Execute medium-priority error_handling test for deploy_agent
+        agent: deploy
+        context:
+          test_type: error_handling
+          priority: medium
+      expected_output:
+        contains:
+          - error_handling
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority error_handling test
+    - id: deploy_agent_p2_014
+      name: Deploy Agent - P2 Medium Priority Test 14
+      priority: P2
+      category: performance
+      tags:
+        - deploy
+        - medium
+        - p2
+        - performance
+      input:
+        prompt: Execute medium-priority performance test for deploy_agent
+        agent: deploy
+        context:
+          test_type: performance
+          priority: medium
+      expected_output:
+        contains:
+          - performance
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority performance test
+    - id: deploy_agent_p2_015
+      name: Deploy Agent - P2 Medium Priority Test 15
+      priority: P2
+      category: integration
+      tags:
+        - deploy
+        - medium
+        - p2
+        - integration
+      input:
+        prompt: Execute medium-priority integration test for deploy_agent
+        agent: deploy
+        context:
+          test_type: integration
+          priority: medium
+      expected_output:
+        contains:
+          - integration
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority integration test
+    - id: deploy_agent_p2_016
+      name: Deploy Agent - P2 Medium Priority Test 16
+      priority: P2
+      category: security
+      tags:
+        - deploy
+        - medium
+        - p2
+        - security
+      input:
+        prompt: Execute medium-priority security test for deploy_agent
+        agent: deploy
+        context:
+          test_type: security
+          priority: medium
+      expected_output:
+        contains:
+          - security
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority security test
+    - id: deploy_agent_p2_017
+      name: Deploy Agent - P2 Medium Priority Test 17
+      priority: P2
+      category: compliance
+      tags:
+        - deploy
+        - medium
+        - p2
+        - compliance
+      input:
+        prompt: Execute medium-priority compliance test for deploy_agent
+        agent: deploy
+        context:
+          test_type: compliance
+          priority: medium
+      expected_output:
+        contains:
+          - compliance
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority compliance test
+    - id: deploy_agent_p2_018
+      name: Deploy Agent - P2 Medium Priority Test 18
+      priority: P2
+      category: scalability
+      tags:
+        - deploy
+        - medium
+        - p2
+        - scalability
+      input:
+        prompt: Execute medium-priority scalability test for deploy_agent
+        agent: deploy
+        context:
+          test_type: scalability
+          priority: medium
+      expected_output:
+        contains:
+          - scalability
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority scalability test
+    - id: deploy_agent_p2_019
+      name: Deploy Agent - P2 Medium Priority Test 19
+      priority: P2
+      category: reliability
+      tags:
+        - deploy
+        - medium
+        - p2
+        - reliability
+      input:
+        prompt: Execute medium-priority reliability test for deploy_agent
+        agent: deploy
+        context:
+          test_type: reliability
+          priority: medium
+      expected_output:
+        contains:
+          - reliability
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority reliability test
+    - id: deploy_agent_p2_020
+      name: Deploy Agent - P2 Medium Priority Test 20
+      priority: P2
+      category: data_quality
+      tags:
+        - deploy
+        - medium
+        - p2
+        - data_quality
+      input:
+        prompt: Execute medium-priority data_quality test for deploy_agent
+        agent: deploy
+        context:
+          test_type: data_quality
+          priority: medium
+      expected_output:
+        contains:
+          - data_quality
+        min_length: 50
+        requires_validation: false
+      judge:
+        model: gemini-2.5-flash
+        criteria:
+          - accuracy
+      performance:
+        max_latency_ms: 8000
+        max_tokens: 1000
+      cost_estimate: 3.0e-05
+      description: Deploy Agent - P2 medium-priority data_quality test

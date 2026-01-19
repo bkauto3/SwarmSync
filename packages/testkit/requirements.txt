@@ -1,0 +1,28 @@
+# Python dependencies for AgentMarket integration tests
+# Generated from packages/testkit/pyproject.toml
+# 
+# To install: pip install -r requirements.txt
+# 
+# Note: This project uses Poetry for dependency management.
+# For development, consider using: poetry install (in packages/testkit/)
+
+# Core dependencies
+httpx>=0.27.0,<0.28.0
+pytest>=8.3.3,<9.0.0
+pytest-asyncio>=0.24.0,<0.25.0
+anyio>=4.4.0,<5.0.0
+asyncpg>=0.29.0,<0.30.0
+
+# Development dependencies (optional, for linting)
+# ruff>=0.6.9,<0.7.0
+
+# Existing dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+
+# NEW: x402 dependencies
+#x402-fastapi==0.3.0
+web3==6.11.3
+eth-account==0.10.0
+python-dotenv==1.0.0

@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+dist
+build
+.turbo
+.vercel
+*.log
+.env*.local
+src/trigger

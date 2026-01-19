@@ -1,0 +1,15 @@
+# Python test dependencies - not needed for Netlify build
+# requirements.txt moved to packages/testkit/ to prevent Netlify from detecting it
+**/pyproject.toml
+**/poetry.lock
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+**/pip-log.txt
+**/pip-delete-this-directory.txt
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+

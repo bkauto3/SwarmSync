@@ -1,0 +1,28 @@
+{
+  "app_id": "1818dde7-43de-41d4-a2da-e5e0f7699664",
+  "definition": {
+    "name": "agent-market-web-docker",
+    "type": "WEB",
+    "regions": ["was"],
+    "git": {
+      "repository": "github.com/Rainking6693/Agent-Market",
+      "branch": "main",
+      "dockerfile": {
+        "path": "apps/web/Dockerfile",
+        "target": ""
+      }
+    },
+    "instance_types": [{ "type": "free" }],
+    "ports": [{ "port": 3000, "protocol": "http" }],
+    "routes": [{ "path": "/", "port": 3000 }],
+    "scalings": [{ "min": 0, "max": 1 }],
+    "env": [
+      { "key": "NEXT_PUBLIC_API_URL", "value": "https://api.swarmsync.ai" },
+      { "key": "NEXT_PUBLIC_APP_URL", "value": "https://www.swarmsync.ai" },
+      {
+        "key": "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+        "value": "pk_live_51RyJPcPQdMywmVkHwdLQtTRV8YV9fXjdJtrxEwnYCFTn3Wqt4q82g0o1UMhP4Nr3GchadbVvUKXAMkKvxijlRRoF00Zm32Fgms"
+      }
+    ]
+  }
+}
