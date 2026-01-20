@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "eslint-config-next": "16.0.3",
-    "ky": "^1.2.1"
+    "ky": "^1.14.2"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
