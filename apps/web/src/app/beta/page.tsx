@@ -24,7 +24,7 @@ export default function BetaPage() {
                 {/* Hero Section */}
                 <section className="relative px-6 py-24 md:py-32">
                     {/* Background Gradient Blurs */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-[var(--accent-primary)]/10 blur-[120px] rounded-full -z-10" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-[var(--accent-primary)]/10 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
                     <div className="mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -69,10 +69,10 @@ export default function BetaPage() {
                             </div>
 
                             {/* Right Column: Form */}
-                            <div className="relative">
+                            <div className="relative z-10">
                                 <BetaForm />
                                 {/* Decorative Elements */}
-                                <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-[var(--accent-primary)]/5 blur-[60px] rounded-full -z-10" />
+                                <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-[var(--accent-primary)]/5 blur-[60px] rounded-full -z-10 pointer-events-none" />
                             </div>
 
                         </div>
