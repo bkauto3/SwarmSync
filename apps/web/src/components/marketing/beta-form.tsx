@@ -131,30 +131,25 @@ export function BetaForm() {
                     <Label className="text-white text-base">Which best describes you?</Label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {interestsOptions.map((option) => (
-                            <div
+                            <label
                                 key={option.id}
                                 className="flex items-center space-x-3 p-3 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors cursor-pointer group"
-                                onClick={() => {
-                                    const current = form.getValues('interests');
-                                    const checked = current.includes(option.id);
-                                    const updated = !checked
-                                        ? [...current, option.id]
-                                        : current.filter(i => i !== option.id);
-                                    form.setValue('interests', updated, { shouldValidate: true });
-                                }}
                             >
                                 <Checkbox
-                                    id={`interest-${option.id}`}
                                     checked={form.watch('interests').includes(option.id)}
-                                    className="h-5 w-5 cursor-pointer pointer-events-none"
+                                    onCheckedChange={(checked) => {
+                                        const current = form.getValues('interests');
+                                        const updated = checked
+                                            ? [...current, option.id]
+                                            : current.filter(i => i !== option.id);
+                                        form.setValue('interests', updated, { shouldValidate: true });
+                                    }}
+                                    className="h-5 w-5"
                                 />
-                                <Label
-                                    htmlFor={`interest-${option.id}`}
-                                    className="text-slate-300 font-normal cursor-pointer flex-1 pointer-events-none group-hover:text-white transition-colors"
-                                >
+                                <span className="text-slate-300 font-normal flex-1 group-hover:text-white transition-colors py-1">
                                     {option.label}
-                                </Label>
-                            </div>
+                                </span>
+                            </label>
                         ))}
                     </div>
                     {form.formState.errors.interests && (
@@ -166,30 +161,25 @@ export function BetaForm() {
                     <Label className="text-white text-base">What do you want to test?</Label>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {testGoalOptions.map((option) => (
-                            <div
+                            <label
                                 key={option.id}
                                 className="flex items-center space-x-3 p-3 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors cursor-pointer group"
-                                onClick={() => {
-                                    const current = form.getValues('testGoals');
-                                    const checked = current.includes(option.id);
-                                    const updated = !checked
-                                        ? [...current, option.id]
-                                        : current.filter(i => i !== option.id);
-                                    form.setValue('testGoals', updated, { shouldValidate: true });
-                                }}
                             >
                                 <Checkbox
-                                    id={`goal-${option.id}`}
                                     checked={form.watch('testGoals').includes(option.id)}
-                                    className="h-5 w-5 cursor-pointer pointer-events-none"
+                                    onCheckedChange={(checked) => {
+                                        const current = form.getValues('testGoals');
+                                        const updated = checked
+                                            ? [...current, option.id]
+                                            : current.filter(i => i !== option.id);
+                                        form.setValue('testGoals', updated, { shouldValidate: true });
+                                    }}
+                                    className="h-5 w-5"
                                 />
-                                <Label
-                                    htmlFor={`goal-${option.id}`}
-                                    className="text-slate-300 font-normal cursor-pointer flex-1 pointer-events-none group-hover:text-white transition-colors"
-                                >
+                                <span className="text-slate-300 font-normal flex-1 group-hover:text-white transition-colors py-1">
                                     {option.label}
-                                </Label>
-                            </div>
+                                </span>
+                            </label>
                         ))}
                     </div>
                     {form.formState.errors.testGoals && (
@@ -209,16 +199,15 @@ export function BetaForm() {
                             { id: 't30', value: '30min', label: '30 min' },
                             { id: 't60', value: '60min+', label: '60 min+' },
                         ].map((opt) => (
-                            <div
+                            <label
                                 key={opt.id}
                                 className="flex items-center space-x-3 p-3 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors cursor-pointer group"
-                                onClick={() => form.setValue('timeCommitment', opt.value, { shouldValidate: true })}
                             >
-                                <RadioGroupItem value={opt.value} id={opt.id} className="h-5 w-5 pointer-events-none" />
-                                <Label htmlFor={opt.id} className="text-slate-300 font-normal cursor-pointer flex-1 pointer-events-none group-hover:text-white transition-colors">
+                                <RadioGroupItem value={opt.value} id={opt.id} className="h-5 w-5" />
+                                <span className="text-slate-300 font-normal flex-1 group-hover:text-white transition-colors py-1">
                                     {opt.label}
-                                </Label>
-                            </div>
+                                </span>
+                            </label>
                         ))}
                     </RadioGroup>
                     {form.formState.errors.timeCommitment && (
@@ -237,16 +226,15 @@ export function BetaForm() {
                             { id: 'yes', value: 'yes', label: 'Yes' },
                             { id: 'no', value: 'no', label: 'No' },
                         ].map((opt) => (
-                            <div
+                            <label
                                 key={opt.id}
                                 className="flex items-center space-x-3 p-3 px-6 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors cursor-pointer group flex-1"
-                                onClick={() => form.setValue('feedbackConsent', opt.value, { shouldValidate: true })}
                             >
-                                <RadioGroupItem value={opt.value} id={opt.id} className="h-5 w-5 pointer-events-none" />
-                                <Label htmlFor={opt.id} className="text-slate-300 font-normal cursor-pointer flex-1 pointer-events-none group-hover:text-white transition-colors">
+                                <RadioGroupItem value={opt.value} id={opt.id} className="h-5 w-5" />
+                                <span className="text-slate-300 font-normal flex-1 group-hover:text-white transition-colors py-1">
                                     {opt.label}
-                                </Label>
-                            </div>
+                                </span>
+                            </label>
                         ))}
                     </RadioGroup>
                     {form.formState.errors.feedbackConsent && (

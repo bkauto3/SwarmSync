@@ -169,6 +169,18 @@ const nextConfig = {
     config.resolve.alias['@'] = path.resolve(__dirname, './src');
     config.resolve.alias['@pricing'] = path.resolve(__dirname, '../../lib/pricing');
 
+    // Add fallbacks for node core modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+      crypto: false,
+      os: false,
+      path: false,
+      stream: false,
+    };
+
     return config;
   },
 };
