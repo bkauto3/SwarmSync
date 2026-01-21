@@ -40,15 +40,24 @@ export async function POST(request: Request) {
     const payload = await request.json();
     const email = sanitize(payload.email);
     const role = sanitize(payload.role);
-    const building = sanitize(payload.building);
-    const interests = Array.isArray(payload.interests)
-      ? payload.interests.map((i: string) => sanitize(i))
+    const proofLink = sanitize(payload.proofLink);
+    const workflow = sanitize(payload.workflow);
+    const toolsUsed = Array.isArray(payload.toolsUsed)
+      ? payload.toolsUsed.map((tool: string) => sanitize(tool))
       : [];
+    const persona = sanitize(payload.persona);
     const testGoals = Array.isArray(payload.testGoals)
       ? payload.testGoals.map((g: string) => sanitize(g))
       : [];
+    const useCases = Array.isArray(payload.useCases)
+      ? payload.useCases.map((u: string) => sanitize(u))
+      : [];
+    const useCasesOther = sanitize(payload.useCasesOther);
     const timeCommitment = sanitize(payload.timeCommitment);
-    const feedbackConsent = sanitize(payload.feedbackConsent);
+    const missionCommitment = sanitize(payload.missionCommitment);
+    const feedbackModes = Array.isArray(payload.feedbackModes)
+      ? payload.feedbackModes.map((m: string) => sanitize(m))
+      : [];
 
     // Validation
     if (!email || !isValidEmail(email)) {
@@ -59,24 +68,48 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Role is required' }, { status: 400 });
     }
 
-    if (!building || building.length < 10) {
-      return NextResponse.json({ error: 'Please tell us more about what you are building (at least 10 characters)' }, { status: 400 });
+    if (!proofLink) {
+      return NextResponse.json({ error: 'A proof link is required' }, { status: 400 });
     }
 
-    if (!interests || interests.length === 0) {
-      return NextResponse.json({ error: 'Please select at least one description' }, { status: 400 });
+    if (!workflow || workflow.length < 10) {
+      return NextResponse.json({ error: 'Please describe a workflow (at least 10 characters)' }, { status: 400 });
+    }
+
+    if (!toolsUsed || toolsUsed.length === 0) {
+      return NextResponse.json({ error: 'Please select at least one tool' }, { status: 400 });
+    }
+
+    if (!persona) {
+      return NextResponse.json({ error: 'Please select the option that best describes you' }, { status: 400 });
     }
 
     if (!testGoals || testGoals.length === 0) {
       return NextResponse.json({ error: 'Please select what you want to test' }, { status: 400 });
     }
 
+    if (!useCases || useCases.length === 0) {
+      return NextResponse.json({ error: 'Please select where you would use specialist agents' }, { status: 400 });
+    }
+
+    if (useCases.length > 2) {
+      return NextResponse.json({ error: 'Please select up to 2 use cases' }, { status: 400 });
+    }
+
+    if (useCases.includes('other') && !useCasesOther) {
+      return NextResponse.json({ error: 'Please specify the other use case' }, { status: 400 });
+    }
+
     if (!timeCommitment) {
       return NextResponse.json({ error: 'Please select a time commitment' }, { status: 400 });
     }
 
-    if (!feedbackConsent) {
-      return NextResponse.json({ error: 'Please indicate if you can provide feedback' }, { status: 400 });
+    if (!missionCommitment) {
+      return NextResponse.json({ error: 'Please indicate if you will complete the test mission' }, { status: 400 });
+    }
+
+    if (!feedbackModes || feedbackModes.length === 0) {
+      return NextResponse.json({ error: 'Please select how you can provide feedback' }, { status: 400 });
     }
 
     const applicationId = randomUUID();
@@ -88,11 +121,16 @@ export async function POST(request: Request) {
         applicationId,
         email,
         role,
-        building,
-        interests,
+        proofLink,
+        workflow,
+        toolsUsed,
+        persona,
         testGoals,
+        useCases,
+        useCasesOther,
         timeCommitment,
-        feedbackConsent,
+        missionCommitment,
+        feedbackModes,
         submittedAt: new Date().toISOString(),
       }, null, 2));
       return NextResponse.json({
@@ -111,20 +149,31 @@ Applicant Details:
 ------------------
 Email: ${email}
 Role: ${role}
-Time Commitment: ${timeCommitment}/week
-Can Provide Feedback: ${feedbackConsent}
+Proof Link: ${proofLink}
+Persona: ${persona}
+Time Commitment (next 7 days): ${timeCommitment}
+Will Complete Test Mission: ${missionCommitment}
 
-What They're Building:
+Workflow:
 ----------------------
-${building}
+${workflow}
 
-Interests:
-----------
-${interests.join(', ')}
+Tools Used:
+-----------
+${toolsUsed.join(', ')}
 
 What They Want to Test:
 -----------------------
 ${testGoals.join(', ')}
+
+Use Cases (Up to 2):
+--------------------
+${useCases.join(', ')}
+${useCases.includes('other') ? `Other: ${useCasesOther}` : ''}
+
+Feedback Modes:
+---------------
+${feedbackModes.join(', ')}
 
 Application ID: ${applicationId}
 Submitted: ${new Date().toISOString()}

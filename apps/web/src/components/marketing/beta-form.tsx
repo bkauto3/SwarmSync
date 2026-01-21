@@ -16,11 +16,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 const betaSchema = z.object({
     email: z.string().email('Invalid email address'),
     role: z.string().min(1, 'Please select a role'),
-    building: z.string().min(10, 'Please tell us a bit more about what you are building'),
-    interests: z.array(z.string()).min(1, 'Please select at least one description'),
+    proofLink: z.string().url('Please enter a valid URL'),
+    workflow: z.string().min(10, 'Please describe a workflow (at least 10 characters)'),
+    toolsUsed: z.array(z.string()).min(1, 'Please select at least one tool'),
+    persona: z.string().min(1, 'Please select the option that best describes you'),
     testGoals: z.array(z.string()).min(1, 'Please select what you want to test'),
+    useCases: z.array(z.string()).min(1, 'Please select where you would use specialist agents'),
+    useCasesOther: z.string().optional(),
     timeCommitment: z.string().min(1, 'Please select a time commitment'),
-    feedbackConsent: z.string().min(1, 'Please indicate if you can provide feedback'),
+    missionCommitment: z.string().min(1, 'Please indicate if you will complete the test mission'),
+    feedbackModes: z.array(z.string()).min(1, 'Please select how you can provide feedback'),
+}).superRefine((data, ctx) => {
+    if (data.useCases.length > 2) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: 'Please select up to 2 options',
+            path: ['useCases'],
+        });
+    }
+    if (data.useCases.includes('other') && !data.useCasesOther?.trim()) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: 'Please specify the other use case',
+            path: ['useCasesOther'],
+        });
+    }
 });
 
 type BetaFormValues = z.infer<typeof betaSchema>;
@@ -32,10 +52,13 @@ export function BetaForm() {
     const form = useForm<BetaFormValues>({
         resolver: zodResolver(betaSchema),
         defaultValues: {
-            interests: [],
             testGoals: [],
+            toolsUsed: [],
+            useCases: [],
+            feedbackModes: [],
         },
     });
+    const selectedUseCases = form.watch('useCases');
 
     const onSubmit = async (data: BetaFormValues) => {
         setIsSubmitting(true);
@@ -64,11 +87,16 @@ export function BetaForm() {
         }
     };
 
-    const interestsOptions = [
-        { id: 'dev', label: 'AI Researcher / Engineer' },
-        { id: 'founder', label: 'Startup Founder' },
-        { id: 'enterprise', label: 'Enterprise Architect' },
-        { id: 'hobbyist', label: 'AI Hobbyist' },
+    const toolsUsedOptions = [
+        { id: 'chatgpt-claude', label: 'ChatGPT / Claude' },
+        { id: 'zapier-make', label: 'Zapier / Make' },
+        { id: 'langchain', label: 'LangChain' },
+        { id: 'autogen-ag2', label: 'AutoGen / AG2' },
+        { id: 'llamaindex', label: 'LlamaIndex' },
+        { id: 'n8n', label: 'n8n' },
+        { id: 'python', label: 'Python scripts' },
+        { id: 'node', label: 'Node/TypeScript' },
+        { id: 'none', label: 'None yet' },
     ];
 
     const testGoalOptions = [
@@ -77,6 +105,26 @@ export function BetaForm() {
         { id: 'payments', label: 'Payments' },
         { id: 'orchestration', label: 'Orchestration' },
         { id: 'all', label: 'All' },
+    ];
+
+    const useCaseOptions = [
+        { id: 'agency', label: 'Automation agency work' },
+        { id: 'data', label: 'Data / ETL / analytics' },
+        { id: 'marketing', label: 'Marketing ops' },
+        { id: 'finance', label: 'Finance ops' },
+        { id: 'support', label: 'Customer support ops' },
+        { id: 'sales', label: 'Sales ops' },
+        { id: 'security', label: 'Security / compliance' },
+        { id: 'dev-tooling', label: 'Dev tooling' },
+        { id: 'other', label: 'Other' },
+    ];
+
+    const feedbackModeOptions = [
+        { id: 'screen-walkthrough', label: 'I can record a 2-5 min screen walkthrough' },
+        { id: 'bug-reports', label: 'I can write clear bug reports with steps to reproduce' },
+        { id: 'feedback-call', label: 'I can join a 15-min feedback call' },
+        { id: 'invite-testers', label: 'I can invite 2-5 qualified testers' },
+        { id: 'none', label: 'None of the above' },
     ];
 
     if (isSubmitted) {
@@ -92,7 +140,7 @@ export function BetaForm() {
                     </svg>
                 </div>
                 <h2 className="text-3xl font-display text-white">Application Received!</h2>
-                <p className="text-slate-400 text-lg">You’re in the queue. We'll reach out to you shortly via email.</p>
+                <p className="text-slate-400 text-lg">You're in the queue. We'll reach out to you shortly via email.</p>
                 <Button onClick={() => setIsSubmitted(false)} variant="outline">Back to Start</Button>
             </motion.div>
         );
@@ -121,9 +169,14 @@ export function BetaForm() {
                             <SelectValue placeholder="Select your role" />
                         </SelectTrigger>
                         <SelectContent className="bg-[#0f0f0f] border-white/10 text-white">
-                            <SelectItem value="ai-dev">AI Dev</SelectItem>
+                            <SelectItem value="ai-ml-engineer">AI / ML Engineer</SelectItem>
+                            <SelectItem value="software-engineer-ai">Software Engineer (AI apps)</SelectItem>
                             <SelectItem value="agent-builder">Agent Builder</SelectItem>
-                            <SelectItem value="enterprise">Enterprise</SelectItem>
+                            <SelectItem value="founder-product">Founder / Product</SelectItem>
+                            <SelectItem value="mlops-platform">MLOps / Platform / DevOps</SelectItem>
+                            <SelectItem value="enterprise-architect">Enterprise Architect / IT</SelectItem>
+                            <SelectItem value="consultant-agency">Consultant / Agency</SelectItem>
+                            <SelectItem value="researcher">Researcher</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                     </Select>
@@ -133,41 +186,80 @@ export function BetaForm() {
                 </div>
 
                 <div className="space-y-4">
-                    <Label htmlFor="building" className="text-white text-base">What are you building?</Label>
-                    <Textarea
-                        id="building"
-                        placeholder="Describe your project or agent use case..."
-                        {...form.register('building')}
-                        className="bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:ring-[var(--accent-primary)] min-h-[100px]"
+                    <Label htmlFor="proofLink" className="text-white text-base">
+                        Share ONE link that proves your work (pick one): (LinkedIn profile, GitHub, Portfolio / website, company page, Product page, etc)
+                    </Label>
+                    <Input
+                        id="proofLink"
+                        type="url"
+                        placeholder="https://..."
+                        {...form.register('proofLink')}
+                        className="bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:ring-[var(--accent-primary)] h-12"
                     />
-                    {form.formState.errors.building && (
-                        <p className="text-red-400 text-sm">{form.formState.errors.building.message}</p>
+                    {form.formState.errors.proofLink && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.proofLink.message}</p>
                     )}
                 </div>
 
                 <div className="space-y-4">
-                    <Label className="text-white text-base">Which best describes you?</Label>
+                    <Label htmlFor="workflow" className="text-white text-base">
+                        Describe a real workflow you want to run with SwarmSync (be specific).
+                    </Label>
+                    <Textarea
+                        id="workflow"
+                        placeholder="Example: My agent finds a specialist, negotiates a fixed fee, executes the task, and confirms payment."
+                        {...form.register('workflow')}
+                        className="bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:ring-[var(--accent-primary)] min-h-[120px]"
+                    />
+                    <p className="text-slate-400 text-sm">
+                        Example: "My agent finds a specialist, negotiates a fixed fee, executes the task, and confirms payment."
+                    </p>
+                    {form.formState.errors.workflow && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.workflow.message}</p>
+                    )}
+                </div>
+
+                <div className="space-y-4">
+                    <Label className="text-white text-base">Which tools have you used?</Label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {interestsOptions.map((option) => (
+                        {toolsUsedOptions.map((option) => (
                             <div key={option.id} className="flex items-center space-x-3">
                                 <Checkbox
-                                    id={`interest-${option.id}`}
+                                    id={`tool-${option.id}`}
                                     onCheckedChange={(checked) => {
-                                        const current = form.getValues('interests');
+                                        const current = form.getValues('toolsUsed');
                                         const updated = checked
                                             ? [...current, option.id]
                                             : current.filter(i => i !== option.id);
-                                        form.setValue('interests', updated);
+                                        form.setValue('toolsUsed', updated);
                                     }}
                                 />
-                                <Label htmlFor={`interest-${option.id}`} className="text-slate-300 font-normal cursor-pointer">
+                                <Label htmlFor={`tool-${option.id}`} className="text-slate-300 font-normal cursor-pointer">
                                     {option.label}
                                 </Label>
                             </div>
                         ))}
                     </div>
-                    {form.formState.errors.interests && (
-                        <p className="text-red-400 text-sm">{form.formState.errors.interests.message}</p>
+                    {form.formState.errors.toolsUsed && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.toolsUsed.message}</p>
+                    )}
+                </div>
+
+                <div className="space-y-4">
+                    <Label className="text-white text-base">Which best describes you?</Label>
+                    <Select onValueChange={(v) => form.setValue('persona', v)}>
+                        <SelectTrigger className="bg-white/5 border-white/10 text-white h-12">
+                            <SelectValue placeholder="Select one" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-[#0f0f0f] border-white/10 text-white">
+                            <SelectItem value="builder">Builder (I build agents/tools and want to connect SwarmSync to my workflows)</SelectItem>
+                            <SelectItem value="operator">Operator (I run AI/automation in a team and care about reliability/governance)</SelectItem>
+                            <SelectItem value="agent-seller">Agent Seller (I want to list an agent/service and get paid for jobs)</SelectItem>
+                            <SelectItem value="explorer">Explorer (I'm evaluating / learning)</SelectItem>
+                        </SelectContent>
+                    </Select>
+                    {form.formState.errors.persona && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.persona.message}</p>
                     )}
                 </div>
 
@@ -198,43 +290,103 @@ export function BetaForm() {
                 </div>
 
                 <div className="space-y-4">
-                    <Label className="text-white text-base">Time commitment per week</Label>
-                    <RadioGroup onValueChange={(v) => form.setValue('timeCommitment', v)} className="flex flex-col gap-3">
-                        <div className="flex items-center space-x-3">
-                            <RadioGroupItem value="15min" id="t15" />
-                            <Label htmlFor="t15" className="text-slate-300 font-normal cursor-pointer">15 min</Label>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <RadioGroupItem value="30min" id="t30" />
-                            <Label htmlFor="t30" className="text-slate-300 font-normal cursor-pointer">30 min</Label>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <RadioGroupItem value="60min+" id="t60" />
-                            <Label htmlFor="t60" className="text-slate-300 font-normal cursor-pointer">60 min+</Label>
-                        </div>
-                    </RadioGroup>
+                    <Label className="text-white text-base">Where would you use specialist agents most?</Label>
+                    <p className="text-slate-400 text-sm">Choose up to 2.</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {useCaseOptions.map((option) => (
+                            <div key={option.id} className="flex items-center space-x-3">
+                                <Checkbox
+                                    id={`usecase-${option.id}`}
+                                    onCheckedChange={(checked) => {
+                                        const current = form.getValues('useCases');
+                                        if (checked && current.length >= 2) {
+                                            return;
+                                        }
+                                        const updated = checked
+                                            ? [...current, option.id]
+                                            : current.filter(i => i !== option.id);
+                                        form.setValue('useCases', updated);
+                                    }}
+                                />
+                                <Label htmlFor={`usecase-${option.id}`} className="text-slate-300 font-normal cursor-pointer">
+                                    {option.label}
+                                </Label>
+                            </div>
+                        ))}
+                    </div>
+                    {selectedUseCases?.includes('other') && (
+                        <Input
+                            id="useCasesOther"
+                            placeholder="Other: tell us where you would use specialists"
+                            {...form.register('useCasesOther')}
+                            className="bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:ring-[var(--accent-primary)] h-12"
+                        />
+                    )}
+                    {form.formState.errors.useCases && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.useCases.message}</p>
+                    )}
+                    {form.formState.errors.useCasesOther && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.useCasesOther.message}</p>
+                    )}
+                </div>
+
+                <div className="space-y-4">
+                    <Label className="text-white text-base">Time you can commit in the next 7 days</Label>
+                    <Select onValueChange={(v) => form.setValue('timeCommitment', v)}>
+                        <SelectTrigger className="bg-white/5 border-white/10 text-white h-12">
+                            <SelectValue placeholder="Select a time commitment" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-[#0f0f0f] border-white/10 text-white">
+                            <SelectItem value="15-min">15 min</SelectItem>
+                            <SelectItem value="30-min">30 min</SelectItem>
+                            <SelectItem value="60-min">60 min</SelectItem>
+                            <SelectItem value="2-plus-hours">2+ hours</SelectItem>
+                        </SelectContent>
+                    </Select>
                     {form.formState.errors.timeCommitment && (
                         <p className="text-red-400 text-sm">{form.formState.errors.timeCommitment.message}</p>
                     )}
                 </div>
 
                 <div className="space-y-4">
-                    <Label className="text-white text-base font-semibold">Can you give feedback?</Label>
-                    <RadioGroup
-                        onValueChange={(v) => form.setValue('feedbackConsent', v)}
-                        className="flex flex-row gap-8"
-                    >
-                        <div className="flex items-center space-x-3">
-                            <RadioGroupItem value="yes" id="yes" />
-                            <Label htmlFor="yes" className="text-slate-300 font-normal cursor-pointer">Yes</Label>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <RadioGroupItem value="no" id="no" />
-                            <Label htmlFor="no" className="text-slate-300 font-normal cursor-pointer">No</Label>
-                        </div>
-                    </RadioGroup>
-                    {form.formState.errors.feedbackConsent && (
-                        <p className="text-red-400 text-sm">{form.formState.errors.feedbackConsent.message}</p>
+                    <Label className="text-white text-base">Will you complete the test mission + feedback form?</Label>
+                    <Select onValueChange={(v) => form.setValue('missionCommitment', v)}>
+                        <SelectTrigger className="bg-white/5 border-white/10 text-white h-12">
+                            <SelectValue placeholder="Select one" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-[#0f0f0f] border-white/10 text-white">
+                            <SelectItem value="yes">Yes</SelectItem>
+                            <SelectItem value="no">No</SelectItem>
+                        </SelectContent>
+                    </Select>
+                    {form.formState.errors.missionCommitment && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.missionCommitment.message}</p>
+                    )}
+                </div>
+
+                <div className="space-y-4">
+                    <Label className="text-white text-base">How can you provide feedback?</Label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {feedbackModeOptions.map((option) => (
+                            <div key={option.id} className="flex items-center space-x-3">
+                                <Checkbox
+                                    id={`feedback-${option.id}`}
+                                    onCheckedChange={(checked) => {
+                                        const current = form.getValues('feedbackModes');
+                                        const updated = checked
+                                            ? [...current, option.id]
+                                            : current.filter(i => i !== option.id);
+                                        form.setValue('feedbackModes', updated);
+                                    }}
+                                />
+                                <Label htmlFor={`feedback-${option.id}`} className="text-slate-300 font-normal cursor-pointer">
+                                    {option.label}
+                                </Label>
+                            </div>
+                        ))}
+                    </div>
+                    {form.formState.errors.feedbackModes && (
+                        <p className="text-red-400 text-sm">{form.formState.errors.feedbackModes.message}</p>
                     )}
                 </div>
 
