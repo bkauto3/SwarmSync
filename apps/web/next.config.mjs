@@ -1,7 +1,7 @@
 // apps/web/next.config.mjs
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import { withSentryConfig } from '@sentry/nextjs';
+// import { withSentryConfig } from '@sentry/nextjs'; // Temporarily disabled
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 // Needed for __dirname in ESM
@@ -169,60 +169,49 @@ const nextConfig = {
     config.resolve.alias['@'] = path.resolve(__dirname, './src');
     config.resolve.alias['@pricing'] = path.resolve(__dirname, '../../lib/pricing');
 
-    // Add fallbacks for node core modules
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-      crypto: false,
-      os: false,
-      path: false,
-      stream: false,
-    };
-
     return config;
   },
 };
 
-const sentryNextConfig = withSentryConfig(
-  nextConfig,
-  {
-    // For all available options, see:
-    // https://github.com/getsentry/sentry-webpack-plugin#options
+// Temporarily disabled Sentry due to missing dependencies
+// const sentryNextConfig = withSentryConfig(
+//   nextConfig,
+//   {
+//     // For all available options, see:
+//     // https://github.com/getsentry/sentry-webpack-plugin#options
 
-    // Suppresses source map uploading logs during bundling
-    silent: true,
-    org: "agent-market",
-    project: "web-app",
-  },
-  {
-    // For all available options, see:
-    // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+//     // Suppresses source map uploading logs during bundling
+//     silent: true,
+//     org: "agent-market",
+//     project: "web-app",
+//   },
+//   {
+//     // For all available options, see:
+//     // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
 
-    // Upload a larger set of source maps for prettier stack traces (increases build time)
-    widenClientFileUpload: true,
+//     // Upload a larger set of source maps for prettier stack traces (increases build time)
+//     widenClientFileUpload: true,
 
-    // Transpiles SDK to be compatible with IE11 (increases bundle size)
-    transpileClientSDK: true,
+//     // Transpiles SDK to be compatible with IE11 (increases bundle size)
+//     transpileClientSDK: true,
 
-    // Routes browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers (increases server load)
-    tunnelRoute: "/monitoring",
+//     // Routes browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers (increases server load)
+//     tunnelRoute: "/monitoring",
 
-    // Hides source maps from the browser
-    hideSourceMaps: true,
+//     // Hides source maps from the browser
+//     hideSourceMaps: true,
 
-    // Automatically tree-shake Sentry logger statements to reduce bundle size
-    disableLogger: true,
+//     // Automatically tree-shake Sentry logger statements to reduce bundle size
+//     disableLogger: true,
 
-    // Enables automatic instrumentation of Vercel Cron Monitors.
-    // See the following for more information:
-    // https://docs.sentry.io/product/crons/
-    // https://vercel.com/docs/cron-jobs
-    automaticVercelMonitors: true,
-  }
-);
+//     // Enables automatic instrumentation of Vercel Cron Monitors.
+//     // See the following for more information:
+//     // https://docs.sentry.io/product/crons/
+//     // https://vercel.com/docs/cron-jobs
+//     automaticVercelMonitors: true,
+//   }
+// );
 
 export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-})(sentryNextConfig);
+})(nextConfig);
