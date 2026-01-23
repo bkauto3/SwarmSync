@@ -106,12 +106,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="apple-touch-icon" href="/favicon.ico" />
         {/* Preload critical resources for LCP */}
         <link rel="preload" href="/logos/swarm-sync-purple.png" as="image" type="image/png" />
+        {/* Preconnect to external origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* Critical CSS will be inlined by Next.js optimizeCss */}
       </head>
       <body
         className="min-h-screen bg-background font-ui text-foreground antialiased"

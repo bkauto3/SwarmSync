@@ -28,6 +28,7 @@ export default async function ConsoleLayout({ children }: { children: ReactNode 
               alt="Swarm Sync logo"
               width={90}
               height={90}
+              quality={75}
               className="h-24 w-auto cursor-pointer transition-opacity hover:opacity-80"
               priority
             />

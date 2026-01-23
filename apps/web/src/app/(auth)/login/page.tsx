@@ -26,6 +26,7 @@ export default function LoginPage() {
               width={180}
               height={60}
               priority
+              quality={75}
               className="h-10 w-auto md:h-11 transition-transform duration-300 group-hover:scale-105"
             />
           </Link>

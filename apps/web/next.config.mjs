@@ -41,6 +41,17 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', '@tanstack/react-query'],
   },
 
+  // Compiler configuration for modern browsers
+  compiler: {
+    // Remove console.log in production
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+
+  // SWC minification with modern browser targets
+  swcMinify: true,
+
   // Redirects: HTTP→HTTPS and www/non-www
   async redirects() {
     return [
@@ -120,30 +131,37 @@ const nextConfig = {
               "frame-src 'self' https://js.stripe.com",
             ].join('; '),
           },
+          {
+            key: 'X-SourceMap',
+            value: 'hidden',
+          },
         ],
       },
     ];
   },
 
-  // Disable source maps for production for security
-  productionBrowserSourceMaps: false,
+  // Enable source maps for production debugging (hidden from browser via headers)
+  productionBrowserSourceMaps: true,
 
   webpack: (config, { isServer, dev }) => {
-    // Split vendor chunks for better caching
+    // Split vendor chunks for better caching and reduce unused JS
     if (!isServer) {
       config.optimization = {
         ...config.optimization,
         splitChunks: {
           chunks: 'all',
+          maxInitialRequests: 25,
+          minSize: 20000,
           cacheGroups: {
             default: false,
             vendors: false,
-            // Vendor chunk for node_modules
+            // Vendor chunk for node_modules - split by package
             vendor: {
               name: 'vendor',
               chunks: 'all',
               test: /node_modules/,
               priority: 20,
+              maxSize: 244000, // Split large vendor chunks
             },
             // Separate chunk for common components
             common: {
@@ -160,8 +178,24 @@ const nextConfig = {
               chunks: 'all',
               priority: 15,
             },
+            // Separate large libraries
+            framerMotion: {
+              test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+              name: 'framer-motion',
+              chunks: 'all',
+              priority: 25,
+            },
+            reactflow: {
+              test: /[\\/]node_modules[\\/]reactflow[\\/]/,
+              name: 'reactflow',
+              chunks: 'all',
+              priority: 25,
+            },
           },
         },
+        // Tree shaking optimization
+        usedExports: true,
+        sideEffects: false,
       };
     }
     // Properly resolve @ alias to ./src (works with both Webpack & Turbopack)
