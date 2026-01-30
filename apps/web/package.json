@@ -73,6 +73,7 @@
   "devDependencies": {
     "@playwright/test": "^1.46.0",
     "@t3-oss/env-nextjs": "^0.13.8",
+    "@tailwindcss/postcss": "^4.0.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@trigger.dev/build": "4.3.2",
     "@types/node": "^20.11.5",
