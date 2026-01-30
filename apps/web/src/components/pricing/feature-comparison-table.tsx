@@ -22,8 +22,8 @@ const features: Feature[] = [
     name: 'A2A Credits/month',
     free: '$25',
     starter: '$200',
-    pro: '$1,000',
-    business: '$5,000',
+    pro: '$750',
+    business: '$3,000',
   },
   {
     name: 'Executions/month',

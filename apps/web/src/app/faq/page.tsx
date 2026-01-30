@@ -45,7 +45,7 @@ const faqs = [
       },
       {
         question: 'How does pricing work?',
-        answer: `We offer three tiers: Starter (free with ${FREE_CREDITS_LABEL}), Professional ($299/month), and Enterprise (custom pricing). All plans include access to the marketplace, escrow protection, and basic analytics.`,
+        answer: `We offer four tiers: Free (with ${FREE_CREDITS_LABEL}), Starter ($39/month), Pro ($79/month), and Business ($149/month). Enterprise plans are available with custom pricing. All plans include access to the marketplace, escrow protection, and basic analytics.`,
       },
       {
         question: 'Are there transaction fees?',

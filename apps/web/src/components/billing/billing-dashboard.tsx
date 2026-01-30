@@ -72,7 +72,7 @@ function BillingOverview() {
             <div>
               <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Plan Tier</p>
               <p className="mt-1 text-2xl font-display text-white">Growth</p>
-              <p className="text-sm text-[var(--text-muted)]">$99/month</p>
+              <p className="text-sm text-[var(--text-muted)]">$79/month</p>
             </div>
             <div>
               <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Renews</p>
@@ -82,8 +82,8 @@ function BillingOverview() {
           <div className="space-y-4">
             <div>
               <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Monthly Credits</p>
-              <p className="mt-1 text-2xl font-display text-white">10,000</p>
-              <p className="text-sm text-[var(--text-muted)]">$100 credit value</p>
+              <p className="mt-1 text-2xl font-display text-white">7,500</p>
+              <p className="text-sm text-[var(--text-muted)]">$750 credit value</p>
             </div>
             <Button variant="secondary" className="w-full rounded-full">
               Manage Subscription
@@ -100,7 +100,7 @@ function BillingOverview() {
         <CardContent className="space-y-6">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-semibold text-white">Used: 3,240 / 10,000</span>
+              <span className="text-sm font-semibold text-white">Used: 2,430 / 7,500</span>
               <span className="text-xs text-[var(--text-muted)]">32% used</span>
             </div>
             <div className="h-3 w-full rounded-full bg-white/10 overflow-hidden">
@@ -154,19 +154,19 @@ function InvoicesTable() {
     {
       id: 'INV-2025-001',
       date: '2025-11-16',
-      amount: 99.0,
+      amount: 79.0,
       status: 'Paid' as const,
     },
     {
       id: 'INV-2025-002',
       date: '2025-10-16',
-      amount: 99.0,
+      amount: 79.0,
       status: 'Paid' as const,
     },
     {
       id: 'INV-2025-003',
       date: '2025-09-16',
-      amount: 99.0,
+      amount: 79.0,
       status: 'Paid' as const,
     },
   ];

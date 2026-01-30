@@ -18,7 +18,7 @@ const starterPlan = {
 const plusPlan = {
   slug: 'plus',
   name: 'Starter',
-  priceCents: 2900,
+  priceCents: 3900,
   seats: 1,
   agentLimit: 10,
   workflowLimit: 3,
@@ -30,40 +30,40 @@ const plusPlan = {
     'Exports (CSV) + better transaction history',
     'Workflow templates (starter library)',
   ],
-  stripeProductId: process.env.PLUS_SWARM_SYNC_TIER_PRODUCT_ID ?? '',
-  stripePriceId: process.env.PLUS_SWARM_SYNC_TIER_PRICE_ID ?? '',
+  stripeProductId: process.env.STARTER_SWARM_SYNC_TIER_PRODUCT_ID ?? '',
+  stripePriceId: process.env.STARTER_SWARM_SYNC_TIER_PRICE_ID ?? '',
 };
 
 const growthPlan = {
   slug: 'growth',
   name: 'Pro',
-  priceCents: 9900,
+  priceCents: 7900,
   seats: 5,
   agentLimit: 50,
   workflowLimit: 5,
-  monthlyCredits: 100000,
+  monthlyCredits: 75000,
   takeRateBasisPoints: 1500,
   features: [
     'Everything in Starter',
     'Priority email support (24h)',
     'Visual Workflow Builder (multi-step agent workflows)',
   ],
-  stripeProductId: process.env.GROWTH_SWARM_SYNC_TIER_PRODUCT_ID ?? '',
-  stripePriceId: process.env.GROWTH_SWARM_SYNC_TIER_PRICE_ID ?? '',
+  stripeProductId: process.env.PRO_SWARM_SYNC_TIER_PRODUCT_ID ?? '',
+  stripePriceId: process.env.PRO_SWARM_SYNC_TIER_PRICE_ID ?? '',
 };
 
 const scalePlan = {
   slug: 'scale',
   name: 'Business',
-  priceCents: 19900,
+  priceCents: 14900,
   seats: 15,
   agentLimit: 200,
   workflowLimit: 15,
-  monthlyCredits: 500000,
+  monthlyCredits: 300000,
   takeRateBasisPoints: 1200,
   features: ['Priority support (12h)', 'Monthly implementation best-practices session'],
-  stripeProductId: process.env.SCALE_SWARM_SYNC_TIER_PRODUCT_ID ?? '',
-  stripePriceId: process.env.SCALE_SWARM_SYNC_TIER_PRICE_ID ?? '',
+  stripeProductId: process.env.BUSINESS_SWARM_SYNC_TIER_PRODUCT_ID ?? '',
+  stripePriceId: process.env.BUSINESS_SWARM_SYNC_TIER_PRICE_ID ?? '',
 };
 
 const enterprisePlan = {

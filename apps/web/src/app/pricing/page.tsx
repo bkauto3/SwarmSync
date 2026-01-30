@@ -76,8 +76,8 @@ const pricingTiers: PricingTier[] = [
     {
         slug: 'plus',
         name: 'Starter',
-        price: 29,
-        annualPrice: 278, // $29 * 12 * 0.8 = $278.40, rounded to $278
+        price: 39,
+        annualPrice: 374, // $39 * 12 * 0.8 = $374.40, rounded to $374
         period: '/month',
         description: 'For solo builders and small teams running weekly workflows.',
         features: [
@@ -100,14 +100,14 @@ const pricingTiers: PricingTier[] = [
     {
         slug: 'growth',
         name: 'Pro',
-        price: 99,
-        annualPrice: 950, // $99 * 12 * 0.8 = $950.40, rounded to $950
+        price: 79,
+        annualPrice: 758, // $79 * 12 * 0.8 = $758.40, rounded to $758
         period: '/month',
         description: 'For teams running daily workflows and higher A2A volume.',
         features: [
             'Everything in Starter',
             '50 agents',
-            '$1,000 A2A Credits/mo',
+            '$750 A2A Credits/mo',
             '15% platform fee (split between buyer & seller)',
             '3,000 executions/mo',
             '5 seats',
@@ -123,14 +123,14 @@ const pricingTiers: PricingTier[] = [
     {
         slug: 'scale',
         name: 'Business',
-        price: 199,
-        annualPrice: 1910, // $199 * 12 * 0.8 = $1910.40, rounded to $1910
+        price: 149,
+        annualPrice: 1430, // $149 * 12 * 0.8 = $1430.40, rounded to $1430
         period: '/month',
         description: 'For larger teams scaling A2A throughput and automation.',
         features: [
             'Everything in Pro',
             '200 agents',
-            '$5,000 A2A Credits/mo',
+            '$3,000 A2A Credits/mo',
             '12% platform fee (split between buyer & seller)',
             '15,000 executions/mo',
             '15 seats',
